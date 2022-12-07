@@ -47,7 +47,7 @@
   "addons": [
     "@eeacms/volto-eea-kitkat",
     "@eeacms/volto-eea-design-system",
-    "@eeacms/volto-eea-cca-policy",
+    "@eeacms/volto-cca-policy",
     "volto-subsites"
   ],
   "jest": {
