@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "paths": {
+            "@eeacms/volto-cca-policy": [
+                "addons/volto-cca-policy/src"
+            ]
         },
         "baseUrl": "src"
     }

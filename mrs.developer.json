@@ -1,4 +1,12 @@
 {
+  "volto-cca-policy": {
+    "url": "git@github.com:eea/volto-cca-policy.git",
+    "https": "https://github.com/eea/volto-cca-policy.git",
+    "package": "@eeacms/volto-cca-policy",
+    "branch": "develop",
+    "develop": true,
+    "path": "src"
+  },
   "volto-matomo": {
     "url": "git@github.com:eea/volto-matomo.git",
     "https": "https://github.com/eea/volto-matomo.git",
@@ -324,6 +332,7 @@
     "https": "https://github.com/eea/volto-workflow-progress.git",
     "package": "@eeacms/volto-workflow-progress",
     "branch": "develop",
+    "develop": false,
     "path": "src"
   },
   "volto-sentry": {
@@ -331,6 +340,7 @@
     "https": "https://github.com/collective/volto-sentry.git",
     "package": "@plone-collective/volto-sentry",
     "branch": "main",
+    "develop": false,
     "path": "src"
   }
 }
