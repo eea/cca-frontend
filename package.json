@@ -47,6 +47,7 @@
   "addons": [
     "volto-subsites",
     "@eeacms/volto-eea-kitkat",
+    "@eeacms/volto-eea-design-system",
     "@eeacms/volto-eea-website-theme",
     "@eeacms/volto-cca-policy"
   ],
@@ -151,8 +152,8 @@
     "@eeacms/volto-eea-design-system": "1.0.0-alpha.5"
   },
   "dependencies": {
-    "@eeacms/volto-eea-design-system": "1.0.0-alpha.5",
     "@eeacms/volto-eea-kitkat": "10.2.0",
+    "@eeacms/volto-eea-design-system": "1.0.0-alpha.5",
     "@eeacms/volto-eea-website-theme": "1.3.1",
     "@plone/volto": "16.3.0",
     "volto-subsites": "4.0.0"
