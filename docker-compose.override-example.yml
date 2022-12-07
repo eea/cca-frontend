@@ -1,0 +1,3 @@
+services:
+  backend:
+    build: ./eea.docker.plone-climateadapt
