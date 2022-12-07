@@ -14,13 +14,27 @@ services:
   #   depends_on:
   #     - backend
 
+  memcached:
+    mem_limit: 73400320
+    image: memcached:1.5.12
+    environment:
+      TZ: Europe/Copenhagen
+    mem_reservation: 52428800
+    command:
+    - -m
+    - '2048'
+    labels:
+      io.rancher.scheduler.affinity:host_label_ne: reserved=yes
+
   backend:
     #build: ./eea-website-backend/
     image: eeacms/eea.docker.plone-climateadapt:v9.105
+    entrypoint: sh -c "tail -f /dev/null"
     ports:
     - "${BACKEND:-8080}:8080"
     volumes:
       - ./data:/data
+      - ./backend/src:/plone/instance/src
     mem_limit: 4294967296
     mem_reservation: 4294967296
     environment:
@@ -28,5 +42,3 @@ services:
       TZ: Europe/Copenhagen
       SERVER_NAME: climate-adapt.eea.europa.eu
       MARINE_PASS: P7n3BLvCerm7cx3B
-
-volumes:
