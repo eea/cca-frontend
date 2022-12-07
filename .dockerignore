@@ -1,0 +1,12 @@
+cypress
+locales/*.json
+node_modules
+omelette
+npm-cache
+docker-compose.yml
+Dockerfile
+Jenkinsfile
+src/addons
+.git
+.env
+*.log
