@@ -45,10 +45,10 @@
     "src/addons/*"
   ],
   "addons": [
+    "volto-subsites",
     "@eeacms/volto-eea-kitkat",
-    "@eeacms/volto-eea-design-system",
-    "@eeacms/volto-cca-policy",
-    "volto-subsites"
+    "@eeacms/volto-eea-website-theme",
+    "@eeacms/volto-cca-policy"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
