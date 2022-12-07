@@ -1,12 +1,25 @@
-cypress
+# Folders
+.git
+.yarn/cache
+.storybook
+build
+cache
 locales/*.json
 node_modules
 omelette
-npm-cache
-docker-compose.yml
-Dockerfile
-Jenkinsfile
-src/addons
-.git
+
+# Files
 .env
 *.log
+.dockerignore
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.gitmodules
+.prettierignore
+bootstrap
+cypress*.json
+docker-compose.yml
+Jenkinsfile
+start_.sh
