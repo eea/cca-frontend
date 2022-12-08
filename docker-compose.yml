@@ -29,7 +29,6 @@ services:
   backend:
     #build: ./eea-website-backend/
     image: eeacms/eea.docker.plone-climateadapt:v9.105
-    entrypoint: sh -c "tail -f /dev/null"
     ports:
     - "${BACKEND:-8080}:8080"
     volumes:
