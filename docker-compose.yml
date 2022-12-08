@@ -28,7 +28,8 @@ services:
 
   backend:
     #build: ./eea-website-backend/
-    image: eeacms/eea.docker.plone-climateadapt:v9.105
+    # image: eeacms/eea.docker.plone-climateadapt:v9.105
+    image: laszlocseh/climateadapt:10.0.0
     ports:
     - "${BACKEND:-8080}:8080"
     volumes:
@@ -40,4 +41,4 @@ services:
       SITE: "cca"
       TZ: Europe/Copenhagen
       SERVER_NAME: climate-adapt.eea.europa.eu
-***REMOVED***
+***REMOVED***      CORS_ALLOW_ORIGIN: "http://localhost:3000"
