@@ -15,8 +15,8 @@ pipeline {
 
   stages {
 
-    // stage('Integration tests') {
-    //   parallel {
+     stage('Integration tests') {
+       parallel {
     //     stage('Run Cypress: @eeacms/volto-*') {
     //      when {
     //        allOf {
@@ -93,34 +93,33 @@ pipeline {
     //       }
     //     }
 
-    //     stage("Docker test build") {
-    //        when {
-    //           allOf {
-    //             not { changelog '.*^Automated release [0-9\\.]+$' }
-    //             not { environment name: 'CHANGE_ID', value: '' }
-    //             environment name: 'CHANGE_TARGET', value: 'master'
-    //           }
-    //         }
-    //          environment {
-    //           IMAGE_NAME = BUILD_TAG.toLowerCase()
-    //          }
-    //          steps {
-    //            node(label: 'docker-host') {
-    //              script {
-    //                checkout scm
-    //                try {
-    //                  dockerImage = docker.build("${IMAGE_NAME}", "--no-cache .")
-    //                } finally {
-    //                  sh script: "docker rmi ${IMAGE_NAME}", returnStatus: true
-    //                }
-    //              }
-    //            }
-    //          }
-    //       }
+        stage("Docker test build") {
+           when {
+              allOf {
+                not { changelog '.*^Automated release [0-9\\.]+$' }
+                not { environment name: 'CHANGE_ID', value: '' }
+                environment name: 'CHANGE_TARGET', value: 'master'
+              }
+            }
+             environment {
+              IMAGE_NAME = BUILD_TAG.toLowerCase()
+             }
+             steps {
+               node(label: 'docker-host') {
+                 script {
+                   checkout scm
+                   try {
+                     dockerImage = docker.build("${IMAGE_NAME}", "--no-cache .")
+                   } finally {
+                     sh script: "docker rmi ${IMAGE_NAME}", returnStatus: true
+                   }
+                 }
+               }
+             }
+          }
 
-
-    //   }
-    // }
+       }
+     }
 
 
     stage('Pull Request') {
@@ -218,7 +217,7 @@ pipeline {
       }
     }
 
-    stage('Update SonarQube Tags: Prod') {
+    stage('Update SonarQube Tags') {
       when {
         not {
           environment name: 'SONARQUBE_TAG', value: ''
@@ -231,25 +230,6 @@ pipeline {
             withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GIT_TOKEN')]) {
               sh '''docker pull eeacms/gitflow'''
               sh '''docker run -i --rm --name="${BUILD_TAG}-sonar" -e GIT_NAME=${GIT_NAME} -e GIT_TOKEN="${GIT_TOKEN}" -e SONARQUBE_TAG=${SONARQUBE_TAG} -e SONARQUBE_TOKEN=${SONAR_AUTH_TOKEN} -e SONAR_HOST_URL=${SONAR_HOST_URL}  eeacms/gitflow /update_sonarqube_tags.sh'''
-            }
-          }
-        }
-      }
-    }
-
-    stage('Update SonarQube Tags: Demo') {
-      when {
-        not {
-          environment name: 'SONARQUBE_TAG_DEMO', value: ''
-        }
-        buildingTag()
-      }
-      steps{
-        node(label: 'docker') {
-          withSonarQubeEnv('Sonarqube') {
-            withCredentials([string(credentialsId: 'eea-jenkins-token', variable: 'GIT_TOKEN')]) {
-              sh '''docker pull eeacms/gitflow'''
-              sh '''docker run -i --rm --name="${BUILD_TAG}-sonar" -e GIT_NAME=${GIT_NAME} -e GIT_TOKEN="${GIT_TOKEN}" -e SONARQUBE_TAG=${SONARQUBE_TAG_DEMO} -e SONARQUBE_TOKEN=${SONAR_AUTH_TOKEN} -e SONAR_HOST_URL=${SONAR_HOST_URL}  eeacms/gitflow /update_sonarqube_tags.sh'''
             }
           }
         }
