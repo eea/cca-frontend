@@ -10,6 +10,15 @@ Trainings on how to create your own website using Plone 6 is available as part o
 
 ## Getting started
 
+1. Bootstrap the development backend:
+
+- `git submodule init`
+- `git submodule update`
+- `ln -s ./docker-compose.override-example.yml ./docker-compose.override.yml`
+- `docker compose up -d`
+- `docker compose exec backend bash`
+- (inside container) `bin/develop rb`
+
 1. Install `nvm`
 
         touch ~/.bash_profile
@@ -71,7 +80,7 @@ Trainings on how to create your own website using Plone 6 is available as part o
 See [Plone 6 backend for EEA Main website](https://github.com/eea/eea-website-backend/tree/master/develop)
 
 ## Release
-  
+
 ### Automatic release using Jenkins
 
 #### Release flow
@@ -79,7 +88,7 @@ See [Plone 6 backend for EEA Main website](https://github.com/eea/eea-website-ba
 The release flow on Plone 6 projects is split in 2 Jenkins jobs:
 
 * A job that runs on every commit on master and creates a production ready GitHub release and tag with the version from `package.json`
-* A job that runs on every new tag ( including the one created in the first job): 
+* A job that runs on every new tag ( including the one created in the first job):
     * A new Docker image is built and released automatically on [DockerHub](https://hub.docker.com/r/eeacms/eea-website-frontend) with the release tag.
     * A new entry is automatically added to [EEA Main Website - frontend](https://github.com/eea/eea.rancher.catalog/tree/master/templates/eea-website-frontend) `EEA Rancher Catalog` with the release tag
     * If the project demo stack is configured in `RANCHER_STACKID`, the demo stack is automatically upgraded to the newly created template version
@@ -97,7 +106,7 @@ The release flow on Plone 6 projects is split in 2 Jenkins jobs:
 * Automated commits and commits with [JENKINS] or [YARN] in the commit log are excluded from `CHANGELOG.md` file.
 
 
-> The release job that runs on the `master` branch only creates the release in GitHub. The release job that runs on the new tag is the one that does the rest. 
+> The release job that runs on the `master` branch only creates the release in GitHub. The release job that runs on the new tag is the one that does the rest.
 
 
 ### Manual release from the develop branch (beta release)

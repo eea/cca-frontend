@@ -1,28 +1,47 @@
 version: "3"
 
 services:
-  frontend:
-    # build: .
-    image: eeacms/eea-website-frontend:develop
-    ports:
-    - "${FRONTEND:-3000}:3000"
+  # frontend:
+  #   # build: .
+  #   image: eeacms/eea-website-frontend:develop
+  #   ports:
+  #   - "${FRONTEND:-3000}:3000"
+  #   environment:
+  #     RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
+  #     RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
+  #   volumes:
+  #   - ./src/addons:/app/src/addons
+  #   depends_on:
+  #     - backend
+
+  memcached:
+    mem_limit: 73400320
+    image: memcached:1.5.12
     environment:
-      RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
-      RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
-    volumes:
-    - ./src/addons:/app/src/addons
-    depends_on:
-      - backend
+      TZ: Europe/Copenhagen
+    mem_reservation: 52428800
+    command:
+    - -m
+    - '2048'
+    labels:
+      io.rancher.scheduler.affinity:host_label_ne: reserved=yes
 
   backend:
     #build: ./eea-website-backend/
-    image: eeacms/eea-website-backend-devel
+    # image: eeacms/eea.docker.plone-climateadapt:v9.105
+    image: laszlocseh/climateadapt:10.0.0
     ports:
     - "${BACKEND:-8080}:8080"
-    environment:
-      SITE: "Plone"
     volumes:
-      - data:/data
-
-volumes:
-  data: {}
+      - ./data:/data
+      - ./backend/src:/plone/instance/src
+      - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
+    mem_limit: 4294967296
+    mem_reservation: 4294967296
+    environment:
+      SITE: "cca"
+      TZ: Europe/Copenhagen
+      SERVER_NAME: climate-adapt.eea.europa.eu
+***REMOVED***      CORS_ALLOW_ORIGIN: "http://localhost:3000"
+    depends_on:
+      - memcached
