@@ -92,3 +92,5 @@ src/addons/*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+docker-compose.override.yml
+backend/src

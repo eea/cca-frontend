@@ -3,6 +3,12 @@
         "paths": {
             "@eeacms/volto-cca-policy": [
                 "addons/volto-cca-policy/src"
+            ],
+            "@eeacms/volto-eea-design-system": [
+                "addons/volto-eea-design-system/src"
+            ],
+            "@eeacms/volto-eea-website-theme": [
+                "addons/volto-eea-website-theme/src"
             ]
         },
         "baseUrl": "src"
