@@ -1,14 +1,14 @@
 pipeline {
   environment {
-    RANCHER_STACKID = "1st2402"
-    RANCHER_ENVID = "1a140884"
-    GIT_NAME = "eea-website-frontend"
-    registry = "eeacms/eea-website-frontend"
-    template = "templates/eea-website-frontend"
+    RANCHER_STACKID = ""
+    RANCHER_ENVID = ""
+    GIT_NAME = "cca-hub-frontend"
+    registry = "eeacms/cca-hub-frontend"
+    template = "templates/volto-cca-hub"
     dockerImage = ''
     tagName = ''
-    SONARQUBE_TAG = 'prod-www.eea.europa.eu'
-    SONARQUBE_TAG_DEMO = 'demo-www.eea.europa.eu'
+    SONARQUBE_TAG = 'climate-adapt.eea.europa.eu-hub'
+    SONARQUBE_TAG_DEMO = ''
   }
 
   agent any
