@@ -35,6 +35,7 @@ services:
     volumes:
       - ./data:/data
       - ./backend/src:/plone/instance/src
+      - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
     mem_limit: 4294967296
     mem_reservation: 4294967296
     environment:
@@ -43,3 +44,5 @@ services:
       SERVER_NAME: climate-adapt.eea.europa.eu
       MARINE_PASS: P7n3BLvCerm7cx3B
       CORS_ALLOW_ORIGIN: "http://localhost:3000"
+    depends_on:
+      - memcached
