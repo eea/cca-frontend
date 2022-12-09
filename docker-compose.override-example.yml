@@ -1,4 +1,4 @@
-# services:
-#   backend:
-#     build: ./eea.docker.plone-climateadapt
-#     entrypoint: sh -c "tail -f /dev/null"
+services:
+  backend:
+    # build: ./eea.docker.plone-climateadapt
+    entrypoint: sh -c "tail -f /dev/null"
