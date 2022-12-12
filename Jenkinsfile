@@ -2,12 +2,12 @@ pipeline {
   environment {
     RANCHER_STACKID = ""
     RANCHER_ENVID = ""
-    GIT_NAME = "cca-hub-frontend"
-    registry = "eeacms/cca-hub-frontend"
-    template = "templates/volto-cca-hub"
+    GIT_NAME = "cca-frontend"
+    registry = "eeacms/cca-frontend"
+    template = "templates/volto-cca"
     dockerImage = ''
     tagName = ''
-    SONARQUBE_TAG = 'climate-adapt.eea.europa.eu-hub'
+    SONARQUBE_TAG = 'climate-adapt.eea.europa.eu'
     SONARQUBE_TAG_DEMO = ''
   }
 
