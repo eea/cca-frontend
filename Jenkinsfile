@@ -32,9 +32,9 @@ pipeline {
                 try {
                   sh '''docker pull eeacms/plone-backend; docker run --rm -d --name="$BUILD_TAG-eeacms-plone" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/plone-backend'''
                   sh '''docker pull eeacms/volto-project-ci; docker run -i --name="$BUILD_TAG-cypress-eeacms" --link $BUILD_TAG-plone-eeacms:plone -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" eeacms/volto-project-ci'''
-     
-                 # sh '''docker pull eeacms/eea-website-backend; docker run --rm -d --name="$BUILD_TAG-plone-eeacms" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/eea-website-backend'''
-                 # sh '''docker pull eeacms/volto-project-ci; docker run -i --name="$BUILD_TAG-cypress-eeacms" --link $BUILD_TAG-plone-eeacms:plone -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" eeacms/volto-project-ci'''
+
+                 // sh '''docker pull eeacms/eea-website-backend; docker run --rm -d --name="$BUILD_TAG-plone-eeacms" -e SITE="Plone" -e PROFILES="eea.kitkat:testing" eeacms/eea-website-backend'''
+                 // sh '''docker pull eeacms/volto-project-ci; docker run -i --name="$BUILD_TAG-cypress-eeacms" --link $BUILD_TAG-plone-eeacms:plone -e GIT_NAME=$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e DEPENDENCIES="$DEPENDENCIES" eeacms/volto-project-ci'''
                 } finally {
                   try {
                     sh '''rm -rf cypress-reports cypress-results'''
