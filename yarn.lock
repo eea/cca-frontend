@@ -2069,13 +2069,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.3.2"
+"@eeacms/volto-eea-website-theme@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.4.0"
   dependencies:
-    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-eea-design-system": ^1.0.0-alpha.8
     volto-subsites: "*"
-  checksum: 2d7d5dce23cef83df73738676b7b8af9bbdbcf8da7f9ad203aefa3c99513959dbf73f659bd158aef38ae2ae9a95e3d5e36098ce48ffb9a1712b6997ac0a32af0
+  checksum: a24f025280db1f643a543c7138ac8603773a41e746ed419a684cdc695481b3b93ac403136a409af4862f126e0a3469748b104b468d99367642e3105fa947eb5c
   languageName: node
   linkType: hard
 
@@ -8163,7 +8163,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.3
     "@eeacms/volto-eea-design-system": 1.0.0-alpha.5
     "@eeacms/volto-eea-kitkat": 10.3.0
-    "@eeacms/volto-eea-website-theme": 1.3.2
+    "@eeacms/volto-eea-website-theme": 1.4.0
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.3.0
     "@storybook/addon-actions": ^6.3.0
