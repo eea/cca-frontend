@@ -2046,9 +2046,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:10.4.0":
-  version: 10.4.0
-  resolution: "@eeacms/volto-eea-kitkat@npm:10.4.0"
+"@eeacms/volto-eea-kitkat@npm:10.5.0":
+  version: 10.5.0
+  resolution: "@eeacms/volto-eea-kitkat@npm:10.5.0"
   dependencies:
     "@eeacms/volto-accordion-block": 6.0.0
     "@eeacms/volto-banner": 3.0.1
@@ -2072,7 +2072,7 @@ __metadata:
     "@eeacms/volto-slate-footnote": 6.0.2
     "@eeacms/volto-slate-label": 0.4.4
     "@eeacms/volto-slate-metadata-mentions": 6.0.1
-    "@eeacms/volto-slate-zotero": 5.0.2
+    "@eeacms/volto-slate-zotero": 5.1.0
     "@eeacms/volto-statistic-block": 1.0.1
     "@eeacms/volto-tabs-block": 3.0.1
     "@eeacms/volto-tags-block": 1.0.2
@@ -2085,7 +2085,7 @@ __metadata:
     "@eeacms/volto-widgets-view": 4.0.1
     "@kitconcept/volto-blocks-grid": 5.1.1
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: ff68ba928133a5cb5f887f57597524fca9e857c6b3c12893a456ec358588adb92a82c7c17202865997401108d9e31e6ffc035a6a3e34708b623ce11701ab4b06
+  checksum: a01545dc609e3676eb9ecffc7102c83bac822e0e518adbfcbbb0c23f4f5087a44de220e6653221ec789982ffba67160846255416cf3c80369581fca913a4059f
   languageName: node
   linkType: hard
 
@@ -2197,12 +2197,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-slate-zotero@npm:5.0.2":
-  version: 5.0.2
-  resolution: "@eeacms/volto-slate-zotero@npm:5.0.2"
+"@eeacms/volto-slate-zotero@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@eeacms/volto-slate-zotero@npm:5.1.0"
   dependencies:
     "@eeacms/volto-slate-footnote": "*"
-  checksum: ab9f52e921ecf26ee2f4d70db36c1c433eb0532e9f0dbec0383f867689b38b19e87faf04d82bef1a2998135c3d8636680790c1284489b4f015ff9fdbda6920d6
+  checksum: 6325e3ecfc0a0d38299f1db13d84b3d3bd18cc20cfd5e983c5e41baedb73186114e10255e38e229de69b3da4fe894d0dc3e6979d5f99770d4d188bd5c2beaedd
   languageName: node
   linkType: hard
 
@@ -8196,7 +8196,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.3
     "@eeacms/volto-eea-design-system": 1.0.0-alpha.9
-    "@eeacms/volto-eea-kitkat": 10.4.0
+    "@eeacms/volto-eea-kitkat": 10.5.0
     "@eeacms/volto-eea-website-theme": 1.5.0
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.6.0
