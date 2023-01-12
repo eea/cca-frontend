@@ -50,6 +50,7 @@
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-eea-website-theme",
     "@eeacms/volto-cca-policy",
+    "@eeacms/volto-embed",
     "@eeacms/volto-eea-map"
   ],
   "jest": {
@@ -158,6 +159,7 @@
     "@eeacms/volto-eea-kitkat": "10.5.0",
     "@eeacms/volto-eea-map": "*",
     "@eeacms/volto-eea-website-theme": "1.5.0",
+    "@eeacms/volto-embed": "*",
     "@plone/volto": "16.6.0",
     "volto-subsites": "4.0.0"
   },
