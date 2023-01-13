@@ -2064,9 +2064,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:10.5.0":
-  version: 10.5.0
-  resolution: "@eeacms/volto-eea-kitkat@npm:10.5.0"
+"@eeacms/volto-eea-kitkat@npm:10.5.1":
+  version: 10.5.1
+  resolution: "@eeacms/volto-eea-kitkat@npm:10.5.1"
   dependencies:
     "@eeacms/volto-accordion-block": 6.0.0
     "@eeacms/volto-banner": 3.0.1
@@ -2103,7 +2103,7 @@ __metadata:
     "@eeacms/volto-widgets-view": 4.0.1
     "@kitconcept/volto-blocks-grid": 5.1.1
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: a01545dc609e3676eb9ecffc7102c83bac822e0e518adbfcbbb0c23f4f5087a44de220e6653221ec789982ffba67160846255416cf3c80369581fca913a4059f
+  checksum: b8d295288f046525be3e00c55bbff00c4b5adcd31a3eed840030de11f25fbfe5d9a36af799ed4682e2bf1e896c839e5cdf33ae5323f38a26baad87e470769dd0
   languageName: node
   linkType: hard
 
@@ -8225,7 +8225,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.4
     "@eeacms/volto-eea-design-system": 1.0.0-alpha.9
-    "@eeacms/volto-eea-kitkat": 10.5.0
+    "@eeacms/volto-eea-kitkat": 10.5.1
     "@eeacms/volto-eea-website-theme": 1.5.0
     "@eeacms/volto-embed": "*"
     "@plone/scripts": ^2.1.2
