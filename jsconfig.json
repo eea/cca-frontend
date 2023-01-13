@@ -9,6 +9,9 @@
             ],
             "@eeacms/volto-eea-website-theme": [
                 "addons/volto-eea-website-theme/src"
+            ],
+            "@eeacms/volto-embed": [
+                "addons/volto-embed/src"
             ]
         },
         "baseUrl": "src"
