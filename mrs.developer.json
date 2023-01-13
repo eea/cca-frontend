@@ -7,6 +7,14 @@
     "develop": true,
     "path": "src"
   },
+  "volto-embed": {
+    "url": "git@github.com:eea/volto-embed.git",
+    "https": "https://github.com/eea/volto-embed.git",
+    "package": "@eeacms/volto-embed",
+    "branch": "develop",
+    "develop": true,
+    "path": "src"
+  },
   "volto-matomo": {
     "url": "git@github.com:eea/volto-matomo.git",
     "https": "https://github.com/eea/volto-matomo.git",
