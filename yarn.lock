@@ -1989,10 +1989,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-call-to-action-block@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@eeacms/volto-call-to-action-block@npm:2.0.0"
-  checksum: 84eaf1687b0e9367c18e5124e03e6ee376e52044b50b8ae01fa2f00705571726fc4f32ce1708b13b237a41fff7b96cf923aca6c7f38ca3744aa9f3c174680d05
+"@eeacms/volto-call-to-action-block@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@eeacms/volto-call-to-action-block@npm:3.0.0"
+  checksum: df3ff907697741365c75b08b0e6f3ea4643d455d76ba5718411e6e3699261a93fe2d7f0b06c776510c5f07bb1d3721bb84fd03235ebe22f066c47e9d74cc8fa9
   languageName: node
   linkType: hard
 
@@ -2064,16 +2064,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:10.5.5":
-  version: 10.5.5
-  resolution: "@eeacms/volto-eea-kitkat@npm:10.5.5"
+"@eeacms/volto-eea-kitkat@npm:10.6.0":
+  version: 10.6.0
+  resolution: "@eeacms/volto-eea-kitkat@npm:10.6.0"
   dependencies:
     "@eeacms/volto-accordion-block": 6.0.0
     "@eeacms/volto-banner": 3.0.1
     "@eeacms/volto-block-divider": 5.0.0
     "@eeacms/volto-block-image-cards": 1.0.1
     "@eeacms/volto-block-style": 4.1.2
-    "@eeacms/volto-call-to-action-block": 2.0.0
+    "@eeacms/volto-call-to-action-block": 3.0.0
     "@eeacms/volto-columns-block": 5.2.0
     "@eeacms/volto-corsproxy": 3.0.1
     "@eeacms/volto-depiction": 1.0.1
@@ -2103,7 +2103,7 @@ __metadata:
     "@eeacms/volto-widgets-view": 4.0.1
     "@kitconcept/volto-blocks-grid": 5.1.1
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: 6ed48e3691bfba9f1fb143388770455ad540e46e37f9545529a030b98b6d37df5cc8286f4722f5f97022729a2723125cef47c80afb92c15135bb82565571677f
+  checksum: 839ab5734e907b4301dd03634dfaffa190d076c4d418e7960b2488185a20b65105ec48971fc0dc2a64094e2dc7206e27dc4af4cefdcc64eae916884fa70eaac9
   languageName: node
   linkType: hard
 
@@ -8225,7 +8225,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.4
     "@eeacms/volto-eea-design-system": 1.0.0-alpha.9
-    "@eeacms/volto-eea-kitkat": 10.5.5
+    "@eeacms/volto-eea-kitkat": 10.6.0
     "@eeacms/volto-eea-website-theme": 1.6.1
     "@eeacms/volto-embed": "*"
     "@plone/scripts": ^2.1.2
