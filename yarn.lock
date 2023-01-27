@@ -1961,9 +1961,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-block-image-cards@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@eeacms/volto-block-image-cards@npm:1.0.1"
+"@eeacms/volto-block-image-cards@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@eeacms/volto-block-image-cards@npm:1.0.2"
   dependencies:
     "@eeacms/volto-block-style": "*"
     "@eeacms/volto-object-widget": "*"
@@ -1975,7 +1975,7 @@ __metadata:
     classnames: 2.2.6
     react-loadable: 5.5.0
     uuid: 8.3.1
-  checksum: f98454da7fe47385068710aa6fceac368b95824a4613843a7ef552268125ebf8b8c1d3baf92e06d4924520d643652991faacd3b25b83933d2f487e563e3e7e0b
+  checksum: 3b1114cef37ef69f41e352c8af4eace97fc75807f148fc45c49c3d930d923f1ef0300c4064164b9e32faea57122e571dafd4144374d641d62a8ca78485411639
   languageName: node
   linkType: hard
 
@@ -1989,10 +1989,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-call-to-action-block@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@eeacms/volto-call-to-action-block@npm:3.0.0"
-  checksum: df3ff907697741365c75b08b0e6f3ea4643d455d76ba5718411e6e3699261a93fe2d7f0b06c776510c5f07bb1d3721bb84fd03235ebe22f066c47e9d74cc8fa9
+"@eeacms/volto-call-to-action-block@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@eeacms/volto-call-to-action-block@npm:3.0.1"
+  checksum: 34a721b03bfc1624e71a228350ef72208d9ba500f6f9930cee4c1b0d55dc80cec3d7fd95830589ceb1be0d58192c12f319e6fa09a5a53208b3e5625d19111ae4
   languageName: node
   linkType: hard
 
@@ -2064,22 +2064,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:10.6.0":
-  version: 10.6.0
-  resolution: "@eeacms/volto-eea-kitkat@npm:10.6.0"
+"@eeacms/volto-eea-kitkat@npm:10.6.1":
+  version: 10.6.1
+  resolution: "@eeacms/volto-eea-kitkat@npm:10.6.1"
   dependencies:
     "@eeacms/volto-accordion-block": 6.0.0
     "@eeacms/volto-banner": 3.0.1
     "@eeacms/volto-block-divider": 5.0.0
-    "@eeacms/volto-block-image-cards": 1.0.1
+    "@eeacms/volto-block-image-cards": 1.0.2
     "@eeacms/volto-block-style": 4.1.2
-    "@eeacms/volto-call-to-action-block": 3.0.0
+    "@eeacms/volto-call-to-action-block": 3.0.1
     "@eeacms/volto-columns-block": 5.2.0
     "@eeacms/volto-corsproxy": 3.0.1
     "@eeacms/volto-depiction": 1.0.1
     "@eeacms/volto-description-block": 1.0.1
     "@eeacms/volto-group-block": 5.0.1
-    "@eeacms/volto-hero-block": 3.0.0
+    "@eeacms/volto-hero-block": 3.0.1
     "@eeacms/volto-listing-block": 2.5.0
     "@eeacms/volto-matomo": 3.0.1
     "@eeacms/volto-metadata-block": 5.0.1
@@ -2103,7 +2103,7 @@ __metadata:
     "@eeacms/volto-widgets-view": 4.0.1
     "@kitconcept/volto-blocks-grid": 5.1.1
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: 839ab5734e907b4301dd03634dfaffa190d076c4d418e7960b2488185a20b65105ec48971fc0dc2a64094e2dc7206e27dc4af4cefdcc64eae916884fa70eaac9
+  checksum: 9cf35e7a22ff74398923f132e655395c099a48db93bb050ba947a081f35a80de4004c64e2911607777d399dfada0bea4e34dcb4c0e43767d343dba2cb9a9473f
   languageName: node
   linkType: hard
 
@@ -2135,12 +2135,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-hero-block@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@eeacms/volto-hero-block@npm:3.0.0"
+"@eeacms/volto-hero-block@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@eeacms/volto-hero-block@npm:3.0.1"
   dependencies:
     "@eeacms/volto-object-widget": "*"
-  checksum: caabcbff36a9c588399e11910fc66841e3395e3f89cd4676f87211bb768447a2e76afa5a52dbcecfa5f6cd4ce07893f9fcb7bcae2c54e799c188fca5d938e587
+  checksum: 6e0780e5dda470578a587e194df3b0461e069f882604ade8986cb6f60586eb06f40fe880ad37c0dd622904b73f2a9954174a6e97056b1dff3c497bff2091deb2
   languageName: node
   linkType: hard
 
@@ -8225,7 +8225,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.4
     "@eeacms/volto-eea-design-system": 1.0.0-alpha.9
-    "@eeacms/volto-eea-kitkat": 10.6.0
+    "@eeacms/volto-eea-kitkat": 10.6.1
     "@eeacms/volto-eea-website-theme": 1.6.2
     "@eeacms/volto-embed": "*"
     "@plone/scripts": ^2.1.2
