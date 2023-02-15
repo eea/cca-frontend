@@ -351,6 +351,14 @@
     "develop": false,
     "path": "src"
   },
+  "volto-eea-map": {
+    "url": "git@github.com:eea/volto-eea-map.git",
+    "https": "https://github.com/eea/volto-eea-map.git",
+    "package": "@eeacms/volto-eea-map",
+    "branch": "develop",
+    "develop": true,
+    "path": "src"
+  },
   "volto-openlayers-map": {
     "url": "git@github.com:eea/volto-openlayers-map.git",
     "https": "https://github.com/eea/volto-openlayers-map.git",
