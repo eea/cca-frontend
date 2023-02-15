@@ -45,12 +45,6 @@
     "src/addons/*"
   ],
   "addons": [
-    "volto-subsites",
-    "@eeacms/volto-eea-kitkat",
-    "@eeacms/volto-eea-design-system",
-    "@eeacms/volto-eea-website-theme",
-    "@eeacms/volto-eea-map",
-    "@eeacms/volto-embed",
     "@eeacms/volto-cca-policy"
   ],
   "jest": {
