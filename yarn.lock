@@ -2235,18 +2235,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-hero-block@4.0.0, @eeacms/volto-hero-block@workspace:src/addons/volto-hero-block":
-  version: 0.0.0-use.local
-  resolution: "@eeacms/volto-hero-block@workspace:src/addons/volto-hero-block"
+"@eeacms/volto-hero-block@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@eeacms/volto-hero-block@npm:4.0.0"
   dependencies:
-    "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-object-widget": "*"
     "@eeacms/volto-widget-theme-picker": ^1.0.1
-    "@plone/scripts": "*"
-    babel-plugin-transform-class-properties: ^6.24.1
-    md5: ^2.3.0
-  languageName: unknown
-  linkType: soft
+  checksum: 310faf4e5fbc321dc5d14a35abf8e5b77f9383e9d6b8343e87baa62543d279c306e3f4558f07000ab3defe18ecd20730953bf82cfb30fb7826f1070fe1247365
+  languageName: node
+  linkType: hard
 
 "@eeacms/volto-listing-block@npm:3.0.0":
   version: 3.0.0
