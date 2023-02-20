@@ -15,11 +15,11 @@ services:
   #     - backend
 
   memcached:
-    mem_limit: 73400320
+    # mem_limit: 73400320
     image: memcached:1.5.12
     environment:
       TZ: Europe/Copenhagen
-    mem_reservation: 52428800
+    # mem_reservation: 52428800
     command:
     - -m
     - '2048'
@@ -36,8 +36,8 @@ services:
       - ./data:/data
       - ./backend/src:/plone/instance/src
       - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
-    mem_limit: 4294967296
-    mem_reservation: 4294967296
+    # mem_limit: 4294967296
+    # mem_reservation: 4294967296
     environment:
       SITE: "cca"
       TZ: Europe/Copenhagen
