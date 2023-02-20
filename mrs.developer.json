@@ -235,7 +235,7 @@
     "url": "git@github.com:eea/volto-eea-website-theme.git",
     "https": "https://github.com/eea/volto-eea-website-theme.git",
     "package": "@eeacms/volto-eea-website-theme",
-    "branch": "develop",
+    "branch": "subsites",
     "develop": true,
     "path": "src"
   },
