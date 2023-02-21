@@ -363,7 +363,7 @@
     "url": "git@github.com:eea/volto-openlayers-map.git",
     "https": "https://github.com/eea/volto-openlayers-map.git",
     "package": "@eeacms/volto-openlayers-map",
-    "branch": "use_map_context",
+    "branch": "develop",
     "develop": true,
     "path": "src"
   }
