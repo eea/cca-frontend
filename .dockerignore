@@ -23,3 +23,5 @@ cypress*.json
 docker-compose.yml
 Jenkinsfile
 start_.sh
+data
+*.tgz
