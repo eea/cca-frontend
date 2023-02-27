@@ -12,6 +12,12 @@
             ],
             "@eeacms/volto-embed": [
                 "addons/volto-embed/src"
+            ],
+            "@eeacms/volto-openlayers-map": [
+                "addons/volto-openlayers-map/src"
+            ],
+            "@eeacms/volto-eea-map": [
+                "addons/volto-eea-map/src"
             ]
         },
         "baseUrl": "src"
