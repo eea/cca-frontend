@@ -1947,10 +1947,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-anchors@npm:0.1.4":
-  version: 0.1.4
-  resolution: "@eeacms/volto-anchors@npm:0.1.4"
-  checksum: b3112886f6de30ef0ff45b5c70c17d94e7258c1ef6ab4a452adcf056fcbd1a595575f3584784adcfd3b8161b54776d059954497f3575fc6132ce8077a9634adf
+"@eeacms/volto-anchors@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@eeacms/volto-anchors@npm:0.1.5"
+  dependencies:
+    github-slugger: 1.4.0
+  checksum: e9eb03c731ffc1efe973328557e79692c7542386a1bf86a7e866a8af1305bacff2cf1aebd0deffe06cad95e64208a0a37b6d7b13849b6af5e0bc258b74883db0
   languageName: node
   linkType: hard
 
@@ -2087,12 +2089,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:12.0.2":
-  version: 12.0.2
-  resolution: "@eeacms/volto-eea-kitkat@npm:12.0.2"
+"@eeacms/volto-eea-kitkat@npm:12.0.3":
+  version: 12.0.3
+  resolution: "@eeacms/volto-eea-kitkat@npm:12.0.3"
   dependencies:
     "@eeacms/volto-accordion-block": 7.0.0
-    "@eeacms/volto-anchors": 0.1.4
+    "@eeacms/volto-anchors": 0.1.5
     "@eeacms/volto-banner": 3.0.1
     "@eeacms/volto-block-divider": 6.0.0
     "@eeacms/volto-block-image-cards": 1.0.2
@@ -2128,7 +2130,7 @@ __metadata:
     "@eeacms/volto-widgets-view": 4.0.1
     "@kitconcept/volto-blocks-grid": 5.1.1
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: 684f874febe212192ae6db7614059e1e95871b8427b7774ffbc2d842fbdce6d08b3d793ab944b21e7ccd55ea1b61187c5d2badcd1f4797012c51de297fc1e8cf
+  checksum: 09bfd0d0031b3b34141e427938ce56c979b550c8600d57721c9fd811e6097148bb8545b91bcfeba2a036fa6b3779d4bcb371b2d1fd4456c3366aee4b9f1f01cd
   languageName: node
   linkType: hard
 
@@ -8319,7 +8321,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.5
     "@eeacms/volto-eea-design-system": 1.0.0-beta.3
-    "@eeacms/volto-eea-kitkat": 12.0.2
+    "@eeacms/volto-eea-kitkat": 12.0.3
     "@eeacms/volto-eea-website-theme": 1.9.1
     "@eeacms/volto-embed": 5.0.1
     "@eeacms/volto-openlayers-map": "*"
@@ -13156,7 +13158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"github-slugger@npm:^1.0.0":
+"github-slugger@npm:1.4.0, github-slugger@npm:^1.0.0":
   version: 1.4.0
   resolution: "github-slugger@npm:1.4.0"
   checksum: 4f52e7a21f5c6a4c5328f01fe4fe13ae8881fea78bfe31f9e72c4038f97e3e70d52fb85aa7633a52c501dc2486874474d9abd22aa61cbe9b113099a495551c6b
