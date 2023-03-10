@@ -2137,13 +2137,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.9.2":
-  version: 1.9.2
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.9.2"
+"@eeacms/volto-eea-website-theme@npm:1.9.3":
+  version: 1.9.3
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.9.3"
   dependencies:
-    "@eeacms/volto-eea-design-system": ^1.0.0-alpha.15
+    "@eeacms/volto-eea-design-system": ^1.0.0-beta.5
     volto-subsites: "*"
-  checksum: bb7f7dd67381fbc155fb6976285ceba082c905447c2bf56d4cea960164932984dcbc3c9ee110ef01850cfc79e50dc3e049c29358039611032fa1ea7693b14579
+  checksum: f2e582deddb4316c331f09fd28f4561422a1fae4345c6b0a7c74aadf1ee986ae741fc08cefc3be8e6e69fc9894c6b8b18335b2e29bff92902752a6a44b3a26fd
   languageName: node
   linkType: hard
 
@@ -8334,7 +8334,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.7
     "@eeacms/volto-eea-design-system": 1.0.0-beta.4
     "@eeacms/volto-eea-kitkat": 12.1.0
-    "@eeacms/volto-eea-website-theme": 1.9.2
+    "@eeacms/volto-eea-website-theme": 1.9.3
     "@eeacms/volto-embed": 5.0.1
     "@eeacms/volto-openlayers-map": 0.2.2
     "@plone/scripts": ^2.1.2
