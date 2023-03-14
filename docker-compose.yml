@@ -48,6 +48,3 @@ services:
 
   converter:
     image: eea/blocks-conversion-tool
-    ports:
-      - "8000:8000"
-
