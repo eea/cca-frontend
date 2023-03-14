@@ -46,3 +46,9 @@ services:
       CORS_ALLOW_ORIGIN: "http://localhost:3000"
     depends_on:
       - memcached
+
+  converter:
+    image: eea/blocks-conversion-tool
+    ports:
+      - "8000:8000"
+

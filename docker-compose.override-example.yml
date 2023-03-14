@@ -2,3 +2,8 @@ services:
   backend:
     build: ./eea.docker.plone-climateadapt
     entrypoint: sh -c "tail -f /dev/null"
+
+  converter:
+    build: ./converter
+    ports:
+      - "8000:8000"
