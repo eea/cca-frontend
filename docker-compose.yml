@@ -34,7 +34,7 @@ services:
     - "${BACKEND:-8080}:8080"
     volumes:
       - ./data:/data
-      # - ./backend/src:/plone/instance/src
+      - ./backend/src:/plone/instance/src
       # - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
     # mem_limit: 4294967296
     # mem_reservation: 4294967296
