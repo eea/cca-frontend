@@ -2021,13 +2021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.8":
-  version: 0.1.8
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.8"
+"@eeacms/volto-cca-policy@npm:0.1.9":
+  version: 0.1.9
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.9"
   dependencies:
-    "@eeacms/volto-eea-design-system": 1.0.0-beta.4
+    "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-openlayers-map": "*"
-  checksum: 4798adc2f2511868858d5f6c6d18a6fdad40c28af3e705fe149b893304ebbeefee8bb408341eb75180c1365bc07bf7af7bffe4bcebec43e138621c29a88235de
+  checksum: 56088fbd346eeba38dac717d7446c8b93574c4c18451f259e7b0dff916777dd0b2518af194dd83fb89538a4b4c841fe90a70938488c1339ce89b775daf01a1ad
   languageName: node
   linkType: hard
 
@@ -2079,16 +2079,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.0.0-beta.4":
-  version: 1.0.0-beta.4
-  resolution: "@eeacms/volto-eea-design-system@npm:1.0.0-beta.4"
+"@eeacms/volto-eea-design-system@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@eeacms/volto-eea-design-system@npm:1.0.2"
   dependencies:
     "@eeacms/volto-corsproxy": "*"
+    "@fontsource/roboto": 4.5.8
     react-countup: ^6.3.0
+    react-lazy-load-image-component: 1.5.6
     react-slick: ^0.28.1
     remixicon: 2.5.0
     slick-carousel: ^1.8.1
-  checksum: fcac2a1a2fa5f34d7270fba6d65919de7c942fc0ca961a6920090ffb8f35f1d5fb460537229f96b0f8adcd25f17b3e3afddb5985c53f2e9059c7dc780ab6c533
+  checksum: 3b7d3704b1811a20a5e6ecbdee3524201e5dd20da27859660e6f1baa21f706edd3c4c0803c28f139b98009b3f4ba4093fcc6e72707e7b4ad8a6f9e71f9f7999d
   languageName: node
   linkType: hard
 
@@ -2665,6 +2667,13 @@ __metadata:
     react: ^16.8.0 || ^17
     react-dom: ^16.8.0 || ^17
   checksum: 030380d5ea00234e5aa7e014d4e1d268a3dee2d59a2564e4d6a4083cab9ece84f3f3643a8474b53a18a855a0894e91d33d0e0d756008046d59e750603b5b1557
+  languageName: node
+  linkType: hard
+
+"@fontsource/roboto@npm:4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/roboto@npm:4.5.8"
+  checksum: 460b6de2c9f7a172192c3f5bdd3aa11f78f0b6660dca9dc2b9d8207272b50c55b5a8f2da68e11e7fbaf44c7d3cf4191030eecce9def79fab75d4cc1de39754e2
   languageName: node
   linkType: hard
 
@@ -8331,8 +8340,8 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.8
-    "@eeacms/volto-eea-design-system": 1.0.0-beta.4
+    "@eeacms/volto-cca-policy": 0.1.9
+    "@eeacms/volto-eea-design-system": 1.0.2
     "@eeacms/volto-eea-kitkat": 13.0.0
     "@eeacms/volto-eea-website-theme": 1.11.2
     "@eeacms/volto-embed": 5.0.1
@@ -21043,7 +21052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-lazy-load-image-component@npm:^1.4.0":
+"react-lazy-load-image-component@npm:1.5.6, react-lazy-load-image-component@npm:^1.4.0":
   version: 1.5.6
   resolution: "react-lazy-load-image-component@npm:1.5.6"
   dependencies:
