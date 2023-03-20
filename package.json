@@ -155,7 +155,7 @@
     "@eeacms/volto-widget-theme-picker": "1.0.3"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.1.8",
+    "@eeacms/volto-cca-policy": "0.1.9",
     "@eeacms/volto-eea-design-system": "1.0.2",
     "@eeacms/volto-eea-kitkat": "13.0.0",
     "@eeacms/volto-eea-website-theme": "1.11.2",
