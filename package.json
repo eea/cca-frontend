@@ -159,13 +159,13 @@
     "@eeacms/volto-workflow-progress": "3.0.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.1.10",
+    "@eeacms/volto-cca-policy": "0.1.11",
+    "@eeacms/volto-editing-progress": "0.1.8",
     "@eeacms/volto-eea-design-system": "1.0.2",
     "@eeacms/volto-eea-kitkat": "13.0.0",
     "@eeacms/volto-eea-website-theme": "1.11.2",
     "@eeacms/volto-embed": "5.0.2",
     "@eeacms/volto-openlayers-map": "0.2.2",
-    "@eeacms/volto-editing-progress": "0.1.8",
     "@eeacms/volto-workflow-progress": "3.0.1",
     "@plone/volto": "16.6.0",
     "volto-subsites": "4.0.0"
