@@ -2447,13 +2447,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-workflow-progress@npm:3.0.1":
-  version: 3.0.1
-  resolution: "@eeacms/volto-workflow-progress@npm:3.0.1"
-  checksum: d03e26dd58ec3501fa1025d63ff927e7fd3fe80ce824a3808f8a00f8eb6a248d3afbe77da4cd7367ec777cfb762ca3df5fa3bff52ac4761a0c01903e40c317a1
-  languageName: node
-  linkType: hard
-
 "@emotion/babel-plugin@npm:^11.10.0":
   version: 11.10.2
   resolution: "@emotion/babel-plugin@npm:11.10.2"
@@ -8585,7 +8578,6 @@ __metadata:
     "@eeacms/volto-eea-website-theme": 1.11.2
     "@eeacms/volto-embed": 5.0.2
     "@eeacms/volto-openlayers-map": 0.2.2
-    "@eeacms/volto-workflow-progress": 3.0.1
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.6.0
     "@storybook/addon-actions": ^6.3.0
