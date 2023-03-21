@@ -2079,13 +2079,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-editing-progress@npm:0.1.8":
-  version: 0.1.8
-  resolution: "@eeacms/volto-editing-progress@npm:0.1.8"
-  checksum: 6f81f62f77e07fefb71876a0983641b1c39a8e55e074ead3bbc0a1a26169f1a86f6bd9e2834391cabcc83e78bbb6d4b948a49d9a31781ce25fccaba27ce03e4c
-  languageName: node
-  linkType: hard
-
 "@eeacms/volto-eea-design-system@npm:1.0.2":
   version: 1.0.2
   resolution: "@eeacms/volto-eea-design-system@npm:1.0.2"
@@ -8346,7 +8339,6 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-cca-policy": 0.1.12
-    "@eeacms/volto-editing-progress": 0.1.8
     "@eeacms/volto-eea-design-system": 1.0.2
     "@eeacms/volto-eea-kitkat": 13.0.0
     "@eeacms/volto-eea-website-theme": 1.11.2
