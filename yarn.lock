@@ -2021,13 +2021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.10"
+"@eeacms/volto-cca-policy@npm:0.1.11":
+  version: 0.1.11
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.11"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-openlayers-map": "*"
-  checksum: 9accb47749e629a447ef2214c189d9a90f89be3fd3d174cfd708442557cb12ec322deaa9492ed6d055597f417f505d618dcafc1d66bd56159380a8e532989077
+  checksum: 05b00be8b29528940aecbcb29d1af6176764e5f1f12dfb40017a8984adad233345bf0dde27dd5feb6c94d633cc70587d734095283d4bbf80bab967eed1a85c67
   languageName: node
   linkType: hard
 
@@ -2076,6 +2076,13 @@ __metadata:
   version: 1.0.1
   resolution: "@eeacms/volto-description-block@npm:1.0.1"
   checksum: 9c71693ac26c666f8e1e1883390b8b424774fad8bc3f669461dd980cf2e6c7371d70e778df10be9c2ff91d5ddd8b3435f1047672eac1388ceb43f8a69dbe941d
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-editing-progress@npm:0.1.8":
+  version: 0.1.8
+  resolution: "@eeacms/volto-editing-progress@npm:0.1.8"
+  checksum: 6f81f62f77e07fefb71876a0983641b1c39a8e55e074ead3bbc0a1a26169f1a86f6bd9e2834391cabcc83e78bbb6d4b948a49d9a31781ce25fccaba27ce03e4c
   languageName: node
   linkType: hard
 
@@ -2392,6 +2399,13 @@ __metadata:
   version: 4.0.1
   resolution: "@eeacms/volto-widgets-view@npm:4.0.1"
   checksum: 0bec6c78eebfc6af6f2ebfe7913f08d72dced254d39abebaf591d7714baeb0622cd416462724d553fd275da008a9c3d248bb5c141baa3cdd24572b4f6250cdb9
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-workflow-progress@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@eeacms/volto-workflow-progress@npm:3.0.1"
+  checksum: d03e26dd58ec3501fa1025d63ff927e7fd3fe80ce824a3808f8a00f8eb6a248d3afbe77da4cd7367ec777cfb762ca3df5fa3bff52ac4761a0c01903e40c317a1
   languageName: node
   linkType: hard
 
@@ -8351,12 +8365,14 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.10
+    "@eeacms/volto-cca-policy": 0.1.11
+    "@eeacms/volto-editing-progress": 0.1.8
     "@eeacms/volto-eea-design-system": 1.0.2
     "@eeacms/volto-eea-kitkat": 13.0.0
     "@eeacms/volto-eea-website-theme": 1.11.2
     "@eeacms/volto-embed": 5.0.2
     "@eeacms/volto-openlayers-map": 0.2.2
+    "@eeacms/volto-workflow-progress": 3.0.1
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.6.0
     "@storybook/addon-actions": ^6.3.0
