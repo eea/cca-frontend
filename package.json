@@ -50,6 +50,8 @@
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-eea-website-theme",
+    "@eeacms/volto-workflow-progress",
+    "@eeacms/volto-editing-progress",
     "@eeacms/volto-cca-policy",
     "volto-subsites"
   ],
@@ -152,7 +154,9 @@
   },
   "resolutions": {
     "@eeacms/volto-eea-design-system": "1.0.2",
-    "@eeacms/volto-widget-theme-picker": "1.0.3"
+    "@eeacms/volto-widget-theme-picker": "1.0.3",
+    "@eeacms/volto-editing-progress": "0.1.8",
+    "@eeacms/volto-workflow-progress": "3.0.1"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.1.10",
@@ -161,6 +165,8 @@
     "@eeacms/volto-eea-website-theme": "1.11.2",
     "@eeacms/volto-embed": "5.0.2",
     "@eeacms/volto-openlayers-map": "0.2.2",
+    "@eeacms/volto-editing-progress": "0.1.8",
+    "@eeacms/volto-workflow-progress": "3.0.1",
     "@plone/volto": "16.6.0",
     "volto-subsites": "4.0.0"
   },
