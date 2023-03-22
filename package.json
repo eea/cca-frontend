@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -50,6 +50,7 @@
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-eea-website-theme",
+    "@eeacms/volto-workflow-progress",
     "@eeacms/volto-cca-policy",
     "volto-subsites"
   ],
@@ -152,6 +153,7 @@
   },
   "resolutions": {
     "@eeacms/volto-eea-design-system": "1.0.2",
+    "@eeacms/volto-workflow-progress": "3.0.1",
     "@eeacms/volto-widget-theme-picker": "1.0.3"
   },
   "dependencies": {
@@ -161,6 +163,7 @@
     "@eeacms/volto-eea-website-theme": "1.11.2",
     "@eeacms/volto-embed": "5.0.2",
     "@eeacms/volto-openlayers-map": "0.2.2",
+    "@eeacms/volto-workflow-progress": "3.0.1",
     "@plone/volto": "16.6.0",
     "volto-subsites": "4.0.0"
   },
