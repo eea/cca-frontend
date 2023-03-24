@@ -2139,13 +2139,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.11.2":
-  version: 1.11.2
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.11.2"
+"@eeacms/volto-eea-website-theme@npm:1.11.3":
+  version: 1.11.3
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.11.3"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     volto-subsites: "*"
-  checksum: 36acc39d0451869d1dd4967bcc14cb5374b6f1cdec27b298f7caf9709365c837ec954ffc190dce65bf2a48f5aab12b7e493b053f9f0318f58cf5f01d0d145739
+  checksum: 1ef7c4b0127264f4452ee3bb0f281c2366ad500f94d39d32c03a5beb54d8f5983e0b701f1bb917a45e0fb6849c39d2ab99bb460caddb1933c8001953d4fd901b
   languageName: node
   linkType: hard
 
@@ -8341,7 +8341,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.14
     "@eeacms/volto-eea-design-system": 1.0.2
     "@eeacms/volto-eea-kitkat": 13.0.0
-    "@eeacms/volto-eea-website-theme": 1.11.2
+    "@eeacms/volto-eea-website-theme": 1.11.3
     "@eeacms/volto-embed": 5.0.2
     "@eeacms/volto-openlayers-map": 0.2.2
     "@eeacms/volto-workflow-progress": 3.0.1
