@@ -1,6 +1,8 @@
 from dataclasses import dataclass
+from typing import Any, Dict
 
 from starlite import LoggingConfig, Starlite, get, post
+from starlite.status_codes import HTTP_200_OK
 
 from .blocks import text_to_blocks
 from .html2slate import text_to_slate
@@ -9,6 +11,11 @@ from .html2slate import text_to_slate
 @dataclass
 class HTML:
     html: str
+
+
+@dataclass
+class Response:
+    data: Any
 
 
 @get(path="/healthcheck")
@@ -22,10 +29,11 @@ def html(data: HTML) -> str:
     return {"data": text_to_slate(html)}
 
 
-@post(path="/toblocks")
-def toblocks(data: HTML) -> str:
+@post(path="/toblocks", status_code=HTTP_200_OK)
+def toblocks(data: HTML) -> Dict:
     html = data.html
-    return {"data": text_to_blocks(html)}
+    data = text_to_blocks(html)
+    return {"data": data}
 
 
 logging_config = LoggingConfig(
