@@ -9,4 +9,4 @@ services:
       - ./converter/app:/app/app
     ports:
       - "8000:8000"
-    # entrypoint: sh -c "tail -f /dev/null"
+    entrypoint: sh -c "tail -f /dev/null"

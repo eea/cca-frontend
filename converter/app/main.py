@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 
-from starlite import Starlite, get, post
+from starlite import LoggingConfig, Starlite, get, post
+
+from .blocks import text_to_blocks
 from .html2slate import text_to_slate
 
 
@@ -20,6 +22,23 @@ def html(data: HTML) -> str:
     return {"data": text_to_slate(html)}
 
 
+@post(path="/toblocks")
+def toblocks(data: HTML) -> str:
+    html = data.html
+    return {"data": text_to_blocks(html)}
+
+
+logging_config = LoggingConfig(
+    loggers={
+        "app": {
+            "level": "INFO",
+            "handlers": ["queue_listener"],
+        }
+    }
+)
+
 app = Starlite(
-    route_handlers=[health_check, html],
+    route_handlers=[health_check, html, toblocks],
+    logging_config=logging_config,
+    debug=True,
 )
