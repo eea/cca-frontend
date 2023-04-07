@@ -23,6 +23,8 @@ ACCEPTED_TAGS = [  # valid volto-slate elements
     "sup",
     "u",
     "ul",
+
+    "voltoblock",        # used for conversions
 ]
 
 DEFAULT_BLOCK_TYPE = "p"

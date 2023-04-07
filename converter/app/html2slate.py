@@ -288,11 +288,6 @@ class HTML2Slate(object):
         return self.handle_fallback(node)
 
     def deserialize_children(self, node):
-        """deserialize_children.
-
-        :param node:
-        """
-
         res = []
 
         for child in node.children:
@@ -305,10 +300,6 @@ class HTML2Slate(object):
         return res
 
     def handle_tag_a(self, node):
-        """handle_tag_a.
-
-        :param node:
-        """
         link = node["href"] if "href" in node.attrs else None
 
         element = {
@@ -320,18 +311,17 @@ class HTML2Slate(object):
 
         return element
 
-    def handle_tag_br(self, node):
-        """handle_tag_br.
+    def handle_tag_voltoblock(self, node):
+        element = {
+            "type": "voltoblock",
+            "data": json.loads(node.attrs['data-voltoblock'])
+        }
+        return element
 
-        :param node:
-        """
+    def handle_tag_br(self, node):
         return {"text": "\n"}
 
     def handle_block(self, node):
-        """handle_block.
-
-        :param node:
-        """
         return {"type": node.name, "children": self.deserialize_children(node)}
 
     def handle_tag_b(self, node):
@@ -339,10 +329,6 @@ class HTML2Slate(object):
         return self.handle_block(node)
 
     def handle_slate_data_element(self, node):
-        """handle_slate_data_element.
-
-        :param node:
-        """
         data = node["data-slate-data"]
         element = json.loads(data)
         element["children"] = self.deserialize_children(node)
@@ -380,10 +366,6 @@ class HTML2Slate(object):
 
 
 def text_to_slate(text):
-    """text_to_slate.
-
-    :param text:
-    """
     return HTML2Slate().to_slate(text)
 
 

@@ -33,8 +33,8 @@ def make_tab_block(tabs):
 
 
 def block_tag(data, soup):
-    element = soup.new_tag('block')
-    element.string = json.dumps(data)
+    element = soup.new_tag('voltoblock')
+    element['data-voltoblock'] = json.dumps(data)
 
     return element
 
@@ -58,7 +58,7 @@ def convert_tabs(soup):
                 div_content.find_all(
                     "div", {"id": tab_id}, limit=1)[0]
             )
-            logger.info("tabs %s", tab_blocks)
+            # logger.info("tabs %s", tab_blocks)
 
             tab_structure.append(
                 {
@@ -68,8 +68,8 @@ def convert_tabs(soup):
                 })
 
         data = make_tab_block(tab_structure)
+        ul.replace_with(block_tag(data, soup))  # no need to decompose
         div_content.decompose()
-        ul.replace_with(block_tag(data, soup))
 
 
 preprocessors = [
@@ -86,21 +86,23 @@ def text_to_blocks(text):
     for proc in preprocessors:
         proc(soup)
 
-    text = str(soup)
+    new_text = str(soup)
 
-    slate = text_to_slate(text)
+    slate = text_to_slate(new_text)
 
-    return convert_slate_to_blocks(slate)
+    blocks = convert_slate_to_blocks(slate)
+    return blocks
 
 
 def convert_slate_to_blocks(slate):
-    blocks = [[str(uuid4()), convert_block(block)] for block in slate]
-    print('blocks', blocks)
+    blocks = [[str(uuid4()), convert_block(paragraph)] for paragraph in slate]
     return blocks
 
 
 def convert_block(block):
     # TODO: do the plaintext
     # TODO: detect replaced blocks
+    if block.get('type') == 'voltoblock':
+        return block['data']
 
     return {"@type": "slate", "value": [block], "plaintext": ""}
