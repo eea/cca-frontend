@@ -311,6 +311,15 @@ class HTML2Slate(object):
 
         return element
 
+    def handle_tag_img(self, node):
+        url = node.attrs.get('src', '')
+        # todo: handle align, alt
+        return {
+            "type": "img",
+            "url": url,
+            "children": [{"text": ""}]
+        }
+
     def handle_tag_voltoblock(self, node):
         element = {
             "type": "voltoblock",

@@ -2,11 +2,11 @@ import json
 import logging
 from uuid import uuid4
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup
 
 from .html2slate import text_to_slate
 
-logger = logging.getLogger("app")
+logger = logging.getLogger()
 
 
 def make_tab_block(tabs):
@@ -81,6 +81,7 @@ def convert_tabs(soup):
 
 
 def convert_iframe(soup):
+    # TODO: also apply the height
     iframes = soup.find_all("iframe")
 
     for tag in iframes:
@@ -118,7 +119,7 @@ def convert_slate_to_blocks(slate):
 
 def convert_block(block):
     # TODO: do the plaintext
-    # TODO: detect replaced blocks
+
     if block.get('type') == 'voltoblock':
         return block['data']
 

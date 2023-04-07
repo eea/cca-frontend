@@ -24,6 +24,7 @@ ACCEPTED_TAGS = [  # valid volto-slate elements
     "u",
     "ul",
 
+    "img",
     "voltoblock",        # used for conversions
 ]
 
