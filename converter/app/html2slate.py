@@ -236,6 +236,16 @@ def is_element(node):
     return isinstance(node, Tag)
 
 
+def style_to_object(text):
+    out = {}
+
+    for pair in [x.strip() for x in text.split(';') if x.strip()]:
+        k, v = pair.split(':', 1)
+        out[k.strip()] = v.strip()
+
+    return out
+
+
 class HTML2Slate(object):
     """A parser for HTML to slate conversion
 
@@ -314,6 +324,8 @@ class HTML2Slate(object):
     def handle_tag_img(self, node):
         url = node.attrs.get('src', '')
         # todo: handle align, alt
+        # TODO: just for testing, I'm missing the blobs
+        url = "/fallback.png/@@images/image/preview"
         return {
             "type": "img",
             "url": url,
@@ -335,6 +347,18 @@ class HTML2Slate(object):
 
     def handle_tag_b(self, node):
         # TO DO: implement <b> special cases
+        return self.handle_block(node)
+
+    def handle_tag_p(self, node):
+        # TO DO: implement <b> special cases
+        style = node.get('style', '')
+        styles = style_to_object(style)
+        if styles.get('text-align') == 'center':
+            return {
+                "type": 'p',
+                "children": self.deserialize_children(node),
+                "styleName": "text-center"
+            }
         return self.handle_block(node)
 
     def handle_slate_data_element(self, node):
