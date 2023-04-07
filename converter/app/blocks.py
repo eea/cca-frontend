@@ -2,7 +2,7 @@ import json
 import logging
 from uuid import uuid4
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from .html2slate import text_to_slate
 
@@ -16,6 +16,7 @@ def make_tab_block(tabs):
     for i, tab in enumerate(tabs):
         blocks[block_ids[i]] = {
             "@type": "tab",
+            "title": tab['title'],
             "blocks": dict(tab['content']),
             "blocks_layout": {"items": [b[0] for b in tab['content']]}
         }
@@ -32,7 +33,15 @@ def make_tab_block(tabs):
     return data
 
 
-def block_tag(data, soup):
+_tag = None
+
+
+def block_tag(data, soup_or_tag):
+    if soup_or_tag.parent:
+        soup = list(soup_or_tag.parents)[-1]
+    else:
+        soup = soup_or_tag
+
     element = soup.new_tag('voltoblock')
     element['data-voltoblock'] = json.dumps(data)
 
@@ -58,7 +67,6 @@ def convert_tabs(soup):
                 div_content.find_all(
                     "div", {"id": tab_id}, limit=1)[0]
             )
-            # logger.info("tabs %s", tab_blocks)
 
             tab_structure.append(
                 {
@@ -72,16 +80,25 @@ def convert_tabs(soup):
         div_content.decompose()
 
 
+def convert_iframe(soup):
+    iframes = soup.find_all("iframe")
+
+    for tag in iframes:
+        data = {"@type": "maps", "url": tag.attrs['src']}
+        tag.replace_with(block_tag(data, soup))
+
+
 preprocessors = [
-    convert_tabs
+    convert_tabs,
+    convert_iframe,
 ]
 
 
-def text_to_blocks(text):
-    if text and not isinstance(text, str):
-        soup = text
+def text_to_blocks(text_or_element):
+    if text_or_element and not isinstance(text_or_element, str):
+        soup = text_or_element
     else:
-        soup = BeautifulSoup(text, "html.parser")
+        soup = BeautifulSoup(text_or_element, "html.parser")
 
     for proc in preprocessors:
         proc(soup)
