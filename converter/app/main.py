@@ -1,11 +1,15 @@
+import json
+import logging
 from dataclasses import dataclass
 from typing import Any, Dict
 
-from starlite import LoggingConfig, Starlite, get, post
+from starlite import Starlite, get, post
 from starlite.status_codes import HTTP_200_OK
 
 from .blocks import text_to_blocks
 from .html2slate import text_to_slate
+
+logger = logging.getLogger()
 
 
 @dataclass
@@ -33,20 +37,12 @@ def html(data: HTML) -> str:
 def toblocks(data: HTML) -> Dict:
     html = data.html
     data = text_to_blocks(html)
+
+    logger.info("Blocks: \n%s", json.dumps(data, indent=2))
     return {"data": data}
 
 
-logging_config = LoggingConfig(
-    loggers={
-        "app": {
-            "level": "INFO",
-            "handlers": ["queue_listener"],
-        }
-    }
-)
-
 app = Starlite(
     route_handlers=[health_check, html, toblocks],
-    logging_config=logging_config,
     debug=True,
 )
