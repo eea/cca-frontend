@@ -7,6 +7,7 @@ services:
     build: ./converter
     volumes:
       - ./converter/app:/app/app
+      - ./converter/requirements.txt:/app/requirements.txt
     ports:
       - "8000:8000"
     entrypoint: sh -c "tail -f /dev/null"
