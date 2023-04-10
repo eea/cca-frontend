@@ -2147,13 +2147,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.13.0":
-  version: 1.13.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.13.0"
+"@eeacms/volto-eea-website-theme@npm:1.14.0":
+  version: 1.14.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.14.0"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     volto-subsites: "*"
-  checksum: 75f0c4510e193655b97576d8b365eb6938bbc45189f2b9d24ab2fd330ce761c1c42f17fb12367d3f398cbbabea15c390f89cee668bbf8593e6ca4694c2e1c7a2
+  checksum: b4f5fdf41ff7b5c11c8f0418f3f4a5fb5caee5f34593f1bce2b91f77ae3dd562ac0d13595c2f5fcfeca3aa8a2cf73e00fe137e43595b0baa0efbbdf1be4a8714
   languageName: node
   linkType: hard
 
@@ -8391,7 +8391,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.16
     "@eeacms/volto-eea-design-system": 1.0.7
     "@eeacms/volto-eea-kitkat": 15.2.0
-    "@eeacms/volto-eea-website-theme": 1.13.0
+    "@eeacms/volto-eea-website-theme": 1.14.0
     "@eeacms/volto-embed": 5.0.2
     "@eeacms/volto-nextcloud-video-block": 0.3.1
     "@eeacms/volto-openlayers-map": 0.2.2
