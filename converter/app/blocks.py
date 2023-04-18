@@ -33,6 +33,132 @@ def make_tab_block(tabs):
     return data
 
 
+def make_accordion_block(panels):
+    block_ids = [str(uuid4()) for _ in panels]
+
+    blocks = {}
+
+    for i, panel in enumerate(panels):
+        blocks[block_ids[i]] = {
+            "@type": "accordionPanel",
+            "title": panel['title'],
+            "blocks": dict(panel['content']),
+            "blocks_layout": {"items": [b[0] for b in panel['content']]}
+        }
+
+    data = {
+        "@type": "accordion",
+        "collapsed": "true",
+        "non_exclusive": "true",
+        "right_arrows": "true",
+        "styles": {},
+        "data": {
+            "blocks": blocks,
+            "blocks_layout": {
+                "items": block_ids
+            }
+        }
+    }
+    return data
+
+
+"""
+    "c86b16ec-35e3-4a8c-8429-788179d1d1b3": {
+      "@type": "accordion",
+      "collapsed": true,
+      "data": {
+        "blocks": {
+          "6c783f72-6d61-4374-a202-d9c1a06cd357": {
+            "@type": "accordionPanel",
+            "blocks": {
+              "42fe0284-3b02-42ef-8bd5-8415c7aed6fa": {
+                "@type": "slate",
+                "plaintext": "Lorem ipsum 1",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Lorem ipsum 1"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            },
+            "blocks_layout": {
+              "items": [
+                "42fe0284-3b02-42ef-8bd5-8415c7aed6fa"
+              ]
+            },
+            "title": "Section 1"
+          },
+          "d9bbe3af-8962-4ecb-bd9d-400e703bbe46": {
+            "@type": "accordionPanel",
+            "blocks": {
+              "580f37a6-30a9-4e99-9fa4-d48f211e3f08": {
+                "@type": "slate",
+                "plaintext": "Lorem ipsum 2",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Lorem ipsum 2"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            },
+            "blocks_layout": {
+              "items": [
+                "580f37a6-30a9-4e99-9fa4-d48f211e3f08"
+              ]
+            },
+            "title": "Section 2"
+          },
+          "e8efec1a-91ad-44d1-b38d-45949fc62c07": {
+            "@type": "accordionPanel",
+            "blocks": {
+              "dbbd2f43-0abd-497d-8550-22f944b55d09": {
+                "@type": "slate",
+                "plaintext": "Lorem ipsum 3",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Lorem ipsum 3"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            },
+            "blocks_layout": {
+              "items": [
+                "dbbd2f43-0abd-497d-8550-22f944b55d09"
+              ]
+            },
+            "title": "Section 3"
+          }
+        },
+        "blocks_layout": {
+          "items": [
+            "6c783f72-6d61-4374-a202-d9c1a06cd357",
+            "d9bbe3af-8962-4ecb-bd9d-400e703bbe46",
+            "e8efec1a-91ad-44d1-b38d-45949fc62c07"
+          ]
+        }
+      },
+      "non_exclusive": true,
+      "right_arrows": true,
+      "styles": {}
+    }
+  },
+"""
+
 _tag = None
 
 
@@ -89,9 +215,60 @@ def convert_iframe(soup):
         tag.replace_with(block_tag(data, soup))
 
 
+def convert_accordion(soup):
+    accordions = soup.find_all("div", attrs={"class": "panel-group"})
+
+    if not accordions:
+        return
+
+    for div in accordions:
+        panels = div.find_all("div", attrs={"class": "panel"})
+
+        panels_structure = []
+        for panel in panels:
+            """
+            <div class="panel-group " id="236-accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="236-96810-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle tiny-acchead  arrow-down" href="#236-96810-body" data-toggle="collapse">
+                                Global
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse tiny-accbody collapse" id="236-96810-body">
+                        <div class="panel-body">
+                            text here
+                        </div>
+                    </div>
+                </div>
+            </div>
+            """
+            panel_id = panel.find_all(
+                "div", attrs={"class": "panel-heading"})[0].attrs['id'].split(
+                "-heading")[0]
+            panel_title = panel.find_all(
+                "h4", attrs={"class": "panel-title"})[0].text
+
+            panel_body = panel.find_all(
+                "div", attrs={"class": "panel-body"})[0]
+
+            panels_structure.append(
+                {
+                    "id": panel_id,
+                    "title": panel_title,
+                    "content": text_to_blocks(panel_body)
+                }
+
+            )
+
+        data = make_accordion_block(panels_structure)
+
+
 preprocessors = [
     convert_tabs,
     convert_iframe,
+    convert_accordion,
 ]
 
 
