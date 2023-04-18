@@ -263,6 +263,7 @@ def convert_accordion(soup):
             )
 
         data = make_accordion_block(panels_structure)
+        div.replace_with(block_tag(data, soup))
 
 
 preprocessors = [
