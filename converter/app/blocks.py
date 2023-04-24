@@ -117,31 +117,31 @@ def convert_iframe(soup):
         data = {"@type": "maps", "url": tag.attrs['src']}
         tag.replace_with(block_tag(data, soup))
 
+
 def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
-    
+
     for button in buttons:
-        target = button.attrs['target'] if button.has_attr('target') else "_self"
+        target = button.attrs['target'] if button.has_attr(
+            'target') else "_self"
 
         data = {
-            "@type": "callToActionBlock", 
+            "@type": "callToActionBlock",
             "text": button.text,
             "href": button.attrs['href'],
             "target": target,
             "styles": {
                 "icon": "ri-share-line",
                 "theme": "primary",
-                "align" : "left"
+                "align": "left"
             },
         }
 
-        # import pdb;
-        # pdb.set_trace()
-
-        button.replace_with(block_tag(data, soup))
-        if button.find_parent("p"):
-            button.parent.decompose()
-
+        parent = button.parent
+        if parent:
+            parent.replace_with(block_tag(data, soup))
+        else:
+            button.replace_with(block_tag(data, soup))
 
 
 def convert_accordion(soup):
