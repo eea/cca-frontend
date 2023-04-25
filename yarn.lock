@@ -2289,12 +2289,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-nextcloud-video-block@npm:0.3.1":
-  version: 0.3.1
-  resolution: "@eeacms/volto-nextcloud-video-block@npm:0.3.1"
-  checksum: 915e77ce799fbf9598b079ffa5be1052129315cfb02412c4336f66233307a35ce75c0218bf4e81bbd660c79975b91dfb07928b47c9a7aa4d4e333215d7fe3a3d
-  languageName: node
-  linkType: hard
+"@eeacms/volto-nextcloud-video-block@0.3.1, @eeacms/volto-nextcloud-video-block@workspace:src/addons/volto-nextcloud-video-block":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-nextcloud-video-block@workspace:src/addons/volto-nextcloud-video-block"
+  dependencies:
+    "@cypress/code-coverage": ^3.10.0
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    cypress-fail-fast: ^5.0.1
+    md5: ^2.3.0
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-object-widget@npm:*":
   version: 5.0.1
