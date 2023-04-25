@@ -183,6 +183,14 @@
     "develop": false,
     "path": "src"
   },
+  "volto-nextcloud-video-block": {
+    "url": "git@github.com:eea/volto-nextcloud-video-block",
+    "https": "https://github.com/eea/volto-nextcloud-video-block.git",
+    "package": "@eeacms/volto-nextcloud-video-block",
+    "branch": "add_title",
+    "develop": true,
+    "path": "src"
+  },
   "volto-block-image-cards": {
     "url": "git@github.com:eea/volto-block-image-cards.git",
     "https": "https://github.com/eea/volto-block-image-cards.git",
