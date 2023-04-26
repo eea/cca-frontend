@@ -137,7 +137,7 @@ def convert_button(soup):
             },
         }
 
-        parent = button.parent
+        parent = button.find_parent("p")
         if parent:
             parent.replace_with(block_tag(data, soup))
         else:
