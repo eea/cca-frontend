@@ -2227,15 +2227,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-globalsearch@npm:*":
-  version: 1.0.15
-  resolution: "@eeacms/volto-globalsearch@npm:1.0.15"
+"@eeacms/volto-globalsearch@*, @eeacms/volto-globalsearch@workspace:src/addons/volto-globalsearch":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-globalsearch@workspace:src/addons/volto-globalsearch"
   dependencies:
+    "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-listing-block": "*"
     "@eeacms/volto-searchlib": "*"
-  checksum: 7eec215db3b3c1b3a5d91d36f1d040e1c07a4b005d273c17a8b2ddd1c7d2c4f6d54fab9e6fbb1b9ab16cd38643b7514d969925cc34184ea4422f0be6866b1660
-  languageName: node
-  linkType: hard
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    md5: ^2.3.0
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-group-block@npm:*":
   version: 5.0.1
@@ -2366,19 +2369,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-searchlib@npm:*":
-  version: 0.5.3
-  resolution: "@eeacms/volto-searchlib@npm:0.5.3"
+"@eeacms/volto-searchlib@*, @eeacms/volto-searchlib@workspace:src/addons/volto-searchlib":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-searchlib@workspace:src/addons/volto-searchlib"
   dependencies:
+    "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-eea-design-system": "*"
     "@elastic/react-search-ui": ^1.9.0
     "@elastic/react-search-ui-views": ^1.9.0
     "@elastic/search-ui": ^1.9.0
+    "@plone/scripts": 2.0.0
     "@visx/group": ^1.7.0
     "@visx/responsive": ^1.10.1
     "@visx/scale": ^1.11.1
     "@visx/shape": ^1.12.0
     "@visx/tooltip": ^1.7.2
+    babel-plugin-transform-class-properties: ^6.24.1
     classnames: ^2.2.6
     csv-stringify: ^5.6.5
     d3-array: ^2.12.1
@@ -2394,6 +2400,7 @@ __metadata:
     lodash.isfunction: ^3.0.9
     lodash.uniq: ^4.5.0
     luxon: ^1.22.0
+    md5: ^2.3.0
     node-fetch: ^2.6.1
     re-resizable: ^6.9.0
     react-compound-slider: ^3.4.0
@@ -2406,9 +2413,8 @@ __metadata:
     superagent: 3.8.2
     svg-loader: 0.0.2
     use-deep-compare-effect: 1.8.1
-  checksum: 8a1959e6b1db5497b972a8f4e90d92b01824b88bc39ca43753006a43d408e93754a4f08155550ec760b43b05f1c82939be57bcf4076e5c28b2b68ed6aed66ee4
-  languageName: node
-  linkType: hard
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-sentry-rancher-config@npm:3.1.0":
   version: 3.1.0
@@ -3660,6 +3666,25 @@ __metadata:
     changelogupdater: changelogupdater.cjs
     i18n: i18n.cjs
   checksum: 32dbbe4f9233e8d9b16ffc451c42d4753907b3f700665a4bed796c5642194890d8bda21deddd3d1efb1559df288b29c69d32cf7437f6f4ef0a5113722b6b79ba
+  languageName: node
+  linkType: hard
+
+"@plone/scripts@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@plone/scripts@npm:2.0.0"
+  dependencies:
+    babel-plugin-react-intl: 5.1.17
+    babel-preset-razzle: 4.2.17
+    commander: 8.2.0
+    git-url-parse: ^11.6.0
+    mrs-developer: "*"
+    pofile: 1.0.10
+    simple-git: 3.5.0
+  bin:
+    addon: addon.js
+    changelogupdater: changelogupdater.js
+    i18n: i18n.js
+  checksum: 443bef9e54bb7c67e4b710d82c913f2f373907a0962f8178e234abf31ec4388649915a98167a52c3c70e372081fa0c41497e1f84282bf63dc67e7521a677a7d1
   languageName: node
   linkType: hard
 

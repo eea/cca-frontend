@@ -18,6 +18,12 @@
             ],
             "@eeacms/volto-eea-map": [
                 "addons/volto-eea-map/src"
+            ],
+            "@eeacms/volto-searchlib": [
+                "addons/volto-searchlib/src"
+            ],
+            "@eeacms/volto-globalsearch": [
+                "addons/volto-globalsearch/src"
             ]
         },
         "baseUrl": "src"
