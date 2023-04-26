@@ -2037,13 +2037,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@0.1.16, @eeacms/volto-cca-policy@workspace:src/addons/volto-cca-policy":
+"@eeacms/volto-cca-policy@npm:0.1.16":
+  version: 0.1.16
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.16"
+  dependencies:
+    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-openlayers-map": "*"
+  checksum: 46f582577f26970a173ff1797ec52876f87e9b8c7277b85f868a6c833272de08ffd8cb0197d13c4ecac17219915529273340c8767c58182209b9c85f5a27cbbe
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-cca-policy@workspace:src/addons/volto-cca-policy":
   version: 0.0.0-use.local
   resolution: "@eeacms/volto-cca-policy@workspace:src/addons/volto-cca-policy"
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-eea-design-system": "*"
-    "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
     "@plone/scripts": "*"
     babel-plugin-transform-class-properties: ^6.24.1
@@ -2227,7 +2236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-globalsearch@*, @eeacms/volto-globalsearch@workspace:src/addons/volto-globalsearch":
+"@eeacms/volto-globalsearch@workspace:src/addons/volto-globalsearch":
   version: 0.0.0-use.local
   resolution: "@eeacms/volto-globalsearch@workspace:src/addons/volto-globalsearch"
   dependencies:
