@@ -166,7 +166,7 @@
     "@eeacms/volto-nextcloud-video-block": "0.3.1",
     "@eeacms/volto-openlayers-map": "0.2.2",
     "@eeacms/volto-workflow-progress": "3.1.0",
-    "@plone/volto": "16.6.0",
+    "@plone/volto": "16.20.3",
     "volto-subsites": "4.0.0"
   },
   "devDependencies": {
