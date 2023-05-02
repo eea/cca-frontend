@@ -21,6 +21,12 @@
             ],
             "@eeacms/volto-nextcloud-video-block": [
                 "addons/volto-nextcloud-video-block/src"
+            ],
+            "@eeacms/volto-searchlib": [
+                "addons/volto-searchlib/src"
+            ],
+            "@eeacms/volto-globalsearch": [
+                "addons/volto-globalsearch/src"
             ]
         },
         "baseUrl": "src"
