@@ -94,3 +94,4 @@ src/addons/*
 !.yarn/versions
 docker-compose.override.yml
 backend/src
+fix_permissions.sh
