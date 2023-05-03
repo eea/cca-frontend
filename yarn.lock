@@ -2265,17 +2265,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:*, @eeacms/volto-listing-block@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@eeacms/volto-listing-block@npm:4.0.0"
+"@eeacms/volto-listing-block@*, @eeacms/volto-listing-block@4.0.0, @eeacms/volto-listing-block@workspace:src/addons/volto-listing-block":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-listing-block@workspace:src/addons/volto-listing-block"
   dependencies:
+    "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-widget-theme-picker": ^1.0.1
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    md5: ^2.3.0
     react-resize-detector: 7.1.2
     react-slick: 0.29.0
     slick-carousel: 1.8.1
-  checksum: 6d5582e9a270d956a5668f7e96022b01292eae25aae4256d52d73baca3e86e13c4f659a2233d9898159fe983111f24f67489c96e85c0183929d073b3015a9eae
-  languageName: node
-  linkType: hard
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-matomo@npm:*":
   version: 3.0.1

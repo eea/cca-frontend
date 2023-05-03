@@ -27,6 +27,9 @@
             ],
             "@eeacms/volto-globalsearch": [
                 "addons/volto-globalsearch/src"
+            ],
+            "@eeacms/volto-listing-block": [
+                "addons/volto-listing-block/src"
             ]
         },
         "baseUrl": "src"
