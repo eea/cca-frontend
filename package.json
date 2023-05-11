@@ -153,13 +153,13 @@
     "node": "^12 || ^14 || ^16"
   },
   "resolutions": {
-    "@eeacms/volto-eea-design-system": "1.0.7",
+    "@eeacms/volto-eea-design-system": "1.11.0",
     "@eeacms/volto-workflow-progress": "3.1.0",
     "@eeacms/volto-widget-theme-picker": "1.1.0"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.1.17",
-    "@eeacms/volto-eea-design-system": "1.0.7",
+    "@eeacms/volto-eea-design-system": "1.11.0",
     "@eeacms/volto-eea-kitkat": "15.3.0",
     "@eeacms/volto-eea-website-theme": "1.14.0",
     "@eeacms/volto-embed": "5.0.2",
