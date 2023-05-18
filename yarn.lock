@@ -2020,14 +2020,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.17":
-  version: 0.1.17
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.17"
+"@eeacms/volto-cca-policy@npm:0.1.18":
+  version: 0.1.18
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.18"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
-  checksum: 5e1d8c958a585a2e687f20b204b5981f03ffbaf3bfb049db447e5d913635be5f9df89998c30388438bb96f7b241009bc5a3645ce6fc3fac112a148f12afbda2b
+  checksum: 8b0baf6fa5ba9b267b5b5faf7bd01e7ace8ca8a8a38dd3c29bc397622bb1fae06483cabd69941555b302d58699a47fc398161ff782e4ee187b4bf8da74c0d642
   languageName: node
   linkType: hard
 
@@ -8810,7 +8810,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.17
+    "@eeacms/volto-cca-policy": 0.1.18
     "@eeacms/volto-eea-design-system": 1.11.0
     "@eeacms/volto-eea-kitkat": 15.3.0
     "@eeacms/volto-eea-website-theme": 1.14.0
