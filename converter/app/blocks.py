@@ -89,6 +89,10 @@ def convert_tabs(soup):
         tabs = ul.find_all('li')
 
         for li in tabs:
+            if li.a is None:
+                # broken html generated
+                continue
+
             tab_id = li.a.attrs['href'].replace('#', '')
             title = li.a.text
 
