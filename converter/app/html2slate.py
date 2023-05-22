@@ -321,6 +321,24 @@ class HTML2Slate(object):
 
         return element
 
+    def handle_tag_ol(self, node):
+        return self.handle_tag_url(node, node_type="ol")
+
+    def handle_tag_ul(self, node, node_type="ul"):
+        children = self.deserialize_children(node)
+
+        if not children:
+            # avoid crash in volto-slate when dealing with empty lists
+            return {
+                "type": "p",
+                "children": [{"text": ""}]
+            }
+
+        return {
+            "type": node_type,
+            "children": children
+        }
+
     def handle_tag_img(self, node):
         url = node.attrs.get('src', '')
         # todo: handle align, alt
