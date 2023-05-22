@@ -2168,7 +2168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-globalsearch@npm:*":
+"@eeacms/volto-globalsearch@npm:*, @eeacms/volto-globalsearch@npm:^1.0.15":
   version: 1.0.15
   resolution: "@eeacms/volto-globalsearch@npm:1.0.15"
   dependencies:
@@ -8830,6 +8830,7 @@ __metadata:
     "@eeacms/volto-eea-kitkat": 15.4.0
     "@eeacms/volto-eea-website-theme": 1.14.1
     "@eeacms/volto-embed": 5.0.2
+    "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.3.1
     "@eeacms/volto-openlayers-map": 0.2.2
     "@eeacms/volto-workflow-progress": 3.1.0
