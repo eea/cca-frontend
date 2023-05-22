@@ -304,7 +304,7 @@
     "path": "src"
   },
   "volto-searchlib": {
-    "develop": false,
+    "develop": true,
     "url": "git@github.com:eea/volto-searchlib.git",
     "https": "https://github.com/eea/volto-searchlib.git",
     "package": "@eeacms/volto-searchlib",
@@ -320,7 +320,7 @@
     "branch": "develop"
   },
   "volto-globalsearch": {
-    "develop": false,
+    "develop": true,
     "url": "git@github.com:eea/volto-globalsearch.git",
     "https": "https://github.com/eea/volto-globalsearch.git",
     "package": "@eeacms/volto-globalsearch",
