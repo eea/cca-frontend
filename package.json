@@ -49,6 +49,7 @@
     "@eeacms/volto-embed",
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
+    "@eeacms/volto-globalsearch",
     "@eeacms/volto-eea-website-theme",
     "@eeacms/volto-workflow-progress",
     "@eeacms/volto-nextcloud-video-block",
@@ -167,6 +168,7 @@
     "@eeacms/volto-openlayers-map": "0.2.2",
     "@eeacms/volto-workflow-progress": "3.1.0",
     "@plone/volto": "16.20.3",
+    "@eeacms/volto-globalsearch": "^1.0.15",
     "volto-subsites": "4.0.0"
   },
   "devDependencies": {
