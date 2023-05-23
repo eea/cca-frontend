@@ -8,6 +8,7 @@ from starlite.status_codes import HTTP_200_OK
 
 from .blocks import text_to_blocks
 from .html2slate import text_to_slate
+from .tests import run
 
 logger = logging.getLogger()
 
@@ -24,6 +25,12 @@ class Response:
 
 @get(path="/healthcheck")
 def health_check() -> str:
+    return "healthy"
+
+
+@get(path="/test")
+def run_tests() -> str:
+    run()
     return "healthy"
 
 
