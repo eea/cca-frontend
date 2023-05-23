@@ -1938,22 +1938,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.12.0":
-  version: 1.12.0
-  resolution: "@eeacms/volto-eea-design-system@npm:1.12.0"
-  dependencies:
-    "@eeacms/volto-corsproxy": "*"
-    "@fontsource/roboto": 4.5.8
-    react-countup: ^6.3.0
-    react-lazy-load-image-component: 1.5.6
-    react-slick: ^0.28.1
-    remixicon: 2.5.0
-    slick-carousel: ^1.8.1
-  checksum: 8041c1343e7f914d602dbd97af01c48bca9bb2d9aeb12003cd7679ac4f7c07cec7d5047bc7170a744b23c307882e23c7ffa7ec637ce87e640083f1a0186088f9
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-eea-design-system@workspace:src/addons/volto-eea-design-system":
+"@eeacms/volto-eea-design-system@1.12.0, @eeacms/volto-eea-design-system@workspace:src/addons/volto-eea-design-system":
   version: 0.0.0-use.local
   resolution: "@eeacms/volto-eea-design-system@workspace:src/addons/volto-eea-design-system"
   dependencies:
@@ -2036,17 +2021,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@eeacms/volto-eea-website-theme@npm:1.14.1":
-  version: 1.14.1
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.14.1"
-  dependencies:
-    "@eeacms/volto-eea-design-system": "*"
-    volto-subsites: "*"
-  checksum: e1d4fd4b40c5d0c6909bb5e0eaad098730034270535db4c42f3355eaeac0b7e8a3e43511c10467ae88a4f6ff35d3f21b74a29af95bd6c21358125be72c77d6eb
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-eea-website-theme@workspace:src/addons/volto-eea-website-theme":
+"@eeacms/volto-eea-website-theme@1.14.1, @eeacms/volto-eea-website-theme@workspace:src/addons/volto-eea-website-theme":
   version: 0.0.0-use.local
   resolution: "@eeacms/volto-eea-website-theme@workspace:src/addons/volto-eea-website-theme"
   dependencies:
