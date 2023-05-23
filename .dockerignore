@@ -25,3 +25,10 @@ Jenkinsfile
 start_.sh
 data
 *.tgz
+
+backups
+backend
+cache
+converter
+eea.docker.plone-climateadapt
+new
