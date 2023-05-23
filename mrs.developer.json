@@ -147,8 +147,8 @@
     "url": "git@github.com:eea/volto-listing-block.git",
     "https": "https://github.com/eea/volto-listing-block.git",
     "package": "@eeacms/volto-listing-block",
-    "branch": "develop",
-    "develop": false,
+    "branch": "simple-listing",
+    "develop": true,
     "path": "src"
   },
   "volto-metadata-block": {
@@ -181,6 +181,14 @@
     "package": "@eeacms/volto-tabs-block",
     "branch": "develop",
     "develop": false,
+    "path": "src"
+  },
+  "volto-nextcloud-video-block": {
+    "url": "git@github.com:eea/volto-nextcloud-video-block",
+    "https": "https://github.com/eea/volto-nextcloud-video-block.git",
+    "package": "@eeacms/volto-nextcloud-video-block",
+    "branch": "add_title",
+    "develop": true,
     "path": "src"
   },
   "volto-block-image-cards": {
