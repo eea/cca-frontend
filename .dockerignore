@@ -34,3 +34,6 @@ eea.docker.plone-climateadapt
 new
 src/addons/*
 Data.fs
+docker-compose.override-example.yml
+docker-compose.override.yml
+docker-compose*
