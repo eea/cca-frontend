@@ -9492,10 +9492,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"countup.js@npm:^2.0.8, countup.js@npm:^2.2.0, countup.js@npm:^2.5.0":
-  version: 2.6.2
-  resolution: "countup.js@npm:2.6.2"
-  checksum: 1272f0f6f0cd979a2d978ebf9d112bfd43aeddb4c0aeb033e2b266c3e89ee5501d5e5e4e27e8ceadb4a4533b9192bade66fbb7ee64c118aed41c80bb7663abd0
+"countup.js@npm:2.5.0":
+  version: 2.5.0
+  resolution: "countup.js@npm:2.5.0"
+  checksum: 96b0f65746d644612c3f01647096b540891788338ada408fdd5efdc1b6cdd83237051b9e7c7ff3b23bd25955eb8c4fb2b9d2db62ec6e3f02d3c4c953e5c57f81
   languageName: node
   linkType: hard
 
