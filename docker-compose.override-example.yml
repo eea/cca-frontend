@@ -11,3 +11,6 @@ services:
     ports:
       - "8000:8000"
     entrypoint: sh -c "tail -f /dev/null"
+
+  frontend:
+    entrypoint: sh -c "tail -f /dev/null"
