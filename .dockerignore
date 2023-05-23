@@ -32,3 +32,5 @@ cache
 converter
 eea.docker.plone-climateadapt
 new
+src/addons/*
+Data.fs
