@@ -1,18 +1,19 @@
 version: "3"
 
 services:
-  # frontend:
-  #   # build: .
-  #   image: eeacms/eea-website-frontend:develop
-  #   ports:
-  #   - "${FRONTEND:-3000}:3000"
-  #   environment:
-  #     RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
-  #     RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
-  #   volumes:
-  #   - ./src/addons:/app/src/addons
-  #   depends_on:
-  #     - backend
+  frontend:
+    build: .
+    # image: eeacms/eea-website-frontend:develop
+    # image: cca-test
+    ports:
+    - "${FRONTEND:-3000}:3000"
+    environment:
+      RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
+      RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
+    volumes:
+    - ./src/addons:/app/src/addons
+    depends_on:
+      - backend
 
   memcached:
     # mem_limit: 73400320
