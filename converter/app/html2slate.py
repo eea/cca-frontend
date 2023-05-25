@@ -322,7 +322,7 @@ class HTML2Slate(object):
         return element
 
     def handle_tag_ol(self, node):
-        return self.handle_tag_url(node, node_type="ol")
+        return self.handle_tag_ul(node, node_type="ol")
 
     def handle_tag_ul(self, node, node_type="ul"):
         children = self.deserialize_children(node)
