@@ -1,5 +1,6 @@
 import json
 import logging
+from collections import deque
 from uuid import uuid4
 
 from bs4 import BeautifulSoup
@@ -211,10 +212,31 @@ def convert_slate_to_blocks(slate):
     return blocks
 
 
+def iterate_children(value):
+    """iterate_children.
+
+    :param value:
+    """
+    queue = deque(value)
+    while queue:
+        child = queue.pop()
+        yield child
+        if child.get("children"):
+            queue.extend(child["children"] or [])
+
+
 def convert_block(block):
     # TODO: do the plaintext
 
     if block.get('type') == 'voltoblock':
         return block['data']
+
+    if block.get('children'):
+        children = iterate_children(block['children'])
+        for child in children:
+            print('child', child)
+            node_type = child.get("type")
+            if node_type == 'voltoblock':
+                return child['data']
 
     return {"@type": "slate", "value": [block], "plaintext": ""}
