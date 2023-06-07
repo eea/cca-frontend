@@ -157,6 +157,7 @@
     "@eeacms/volto-eea-design-system": "1.12.1",
     "@eeacms/volto-workflow-progress": "3.1.0",
     "@eeacms/volto-widget-theme-picker": "1.1.0",
+    "@kitconcept/volto-blocks-grid": "7.0.2",
     "react-countup/countup.js": "2.5.0",
     "d3-array": "^2.12.1"
   },
@@ -170,6 +171,7 @@
     "@eeacms/volto-nextcloud-video-block": "0.3.1",
     "@eeacms/volto-openlayers-map": "0.2.2",
     "@eeacms/volto-workflow-progress": "3.1.0",
+    "@kitconcept/volto-blocks-grid": "7.0.2",
     "@plone/volto": "16.20.3",
     "volto-subsites": "4.0.0"
   },
