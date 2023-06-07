@@ -1,6 +1,37 @@
 {
     "compilerOptions": {
-        "paths": {},
+        "paths": {
+            "@eeacms/volto-cca-policy": [
+                "addons/volto-cca-policy/src"
+            ],
+            "@eeacms/volto-embed": [
+                "addons/volto-embed/src"
+            ],
+            "@eeacms/volto-listing-block": [
+                "addons/volto-listing-block/src"
+            ],
+            "@eeacms/volto-nextcloud-video-block": [
+                "addons/volto-nextcloud-video-block/src"
+            ],
+            "@eeacms/volto-eea-design-system": [
+                "addons/volto-eea-design-system/src"
+            ],
+            "@eeacms/volto-eea-website-theme": [
+                "addons/volto-eea-website-theme/src"
+            ],
+            "@eeacms/volto-searchlib": [
+                "addons/volto-searchlib/src"
+            ],
+            "@eeacms/volto-globalsearch": [
+                "addons/volto-globalsearch/src"
+            ],
+            "@eeacms/volto-eea-map": [
+                "addons/volto-eea-map/src"
+            ],
+            "@eeacms/volto-openlayers-map": [
+                "addons/volto-openlayers-map/src"
+            ]
+        },
         "baseUrl": "src"
     }
 }
