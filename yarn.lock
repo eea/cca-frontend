@@ -1858,15 +1858,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.19":
-  version: 0.1.19
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.19"
+"@eeacms/volto-cca-policy@npm:0.1.20":
+  version: 0.1.20
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.20"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
     d3: 3
-  checksum: b4a7cecdad1d6a7f5614afd7b1d8890fb301a1b1fa972638ed1ea57475a8cc286d700603161bf243622be67e3a4e3d01cb42d0b4a83142dc649d5adf80fff50f
+  checksum: 83a71d78c7fcf5093f206978f3147923a6a8b0483b7e7348d7e9048d18bd1977f4093001d95292bf1b9e1fa3aac6de155ed6863aa97df140fc75db955bcfbf77
   languageName: node
   linkType: hard
 
@@ -3033,12 +3033,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kitconcept/volto-blocks-grid@npm:5.1.1":
-  version: 5.1.1
-  resolution: "@kitconcept/volto-blocks-grid@npm:5.1.1"
+"@kitconcept/volto-blocks-grid@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@kitconcept/volto-blocks-grid@npm:7.0.2"
   peerDependencies:
-    "@plone/volto": ">=12.14.0"
-  checksum: b3ba6917c028a96598b20f10fff079f67beb987a5365c871ada9bf4fcab4bbff4ad9b6d3f27cf8b21e805b50bb9cdd9336d3c2deb0e8aa4e2df4b2f73cc70dd5
+    "@plone/volto": ">=16.0.0"
+  checksum: e375acef67861b780748ac12e1786b9dc1bfd10e603c089678ed6bf318c380ef5f48d921525b12b9cde89f97daea4f7933de9dfc7d8661b517287c39f9d5b1c2
   languageName: node
   linkType: hard
 
@@ -8509,7 +8509,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.19
+    "@eeacms/volto-cca-policy": 0.1.20
     "@eeacms/volto-eea-design-system": 1.12.1
     "@eeacms/volto-eea-kitkat": 15.4.0
     "@eeacms/volto-eea-website-theme": 1.15.0
@@ -8518,6 +8518,7 @@ __metadata:
     "@eeacms/volto-nextcloud-video-block": 0.3.1
     "@eeacms/volto-openlayers-map": 0.2.2
     "@eeacms/volto-workflow-progress": 3.1.0
+    "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.20.3
     "@storybook/addon-actions": ^6.3.0
