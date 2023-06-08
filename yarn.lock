@@ -1979,13 +1979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.15.0":
-  version: 1.15.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.15.0"
+"@eeacms/volto-eea-website-theme@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.16.0"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     volto-subsites: "*"
-  checksum: 45cceb59d745c1afa5bb308995cdf8b015b518170821fa9ca24f0a9069a481fe3110e3f142591dfe27b0d35ee1b054573ce2dad20db73a010fbbeb95f8afee17
+  checksum: bda2934474a5291932f7dc14e182617ec8b70dad02c5bd779f5c1a3296b7de3254ef09d8b689568800f0954a70fb9d6ff0963cd7516ede35364485999ddea6de
   languageName: node
   linkType: hard
 
@@ -8512,7 +8512,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.20
     "@eeacms/volto-eea-design-system": 1.12.1
     "@eeacms/volto-eea-kitkat": 15.4.0
-    "@eeacms/volto-eea-website-theme": 1.15.0
+    "@eeacms/volto-eea-website-theme": 1.16.0
     "@eeacms/volto-embed": 5.0.3
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.3.1
