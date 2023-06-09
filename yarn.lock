@@ -1858,15 +1858,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.21":
-  version: 0.1.21
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.21"
+"@eeacms/volto-cca-policy@npm:0.1.22":
+  version: 0.1.22
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.22"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
     d3: 3
-  checksum: 8e75100630b0bff0731c9a27e69104c1df0270a817aa87b033492fa13f9587f6640fcd0178d071f50ba2d6ecf690523e8e0551fb5236fe37966c03543b5c5d29
+  checksum: 5b1c0ad4f92c230943373848b08f67ad6bdc4e95181dcccdbb7178198ae18937f87ff2013a073b740253b24806c3b08e9867783f65709925fd717d70b5ff5440
   languageName: node
   linkType: hard
 
@@ -1918,9 +1918,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.12.1":
-  version: 1.12.1
-  resolution: "@eeacms/volto-eea-design-system@npm:1.12.1"
+"@eeacms/volto-eea-design-system@npm:1.13.0":
+  version: 1.13.0
+  resolution: "@eeacms/volto-eea-design-system@npm:1.13.0"
   dependencies:
     "@eeacms/volto-corsproxy": "*"
     "@fontsource/roboto": 4.5.8
@@ -1929,7 +1929,7 @@ __metadata:
     react-slick: ^0.28.1
     remixicon: 2.5.0
     slick-carousel: ^1.8.1
-  checksum: 8bad634ea227f336aab620b76d6f7b0737b35ff9fc05471f54f0a4c716d98abb91ad5a6f3520118c9d8d824d12a0ad5f243bb8679205326e1421872b99ae4f4e
+  checksum: 6289c90a9974242809d9a2983b21dabf576ce7b6cdafd46010187c00058438bcb734daae2387bb7500c4ed32d07a6fea4809a9ddd5d9afd27be21c7bf1240b88
   languageName: node
   linkType: hard
 
@@ -1979,13 +1979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.16.0"
+"@eeacms/volto-eea-website-theme@npm:1.17.0":
+  version: 1.17.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.17.0"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     volto-subsites: "*"
-  checksum: bda2934474a5291932f7dc14e182617ec8b70dad02c5bd779f5c1a3296b7de3254ef09d8b689568800f0954a70fb9d6ff0963cd7516ede35364485999ddea6de
+  checksum: bcfa27409b3ea06b867aa5caaad153c19b1e16de398e73ed27cf62b3b528184f4bc313c97686603a1083f35f5c3a9aca1f30b144c0ffcae9255590d0631430f5
   languageName: node
   linkType: hard
 
@@ -8509,10 +8509,10 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.21
-    "@eeacms/volto-eea-design-system": 1.12.1
+    "@eeacms/volto-cca-policy": 0.1.22
+    "@eeacms/volto-eea-design-system": 1.13.0
     "@eeacms/volto-eea-kitkat": 15.4.0
-    "@eeacms/volto-eea-website-theme": 1.16.0
+    "@eeacms/volto-eea-website-theme": 1.17.0
     "@eeacms/volto-embed": 5.0.3
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.3.1
