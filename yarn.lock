@@ -1858,15 +1858,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.23"
+"@eeacms/volto-cca-policy@npm:0.1.24":
+  version: 0.1.24
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.24"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
     d3: 3
-  checksum: 213fe7ab1935fa56ba99d9dcfebb60561a0af369e0a0a1781f4810162a7a00f5020d09a4a8f3e436487bb0264c7f838f1fecdd9bb196ae21a47bbb9bc1fe37d8
+  checksum: bbc2c0b1f616e970275948f34aa01cc4032ac00bda5d0ac137d1f04b4ef1f848f80d8d0e5ba3da662496c04a73ff0ee68c6f37762ed3977905b2f6e4e1510f34
   languageName: node
   linkType: hard
 
@@ -2080,12 +2080,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-openlayers-map@npm:*, @eeacms/volto-openlayers-map@npm:0.2.2":
+"@eeacms/volto-openlayers-map@npm:*":
   version: 0.2.2
   resolution: "@eeacms/volto-openlayers-map@npm:0.2.2"
   dependencies:
     ol: 6.6.x
   checksum: a6db83ae91b5f8e452a954e9d088fb906a24c97dad4101910c76f35457d0c0dff160eb8705e9b3ae4c50549ca085249b679e98006e222481e973e5dc23fd4369
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-openlayers-map@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@eeacms/volto-openlayers-map@npm:0.3.0"
+  dependencies:
+    ol: 6.6.x
+  checksum: d7d33223773199248cb63e05e75042cf984d4dac4be16f4ba24e4fb803067ec8ff6d247461cd007ed6903538ab8d7dbf7e575f17221e6abdc86dd27b805e659c
   languageName: node
   linkType: hard
 
@@ -8509,14 +8518,14 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.23
+    "@eeacms/volto-cca-policy": 0.1.24
     "@eeacms/volto-eea-design-system": 1.13.0
     "@eeacms/volto-eea-kitkat": 15.4.0
     "@eeacms/volto-eea-website-theme": 1.17.0
     "@eeacms/volto-embed": 5.0.3
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.3.1
-    "@eeacms/volto-openlayers-map": 0.2.2
+    "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-workflow-progress": 3.1.0
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
