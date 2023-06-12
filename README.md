@@ -199,4 +199,3 @@ See [LICENSE.md](https://github.com/eea/eea-website-backend/blob/master/LICENSE.
 ## Funding
 
 [European Environment Agency (EU)](http://eea.europa.eu)
-
