@@ -1858,15 +1858,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.24":
-  version: 0.1.24
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.24"
+"@eeacms/volto-cca-policy@npm:0.1.25":
+  version: 0.1.25
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.25"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
     d3: 3
-  checksum: bbc2c0b1f616e970275948f34aa01cc4032ac00bda5d0ac137d1f04b4ef1f848f80d8d0e5ba3da662496c04a73ff0ee68c6f37762ed3977905b2f6e4e1510f34
+  checksum: 0c136f86629b7f10780a3a670fca4ccdb53eb0d83fafc345e3981ed65625905afa492625c3d2baf445e0af035fc626e730191a4f6c1ecb17be10a6f8106be5fd
   languageName: node
   linkType: hard
 
@@ -1918,9 +1918,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.13.0":
-  version: 1.13.0
-  resolution: "@eeacms/volto-eea-design-system@npm:1.13.0"
+"@eeacms/volto-eea-design-system@npm:1.13.1":
+  version: 1.13.1
+  resolution: "@eeacms/volto-eea-design-system@npm:1.13.1"
   dependencies:
     "@eeacms/volto-corsproxy": "*"
     "@fontsource/roboto": 4.5.8
@@ -1929,7 +1929,7 @@ __metadata:
     react-slick: ^0.28.1
     remixicon: 2.5.0
     slick-carousel: ^1.8.1
-  checksum: 6289c90a9974242809d9a2983b21dabf576ce7b6cdafd46010187c00058438bcb734daae2387bb7500c4ed32d07a6fea4809a9ddd5d9afd27be21c7bf1240b88
+  checksum: 4d0bf837ed2ccfb9a26a2454da21552febb26f0ce0eb1cea14179364706bf7381047a8a63c26c53eadd09802f7b1b0cd205dbf1fea31938b632a69754cbdef2a
   languageName: node
   linkType: hard
 
@@ -1979,13 +1979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.17.0":
-  version: 1.17.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.17.0"
+"@eeacms/volto-eea-website-theme@npm:1.17.1":
+  version: 1.17.1
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.17.1"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     volto-subsites: "*"
-  checksum: bcfa27409b3ea06b867aa5caaad153c19b1e16de398e73ed27cf62b3b528184f4bc313c97686603a1083f35f5c3a9aca1f30b144c0ffcae9255590d0631430f5
+  checksum: 12637b7247a45f7c3e7d4e44bb7a5329ed3087fc05855ddbfdbfb9c2d39cc7a225208a1501435eff81ace776b231f8d84417bfa566dcda7c4f62dc93f4b77242
   languageName: node
   linkType: hard
 
@@ -2265,10 +2265,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-widget-theme-picker@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.0"
-  checksum: 046c44e5f270768dae2ad3a2838be5681a28ddbc77f0228d59f834f055394a682cb50953ce837317bff2a58ac5aa2ba171ff9933653129d44793d724b78a1f99
+"@eeacms/volto-widget-theme-picker@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.1"
+  checksum: 744f7993ab5b75a1248da95d02142b6a5cf1db17fae69d779818863745f0e8d7ba3c070619e7a56401a2034b0648c268a7bcab6239b0510e27f0431d5b0ee8a4
   languageName: node
   linkType: hard
 
@@ -2286,10 +2286,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-workflow-progress@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@eeacms/volto-workflow-progress@npm:3.1.0"
-  checksum: 0ab56d116ad05ba9dd87755d68bd910bdd720bb7ae0e8a948615ff7cf99ac0b3079521c99709aa7f4706940d0ced746bead22054579529725202f02eb6008a16
+"@eeacms/volto-workflow-progress@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@eeacms/volto-workflow-progress@npm:3.1.1"
+  checksum: 56acb82ec8ee5da8d434bd7f7df675d0917ba5d830e3025f56f02ec83a3fd550324fb03cc72798878a5611a88595fd45fa7ec07d3b4082b181012c4dccc90354
   languageName: node
   linkType: hard
 
@@ -8518,15 +8518,15 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.24
-    "@eeacms/volto-eea-design-system": 1.13.0
+    "@eeacms/volto-cca-policy": 0.1.25
+    "@eeacms/volto-eea-design-system": 1.13.1
     "@eeacms/volto-eea-kitkat": 15.4.0
-    "@eeacms/volto-eea-website-theme": 1.17.0
+    "@eeacms/volto-eea-website-theme": 1.17.1
     "@eeacms/volto-embed": 5.0.3
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.3.1
     "@eeacms/volto-openlayers-map": 0.3.0
-    "@eeacms/volto-workflow-progress": 3.1.0
+    "@eeacms/volto-workflow-progress": 3.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.20.3
