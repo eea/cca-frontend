@@ -168,7 +168,7 @@
     "@eeacms/volto-eea-website-theme": "1.17.1",
     "@eeacms/volto-embed": "5.0.4",
     "@eeacms/volto-globalsearch": "^1.0.15",
-    "@eeacms/volto-nextcloud-video-block": "0.3.1",
+    "@eeacms/volto-nextcloud-video-block": "0.4.0",
     "@eeacms/volto-openlayers-map": "0.3.0",
     "@eeacms/volto-workflow-progress": "3.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
