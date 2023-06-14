@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "1.39.0",
+  "version": "1.40.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -154,7 +154,7 @@
     "node": "^12 || ^14 || ^16"
   },
   "resolutions": {
-    "@eeacms/volto-eea-design-system": "1.13.1",
+    "@eeacms/volto-eea-design-system": "1.13.2",
     "@eeacms/volto-workflow-progress": "3.1.1",
     "@eeacms/volto-widget-theme-picker": "1.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
@@ -162,13 +162,13 @@
     "d3-array": "^2.12.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.1.26",
-    "@eeacms/volto-eea-design-system": "1.13.1",
-    "@eeacms/volto-eea-kitkat": "15.4.0",
-    "@eeacms/volto-eea-website-theme": "1.17.1",
+    "@eeacms/volto-cca-policy": "0.1.27",
+    "@eeacms/volto-eea-design-system": "1.13.2",
+    "@eeacms/volto-eea-kitkat": "16.0.0",
+    "@eeacms/volto-eea-website-theme": "1.17.2",
     "@eeacms/volto-embed": "5.0.4",
     "@eeacms/volto-globalsearch": "^1.0.15",
-    "@eeacms/volto-nextcloud-video-block": "0.3.1",
+    "@eeacms/volto-nextcloud-video-block": "0.4.0",
     "@eeacms/volto-openlayers-map": "0.3.0",
     "@eeacms/volto-workflow-progress": "3.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
