@@ -49,4 +49,4 @@ services:
       - memcached
 
   converter:
-    image: eea/blocks-conversion-tool
+    image: tiberiuichim/blocks-conversion-tool
