@@ -48,4 +48,4 @@ services:
       - memcached
 
   converter:
-    image: tiberiuichim/blocks-conversion-tool
+    image: tiberiuichim/blocks-conversion-tool:0.1

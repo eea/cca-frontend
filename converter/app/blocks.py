@@ -236,8 +236,13 @@ def convert_block(block):
         for child in children:
             print('child', child)
             node_type = child.get("type")
+
             if node_type == 'voltoblock':
                 return child['data']
+
+            # if there's any image in the paragraph, it will be replaced only by the
+            # image block. This needs to be treated carefully, if we have inline aligned
+            # images
             elif node_type == 'img':
                 return {"@type": "image", "url": child.get('url', ''),
                         "alt": ""}
