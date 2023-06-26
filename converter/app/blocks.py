@@ -238,5 +238,8 @@ def convert_block(block):
             node_type = child.get("type")
             if node_type == 'voltoblock':
                 return child['data']
+            elif node_type == 'img':
+                return {"@type": "image", "url": child.get('url', ''),
+                        "alt": ""}
 
     return {"@type": "slate", "value": [block], "plaintext": ""}

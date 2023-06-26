@@ -343,7 +343,7 @@ class HTML2Slate(object):
         url = node.attrs.get('src', '')
         # todo: handle align, alt
         # TODO: just for testing, I'm missing the blobs
-        url = "/fallback.png/@@images/image/preview"
+        # url = "/fallback.png/@@images/image/preview"
         return {
             "type": "img",
             "url": url,
