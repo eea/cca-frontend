@@ -346,7 +346,7 @@ class HTML2Slate(object):
         # url = "/fallback.png/@@images/image/preview"
         return {
             "type": "img",
-            "url": url,
+            "url": url.split('/@@images', 1)[0],
             "children": [{"text": ""}]
         }
 
