@@ -152,7 +152,15 @@ def convert_button(soup):
 def convert_accordion(soup):
     accordions = soup.find_all("div", attrs={"class": "panel-group"})
 
+    accordion_titles = soup.find_all("div", attrs={"class": "panel-heading"})
+
+    if accordion_titles and not accordions:
+        for node in accordion_titles:
+            node.decompose()
+        return
+
     if not accordions:
+        # handle single accordion, aka "Read more", which we remove
         return
 
     for div in accordions:
