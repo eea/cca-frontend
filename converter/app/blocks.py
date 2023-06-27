@@ -244,7 +244,9 @@ def convert_block(block):
             # image block. This needs to be treated carefully, if we have inline aligned
             # images
             elif node_type == 'img':
-                return {"@type": "image", "url": child.get('url', ''),
-                        "alt": ""}
+                return {"@type": "image",
+                        "url": child.get('url', ''),
+                        "title": child.get('title', ''),
+                        "alt": child.get('alt', '')}
 
     return {"@type": "slate", "value": [block], "plaintext": ""}
