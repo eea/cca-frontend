@@ -166,14 +166,18 @@ def convert_accordion(soup):
             panel_title = panel.find_all(
                 "h4", attrs={"class": "panel-title"})[0].text
 
-            panel_body = panel.find_all(
-                "div", attrs={"class": "panel-body"})[0]
+            _panel_bodies = panel.find_all(
+                "div", attrs={"class": "panel-body"})
+
+            blocks = []
+            for panel_body in _panel_bodies:
+                blocks.extend(text_to_blocks(panel_body))
 
             panels_structure.append(
                 {
                     "id": panel_id,
                     "title": panel_title,
-                    "content": text_to_blocks(panel_body)
+                    "content": blocks
                 }
 
             )
@@ -245,7 +249,7 @@ def convert_block(block):
             # images
             elif node_type == 'img':
                 return {"@type": "image",
-                        "url": child.get('url', ''),
+                        "url": child.get('url', '').split('/@@images', 1)[0],
                         "title": child.get('title', ''),
                         "alt": child.get('alt', '')}
 
