@@ -33,7 +33,9 @@ ACCEPTED_TAGS = [  # valid volto-slate elements
     "tfoot",
     "tr",
     "td",
-    "th"
+    "th",
+
+    "video"
 
 ]
 
