@@ -246,6 +246,14 @@ def style_to_object(text):
     return out
 
 
+def fix_node_attributes(key):
+    restricted = ['type', 'value', 'children']
+    if key in restricted:
+        key = "_" + key
+
+    return key
+
+
 class HTML2Slate(object):
     """A parser for HTML to slate conversion
 
@@ -361,7 +369,12 @@ class HTML2Slate(object):
         return {"text": "\n"}
 
     def handle_block(self, node):
-        return {"type": node.name, "children": self.deserialize_children(node)}
+        value = {"type": node.name,
+                 "children": self.deserialize_children(node)}
+        for k, v in node.attrs.items():
+            k = fix_node_attributes(k)
+            value[k] = v
+        return value
 
     def handle_tag_b(self, node):
         # TO DO: implement <b> special cases
