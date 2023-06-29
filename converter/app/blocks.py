@@ -261,4 +261,10 @@ def convert_block(block):
                         "title": child.get('title', ''),
                         "alt": child.get('alt', '')}
 
+            elif node_type == 'video':
+                return {"@type": "nextCloudVideo",
+                        "url": child.get('url', ''),
+                        "title": child.get('title', ''),
+                        "alt": child.get('alt', '')}
+
     return {"@type": "slate", "value": [block], "plaintext": ""}
