@@ -247,6 +247,9 @@ def convert_volto_block(node):
     if node_type == 'voltoblock':
         return node['data']
 
+    elif node_type == 'table':      # don't extract anything from tables (yet)
+        return
+
     elif node_type == 'img':
         return {"@type": "image",
                 "url": node.get('url', '').split('/@@images', 1)[0],
