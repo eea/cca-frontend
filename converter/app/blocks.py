@@ -237,34 +237,43 @@ def iterate_children(value):
             queue.extend(child["children"] or [])
 
 
+def convert_volto_block(node):
+    # if there's any image in the paragraph, it will be replaced only by the
+    # image block. This needs to be treated carefully, if we have inline aligned
+    # images
+
+    node_type = node.get("type")
+
+    if node_type == 'voltoblock':
+        return node['data']
+
+    elif node_type == 'img':
+        return {"@type": "image",
+                "url": node.get('url', '').split('/@@images', 1)[0],
+                "title": node.get('title', ''),
+                "alt": node.get('alt', '')}
+
+    elif node_type == 'video':
+        return {"@type": "nextCloudVideo",
+                "url": node.get('src', ''),
+                "title": node.get('data-matomo-title', ''),
+                "alt": node.get('alt', '')}
+
+
 def convert_block(block):
     # TODO: do the plaintext
 
-    if block.get('type') == 'voltoblock':
-        return block['data']
+    volto_block = convert_volto_block(block)
+    if volto_block:
+        return volto_block
 
     if block.get('children'):
         children = iterate_children(block['children'])
         for child in children:
-            print('child', child)
-            node_type = child.get("type")
+            # print('child', child)
 
-            if node_type == 'voltoblock':
-                return child['data']
-
-            # if there's any image in the paragraph, it will be replaced only by the
-            # image block. This needs to be treated carefully, if we have inline aligned
-            # images
-            elif node_type == 'img':
-                return {"@type": "image",
-                        "url": child.get('url', '').split('/@@images', 1)[0],
-                        "title": child.get('title', ''),
-                        "alt": child.get('alt', '')}
-
-            elif node_type == 'video':
-                return {"@type": "nextCloudVideo",
-                        "url": child.get('url', ''),
-                        "title": child.get('title', ''),
-                        "alt": child.get('alt', '')}
+            volto_block = convert_volto_block(child)
+            if volto_block:
+                return volto_block
 
     return {"@type": "slate", "value": [block], "plaintext": ""}
