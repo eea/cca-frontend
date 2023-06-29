@@ -237,7 +237,7 @@ def iterate_children(value):
             queue.extend(child["children"] or [])
 
 
-def convert_volto_block(node):
+def convert_volto_block(block, node):
     # if there's any image in the paragraph, it will be replaced only by the
     # image block. This needs to be treated carefully, if we have inline aligned
     # images
@@ -248,7 +248,7 @@ def convert_volto_block(node):
         return node['data']
 
     elif node_type == 'table':      # don't extract anything from tables (yet)
-        return
+        return {"@type": "slate", "value": [block], "plaintext": ""}
 
     elif node_type == 'img':
         return {"@type": "image",
@@ -263,20 +263,21 @@ def convert_volto_block(node):
                 "alt": node.get('alt', '')}
 
 
-def convert_block(block):
+def convert_block(slate_node):
     # TODO: do the plaintext
 
-    volto_block = convert_volto_block(block)
+    volto_block = convert_volto_block(slate_node, slate_node)
     if volto_block:
         return volto_block
 
-    if block.get('children'):
-        children = iterate_children(block['children'])
+    if slate_node.get('children'):
+        children = iterate_children(slate_node['children'])
         for child in children:
             # print('child', child)
 
-            volto_block = convert_volto_block(child)
+            volto_block = convert_volto_block(slate_node, child)
+
             if volto_block:
                 return volto_block
 
-    return {"@type": "slate", "value": [block], "plaintext": ""}
+    return {"@type": "slate", "value": [slate_node], "plaintext": ""}

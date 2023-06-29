@@ -254,6 +254,13 @@ def fix_node_attributes(key):
     return key
 
 
+def fix_img_url(url):
+    if 'resolveuid' in url:
+        # TODO: fix this
+        return ''
+    return url.split('/@@images', 1)[0]
+
+
 class HTML2Slate(object):
     """A parser for HTML to slate conversion
 
@@ -354,7 +361,7 @@ class HTML2Slate(object):
         # url = "/fallback.png/@@images/image/preview"
         return {
             "type": "img",
-            "url": url.split('/@@images', 1)[0],
+            "url": fix_img_url(url),
             "children": [{"text": ""}]
         }
 
