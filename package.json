@@ -164,7 +164,7 @@
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.1.29",
     "@eeacms/volto-eea-design-system": "1.13.2",
-    "@eeacms/volto-eea-kitkat": "16.0.1",
+    "@eeacms/volto-eea-kitkat": "16.0.2",
     "@eeacms/volto-eea-website-theme": "1.18.1",
     "@eeacms/volto-embed": "5.0.4",
     "@eeacms/volto-globalsearch": "^1.0.15",
