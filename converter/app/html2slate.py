@@ -255,10 +255,14 @@ def fix_node_attributes(key):
 
 
 def fix_img_url(url):
-    if 'resolveuid' in url:
-        # TODO: fix this
-        return ''
-    return url.split('/@@images', 1)[0]
+    # if 'resolveuid' in url:
+    #     # TODO: fix this
+    #     return ''
+    # ../../../../
+    url = url.split('/@@images', 1)[0]
+    if 'resolveuid' in url and not url.startswith('/'):
+        url = '../' + url
+    return url
 
 
 class HTML2Slate(object):
@@ -356,12 +360,21 @@ class HTML2Slate(object):
 
     def handle_tag_img(self, node):
         url = node.attrs.get('src', '')
+
         # todo: handle align, alt
         # TODO: just for testing, I'm missing the blobs
         # url = "/fallback.png/@@images/image/preview"
+        # resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview
+        # <img alt="" class="image-left" data-linktype="image"
+        # data-scale="preview" data-val="88a6567afaa148aabed5c5055e12c509"
+        # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
+        # title="rawpixel on Unsplash"/>
+
         return {
             "type": "img",
             "url": fix_img_url(url),
+            "title": node.attrs.get('title', ''),
+            "alt": node.attrs.get('alt', ''),
             "children": [{"text": ""}]
         }
 
