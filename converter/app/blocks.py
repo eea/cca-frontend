@@ -152,7 +152,15 @@ def convert_button(soup):
 def convert_accordion(soup):
     accordions = soup.find_all("div", attrs={"class": "panel-group"})
 
+    accordion_titles = soup.find_all("div", attrs={"class": "panel-heading"})
+
+    if accordion_titles and not accordions:
+        for node in accordion_titles:
+            node.decompose()
+        return
+
     if not accordions:
+        # handle single accordion, aka "Read more", which we remove
         return
 
     for div in accordions:
@@ -166,14 +174,18 @@ def convert_accordion(soup):
             panel_title = panel.find_all(
                 "h4", attrs={"class": "panel-title"})[0].text
 
-            panel_body = panel.find_all(
-                "div", attrs={"class": "panel-body"})[0]
+            _panel_bodies = panel.find_all(
+                "div", attrs={"class": "panel-body"})
+
+            blocks = []
+            for panel_body in _panel_bodies:
+                blocks.extend(text_to_blocks(panel_body))
 
             panels_structure.append(
                 {
                     "id": panel_id,
                     "title": panel_title,
-                    "content": text_to_blocks(panel_body)
+                    "content": blocks
                 }
 
             )
@@ -225,18 +237,47 @@ def iterate_children(value):
             queue.extend(child["children"] or [])
 
 
-def convert_block(block):
+def convert_volto_block(block, node):
+    # if there's any image in the paragraph, it will be replaced only by the
+    # image block. This needs to be treated carefully, if we have inline aligned
+    # images
+
+    node_type = node.get("type")
+
+    if node_type == 'voltoblock':
+        return node['data']
+
+    elif node_type == 'table':      # don't extract anything from tables (yet)
+        return {"@type": "slate", "value": [block], "plaintext": ""}
+
+    elif node_type == 'img':
+        return {"@type": "image",
+                "url": node.get('url', '').split('/@@images', 1)[0],
+                "title": node.get('title', ''),
+                "alt": node.get('alt', '')}
+
+    elif node_type == 'video':
+        return {"@type": "nextCloudVideo",
+                "url": node.get('src', ''),
+                "title": node.get('data-matomo-title', ''),
+                "alt": node.get('alt', '')}
+
+
+def convert_block(slate_node):
     # TODO: do the plaintext
 
-    if block.get('type') == 'voltoblock':
-        return block['data']
+    volto_block = convert_volto_block(slate_node, slate_node)
+    if volto_block:
+        return volto_block
 
-    if block.get('children'):
-        children = iterate_children(block['children'])
+    if slate_node.get('children'):
+        children = iterate_children(slate_node['children'])
         for child in children:
-            print('child', child)
-            node_type = child.get("type")
-            if node_type == 'voltoblock':
-                return child['data']
+            # print('child', child)
 
-    return {"@type": "slate", "value": [block], "plaintext": ""}
+            volto_block = convert_volto_block(slate_node, child)
+
+            if volto_block:
+                return volto_block
+
+    return {"@type": "slate", "value": [slate_node], "plaintext": ""}
