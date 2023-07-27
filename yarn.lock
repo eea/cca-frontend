@@ -1889,15 +1889,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.29":
-  version: 0.1.29
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.29"
+"@eeacms/volto-cca-policy@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.30"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
+    "@eeacms/volto-widget-dataprovenance": "*"
+    "@eeacms/volto-widget-geolocation": "*"
+    "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
-  checksum: 80eed3987e3547471ae6d7fd5c785c0f6506c6540cb3c02a309ea845a127418a262bc6c6b952421c618509ba62743540e84ff898fc03273e4d26c6f633ce4552
+    d3-geo: 3
+  checksum: c34eda9055018b0f2ae291f837c671bf9c063dba2799bfc7fdf0a95c086acd4b1acb0718c5461f009475ec883c6b7a12a080501ee6f476cc66b2c64e54e94cc9
   languageName: node
   linkType: hard
 
@@ -2304,14 +2308,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-widget-dataprovenance@npm:0.3.3":
+"@eeacms/volto-widget-dataprovenance@npm:*, @eeacms/volto-widget-dataprovenance@npm:0.3.3":
   version: 0.3.3
   resolution: "@eeacms/volto-widget-dataprovenance@npm:0.3.3"
   checksum: a0be6fc8681b853fead4adf10517333a86a27ce5a77102b916ca55100e71d1254921ba1f5d83fd3625039838b44dd3e5592cbc27134e5c120a8de0003cd1318f
   languageName: node
   linkType: hard
 
-"@eeacms/volto-widget-geolocation@npm:5.1.2":
+"@eeacms/volto-widget-geolocation@npm:*, @eeacms/volto-widget-geolocation@npm:5.1.2":
   version: 5.1.2
   resolution: "@eeacms/volto-widget-geolocation@npm:5.1.2"
   dependencies:
@@ -2321,7 +2325,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-widget-temporal-coverage@npm:5.1.2":
+"@eeacms/volto-widget-temporal-coverage@npm:*, @eeacms/volto-widget-temporal-coverage@npm:5.1.2":
   version: 5.1.2
   resolution: "@eeacms/volto-widget-temporal-coverage@npm:5.1.2"
   checksum: 5244a6d26a04f12a58c47e874e6767f2b6da2b8e4268df0db299d7c2085837310b46ec3c9c30283b1e0ae505937b41587731be4f09fa2c98c1ed36aa294f26ce
@@ -8560,7 +8564,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-cca-policy": 0.1.29
+    "@eeacms/volto-cca-policy": 0.1.30
     "@eeacms/volto-eea-design-system": 1.15.0
     "@eeacms/volto-eea-kitkat": 17.0.0
     "@eeacms/volto-eea-website-theme": 1.18.1
@@ -9545,10 +9549,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"countup.js@npm:2.5.0":
-  version: 2.5.0
-  resolution: "countup.js@npm:2.5.0"
-  checksum: 96b0f65746d644612c3f01647096b540891788338ada408fdd5efdc1b6cdd83237051b9e7c7ff3b23bd25955eb8c4fb2b9d2db62ec6e3f02d3c4c953e5c57f81
+"countup.js@npm:^2.0.8":
+  version: 2.7.0
+  resolution: "countup.js@npm:2.7.0"
+  checksum: 52990ddbcf5e23e51fa7ce0d33bcfebaf1345df8459aff239fb840b6e3ecc1b171df2f4e8edc3d30e727e6043c4c5e231e2dea465b9ca3e96fef241586c93e4f
   languageName: node
   linkType: hard
 
