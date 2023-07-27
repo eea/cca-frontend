@@ -132,7 +132,7 @@
     "https": "https://github.com/eea/volto-accordion-block.git",
     "package": "@eeacms/volto-accordion-block",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-block-divider": {

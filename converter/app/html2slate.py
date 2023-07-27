@@ -246,6 +246,25 @@ def style_to_object(text):
     return out
 
 
+def fix_node_attributes(key):
+    restricted = ['type', 'value', 'children']
+    if key in restricted:
+        key = "_" + key
+
+    return key
+
+
+def fix_img_url(url):
+    # if 'resolveuid' in url:
+    #     # TODO: fix this
+    #     return ''
+    # ../../../../
+    url = url.split('/@@images', 1)[0]
+    if 'resolveuid' in url and not url.startswith('/'):
+        url = '../' + url
+    return url
+
+
 class HTML2Slate(object):
     """A parser for HTML to slate conversion
 
@@ -341,12 +360,21 @@ class HTML2Slate(object):
 
     def handle_tag_img(self, node):
         url = node.attrs.get('src', '')
+
         # todo: handle align, alt
         # TODO: just for testing, I'm missing the blobs
-        url = "/fallback.png/@@images/image/preview"
+        # url = "/fallback.png/@@images/image/preview"
+        # resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview
+        # <img alt="" class="image-left" data-linktype="image"
+        # data-scale="preview" data-val="88a6567afaa148aabed5c5055e12c509"
+        # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
+        # title="rawpixel on Unsplash"/>
+
         return {
             "type": "img",
-            "url": url,
+            "url": fix_img_url(url),
+            "title": node.attrs.get('title', ''),
+            "alt": node.attrs.get('alt', ''),
             "children": [{"text": ""}]
         }
 
@@ -361,7 +389,12 @@ class HTML2Slate(object):
         return {"text": "\n"}
 
     def handle_block(self, node):
-        return {"type": node.name, "children": self.deserialize_children(node)}
+        value = {"type": node.name,
+                 "children": self.deserialize_children(node)}
+        for k, v in node.attrs.items():
+            k = fix_node_attributes(k)
+            value[k] = v
+        return value
 
     def handle_tag_b(self, node):
         # TO DO: implement <b> special cases
