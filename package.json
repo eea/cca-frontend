@@ -158,7 +158,6 @@
     "@eeacms/volto-workflow-progress": "3.1.1",
     "@eeacms/volto-widget-theme-picker": "1.1.2",
     "@kitconcept/volto-blocks-grid": "7.0.2",
-    "react-countup/countup.js": "2.5.0",
     "d3-array": "^2.12.1"
   },
   "dependencies": {
