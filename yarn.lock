@@ -2388,29 +2388,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-widget-dataprovenance@npm:*, @eeacms/volto-widget-dataprovenance@npm:0.3.3":
-  version: 0.3.3
-  resolution: "@eeacms/volto-widget-dataprovenance@npm:0.3.3"
-  checksum: a0be6fc8681b853fead4adf10517333a86a27ce5a77102b916ca55100e71d1254921ba1f5d83fd3625039838b44dd3e5592cbc27134e5c120a8de0003cd1318f
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-widget-geolocation@npm:*, @eeacms/volto-widget-geolocation@npm:5.1.2":
-  version: 5.1.2
-  resolution: "@eeacms/volto-widget-geolocation@npm:5.1.2"
+"@eeacms/volto-widget-dataprovenance@*, @eeacms/volto-widget-dataprovenance@0.3.3, @eeacms/volto-widget-dataprovenance@workspace:src/addons/volto-widget-dataprovenance":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-widget-dataprovenance@workspace:src/addons/volto-widget-dataprovenance"
   dependencies:
-    "@eeacms/volto-corsproxy": "*"
-    i18n-iso-countries: 6.2.1
-  checksum: f3488d9236abbe9a4673d429ffd0be7022760381087707a102ffba35c8a2770127bdca8f9a508076bf8df27ca3d3e8b1777c59f36ae835a49288fc6355580e2c
-  languageName: node
-  linkType: hard
+    "@cypress/code-coverage": ^3.10.0
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    md5: ^2.3.0
+  languageName: unknown
+  linkType: soft
 
-"@eeacms/volto-widget-temporal-coverage@npm:*, @eeacms/volto-widget-temporal-coverage@npm:5.1.2":
-  version: 5.1.2
-  resolution: "@eeacms/volto-widget-temporal-coverage@npm:5.1.2"
-  checksum: 5244a6d26a04f12a58c47e874e6767f2b6da2b8e4268df0db299d7c2085837310b46ec3c9c30283b1e0ae505937b41587731be4f09fa2c98c1ed36aa294f26ce
-  languageName: node
-  linkType: hard
+"@eeacms/volto-widget-geolocation@*, @eeacms/volto-widget-geolocation@5.1.2, @eeacms/volto-widget-geolocation@workspace:src/addons/volto-widget-geolocation":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-widget-geolocation@workspace:src/addons/volto-widget-geolocation"
+  dependencies:
+    "@cypress/code-coverage": ^3.10.0
+    "@eeacms/volto-corsproxy": "*"
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    i18n-iso-countries: 6.2.1
+    md5: ^2.3.0
+  languageName: unknown
+  linkType: soft
+
+"@eeacms/volto-widget-temporal-coverage@*, @eeacms/volto-widget-temporal-coverage@5.1.2, @eeacms/volto-widget-temporal-coverage@workspace:src/addons/volto-widget-temporal-coverage":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-widget-temporal-coverage@workspace:src/addons/volto-widget-temporal-coverage"
+  dependencies:
+    "@cypress/code-coverage": ^3.10.0
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    md5: ^2.3.0
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-widget-theme-picker@npm:1.1.2":
   version: 1.1.2
@@ -8803,6 +8814,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
+    "@eeacms/volto-accordion-block": 9.3.0
     "@eeacms/volto-cca-policy": 0.1.31
     "@eeacms/volto-eea-design-system": 1.15.0
     "@eeacms/volto-eea-kitkat": 17.0.0
@@ -8811,6 +8823,9 @@ __metadata:
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.4.3
     "@eeacms/volto-openlayers-map": 0.3.0
+    "@eeacms/volto-widget-dataprovenance": 0.3.3
+    "@eeacms/volto-widget-geolocation": 5.1.2
+    "@eeacms/volto-widget-temporal-coverage": 5.1.2
     "@eeacms/volto-workflow-progress": 3.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2

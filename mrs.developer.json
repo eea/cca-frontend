@@ -84,7 +84,7 @@
     "https": "https://github.com/eea/volto-widget-dataprovenance.git",
     "package": "@eeacms/volto-widget-dataprovenance",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-widget-temporal-coverage": {
@@ -92,7 +92,7 @@
     "https": "https://github.com/eea/volto-widget-temporal-coverage.git",
     "package": "@eeacms/volto-widget-temporal-coverage",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-widget-geolocation": {
@@ -100,7 +100,7 @@
     "https": "https://github.com/eea/volto-widget-geolocation.git",
     "package": "@eeacms/volto-widget-geolocation",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-slate-metadata-mentions": {
