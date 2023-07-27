@@ -53,6 +53,10 @@
     "@eeacms/volto-eea-website-theme",
     "@eeacms/volto-workflow-progress",
     "@eeacms/volto-nextcloud-video-block",
+    "@eeacms/volto-widget-temporal-coverage",
+    "@eeacms/volto-widget-geolocation",
+    "@eeacms/volto-widget-dataprovenance",
+    "@eeacms/volto-accordion-block",
     "@eeacms/volto-cca-policy",
     "volto-subsites"
   ],
@@ -171,6 +175,10 @@
     "@eeacms/volto-openlayers-map": "0.3.0",
     "@eeacms/volto-workflow-progress": "3.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
+    "@eeacms/volto-widget-dataprovenance": "0.3.3",
+    "@eeacms/volto-widget-geolocation": "5.1.2",
+    "@eeacms/volto-widget-temporal-coverage": "5.1.2",
+    "@eeacms/volto-accordion-block": "9.3.0",
     "@plone/volto": "16.20.3",
     "volto-subsites": "4.0.0"
   },
