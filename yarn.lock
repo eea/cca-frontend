@@ -2207,7 +2207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-openlayers-map@*, @eeacms/volto-openlayers-map@workspace:src/addons/volto-openlayers-map":
+"@eeacms/volto-openlayers-map@*, @eeacms/volto-openlayers-map@0.3.0, @eeacms/volto-openlayers-map@workspace:src/addons/volto-openlayers-map":
   version: 0.0.0-use.local
   resolution: "@eeacms/volto-openlayers-map@workspace:src/addons/volto-openlayers-map"
   dependencies:
@@ -2219,15 +2219,6 @@ __metadata:
     ol: 6.6.x
   languageName: unknown
   linkType: soft
-
-"@eeacms/volto-openlayers-map@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@eeacms/volto-openlayers-map@npm:0.3.0"
-  dependencies:
-    ol: 6.6.x
-  checksum: d7d33223773199248cb63e05e75042cf984d4dac4be16f4ba24e4fb803067ec8ff6d247461cd007ed6903538ab8d7dbf7e575f17221e6abdc86dd27b805e659c
-  languageName: node
-  linkType: hard
 
 "@eeacms/volto-quote-block@npm:1.2.1":
   version: 1.2.1
@@ -2364,6 +2355,22 @@ __metadata:
   checksum: 03e6046f88df547ac831114728c4594a0c259ff086ea054f5f6cdf352d8cf0ca228541c81ef49f619d2c9e4f4367a6d65e68dcca0d35800abee14dba3b66d298
   languageName: node
   linkType: hard
+
+"@eeacms/volto-tabs-block@workspace:src/addons/volto-tabs-block":
+  version: 0.0.0-use.local
+  resolution: "@eeacms/volto-tabs-block@workspace:src/addons/volto-tabs-block"
+  dependencies:
+    "@cypress/code-coverage": ^3.10.0
+    "@eeacms/volto-anchors": "*"
+    "@eeacms/volto-block-style": "*"
+    "@plone/scripts": "*"
+    babel-plugin-transform-class-properties: ^6.24.1
+    md5: ^2.3.0
+    react-responsive-tabs: 4.4.3
+    react-slick: ^0.24.0
+    slick-carousel: ^1.8.1
+  languageName: unknown
+  linkType: soft
 
 "@eeacms/volto-tags-block@npm:1.2.1":
   version: 1.2.1
