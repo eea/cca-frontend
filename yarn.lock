@@ -2115,6 +2115,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-nextcloud-video-block@npm:0.4.4":
+  version: 0.4.4
+  resolution: "@eeacms/volto-nextcloud-video-block@npm:0.4.4"
+  dependencies:
+    "@eeacms/volto-object-widget": "*"
+  checksum: bcab391dc7affd26a13a5feb76fd920fdb9ababa8460161c7e62d2b6d907605d4cb772894bb5af756cc957735793fafef43a918804ef5408753b735247cd2a80
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-object-widget@npm:*":
   version: 5.1.1
   resolution: "@eeacms/volto-object-widget@npm:5.1.1"
@@ -8561,7 +8570,7 @@ __metadata:
     "@eeacms/volto-eea-website-theme": 1.18.1
     "@eeacms/volto-embed": 6.0.0
     "@eeacms/volto-globalsearch": ^1.0.15
-    "@eeacms/volto-nextcloud-video-block": 0.4.3
+    "@eeacms/volto-nextcloud-video-block": 0.4.4
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.3.3
     "@eeacms/volto-widget-geolocation": 5.1.2
