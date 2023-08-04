@@ -187,7 +187,7 @@
     "url": "git@github.com:eea/volto-nextcloud-video-block",
     "https": "https://github.com/eea/volto-nextcloud-video-block.git",
     "package": "@eeacms/volto-nextcloud-video-block",
-    "branch": "add_title",
+    "branch": "develop",
     "develop": true,
     "path": "src"
   },
