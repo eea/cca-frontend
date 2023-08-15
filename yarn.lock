@@ -1889,9 +1889,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.36":
-  version: 0.1.36
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.36"
+"@eeacms/volto-cca-policy@npm:0.1.37":
+  version: 0.1.37
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.37"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1902,7 +1902,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: 6b2769aa8e59982ceb0cc79f861a7d99711ba80e823539304953e3a7e84f9f314b21aed00bd569812342eb6fb604fc73a5ddbc830063ba032ec824a3f2430978
+  checksum: aa9c066d692160217f2db0cebcbbcddce54300b813f387a7c29b45f67a8cc2d26c822df47583f610b71b4c5597dd4bb8f231ba96972624728dd885417899a74b
   languageName: node
   linkType: hard
 
@@ -2311,6 +2311,13 @@ __metadata:
   version: 0.3.3
   resolution: "@eeacms/volto-widget-dataprovenance@npm:0.3.3"
   checksum: a0be6fc8681b853fead4adf10517333a86a27ce5a77102b916ca55100e71d1254921ba1f5d83fd3625039838b44dd3e5592cbc27134e5c120a8de0003cd1318f
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-widget-dataprovenance@npm:0.4.0":
+  version: 0.4.0
+  resolution: "@eeacms/volto-widget-dataprovenance@npm:0.4.0"
+  checksum: 112a2f951657f526e9f73043973d7c5f7814e4c3539aa4ec230084763ce120d8313317ec2516185849f81039c15ffc9543f2dc12be9bf020860093932dc9badf
   languageName: node
   linkType: hard
 
@@ -8574,7 +8581,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 9.3.0
-    "@eeacms/volto-cca-policy": 0.1.36
+    "@eeacms/volto-cca-policy": 0.1.37
     "@eeacms/volto-eea-design-system": 1.15.0
     "@eeacms/volto-eea-kitkat": 17.0.0
     "@eeacms/volto-eea-website-theme": 1.18.1
@@ -8582,7 +8589,7 @@ __metadata:
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-nextcloud-video-block": 0.4.4
     "@eeacms/volto-openlayers-map": 0.3.0
-    "@eeacms/volto-widget-dataprovenance": 0.3.3
+    "@eeacms/volto-widget-dataprovenance": 0.4.0
     "@eeacms/volto-widget-geolocation": 5.1.3
     "@eeacms/volto-widget-temporal-coverage": 5.1.2
     "@eeacms/volto-workflow-progress": 3.1.1
