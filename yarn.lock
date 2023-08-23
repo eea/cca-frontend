@@ -1797,7 +1797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-accordion-block@npm:*, @eeacms/volto-accordion-block@npm:10.1.0":
+"@eeacms/volto-accordion-block@npm:*":
   version: 10.1.0
   resolution: "@eeacms/volto-accordion-block@npm:10.1.0"
   dependencies:
@@ -1978,12 +1978,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:18.0.2":
-  version: 18.0.2
-  resolution: "@eeacms/volto-eea-kitkat@npm:18.0.2"
+"@eeacms/volto-eea-kitkat@npm:18.0.3":
+  version: 18.0.3
+  resolution: "@eeacms/volto-eea-kitkat@npm:18.0.3"
   dependencies:
     "@eeacms/countup": 2.0.4
-    "@eeacms/volto-accordion-block": 10.1.0
+    "@eeacms/volto-accordion-block": 10.1.1
     "@eeacms/volto-anchors": 0.4.0
     "@eeacms/volto-banner": 3.1.3
     "@eeacms/volto-block-divider": 6.1.2
@@ -2019,7 +2019,7 @@ __metadata:
     "@eeacms/volto-widget-toggle": 3.1.2
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone-collective/volto-sentry": 0.3.0
-  checksum: f60051665514d04c59ec1dedcb4add0ebd343e541a4c0a6ffbc5c099c6c41ba6fd0bcc292ce417aceb10caf1977da5cdb7d37f6e9708424d53e9b31c446d7667
+  checksum: c8095f6d73e98aa319adcf23455814b563bd87d3e35d713d85a9fa0fe4ef5e77c60713ee530f19e7fe09819b35d80e9ab6b95875e6bc0cb3028932b6160f1337
   languageName: node
   linkType: hard
 
@@ -8566,7 +8566,7 @@ __metadata:
     "@eeacms/volto-accordion-block": 10.1.1
     "@eeacms/volto-cca-policy": 0.1.39
     "@eeacms/volto-eea-design-system": 1.16.0
-    "@eeacms/volto-eea-kitkat": 18.0.2
+    "@eeacms/volto-eea-kitkat": 18.0.3
     "@eeacms/volto-eea-website-theme": 1.19.0
     "@eeacms/volto-embed": 6.0.0
     "@eeacms/volto-globalsearch": ^1.0.15
