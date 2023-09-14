@@ -259,10 +259,14 @@ def fix_img_url(url):
     #     # TODO: fix this
     #     return ''
     # ../../../../
-    url = url.split('/@@images', 1)[0]
+    bits = url.split('/@@images', 1)
+    url = bits[0]
+    scale = None
+    if len(bits) > 1:
+        scale = list(reversed(bits[1].rsplit('/')))[0]
     if 'resolveuid' in url and not url.startswith('/'):
         url = '../' + url
-    return url
+    return (url, scale)
 
 
 class HTML2Slate(object):
@@ -370,12 +374,14 @@ class HTML2Slate(object):
         # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
         # title="rawpixel on Unsplash"/>
 
+        url, scale = fix_img_url(url)
         return {
             "type": "img",
-            "url": fix_img_url(url),
+            "url": url,
             "title": node.attrs.get('title', ''),
             "alt": node.attrs.get('alt', ''),
-            "children": [{"text": ""}]
+            "children": [{"text": ""}],
+            "scale": scale
         }
 
     def handle_tag_voltoblock(self, node):
