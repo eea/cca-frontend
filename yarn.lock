@@ -1889,20 +1889,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.42":
-  version: 0.1.42
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.42"
+"@eeacms/volto-cca-policy@npm:0.1.43":
+  version: 0.1.43
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.43"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-globalsearch": "*"
     "@eeacms/volto-openlayers-map": "*"
+    "@eeacms/volto-slate-label": "*"
     "@eeacms/volto-widget-dataprovenance": "*"
     "@eeacms/volto-widget-geolocation": "*"
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: 0caf28d44d3ba2d6a7b0126db1351146f3e57175755d32737d2b9c67bc00bc6c004d60afe46be593c78fa1f889d527c8763c8dbff872fc83c97d371218fcc488
+  checksum: 000fc79034474a1f30f08246f277ff25003a5ddc9c55ef060e5d19d017b5d40b3d952fdfc5ad5459dffe0d5866d67497ef637274f148610db6e468135d9fcec9
   languageName: node
   linkType: hard
 
@@ -2231,7 +2232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-slate-label@npm:0.5.3":
+"@eeacms/volto-slate-label@npm:*, @eeacms/volto-slate-label@npm:0.5.3":
   version: 0.5.3
   resolution: "@eeacms/volto-slate-label@npm:0.5.3"
   checksum: 2b6c6543614faa3c57168409143f42f46c3c0ba73ec4c303ad6d120a7981c07247318eb1c1581de947c0a6c515ffc700183bba02d6d4c4c2511a61bc585ede5f
@@ -8556,7 +8557,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.3.0
-    "@eeacms/volto-cca-policy": 0.1.42
+    "@eeacms/volto-cca-policy": 0.1.43
     "@eeacms/volto-eea-design-system": 1.18.1
     "@eeacms/volto-eea-kitkat": 18.1.1
     "@eeacms/volto-eea-website-theme": 1.21.0
