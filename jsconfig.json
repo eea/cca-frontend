@@ -40,6 +40,9 @@
             "@eeacms/volto-widget-temporal-coverage": [
                 "addons/volto-widget-temporal-coverage/src"
             ],
+            "@eeacms/volto-slate-label": [
+                "addons/volto-slate-label/src"
+            ],
             "@eeacms/volto-widget-geolocation": [
                 "addons/volto-widget-geolocation/src"
             ]
