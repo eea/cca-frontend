@@ -95,3 +95,4 @@ src/addons/*
 docker-compose.override.yml
 backend/src
 fix_permissions.sh
+start_dev.sh
