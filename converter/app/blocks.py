@@ -148,16 +148,30 @@ def convert_button(soup):
         else:
             button.replace_with(block_tag(data, soup))
 
+def convert_read_more(soup):
+    links = soup.find_all("a", attrs={"class": "accordion-toggle"})
+
+    new_data = {
+        "@type": "readMoreBlock",
+        "height": "50vh",
+        "label_closed": "Read more",
+        "label_opened": "Read less",
+        "label_position": "right"
+    }
+
+    for tag in links:
+        if tag.text == 'Read more':
+            tag.replace_with(block_tag(new_data, soup))
+
 
 def convert_accordion(soup):
     accordions = soup.find_all("div", attrs={"class": "panel-group"})
 
-    accordion_titles = soup.find_all("div", attrs={"class": "panel-heading"})
-
-    if accordion_titles and not accordions:
-        for node in accordion_titles:
-            node.decompose()
-        return
+    # accordion_titles = soup.find_all("div", attrs={"class": "panel-heading"})
+    # if accordion_titles and not accordions:
+    #     for node in accordion_titles:
+    #         node.decompose()
+    #     return
 
     if not accordions:
         # handle single accordion, aka "Read more", which we remove
@@ -176,6 +190,9 @@ def convert_accordion(soup):
 
             _panel_bodies = panel.find_all(
                 "div", attrs={"class": "panel-body"})
+            
+            if panel_title == 'Read more':
+                return
 
             blocks = []
             for panel_body in _panel_bodies:
@@ -198,6 +215,7 @@ preprocessors = [
     convert_tabs,
     convert_iframe,
     convert_accordion,
+    convert_read_more,
     convert_button,
 ]
 
