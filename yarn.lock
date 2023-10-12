@@ -2399,10 +2399,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-workflow-progress@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@eeacms/volto-workflow-progress@npm:4.1.0"
-  checksum: f1869ccd17616ac8f2a26ae0a1270bfaba0e8b40aaad916c5cbf442d6a14a4b23cca24a18077d71ab196172696de2359d43f78b0dc352738ba7979e9b7c32031
+"@eeacms/volto-workflow-progress@npm:4.1.1":
+  version: 4.1.1
+  resolution: "@eeacms/volto-workflow-progress@npm:4.1.1"
+  checksum: c439275077eccfd791ff49ab2c52066e4a14a4af81ac63f4bcd89137e673e07c46e353327e4c5f1839197968db44db28c0b1bfe149b1ccd54a3f1b4f981b85b6
   languageName: node
   linkType: hard
 
@@ -8629,7 +8629,7 @@ __metadata:
     "@eeacms/volto-widget-dataprovenance": 0.4.1
     "@eeacms/volto-widget-geolocation": 5.1.4
     "@eeacms/volto-widget-temporal-coverage": 5.1.4
-    "@eeacms/volto-workflow-progress": 4.1.0
+    "@eeacms/volto-workflow-progress": 4.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
     "@plone/volto": 16.20.3
