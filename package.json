@@ -167,7 +167,7 @@
   },
   "dependencies": {
     "@eeacms/volto-accordion-block": "10.4.1",
-    "@eeacms/volto-cca-policy": "0.1.47",
+    "@eeacms/volto-cca-policy": "0.1.48",
     "@eeacms/volto-eea-design-system": "1.18.3",
     "@eeacms/volto-eea-kitkat": "18.2.0",
     "@eeacms/volto-eea-website-theme": "1.22.1",
