@@ -1817,6 +1817,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-accordion-block@npm:10.4.2":
+  version: 10.4.2
+  resolution: "@eeacms/volto-accordion-block@npm:10.4.2"
+  dependencies:
+    "@eeacms/volto-widget-theme-picker": "*"
+  checksum: 4d1cf90b6582cea9d71b3d0d7268d8d95abafe107ea1ff0956a89771a98bd3642f6e267bf206fceef778ac10224c56fb6ea44cbe09511a0031c847990609e35e
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-anchors@npm:*":
   version: 0.2.1
   resolution: "@eeacms/volto-anchors@npm:0.2.1"
@@ -8583,7 +8592,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@cypress/code-coverage": ^3.10.0
-    "@eeacms/volto-accordion-block": 10.4.1
+    "@eeacms/volto-accordion-block": 10.4.2
     "@eeacms/volto-cca-policy": 0.1.48
     "@eeacms/volto-eea-design-system": 1.19.0
     "@eeacms/volto-eea-kitkat": 19.0.0
