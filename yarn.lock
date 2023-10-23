@@ -2379,6 +2379,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-widget-temporal-coverage@npm:5.1.5":
+  version: 5.1.5
+  resolution: "@eeacms/volto-widget-temporal-coverage@npm:5.1.5"
+  checksum: e8b3033c3447938b877290f53d710550d6e876a988f362b1930b9a721742c7c034a85e9a544c1490d47c45f4f179194e1085a8d66b331f6402674ee6b056302d
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-widget-theme-picker@npm:1.1.4":
   version: 1.1.4
   resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.4"
@@ -8623,7 +8630,7 @@ __metadata:
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.2
     "@eeacms/volto-widget-geolocation": 5.1.5
-    "@eeacms/volto-widget-temporal-coverage": 5.1.4
+    "@eeacms/volto-widget-temporal-coverage": 5.1.5
     "@eeacms/volto-workflow-progress": 4.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
