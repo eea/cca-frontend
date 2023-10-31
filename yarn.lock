@@ -2372,6 +2372,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-widget-geolocation@npm:5.1.6":
+  version: 5.1.6
+  resolution: "@eeacms/volto-widget-geolocation@npm:5.1.6"
+  dependencies:
+    "@eeacms/volto-corsproxy": "*"
+    i18n-iso-countries: 6.2.1
+  checksum: 0d557fe6557bd309494e6fedbcae6e0be10e75bba5ef1a48b3fec6b16bf77fa1d33538823abd44a38d56dcbe7d7995d9fc13b46c13ac10c56abfe8f5e8245217
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-widget-temporal-coverage@npm:*, @eeacms/volto-widget-temporal-coverage@npm:5.1.4":
   version: 5.1.4
   resolution: "@eeacms/volto-widget-temporal-coverage@npm:5.1.4"
@@ -8629,7 +8639,7 @@ __metadata:
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.2
-    "@eeacms/volto-widget-geolocation": 5.1.5
+    "@eeacms/volto-widget-geolocation": 5.1.6
     "@eeacms/volto-widget-temporal-coverage": 5.1.5
     "@eeacms/volto-workflow-progress": 4.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
