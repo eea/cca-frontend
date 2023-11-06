@@ -2091,15 +2091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:6.0.2":
-  version: 6.0.2
-  resolution: "@eeacms/volto-listing-block@npm:6.0.2"
+"@eeacms/volto-listing-block@npm:6.0.3":
+  version: 6.0.3
+  resolution: "@eeacms/volto-listing-block@npm:6.0.3"
   dependencies:
     "@eeacms/volto-widget-theme-picker": ^1.0.1
     react-resize-detector: 7.1.2
     react-slick: 0.29.0
     slick-carousel: 1.8.1
-  checksum: ccd9fd6d822bc88dbc800f26bd193543bfdd06e9ffabf7980030a3b1e8285dd7850422900d3dfc91e34f85929a5f86a42a6c313d84dbde090156425c407c8e87
+  checksum: f13ff404fd391009a75f32d998c2c4490a443846e269ef46e4a5c24e2cad104f5bf37adc84a251d347ef7f0b1c6c468e6e8aa0e04207e31d92eb48bf40259c18
   languageName: node
   linkType: hard
 
@@ -8616,7 +8616,7 @@ __metadata:
     "@eeacms/volto-eea-website-theme": 1.23.0
     "@eeacms/volto-embed": 6.0.1
     "@eeacms/volto-globalsearch": ^1.0.15
-    "@eeacms/volto-listing-block": 6.0.2
+    "@eeacms/volto-listing-block": 6.0.3
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.3
