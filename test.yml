@@ -1,0 +1,88 @@
+version: "3"
+
+services:
+  cypress:
+    image: plone/volto-addon-ci
+    volumes:
+      - ./src/addons/volto-cca-policy/:/opt/frontend/my-volto-project/src/addons/volto-cca-policy
+    environment:
+      - "GIT_NAME=volto-cca-policy"
+      - "NAMESPACE=@eeacms"
+      - "VOLTO=16.24.0"
+    command: cypress
+
+  plone:
+    image: eeacms/plone-backend
+    environment:
+      SITE: "Plone"
+      PROFILES: "eea.kitkat:testing plone.app.multilingual:default"
+      ADDONS: "plone.app.multilingual"
+    ports:
+      - "8080:8080"
+
+
+# docker run -it --rm --link cypress-test-3:plone -v $(pwd):/opt/frontend/my-volto-project/src/addons/volto-cca-policy
+  # -e GIT_NAME=volto-cca-policy -e NAMESPACE=@eeacms -e VOLTO='16.24.0' plone/volto-addon-ci cypress
+# am un container de plone, si in directorul de unde pornesc comanda de sus am volto-cca-policy
+# am facut ceva modificari acuma neata, a terminat testul in 20min fata de 1h cat tinea
+# acuma crapa ca nu poate face login la plone
+# https://ci.eionet.europa.eu/job/volto-addons/job/volto-cca-policy/job/cca-event-view/12/pipeline-console/
+# docker run -it --name="cypress-test-3" -e SITE="Plone" -p 8080:8080 -e PROFILES="eea.kitkat:testing" eeacms/plone-backend
+#
+# git clone git@github.com:eea/volto-cca-policy.git
+# cd volto-cca-policy/
+# git checkout cca-event-view
+#
+# docker run -it --rm --link cypress-test-3:plone -v $(pwd):/opt/frontend/my-volto-project/src/addons/volto-cca-policy -e GIT_NAME=volto-cca-policy -e NAMESPACE=@eeacms -e VOLTO='16.24.0' plone/volto-addon-ci cypress
+
+
+# docker run -it --name="cypress-test-3" -e SITE="Plone" -p 8080:8080 -e PROFILES="eea.kitkat:testing" eeacms/plone-backend
+
+  # frontend:
+  #   build: .
+  #   # image: eeacms/eea-website-frontend:develop
+  #   # image: cca-test
+  #   ports:
+  #   - "${FRONTEND:-3000}:3000"
+  #   environment:
+  #     RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
+  #     RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
+  #   volumes:
+  #   - ./src/addons:/app/src/addons
+  #   depends_on:
+  #     - backend
+  #
+  # memcached:
+  #   # mem_limit: 73400320
+  #   image: memcached:1.5.12
+  #   environment:
+  #     TZ: Europe/Copenhagen
+  #   # mem_reservation: 52428800
+  #   command:
+  #   - -m
+  #   - '2048'
+  #   # labels:
+  #   #   io.rancher.scheduler.affinity:host_label_ne: reserved=yes
+  #
+  # backend:
+  #   #build: ./eea-website-backend/
+  #   # image: eeacms/eea.docker.plone-climateadapt:v9.105
+  #   image: eeacms/eea.docker.plone-climateadapt:v9.173
+  #   ports:
+  #   - "${BACKEND:-8080}:8080"
+  #   volumes:
+  #     - ./data:/data
+  #     - ./backend/src:/plone/instance/src
+  #     # - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
+  #   # mem_limit: 4294967296
+  #   # mem_reservation: 4294967296
+  #   environment:
+  #     SITE: "cca"
+  #     TZ: Europe/Copenhagen
+  #     SERVER_NAME: climate-adapt.eea.europa.eu
+***REMOVED***  #     CORS_ALLOW_ORIGIN: "http://localhost:3000"
+  #   depends_on:
+  #     - memcached
+  #
+  # converter:
+  #   image: tiberiuichim/blocks-conversion-tool:0.5
