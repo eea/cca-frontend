@@ -171,7 +171,7 @@
     "@eeacms/volto-eea-design-system": "1.20.0",
     "@eeacms/volto-eea-kitkat": "20.0.2",
     "@eeacms/volto-eea-website-theme": "1.23.0",
-    "@eeacms/volto-embed": "7.0.2",
+    "@eeacms/volto-embed": "8.0.0",
     "@eeacms/volto-globalsearch": "^1.0.15",
     "@eeacms/volto-listing-block": "6.1.0",
     "@eeacms/volto-nextcloud-video-block": "0.4.8",
