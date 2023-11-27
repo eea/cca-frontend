@@ -2409,6 +2409,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-widget-temporal-coverage@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@eeacms/volto-widget-temporal-coverage@npm:5.2.0"
+  dependencies:
+    react-compound-slider: ^3.4.0
+  checksum: fc3d85b5457fa1ae129fdf9130a3431111ce4c5d5d55e0ec0dead33d42fb87febd16e94ce978754313f384e46db5bfa38f190bc34ceb33d41a4db1807e85eb5f
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-widget-theme-picker@npm:1.1.5":
   version: 1.1.5
   resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.5"
@@ -8653,7 +8662,7 @@ __metadata:
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.3
     "@eeacms/volto-widget-geolocation": 5.1.6
-    "@eeacms/volto-widget-temporal-coverage": 5.1.5
+    "@eeacms/volto-widget-temporal-coverage": 5.2.0
     "@eeacms/volto-workflow-progress": 4.1.1
     "@kitconcept/volto-blocks-grid": 7.0.2
     "@plone/scripts": ^2.1.2
