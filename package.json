@@ -166,7 +166,7 @@
     "d3-array": "^2.12.1"
   },
   "dependencies": {
-    "@eeacms/volto-accordion-block": "10.4.4",
+    "@eeacms/volto-accordion-block": "10.4.5",
     "@eeacms/volto-cca-policy": "0.1.50",
     "@eeacms/volto-eea-design-system": "1.22.4",
     "@eeacms/volto-eea-kitkat": "21.0.1",
