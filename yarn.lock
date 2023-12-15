@@ -1909,9 +1909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.51":
-  version: 0.1.51
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.51"
+"@eeacms/volto-cca-policy@npm:0.1.52":
+  version: 0.1.52
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.52"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1924,7 +1924,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: 1e76d246b9407c364f56ba714137a64563c75384334e5b46b39f30cf81b8757908436762463255a6e5bbaa2dddecd21a755676b453b127dbc272ae201deed631
+  checksum: a9720d0ab9ef05152f43fdb4065039a9cd8628ff30e1184f143a2e991cf71a55691acfa61cc7c6d5098c642c9960c0fbe860a0eb0110f8952b5e745de516af82
   languageName: node
   linkType: hard
 
@@ -2036,7 +2036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:*, @eeacms/volto-eea-website-theme@npm:1.24.3":
+"@eeacms/volto-eea-website-theme@npm:*":
   version: 1.24.3
   resolution: "@eeacms/volto-eea-website-theme@npm:1.24.3"
   dependencies:
@@ -2045,6 +2045,18 @@ __metadata:
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
   checksum: 5d5efc9c8356662d5eeb435d7150ae48c35804cb990491b6b7fba5519552d3279c4e81ba646329a04606fd779d9528c989b34667585d1c180cedb0b8c022de4d
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-eea-website-theme@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.26.1"
+  dependencies:
+    "@eeacms/volto-block-style": "*"
+    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-group-block": "*"
+    volto-subsites: "*"
+  checksum: 80498e0fe150fc3401bb5740e862c3598ff1a26f1a335d18b9aeda3cacf986599d0599280cb28248ba1f8fddfadd2abbd68af65a56cef6af85c0afc08c6857dc
   languageName: node
   linkType: hard
 
@@ -2058,13 +2070,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-embed@npm:9.0.4":
-  version: 9.0.4
-  resolution: "@eeacms/volto-embed@npm:9.0.4"
+"@eeacms/volto-embed@npm:9.0.5":
+  version: 9.0.5
+  resolution: "@eeacms/volto-embed@npm:9.0.5"
   dependencies:
     "@eeacms/volto-corsproxy": "*"
     "@eeacms/volto-datablocks": "*"
-  checksum: 354f8ec18356c947b4b5f363139dd840352d64d297b70387d19ae6d1f96db0a2364410e57b4535f214ff1e86383621c0c79f48ac142b5e1e7e9e56e500419539
+  checksum: 505d419d21a31d5e0ca1053b5d628ff572fc8d73cf433997d87c259c1571b20ab947e1f4cd62ee254582e5d62b53b2071d8be23240b8bc25632483bf9ea3d988
   languageName: node
   linkType: hard
 
@@ -8592,11 +8604,11 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.5
-    "@eeacms/volto-cca-policy": 0.1.51
+    "@eeacms/volto-cca-policy": 0.1.52
     "@eeacms/volto-eea-design-system": 1.22.4
     "@eeacms/volto-eea-kitkat": 21.1.0
-    "@eeacms/volto-eea-website-theme": 1.24.3
-    "@eeacms/volto-embed": 9.0.4
+    "@eeacms/volto-eea-website-theme": 1.26.1
+    "@eeacms/volto-embed": 9.0.5
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-listing-block": 7.0.0
     "@eeacms/volto-nextcloud-video-block": 0.4.8
