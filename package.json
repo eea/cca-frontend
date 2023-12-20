@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "1.66.0",
+  "version": "1.67.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -181,7 +181,7 @@
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-workflow-progress": "4.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
-    "@plone/volto": "16.20.3",
+    "@plone/volto": "16.30.0",
     "volto-subsites": "4.0.0"
   },
   "devDependencies": {
