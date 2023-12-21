@@ -1900,9 +1900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.54":
-  version: 0.1.54
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.54"
+"@eeacms/volto-cca-policy@npm:0.1.55":
+  version: 0.1.55
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.55"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1915,7 +1915,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: c1baa1e0aba743a21a47410bbb6b754b7045fe7fa41d4f8bd41a96e862fabf170350521d4a684b6b6a4759e6848b4736fc0517fc7bee3f473a092f6c2687ec4d
+  checksum: 8ba6914f8b7e0c8bb142bc0f613175ffc2660ab798c894a2d6c9c89676e8366a24742c07d35f246165abfe239d31e1e0e5d3e603c157697db066f76582aa18a3
   languageName: node
   linkType: hard
 
@@ -2083,15 +2083,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@eeacms/volto-listing-block@npm:7.0.0"
+"@eeacms/volto-listing-block@npm:7.0.1":
+  version: 7.0.1
+  resolution: "@eeacms/volto-listing-block@npm:7.0.1"
   dependencies:
     "@eeacms/volto-widget-theme-picker": ^1.0.1
     react-resize-detector: 7.1.2
     react-slick: 0.29.0
     slick-carousel: 1.8.1
-  checksum: 2d271c8bd5aa861eda8bf5f6dbe21bd9f5662bc793094e5637f68235b5ee323157f5724f8abcb5098c370046190e6b49070a9a2e97498c35139bec84f815d166
+  checksum: 552caa5e3aa4e58d6d59884da7c740334304dbff33cc56c5dc40595758654b3a7ee072af3ffa391875402b36a5b742c895fca513d1668266f5a429df16e64b1d
   languageName: node
   linkType: hard
 
@@ -8580,13 +8580,13 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.5
-    "@eeacms/volto-cca-policy": 0.1.54
+    "@eeacms/volto-cca-policy": 0.1.55
     "@eeacms/volto-eea-design-system": 1.22.4
     "@eeacms/volto-eea-kitkat": 21.1.0
     "@eeacms/volto-eea-website-theme": 1.26.1
     "@eeacms/volto-embed": 9.0.5
     "@eeacms/volto-globalsearch": ^1.0.15
-    "@eeacms/volto-listing-block": 7.0.0
+    "@eeacms/volto-listing-block": 7.0.1
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.3
