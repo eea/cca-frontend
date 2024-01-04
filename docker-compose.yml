@@ -49,3 +49,101 @@ services:
 
   converter:
     image: tiberiuichim/blocks-conversion-tool:0.5
+
+  apache:
+    image: eeacms/apache:2.4-2.9
+    environment:
+      APACHE_CONFIG: |-
+        <VirtualHost *:80>
+          ServerAdmin helpdesk@climate-adapt.eea.europa.eu
+          ServerName cca-local
+
+          ErrorLog /var/log/apache.log
+        # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
+        <IfModule mod_deflate.c>
+
+          AddOutputFilterByType DEFLATE text/css
+          AddOutputFilterByType DEFLATE text/html
+          AddOutputFilterByType DEFLATE text/javascript
+          AddOutputFilterByType DEFLATE text/plain
+          AddOutputFilterByType DEFLATE text/xml
+          AddOutputFilterByType DEFLATE text/tab-separated-values
+          AddOutputFilterByType DEFLATE application/javascript
+          AddOutputFilterByType DEFLATE application/x-javascript
+          AddOutputFilterByType DEFLATE application/octet-stream
+          AddOutputFilterByType DEFLATE application/x-font
+          AddOutputFilterByType DEFLATE application/json
+          AddOutputFilterByType DEFLATE application/x-font-opentype
+          AddOutputFilterByType DEFLATE application/x-font-otf
+          AddOutputFilterByType DEFLATE application/x-font-truetype
+          AddOutputFilterByType DEFLATE application/x-font-ttf
+          AddOutputFilterByType DEFLATE application/xhtml+xml
+          AddOutputFilterByType DEFLATE application/xml
+          AddOutputFilterByType DEFLATE font/opentype
+          AddOutputFilterByType DEFLATE font/otf
+          AddOutputFilterByType DEFLATE font/ttf
+          AddOutputFilterByType DEFLATE image/svg+xml
+          AddOutputFilterByType DEFLATE image/x-icon
+        </IfModule>
+
+          RewriteEngine On
+          ProxyPreserveHost On
+
+          # volto-cca
+          RewriteRule ^/mission$$ /en/mission [R=301,L]
+        RewriteRule ^/\+\+api\+\+(.*) http://backend:8080/VirtualHostBase/http/cca-local:80/cca/VirtualHostRoot/$$1 [P,L]
+          RewriteRule ^/static(.*) http://192.168.100.28:3000/static$$1 [P,L]
+          RewriteRule ^/_es(.*) http://192.168.100.28:3000/_es$$1 [P,L]
+          RewriteRule ^/en/mission(.*) http://192.168.100.28:3000/en/mission$$1 [P,L]
+          RewriteRule ^/en/observatory/resource-catalogue(.*) http://192.168.100.28:3000/en/observatory/resource-catalogue$$1 [P,L]
+        RewriteRule ^/en/resource-catalogue(.*) http://192.168.100.28:3000/en/resource-catalogue$$1 [P,L]
+        RewriteRule ^/en/next-data-and-download(.*) http://192.168.100.28:3000/en/next-data-and-download$$1 [P,L]
+
+          # fix some tinymce errors see task #156571
+        RewriteRule ^/(.*)\+\+resource\+\+plone\.app\.widgets\.tinymce(.*) http://backend:8080/VirtualHostBase/http/cca-local:80/cca/VirtualHostRoot/$$1$$2 [P,L]
+
+
+        RewriteRule ^/(en|de|fr|es|it|pl)$$ / [L,R=301]
+        RewriteRule ^/(en|de|fr|es|it|pl)/$$ / [L,R=301]
+        RewriteRule ^/data-and-downloads/$$ /en/data-and-downloads/ [L,R=301]
+
+            RewriteRule ^/(en|de|fr|es|it|pl)/data-and-downloads/(.*) http://search-app:3000/$$2 [P,L]
+            RewriteRule ^/(en|de|fr|es|it|pl)/data-and-downloads /data-and-downloads/ [L,R=301]
+            RewriteRule ^/(en|de|fr|es|it|pl)/dataanddownloads/(.*) http://search-app:3000/$$2 [P,L]
+            RewriteRule ^/(en|de|fr|es|it|pl)/observatory/catalogue/(.*) http://health-catalog-app:3000/$$2 [P,L]
+
+
+            # from demo website
+            # RewriteRule ^/data-and-downloads$$ https://climate-adapt.eea.europa.eu/data-and-downloads/ [L,R=301]
+            # RewriteRule ^/observatory/catalogue$$ https://climate-adapt.eea.europa.eu/observatory/catalogue/ [L,R=301]
+
+            # Main search engine
+            # RewriteRule ^/data-and-downloads/(.*) http://search-app:3000/$$$$1 [P,L]
+
+            # Health catalogue search engine
+            # RewriteRule ^/observatory/catalogue/(.*) http://health-catalog-app:3000/$$$$1 [P,L]
+
+            # Needed
+            RewriteRule /esbootstrap_resources/(.*) http://health-catalog-app:3000/esbootstrap_resources/$$1 [P]
+            RewriteRule /search-images/(.*) http://health-catalog-app:3000/search-images/$$1 [P]
+            RewriteRule /fonts-search/(.*) http://health-catalog-app:3000/fonts-search/$$1 [P]
+
+
+            RewriteRule ^/(.*data\-and\-downloads.*) http://search-app:3000/$$$$1 [P]
+            RewriteRule /frontpage/(.*data\-and\-downloads.*) http://search-app:3000/$$$$1 [P]
+
+        RewriteRule ^/(.*) http://backend:8080/VirtualHostBase/http/cca-local:80/cca/VirtualHostRoot/$$1 [P,L]
+
+        # # ported from the ca-proxy server, not sure this is needed
+        # # Comment on that server was "For the background map"
+
+          RewriteRule ^/ve/(.*) http://dev.virtualearth.net/$$1 [P]
+          ProxyPassReverse /ve http://dev.virtualearth.net/
+
+        </VirtualHost>
+      APACHE_CONFIG_URL_OLD: https://raw.githubusercontent.com/eea/eea.docker.climateadapt/master/apache/vh-cca-https.conf?bust=7
+      TZ: Europe/Copenhagen
+    stdin_open: true
+    tty: true
+    ports:
+    - "80:80"
