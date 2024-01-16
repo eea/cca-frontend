@@ -1900,9 +1900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.59":
-  version: 0.1.59
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.59"
+"@eeacms/volto-cca-policy@npm:0.1.60":
+  version: 0.1.60
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.60"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1915,7 +1915,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: bb4a40c9946b482c0836ec188007f269c01c5cd0b34bdfffe673f503555ca494eb42339d22a0aebd17af3800f117de466228532384955436505d4d456425eabb
+  checksum: 81cdf54d6f9062537eb9ae98d51614a063f4a4005a479c729740c5bf36a1532c0f257c48f02b1377addb3a1b99c2ad69fecebee7166bcca6514efb8e92229c24
   languageName: node
   linkType: hard
 
@@ -2051,13 +2051,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-embed@npm:*, @eeacms/volto-embed@npm:9.0.5":
+"@eeacms/volto-embed@npm:*":
   version: 9.0.5
   resolution: "@eeacms/volto-embed@npm:9.0.5"
   dependencies:
     "@eeacms/volto-corsproxy": "*"
     "@eeacms/volto-datablocks": "*"
   checksum: 505d419d21a31d5e0ca1053b5d628ff572fc8d73cf433997d87c259c1571b20ab947e1f4cd62ee254582e5d62b53b2071d8be23240b8bc25632483bf9ea3d988
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-embed@npm:9.0.6":
+  version: 9.0.6
+  resolution: "@eeacms/volto-embed@npm:9.0.6"
+  dependencies:
+    "@eeacms/volto-corsproxy": "*"
+    "@eeacms/volto-datablocks": "*"
+  checksum: ae81faf8524e2868d52dd321e87aaf9adc7329ca75d1f67ff8d5740f0b0a0890327c4bc1ca730b618f2ced891c94dd23a42eed10ecad4f294b4fb23c19b3d39e
   languageName: node
   linkType: hard
 
@@ -2095,15 +2105,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:7.0.1":
-  version: 7.0.1
-  resolution: "@eeacms/volto-listing-block@npm:7.0.1"
+"@eeacms/volto-listing-block@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@eeacms/volto-listing-block@npm:7.0.2"
   dependencies:
     "@eeacms/volto-widget-theme-picker": ^1.0.1
     react-resize-detector: 7.1.2
     react-slick: 0.29.0
     slick-carousel: 1.8.1
-  checksum: 552caa5e3aa4e58d6d59884da7c740334304dbff33cc56c5dc40595758654b3a7ee072af3ffa391875402b36a5b742c895fca513d1668266f5a429df16e64b1d
+  checksum: ac755157d5343e705e07ff233cd9a4e747cd4d95c9da084724d918dbfd589fb510534d9930cd0bf3a7cab533c7b4d3cd88f2a21322a988e3e42e748d40e88300
   languageName: node
   linkType: hard
 
@@ -8592,13 +8602,13 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.5
-    "@eeacms/volto-cca-policy": 0.1.59
+    "@eeacms/volto-cca-policy": 0.1.60
     "@eeacms/volto-eea-design-system": 1.22.4
     "@eeacms/volto-eea-kitkat": 21.1.0
     "@eeacms/volto-eea-website-theme": 1.26.2
-    "@eeacms/volto-embed": 9.0.5
+    "@eeacms/volto-embed": 9.0.6
     "@eeacms/volto-globalsearch": ^1.0.15
-    "@eeacms/volto-listing-block": 7.0.1
+    "@eeacms/volto-listing-block": 7.0.2
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.0
     "@eeacms/volto-widget-dataprovenance": 0.4.3
