@@ -12,7 +12,7 @@
     "https": "https://github.com/eea/volto-embed.git",
     "package": "@eeacms/volto-embed",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-matomo": {
@@ -84,7 +84,7 @@
     "https": "https://github.com/eea/volto-widget-dataprovenance.git",
     "package": "@eeacms/volto-widget-dataprovenance",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-widget-temporal-coverage": {
@@ -92,7 +92,7 @@
     "https": "https://github.com/eea/volto-widget-temporal-coverage.git",
     "package": "@eeacms/volto-widget-temporal-coverage",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-widget-geolocation": {
@@ -100,7 +100,7 @@
     "https": "https://github.com/eea/volto-widget-geolocation.git",
     "package": "@eeacms/volto-widget-geolocation",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-slate-metadata-mentions": {
@@ -132,7 +132,7 @@
     "https": "https://github.com/eea/volto-accordion-block.git",
     "package": "@eeacms/volto-accordion-block",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-block-divider": {
@@ -148,7 +148,7 @@
     "https": "https://github.com/eea/volto-listing-block.git",
     "package": "@eeacms/volto-listing-block",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-metadata-block": {
@@ -188,7 +188,7 @@
     "https": "https://github.com/eea/volto-nextcloud-video-block.git",
     "package": "@eeacms/volto-nextcloud-video-block",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-block-image-cards": {
@@ -236,7 +236,7 @@
     "https": "https://github.com/eea/volto-eea-design-system.git",
     "package": "@eeacms/volto-eea-design-system",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-eea-website-theme": {
@@ -244,7 +244,7 @@
     "https": "https://github.com/eea/volto-eea-website-theme.git",
     "package": "@eeacms/volto-eea-website-theme",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-eea-website-policy": {
@@ -284,7 +284,7 @@
     "https": "https://github.com/eea/volto-slate-label.git",
     "package": "@eeacms/volto-slate-label",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-tags-block": {
@@ -364,7 +364,7 @@
     "https": "https://github.com/eea/volto-eea-map.git",
     "package": "@eeacms/volto-eea-map",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-openlayers-map": {
@@ -372,7 +372,7 @@
     "https": "https://github.com/eea/volto-openlayers-map.git",
     "package": "@eeacms/volto-openlayers-map",
     "branch": "develop",
-    "develop": true,
+    "develop":  false,
     "path": "src"
   }
 }
