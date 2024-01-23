@@ -1909,9 +1909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.62":
-  version: 0.1.62
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.62"
+"@eeacms/volto-cca-policy@npm:0.1.63":
+  version: 0.1.63
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.63"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1924,7 +1924,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: 5f67e02abab1e78ea3516f1ccc9817eabbb55a5b973363c567c955dd8979f90d27cb5bf5633081ed8a847e15e2fb6591a5be2b470d9482d4913994a2d5e1c5e0
+  checksum: dd76f34b8cca1296585e024c111756bd77afab1708755da2504b0b64e505b323c0ec2c6aade369a0febedd7c44f8a4521d522d04b9443c92d30a53bef198ddac
   languageName: node
   linkType: hard
 
@@ -1976,9 +1976,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.22.6":
-  version: 1.22.6
-  resolution: "@eeacms/volto-eea-design-system@npm:1.22.6"
+"@eeacms/volto-eea-design-system@npm:1.22.7":
+  version: 1.22.7
+  resolution: "@eeacms/volto-eea-design-system@npm:1.22.7"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -1987,7 +1987,7 @@ __metadata:
     react-slick: ^0.28.1
     remixicon: 3.6.0
     slick-carousel: ^1.8.1
-  checksum: 3494a6922743109b5cffb2ea08c82fb6f0173f7f9f20d6009755d520e3a45fef3522faabaea656ea486c962c7b9901403d86680fee7a48726fc53f9f82cdd057
+  checksum: 44850e6148b0be82f705650e1900d2972737828f7ab6aba5333a6d8c2547262a3301ff8e14232ff753a33164d5721be4a9ac447822c90ef320751915968dd8c6
   languageName: node
   linkType: hard
 
@@ -8618,8 +8618,8 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.6
-    "@eeacms/volto-cca-policy": 0.1.62
-    "@eeacms/volto-eea-design-system": 1.22.6
+    "@eeacms/volto-cca-policy": 0.1.63
+    "@eeacms/volto-eea-design-system": 1.22.7
     "@eeacms/volto-eea-kitkat": 21.2.2
     "@eeacms/volto-eea-website-theme": 1.27.1
     "@eeacms/volto-embed": 9.1.0
