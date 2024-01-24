@@ -2049,15 +2049,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:1.27.1":
-  version: 1.27.1
-  resolution: "@eeacms/volto-eea-website-theme@npm:1.27.1"
+"@eeacms/volto-eea-website-theme@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.27.2"
   dependencies:
     "@eeacms/volto-block-style": "*"
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: 0408a966ff6a2f5f7c51120484c5de306a2a526846cb59b08ac153e92ffc14004353952f560990acec3d8b136db1a064825aac6a00fdc2811d4e2ebaf45a8b1c
+  checksum: 702338fb6dd2696382773fdb043bcd232b7efb9e0335154402ce6e8252df38abd0bafd54a06d0f9acbf000f087161b00861627e765c8d0bbed0da2650ea74852
   languageName: node
   linkType: hard
 
@@ -2257,9 +2257,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-searchlib@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@eeacms/volto-searchlib@npm:0.7.1"
+"@eeacms/volto-searchlib@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@eeacms/volto-searchlib@npm:0.7.2"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@elastic/react-search-ui": ^1.9.0
@@ -2297,7 +2297,7 @@ __metadata:
     superagent: 3.8.2
     svg-loader: 0.0.2
     use-deep-compare-effect: 1.8.1
-  checksum: 48feb82ef200004f258d265254e6aa1295ccc4a0d2efbaa87c9a4330a81dbd7fc98ab18f7a77bb4fcf0b57fe0530e07faf9d013ab15d9f602d3bfad252ef9eca
+  checksum: 2b2abdb2f5980d5aeac61a5d3f1897c1add14df9f7d28ceadacbc2cc654ccb59a27fd492b3c70051cdfae06c626c639102323be239dec489661d1d5a70df1643
   languageName: node
   linkType: hard
 
@@ -8666,13 +8666,13 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.1.65
     "@eeacms/volto-eea-design-system": 1.22.7
     "@eeacms/volto-eea-kitkat": 21.2.2
-    "@eeacms/volto-eea-website-theme": 1.27.1
+    "@eeacms/volto-eea-website-theme": 1.27.2
     "@eeacms/volto-embed": 9.1.0
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-listing-block": 7.0.2
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.0
-    "@eeacms/volto-searchlib": ^0.7.1
+    "@eeacms/volto-searchlib": ^0.7.2
     "@eeacms/volto-widget-dataprovenance": 0.4.3
     "@eeacms/volto-widget-geolocation": 5.1.7
     "@eeacms/volto-widget-temporal-coverage": 5.2.0
