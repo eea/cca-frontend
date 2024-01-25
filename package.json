@@ -50,6 +50,7 @@
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-globalsearch",
+    "@eeacms/volto-searchlib",
     "@eeacms/volto-eea-website-theme",
     "@eeacms/volto-workflow-progress",
     "@eeacms/volto-nextcloud-video-block",
