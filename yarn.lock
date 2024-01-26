@@ -1909,9 +1909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.65":
-  version: 0.1.65
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.65"
+"@eeacms/volto-cca-policy@npm:0.1.66":
+  version: 0.1.66
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.66"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -1925,7 +1925,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 3
     d3-geo: 3
-  checksum: e065b63718a1f5f3621af47b7f6fd391c041c66198cb630234b58fd761e8382866fd9e9eeac4364b3f8fa47bc26325a5cb1ae58d91d02f820ee7741d791cdcea
+  checksum: b8129b6b6148c66d96eb2b6f27413b4617a6c3ee330665a318f8785bb5dc5f7ea4fe4902af0b23396b1b892f06650a23144e4c289123bc0bb4f212234131e2b7
   languageName: node
   linkType: hard
 
@@ -8663,7 +8663,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.6
-    "@eeacms/volto-cca-policy": 0.1.65
+    "@eeacms/volto-cca-policy": 0.1.66
     "@eeacms/volto-eea-design-system": 1.22.7
     "@eeacms/volto-eea-kitkat": 21.2.2
     "@eeacms/volto-eea-website-theme": 1.27.2
