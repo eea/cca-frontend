@@ -44,6 +44,8 @@ class Slate2HTML(object):
                 handler = self.handle_block
 
         if handler is None:
+            # __import__("pdb").set_trace()
+            print(element)
             raise ValueError("Unknown handler")
 
         res = handler(element)
@@ -86,6 +88,16 @@ class Slate2HTML(object):
 
         return el(*children, **attributes)
 
+    def handle_tag_callout(self, element):
+        el = E.P
+        attributes = {"class": "callout"}
+
+        children = []
+        for child in element["children"]:
+            children += self.serialize(child)
+
+        return el(*children, **attributes)
+
     def handle_block(self, element):
         """handle_block.
 
@@ -99,17 +111,29 @@ class Slate2HTML(object):
 
         return el(*children)
 
+    def to_elements(self, value):
+        children = []
+        for child in value:
+            children += self.serialize(child)
+
+        return children
+
     def to_html(self, value):
         """to_html.
 
         :param value:
         """
+        # __import__("pdb").set_trace()
         children = []
         for child in value:
             children += self.serialize(child)
 
         # TO DO: handle unicode properly
-        return "".join(tostring(f).decode("utf-8") for f in children)
+        return elements_to_text(children)
+
+
+def elements_to_text(children):
+    return "".join(tostring(f).decode("utf-8") for f in children)
 
 
 def slate_to_html(value):
@@ -117,5 +141,13 @@ def slate_to_html(value):
 
     :param value:
     """
+
     convert = Slate2HTML()
     return convert.to_html(value)
+
+
+def slate_to_elements(value):
+    """Convert a slate value to lxml Elements"""
+
+    convert = Slate2HTML()
+    return convert.to_elements(value)

@@ -23,10 +23,8 @@ ACCEPTED_TAGS = [  # valid volto-slate elements
     "sup",
     "u",
     "ul",
-
     "img",
-    "voltoblock",        # used for conversions
-
+    "voltoblock",  # used for conversions
     "table",
     "thead",
     "tbody",
@@ -34,9 +32,8 @@ ACCEPTED_TAGS = [  # valid volto-slate elements
     "tr",
     "td",
     "th",
-
-    "video"
-
+    "video",
+    "small",
 ]
 
 DEFAULT_BLOCK_TYPE = "p"

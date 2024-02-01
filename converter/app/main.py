@@ -62,7 +62,7 @@ async def handle_block2html(data: Blocks, request: Request) -> Dict:
     # __import__("pdb").set_trace()
     html = convert_blocks_to_html(data)
 
-    logger.info("HTML: \n%s", html)
+    # logger.info("HTML: \n%s", html)
     return {"html": html}
 
 
