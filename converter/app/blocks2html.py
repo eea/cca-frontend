@@ -1,5 +1,10 @@
+import json
 from lxml.html import builder as E
 from .slate2html import slate_to_html, elements_to_text, slate_to_elements
+
+
+def nop_converter(block_data):
+    return None
 
 
 def convert_slate(block_data):
@@ -7,19 +12,59 @@ def convert_slate(block_data):
     return value
 
 
-def nop_converter(*args):
-    return
+TABLE_CELLS = {"header": E.TH, "data": E.TD}
+
+
+def convert_slate_table(block_data):
+    _type = block_data.pop("@type")
+    table = block_data.pop("table")
+    rows = table.pop("rows")
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-table": json.dumps(table),
+    }
+    children = []
+    for row in rows:
+        ecells = []
+        for cell in row["cells"]:
+            el = TABLE_CELLS[cell["type"]](*slate_to_elements(cell["value"]))
+            ecells.append(el)
+
+        erow = E.TR(*ecells)
+        children.append(erow)
+
+    etable = E.TABLE(*children, **attributes)
+    return elements_to_text([etable])
 
 
 def convert_quote(block_data):
-    attributes = {"data-block_type": "quote"}
-    children = slate_to_elements(block_data["value"])
+    value = block_data.pop("value")
+    _type = block_data.pop("@type")
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-block": json.dumps(block_data),
+    }
+    children = slate_to_elements(value)
     div = E.DIV(*children, **attributes)
     return elements_to_text([div])
 
 
-converters = {"slate": convert_slate,
-              "title": nop_converter, "quote": convert_quote}
+def convert_image(block_data):
+    # print("img", block_data)
+    attributes = {
+        "src": block_data["url"],
+        "data-volto-block": json.dumps(block_data),
+    }
+    return elements_to_text([E.IMG(**attributes)])
+
+
+converters = {
+    "slate": convert_slate,
+    "slateTable": convert_slate_table,
+    "title": nop_converter,
+    "quote": convert_quote,
+    "image": convert_image,
+}
 
 
 def convert_block_to_html(block_data):
