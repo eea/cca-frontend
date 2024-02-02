@@ -239,15 +239,15 @@ def is_element(node):
 def style_to_object(text):
     out = {}
 
-    for pair in [x.strip() for x in text.split(';') if x.strip()]:
-        k, v = pair.split(':', 1)
+    for pair in [x.strip() for x in text.split(";") if x.strip()]:
+        k, v = pair.split(":", 1)
         out[k.strip()] = v.strip()
 
     return out
 
 
 def fix_node_attributes(key):
-    restricted = ['type', 'value', 'children']
+    restricted = ["type", "value", "children"]
     if key in restricted:
         key = "_" + key
 
@@ -259,13 +259,13 @@ def fix_img_url(url):
     #     # TODO: fix this
     #     return ''
     # ../../../../
-    bits = url.split('/@@images', 1)
+    bits = url.split("/@@images", 1)
     url = bits[0]
     scale = None
     if len(bits) > 1:
-        scale = list(reversed(bits[1].rsplit('/')))[0]
-    if 'resolveuid' in url and not url.startswith('/'):
-        url = '../' + url
+        scale = list(reversed(bits[1].rsplit("/")))[0]
+    if "resolveuid" in url and not url.startswith("/"):
+        url = "../" + url
     return (url, scale)
 
 
@@ -352,18 +352,12 @@ class HTML2Slate(object):
 
         if not children:
             # avoid crash in volto-slate when dealing with empty lists
-            return {
-                "type": "p",
-                "children": [{"text": ""}]
-            }
+            return {"type": "p", "children": [{"text": ""}]}
 
-        return {
-            "type": node_type,
-            "children": children
-        }
+        return {"type": node_type, "children": children}
 
     def handle_tag_img(self, node):
-        url = node.attrs.get('src', '')
+        url = node.attrs.get("src", "")
 
         # todo: handle align, alt
         # TODO: just for testing, I'm missing the blobs
@@ -378,16 +372,16 @@ class HTML2Slate(object):
         return {
             "type": "img",
             "url": url,
-            "title": node.attrs.get('title', ''),
-            "alt": node.attrs.get('alt', ''),
+            "title": node.attrs.get("title", ""),
+            "alt": node.attrs.get("alt", ""),
             "children": [{"text": ""}],
-            "scale": scale
+            "scale": scale,
         }
 
     def handle_tag_voltoblock(self, node):
         element = {
             "type": "voltoblock",
-            "data": json.loads(node.attrs['data-voltoblock'])
+            "data": json.loads(node.attrs["data-voltoblock"]),
         }
         return element
 
@@ -408,13 +402,13 @@ class HTML2Slate(object):
 
     def handle_tag_p(self, node):
         # TO DO: implement <b> special cases
-        style = node.get('style', '')
+        style = node.get("style", "")
         styles = style_to_object(style)
-        if styles.get('text-align') == 'center':
+        if styles.get("text-align") == "center":
             return {
-                "type": 'p',
+                "type": "p",
                 "children": self.deserialize_children(node),
-                "styleName": "text-center"
+                "styleName": "text-center",
             }
         return self.handle_block(node)
 
@@ -455,7 +449,7 @@ class HTML2Slate(object):
         return value
 
 
-def text_to_slate(text):
+def text_to_slate(text: str):
     return HTML2Slate().to_slate(text)
 
 

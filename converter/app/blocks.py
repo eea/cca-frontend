@@ -17,19 +17,14 @@ def make_tab_block(tabs):
     for i, tab in enumerate(tabs):
         blocks[block_ids[i]] = {
             "@type": "tab",
-            "title": tab['title'],
-            "blocks": dict(tab['content']),
-            "blocks_layout": {"items": [b[0] for b in tab['content']]}
+            "title": tab["title"],
+            "blocks": dict(tab["content"]),
+            "blocks_layout": {"items": [b[0] for b in tab["content"]]},
         }
 
     data = {
         "@type": "tabs_block",
-        "data": {
-            "blocks": blocks,
-            "blocks_layout": {
-                "items": block_ids
-            }
-        }
+        "data": {"blocks": blocks, "blocks_layout": {"items": block_ids}},
     }
     return data
 
@@ -42,9 +37,9 @@ def make_accordion_block(panels):
     for i, panel in enumerate(panels):
         blocks[block_ids[i]] = {
             "@type": "accordionPanel",
-            "title": panel['title'],
-            "blocks": dict(panel['content']),
-            "blocks_layout": {"items": [b[0] for b in panel['content']]}
+            "title": panel["title"],
+            "blocks": dict(panel["content"]),
+            "blocks_layout": {"items": [b[0] for b in panel["content"]]},
         }
 
     data = {
@@ -53,12 +48,7 @@ def make_accordion_block(panels):
         "non_exclusive": "true",
         "right_arrows": "true",
         "styles": {},
-        "data": {
-            "blocks": blocks,
-            "blocks_layout": {
-                "items": block_ids
-            }
-        }
+        "data": {"blocks": blocks, "blocks_layout": {"items": block_ids}},
     }
     return data
 
@@ -72,8 +62,8 @@ def block_tag(data, soup_or_tag):
     else:
         soup = soup_or_tag
 
-    element = soup.new_tag('voltoblock')
-    element['data-voltoblock'] = json.dumps(data)
+    element = soup.new_tag("voltoblock")
+    element["data-voltoblock"] = json.dumps(data)
 
     return element
 
@@ -87,27 +77,22 @@ def convert_tabs(soup):
     for ul in nav_tabs:
         div_content = ul.find_next_sibling("div", class_="tab-content")
         tab_structure = []
-        tabs = ul.find_all('li')
+        tabs = ul.find_all("li")
 
         for li in tabs:
             if li.a is None:
                 # broken html generated
                 continue
 
-            tab_id = li.a.attrs['href'].replace('#', '')
+            tab_id = li.a.attrs["href"].replace("#", "")
             title = li.a.text
 
             tab_blocks = text_to_blocks(
-                div_content.find_all(
-                    "div", {"id": tab_id}, limit=1)[0]
+                div_content.find_all("div", {"id": tab_id}, limit=1)[0]
             )
 
             tab_structure.append(
-                {
-                    "id": tab_id,
-                    "title": title,
-                    "content": tab_blocks
-                })
+                {"id": tab_id, "title": title, "content": tab_blocks})
 
         data = make_tab_block(tab_structure)
         ul.replace_with(block_tag(data, soup))  # no need to decompose
@@ -119,7 +104,7 @@ def convert_iframe(soup):
     iframes = soup.find_all("iframe")
 
     for tag in iframes:
-        data = {"@type": "maps", "url": tag.attrs['src']}
+        data = {"@type": "maps", "url": tag.attrs["src"]}
         tag.replace_with(block_tag(data, soup))
 
 
@@ -127,19 +112,15 @@ def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
 
     for button in buttons:
-        target = button.attrs['target'] if button.has_attr(
-            'target') else "_self"
+        target = button.attrs["target"] if button.has_attr(
+            "target") else "_self"
 
         data = {
             "@type": "callToActionBlock",
             "text": button.text,
-            "href": button.attrs['href'],
+            "href": button.attrs["href"],
             "target": target,
-            "styles": {
-                "icon": "ri-share-line",
-                "theme": "primary",
-                "align": "left"
-            },
+            "styles": {"icon": "ri-share-line", "theme": "primary", "align": "left"},
         }
 
         parent = button.find_parent("p")
@@ -147,6 +128,7 @@ def convert_button(soup):
             parent.replace_with(block_tag(data, soup))
         else:
             button.replace_with(block_tag(data, soup))
+
 
 def convert_read_more(soup):
     links = soup.find_all("a", attrs={"class": "accordion-toggle"})
@@ -156,11 +138,11 @@ def convert_read_more(soup):
         "height": "50vh",
         "label_closed": "Read more",
         "label_opened": "Read less",
-        "label_position": "right"
+        "label_position": "right",
     }
 
     for tag in links:
-        if tag.text == 'Read more':
+        if tag.text == "Read more":
             tag.replace_with(block_tag(new_data, soup))
 
 
@@ -182,16 +164,18 @@ def convert_accordion(soup):
 
         panels_structure = []
         for panel in panels:
-            panel_id = panel.find_all(
-                "div", attrs={"class": "panel-heading"})[0].attrs['id'].split(
-                "-heading")[0]
+            panel_id = (
+                panel.find_all("div", attrs={"class": "panel-heading"})[0]
+                .attrs["id"]
+                .split("-heading")[0]
+            )
             panel_title = panel.find_all(
                 "h4", attrs={"class": "panel-title"})[0].text
 
             _panel_bodies = panel.find_all(
                 "div", attrs={"class": "panel-body"})
-            
-            if panel_title == 'Read more':
+
+            if panel_title == "Read more":
                 return
 
             blocks = []
@@ -199,12 +183,7 @@ def convert_accordion(soup):
                 blocks.extend(text_to_blocks(panel_body))
 
             panels_structure.append(
-                {
-                    "id": panel_id,
-                    "title": panel_title,
-                    "content": blocks
-                }
-
+                {"id": panel_id, "title": panel_title, "content": blocks}
             )
 
         data = make_accordion_block(panels_structure)
@@ -224,7 +203,7 @@ def text_to_blocks(text_or_element):
     if text_or_element and not isinstance(text_or_element, str):
         soup = text_or_element
     else:
-        soup = BeautifulSoup(text_or_element, "html.parser")
+        soup = BeautifulSoup(str(text_or_element), "html.parser")
 
     for proc in preprocessors:
         proc(soup)
@@ -262,23 +241,27 @@ def convert_volto_block(block, node):
 
     node_type = node.get("type")
 
-    if node_type == 'voltoblock':
-        return node['data']
+    if node_type == "voltoblock":
+        return node["data"]
 
-    elif node_type == 'table':      # don't extract anything from tables (yet)
+    elif node_type == "table":  # don't extract anything from tables (yet)
         return {"@type": "slate", "value": [block], "plaintext": ""}
 
-    elif node_type == 'img':
-        return {"@type": "image",
-                "url": node.get('url', '').split('/@@images', 1)[0],
-                "title": node.get('title', ''),
-                "alt": node.get('alt', '')}
+    elif node_type == "img":
+        return {
+            "@type": "image",
+            "url": node.get("url", "").split("/@@images", 1)[0],
+            "title": node.get("title", ""),
+            "alt": node.get("alt", ""),
+        }
 
-    elif node_type == 'video':
-        return {"@type": "nextCloudVideo",
-                "url": node.get('src', ''),
-                "title": node.get('data-matomo-title', ''),
-                "alt": node.get('alt', '')}
+    elif node_type == "video":
+        return {
+            "@type": "nextCloudVideo",
+            "url": node.get("src", ""),
+            "title": node.get("data-matomo-title", ""),
+            "alt": node.get("alt", ""),
+        }
 
 
 def convert_block(slate_node):
@@ -288,8 +271,8 @@ def convert_block(slate_node):
     if volto_block:
         return volto_block
 
-    if slate_node.get('children'):
-        children = iterate_children(slate_node['children'])
+    if slate_node.get("children"):
+        children = iterate_children(slate_node["children"])
         for child in children:
             # print('child', child)
 
