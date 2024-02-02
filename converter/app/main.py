@@ -8,7 +8,7 @@ from litestar.status_codes import HTTP_200_OK
 
 from .blocks import text_to_blocks
 from .blocks2html import convert_blocks_to_html
-from .html2blocks import convert_html_to_blocks
+from .html2content import convert_html_to_content
 from .html2slate import text_to_slate
 from .tests import run
 
@@ -65,16 +65,22 @@ async def handle_block2html(data: Blocks) -> Dict:
     return {"html": html}
 
 
-@post(path="/html2blocks", status_code=HTTP_200_OK)
-async def handle_html2blocks(data: HTML) -> Dict:
+@post(path="/html2content", status_code=HTTP_200_OK)
+async def handle_html2content(data: HTML) -> Dict:
     html = data.html
-    data = convert_html_to_blocks(html)
+    data = convert_html_to_content(html)
 
-    logger.info("Blocks: \n%s", json.dumps(data, indent=2))
+    logger.info("Data: \n%s", json.dumps(data, indent=2))
     return {"data": data}
 
 
 app = Litestar(
-    route_handlers=[health_check, html, toblocks, handle_block2html],
+    route_handlers=[
+        health_check,
+        html,
+        toblocks,
+        handle_block2html,
+        handle_html2content,
+    ],
     debug=True,
 )
