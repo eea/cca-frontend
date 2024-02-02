@@ -1,6 +1,7 @@
 """ Convert html produced by blocks2html
 """
 
+import random
 import json
 from bs4 import BeautifulSoup
 
@@ -13,6 +14,13 @@ def get_elements(node):
     for child in node.children:
         if child.name:
             yield child
+
+
+urlAlphabet = "ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW"
+
+
+def nanoid(size=5):
+    return "".join(random.choices(urlAlphabet, k=size))
 
 
 def convert_columns_block(fragment):
@@ -35,6 +43,33 @@ def convert_columns_block(fragment):
     return [uid, data]
 
 
+def convert_slate_table_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+
+    data["rows"] = []
+
+    for erow in fragment.css.select("table tr"):
+        row = {"cells": [], "key": nanoid()}
+        data["rows"].append(row)
+        for ecell in get_elements(erow):
+            cell = {"key": nanoid()}
+            cell["value"] = HTML2Slate().from_elements(ecell)
+
+            if ecell.name == "th":
+                cell["type"] = "header"
+            elif ecell.name == "td":
+                cell["type"] = "data"
+            else:
+                # __import__("pdb").set_trace()
+                raise ValueError
+
+            row["cells"].append(cell)
+
+    block = {"@type": "slateTable", "table": data}
+    return [str(uuid4()), block]
+
+
 def convert_quote_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
 
@@ -48,8 +83,11 @@ def convert_quote_block(fragment):
     return [uid, data]
 
 
-converters = {"columnsBlock": convert_columns_block,
-              "quote": convert_quote_block}
+converters = {
+    "columnsBlock": convert_columns_block,
+    "quote": convert_quote_block,
+    "slateTable": convert_slate_table_block,
+}
 
 
 def deserialize_block(fragment):
