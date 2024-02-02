@@ -6,9 +6,15 @@ from .blocks import text_to_blocks
 # from uuid import uuid4
 
 
+def get_elements(node):
+    for child in node.children:
+        if child.name:
+            yield child
+
+
 def convert_columns_block(fragment):
-    __import__("pdb").set_trace()
-    pass
+    # __import__("pdb").set_trace()
+    return []
 
 
 converters = {"columnsBlock": convert_columns_block}
@@ -26,6 +32,7 @@ def deserialize_block(fragment):
             deserializer = converters[_type]
             return deserializer(fragment)
 
+    # fallback to slate deserializer
     blocks = text_to_blocks(fragment)
     assert len(blocks) == 1
 
@@ -36,7 +43,7 @@ def deserialize_blocks(element):
     blocks = {}
     items = []
 
-    for f in element.findChildren():
+    for f in get_elements(element):
         blockuid = deserialize_block(f)
         if len(blockuid) != 2:
             continue  # converter not created yet
