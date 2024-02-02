@@ -1,9 +1,10 @@
 """ Convert html produced by blocks2html
 """
 
+import json
 from bs4 import BeautifulSoup
 from .blocks import text_to_blocks
-# from uuid import uuid4
+from uuid import uuid4
 
 
 def get_elements(node):
@@ -13,8 +14,23 @@ def get_elements(node):
 
 
 def convert_columns_block(fragment):
-    # __import__("pdb").set_trace()
-    return []
+    rawdata = fragment.attrs["data-volto-columnsblock"]
+
+    data = json.loads(rawdata)
+    data["@type"] = "columnsBlock"
+
+    colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
+
+    for column in get_elements(fragment):
+        coldata = deserialize_blocks(column)
+        coluid = str(uuid4())
+        colblockdata["blocks"][coluid] = coldata
+        colblockdata["blocks_layout"]["items"].append(coluid)
+
+    data["data"] = colblockdata
+    uid = str(uuid4())
+
+    return [uid, data]
 
 
 converters = {"columnsBlock": convert_columns_block}
@@ -54,9 +70,10 @@ def deserialize_blocks(element):
     return {"blocks": blocks, "blocks_layout": {"items": items}}
 
 
-def convert_html_to_content(text):
+def convert_html_to_content(text: str):
     tree = BeautifulSoup(text, "html.parser")
-    fragments = tree.find("body").find_all("div", recursive=False)
+    body = tree.find("body")
+    fragments = body.find_all("div", recursive=False)
 
     data = {}
 

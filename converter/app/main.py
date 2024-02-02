@@ -16,7 +16,7 @@ logger = logging.getLogger()
 
 
 @dataclass
-class HTML:
+class HtmlData:
     html: str
 
 
@@ -43,14 +43,14 @@ async def run_tests() -> str:
 
 
 @post(path="/html")
-async def html(data: HTML) -> str:
+async def html(data: HtmlData) -> Dict:
     html = data.html
     return {"data": text_to_slate(html)}
 
 
 @post(path="/toblocks", status_code=HTTP_200_OK)
-async def toblocks(data: HTML) -> Dict:
-    html = data.html
+async def toblocks(data: HtmlData) -> Dict:
+    html: str = data.html
     data = text_to_blocks(html)
 
     logger.info("Blocks: \n%s", json.dumps(data, indent=2))
@@ -61,16 +61,16 @@ async def toblocks(data: HTML) -> Dict:
 async def handle_block2html(data: Blocks) -> Dict:
     html = convert_blocks_to_html(data)
 
-    logger.info("HTML: \n%s", html)
+    # logger.info("HTML: \n%s", html)
     return {"html": html}
 
 
 @post(path="/html2content", status_code=HTTP_200_OK)
-async def handle_html2content(data: HTML) -> Dict:
+async def handle_html2content(data: HtmlData) -> Dict:
     html = data.html
     data = convert_html_to_content(html)
 
-    logger.info("Data: \n%s", json.dumps(data, indent=2))
+    # logger.info("Data: \n%s", json.dumps(data, indent=2))
     return {"data": data}
 
 
