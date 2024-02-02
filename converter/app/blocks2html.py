@@ -1,6 +1,6 @@
 import json
 from lxml.html import builder as E
-from .slate2html import slate_to_html, elements_to_text, slate_to_elements
+from .slate2html import elements_to_text, slate_to_elements
 
 
 TABLE_CELLS = {"header": E.TH, "data": E.TD}

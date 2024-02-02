@@ -7,8 +7,9 @@ from litestar import Litestar, get, post, Request
 from litestar.status_codes import HTTP_200_OK
 
 from .blocks import text_to_blocks
-from .html2slate import text_to_slate
 from .blocks2html import convert_blocks_to_html
+from .html2blocks import convert_html_to_blocks
+from .html2slate import text_to_slate
 from .tests import run
 
 logger = logging.getLogger()
@@ -57,13 +58,20 @@ async def toblocks(data: HTML) -> Dict:
 
 
 @post(path="/blocks2html", status_code=HTTP_200_OK)
-async def handle_block2html(data: Blocks, request: Request) -> Dict:
-    # j = await request.json()
-    # __import__("pdb").set_trace()
+async def handle_block2html(data: Blocks) -> Dict:
     html = convert_blocks_to_html(data)
 
-    # logger.info("HTML: \n%s", html)
+    logger.info("HTML: \n%s", html)
     return {"html": html}
+
+
+@post(path="/html2blocks", status_code=HTTP_200_OK)
+async def handle_html2blocks(data: HTML) -> Dict:
+    html = data.html
+    data = convert_html_to_blocks(html)
+
+    logger.info("Blocks: \n%s", json.dumps(data, indent=2))
+    return {"data": data}
 
 
 app = Litestar(
