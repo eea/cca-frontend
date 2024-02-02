@@ -49,7 +49,7 @@ def convert_columns_block(block_data):
     data = block_data.pop("data")
     attributes = {
         "data-block-type": _type,
-        "data-volto-columnsBlock": json.dumps(block_data),
+        "data-volto-block": json.dumps(block_data),
     }
 
     children = []
