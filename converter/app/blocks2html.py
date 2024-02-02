@@ -16,11 +16,11 @@ def convert_slate(block_data):
 
 def convert_slate_table(block_data):
     _type = block_data.pop("@type")
-    table = block_data.pop("table")
-    rows = table.pop("rows")
+    data = block_data.pop("table")
+    rows = data.pop("rows")
     attributes = {
         "data-block-type": _type,
-        "data-volto-table": json.dumps(table),
+        "data-volto-block": json.dumps(data),
     }
     children = []
     for row in rows:
@@ -32,8 +32,9 @@ def convert_slate_table(block_data):
         erow = E.TR(*ecells)
         children.append(erow)
 
-    etable = E.TABLE(*children, **attributes)
-    return [etable]
+    etable = E.TABLE(*children)
+    ediv = E.DIV(etable, **attributes)
+    return [ediv]
 
 
 def iterate_blocks(data):
