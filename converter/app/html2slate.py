@@ -277,17 +277,20 @@ class HTML2Slate(object):
     See https://github.com/plone/volto/blob/5f9066a70b9f3b60d462fc96a1aa7027ff9bbac0/packages/volto-slate/src/editor/deserialize.js
     """
 
-    def to_slate(self, text):
-        "Convert text to a slate value. A slate value is a list of elements"
-
-        fragments = fragments_fromstring(text)
+    def from_elements(self, elements):
         nodes = []
-        for f in fragments:
+        for f in elements:
             slate_nodes = self.deserialize(f)
             if slate_nodes:
                 nodes += slate_nodes
 
         return self.normalize(nodes)
+
+    def to_slate(self, text):
+        "Convert text to a slate value. A slate value is a list of elements"
+
+        fragments = fragments_fromstring(text)
+        return self.from_elements(fragments)
 
     def deserialize(self, node):
         """Deserialize a node into a list Slate Nodes"""

@@ -3,6 +3,8 @@
 
 import json
 from bs4 import BeautifulSoup
+
+from .html2slate import HTML2Slate
 from .blocks import text_to_blocks
 from uuid import uuid4
 
@@ -14,7 +16,7 @@ def get_elements(node):
 
 
 def convert_columns_block(fragment):
-    rawdata = fragment.attrs["data-volto-columnsblock"]
+    rawdata = fragment.attrs["data-volto-block"]
 
     data = json.loads(rawdata)
     data["@type"] = "columnsBlock"
@@ -33,7 +35,21 @@ def convert_columns_block(fragment):
     return [uid, data]
 
 
-converters = {"columnsBlock": convert_columns_block}
+def convert_quote_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+
+    data = json.loads(rawdata)
+    data["@type"] = "quote"
+    elements = list(get_elements(fragment))
+    data["value"] = HTML2Slate().from_elements(elements)
+
+    uid = str(uuid4())
+
+    return [uid, data]
+
+
+converters = {"columnsBlock": convert_columns_block,
+              "quote": convert_quote_block}
 
 
 def deserialize_block(fragment):
