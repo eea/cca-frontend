@@ -125,11 +125,14 @@ def deserialize_blocks(element):
 
 
 def convert_html_to_content(text: str):
-    tree = BeautifulSoup(text, "html.parser")
-    body = tree.find("body")
-    fragments = body.find_all("div", recursive=False)
-
     data = {}
+    tree = BeautifulSoup(text, "html.parser")
+
+    body = tree.find("body")
+    if body is None:
+        return data
+
+    fragments = body.find_all("div", recursive=False)
 
     for f in fragments:
         if not hasattr(f, "attrs"):
