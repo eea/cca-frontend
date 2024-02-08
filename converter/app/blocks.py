@@ -10,8 +10,12 @@ from .html2slate import text_to_slate
 logger = logging.getLogger()
 
 
+def make_uid():
+    return str(uuid4())
+
+
 def make_tab_block(tabs):
-    block_ids = [str(uuid4()) for _ in tabs]
+    block_ids = [make_uid() for _ in tabs]
     blocks = {}
 
     for i, tab in enumerate(tabs):
@@ -30,7 +34,7 @@ def make_tab_block(tabs):
 
 
 def make_accordion_block(panels):
-    block_ids = [str(uuid4()) for _ in panels]
+    block_ids = [make_uid() for _ in panels]
 
     blocks = {}
 
@@ -217,7 +221,15 @@ def text_to_blocks(text_or_element):
 
 
 def convert_slate_to_blocks(slate):
-    blocks = [[str(uuid4()), convert_block(paragraph)] for paragraph in slate]
+    blocks = []
+    for paragraph in slate:
+        maybe_block = convert_block(paragraph)
+
+        if not isinstance(maybe_block, list):
+            blocks.append([make_uid(), maybe_block])
+        else:
+            blocks.extend(maybe_block)
+
     return blocks
 
 
@@ -230,8 +242,79 @@ def iterate_children(value):
     while queue:
         child = queue.pop()
         yield child
-        if child.get("children"):
+        if isinstance(child, dict) and child.get("children"):
             queue.extend(child["children"] or [])
+
+
+def has_volto_blocks(node):
+    for child in iterate_children(node):
+        if isinstance(child, dict) and child.get("type") == "voltoblock":
+            return True
+
+
+def table_to_columns_block(node):
+    blocks = []
+
+    def row_to_columns_block(row):
+        children = row["children"]
+        columns_storage = {
+            "blocks": {},  # these are the columns
+            "blocks_layout": {"items": []},
+        }
+        nr = int(12 / len(children))
+
+        blockdata = {
+            "@type": "columnsBlock",
+            "data": columns_storage,  # stores columns as "blocks"
+            "gridSize": 12,
+            "gridCols": [COL_MAPPING[nr] for _ in children],
+        }
+
+        for cell in children:
+            colblocks = {}
+            colblocks_layout = []
+
+            for uid, block in convert_slate_to_blocks(cell["children"]):
+                colblocks[uid] = block
+                colblocks_layout.append(uid)
+
+            uid = make_uid()
+            columns_storage["blocks"][uid] = {
+                "blocks": colblocks,
+                "blocks_layout": {"items": colblocks_layout},
+            }
+            columns_storage["blocks_layout"]["items"].append(uid)
+
+        blocks.append([make_uid(), blockdata])
+
+    def body_to_columns(body):
+        for child in body["children"]:
+            row_to_columns_block(child)
+
+    for child in node["children"]:
+        if child.get("type") == "tbody":
+            body_to_columns(child)
+            continue
+
+        if child.get("type") == "tr":
+            row_to_columns_block(child)
+            continue
+
+    return blocks
+
+
+COL_MAPPING = {
+    2: "oneThird",
+    3: "oneThird",
+    4: "oneThird",
+    5: "oneThird",
+    6: "halfWidth",
+    7: "twoThirds",
+    8: "twoThirds",
+    9: "twoThirds",
+    10: "twoThirds",
+    12: "full",
+}
 
 
 def convert_volto_block(block, node):
@@ -245,6 +328,9 @@ def convert_volto_block(block, node):
         return node["data"]
 
     elif node_type == "table":  # don't extract anything from tables (yet)
+        if has_volto_blocks(node["children"]):
+            return table_to_columns_block(node)
+
         return {"@type": "slate", "value": [block], "plaintext": ""}
 
     elif node_type == "img":
