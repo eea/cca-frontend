@@ -95,8 +95,7 @@ def convert_tabs(soup):
                 div_content.find_all("div", {"id": tab_id}, limit=1)[0]
             )
 
-            tab_structure.append(
-                {"id": tab_id, "title": title, "content": tab_blocks})
+            tab_structure.append({"id": tab_id, "title": title, "content": tab_blocks})
 
         data = make_tab_block(tab_structure)
         ul.replace_with(block_tag(data, soup))  # no need to decompose
@@ -116,8 +115,7 @@ def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
 
     for button in buttons:
-        target = button.attrs["target"] if button.has_attr(
-            "target") else "_self"
+        target = button.attrs["target"] if button.has_attr("target") else "_self"
 
         data = {
             "@type": "callToActionBlock",
@@ -173,11 +171,9 @@ def convert_accordion(soup):
                 .attrs["id"]
                 .split("-heading")[0]
             )
-            panel_title = panel.find_all(
-                "h4", attrs={"class": "panel-title"})[0].text
+            panel_title = panel.find_all("h4", attrs={"class": "panel-title"})[0].text
 
-            _panel_bodies = panel.find_all(
-                "div", attrs={"class": "panel-body"})
+            _panel_bodies = panel.find_all("div", attrs={"class": "panel-body"})
 
             if panel_title == "Read more":
                 return
@@ -334,12 +330,14 @@ def convert_volto_block(block, node):
         return {"@type": "slate", "value": [block], "plaintext": ""}
 
     elif node_type == "img":
-        return {
-            "@type": "image",
-            "url": node.get("url", "").split("/@@images", 1)[0],
-            "title": node.get("title", ""),
-            "alt": node.get("alt", ""),
-        }
+        # __import__("pdb").set_trace()
+        if block is node:  # convert to a volto block only on top level element
+            return {
+                "@type": "image",
+                "url": node.get("url", "").split("/@@images", 1)[0],
+                "title": node.get("title", ""),
+                "alt": node.get("alt", ""),
+            }
 
     elif node_type == "video":
         return {
