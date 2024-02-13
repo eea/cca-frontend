@@ -47,7 +47,6 @@
   "addons": [
     "@eeacms/volto-eea-kitkat",
     "@eeacms/volto-embed",
-    "@eeacms/volto-block-style",
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-globalsearch",
@@ -164,6 +163,7 @@
     "@eeacms/volto-workflow-progress": "4.1.1",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/volto-listing-block": "7.0.2",
+    "@eeacms/volto-block-style": "6.1.0",
     "@kitconcept/volto-blocks-grid": "7.0.2",
     "d3-array": "^2.12.1"
   },
