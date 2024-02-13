@@ -47,6 +47,7 @@
   "addons": [
     "@eeacms/volto-eea-kitkat",
     "@eeacms/volto-embed",
+    "@eeacms/volto-block-style",
     "@eeacms/volto-openlayers-map",
     "@eeacms/volto-eea-design-system",
     "@eeacms/volto-globalsearch",
@@ -168,6 +169,7 @@
   },
   "dependencies": {
     "@eeacms/volto-accordion-block": "10.4.6",
+    "@eeacms/volto-block-style": "6.1.0",
     "@eeacms/volto-cca-policy": "0.1.74",
     "@eeacms/volto-eea-design-system": "1.22.7",
     "@eeacms/volto-eea-kitkat": "21.2.3",
