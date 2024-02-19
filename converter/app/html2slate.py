@@ -157,8 +157,7 @@ def remove_element_edges(text, node):
         text = FIRST_ALL_SPACE.sub("", text)
 
     if ANY_SPACE_AT_END.search(text):
-        has_inline_ancestor_sibling = get_inline_ancestor_sibling(
-            node) is not None
+        has_inline_ancestor_sibling = get_inline_ancestor_sibling(node) is not None
         if not has_inline_ancestor_sibling or (next_ and next_.name == "br"):
             text = ANY_SPACE_AT_END.sub("", text)
 
@@ -391,17 +390,17 @@ class HTML2Slate(object):
     def handle_tag_br(self, node):
         return {"text": "\n"}
 
-    def handle_block(self, node):
-        value = {"type": node.name,
-                 "children": self.deserialize_children(node)}
-        for k, v in node.attrs.items():
-            k = fix_node_attributes(k)
-            value[k] = v
-        return value
-
     def handle_tag_b(self, node):
         # TO DO: implement <b> special cases
         return self.handle_block(node)
+
+    def handle_tag_div(self, node):
+        if getattr(node, "name", "") == "[document]":
+            # treat divs directly in the input as paragraph nodes. Fixes
+            # en/observatory/policy-context/european-policy-framework/who/
+            return self.handle_tag_p(node)
+        else:
+            return self.handle_block(node)
 
     def handle_tag_p(self, node):
         # TO DO: implement <b> special cases
@@ -414,6 +413,13 @@ class HTML2Slate(object):
                 "styleName": "text-center",
             }
         return self.handle_block(node)
+
+    def handle_block(self, node):
+        value = {"type": node.name, "children": self.deserialize_children(node)}
+        for k, v in node.attrs.items():
+            k = fix_node_attributes(k)
+            value[k] = v
+        return value
 
     def handle_slate_data_element(self, node):
         data = node["data-slate-data"]
