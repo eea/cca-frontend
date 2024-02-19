@@ -1889,9 +1889,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.1.76":
-  version: 0.1.76
-  resolution: "@eeacms/volto-cca-policy@npm:0.1.76"
+"@eeacms/volto-cca-policy@npm:0.1.77":
+  version: 0.1.77
+  resolution: "@eeacms/volto-cca-policy@npm:0.1.77"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-block-style": "*"
@@ -1906,7 +1906,7 @@ __metadata:
     "@eeacms/volto-widget-temporal-coverage": "*"
     d3: 4
     d3-geo: 3
-  checksum: 020fe6e6a9da17a67d5ab4528f839c5b51343abeb8b97b54f70b15abcf9b012eafd9d75f657523b04186ab4389997be490d577617133573fd7065ad295162107
+  checksum: 72f4a06b1f523d21ff94319c362683d9c14b32bb9fbc4354549fa76376aa4521076df36dfc430c4958b410a00da41dc55abe02916e768d6bb17d5e4dec9d9a0b
   languageName: node
   linkType: hard
 
@@ -2018,7 +2018,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:*, @eeacms/volto-eea-website-theme@npm:1.27.2":
+"@eeacms/volto-eea-website-theme@npm:*":
   version: 1.27.2
   resolution: "@eeacms/volto-eea-website-theme@npm:1.27.2"
   dependencies:
@@ -2027,6 +2027,18 @@ __metadata:
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
   checksum: 702338fb6dd2696382773fdb043bcd232b7efb9e0335154402ce6e8252df38abd0bafd54a06d0f9acbf000f087161b00861627e765c8d0bbed0da2650ea74852
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-eea-website-theme@npm:1.28.0":
+  version: 1.28.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:1.28.0"
+  dependencies:
+    "@eeacms/volto-block-style": "*"
+    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-group-block": "*"
+    volto-subsites: "*"
+  checksum: b4382a44eab78edac1bacbdfcb52cd0780c3a8031b3acbf653376e15eb50f6cde5ca1279a60649f35cd2e6b89cf45c1cec685bc5c6975d334e5c3f2b8fbec373
   languageName: node
   linkType: hard
 
@@ -2084,15 +2096,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:7.0.2":
-  version: 7.0.2
-  resolution: "@eeacms/volto-listing-block@npm:7.0.2"
+"@eeacms/volto-listing-block@npm:7.1.0":
+  version: 7.1.0
+  resolution: "@eeacms/volto-listing-block@npm:7.1.0"
   dependencies:
     "@eeacms/volto-widget-theme-picker": ^1.0.1
     react-resize-detector: 7.1.2
-    react-slick: 0.29.0
+    react-slick: ^0.30.1
     slick-carousel: 1.8.1
-  checksum: ac755157d5343e705e07ff233cd9a4e747cd4d95c9da084724d918dbfd589fb510534d9930cd0bf3a7cab533c7b4d3cd88f2a21322a988e3e42e748d40e88300
+  checksum: ac2693386773d8b727087694d4dfde222db733a44046253e1841b954cc4191e31444d9a9f030a1727668cf79e370696bcadeb68876af93aa12660bc64dd24681
   languageName: node
   linkType: hard
 
@@ -8591,13 +8603,13 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.6
     "@eeacms/volto-block-style": 6.1.0
-    "@eeacms/volto-cca-policy": 0.1.76
+    "@eeacms/volto-cca-policy": 0.1.77
     "@eeacms/volto-eea-design-system": 1.22.7
     "@eeacms/volto-eea-kitkat": 21.2.3
-    "@eeacms/volto-eea-website-theme": 1.27.2
+    "@eeacms/volto-eea-website-theme": 1.28.0
     "@eeacms/volto-embed": 9.1.1
     "@eeacms/volto-globalsearch": ^1.0.15
-    "@eeacms/volto-listing-block": 7.0.2
+    "@eeacms/volto-listing-block": 7.1.0
     "@eeacms/volto-nextcloud-video-block": 0.4.8
     "@eeacms/volto-openlayers-map": 0.3.1
     "@eeacms/volto-searchlib": ^0.7.3
@@ -22793,22 +22805,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-slick@npm:0.29.0":
-  version: 0.29.0
-  resolution: "react-slick@npm:0.29.0"
-  dependencies:
-    classnames: ^2.2.5
-    enquire.js: ^2.1.6
-    json2mq: ^0.2.0
-    lodash.debounce: ^4.0.8
-    resize-observer-polyfill: ^1.5.0
-  peerDependencies:
-    react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 67ce4981914da8a76c6efb4bc8ee7ab69e04c33bd4b3517419ab2165679a3c701dae781556149713fe2c542f84188b7ca101ea58883537be5c05756408f48c8b
-  languageName: node
-  linkType: hard
-
 "react-slick@npm:^0.24.0":
   version: 0.24.0
   resolution: "react-slick@npm:0.24.0"
@@ -22838,6 +22834,22 @@ __metadata:
     react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
     react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
   checksum: 399ad43b9e10dfd66a000dd00faf1f476428ff8b9e70705d253056d279a9297b441d08fe7255b5ffea6f6e05ce63fb6c36f86fddcdffd453ee8f47ca9d958f72
+  languageName: node
+  linkType: hard
+
+"react-slick@npm:^0.30.1":
+  version: 0.30.2
+  resolution: "react-slick@npm:0.30.2"
+  dependencies:
+    classnames: ^2.2.5
+    enquire.js: ^2.1.6
+    json2mq: ^0.2.0
+    lodash.debounce: ^4.0.8
+    resize-observer-polyfill: ^1.5.0
+  peerDependencies:
+    react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 7d415c745ca7d9d19947a6ce62ab866757310fbaf0941b14479cf2779f8db8951b037ab6a357a2d013518dd50fd41080dac7e7949cb201b4c6431f13c6e8975f
   languageName: node
   linkType: hard
 
