@@ -2171,12 +2171,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-openlayers-map@npm:0.3.1":
-  version: 0.3.1
-  resolution: "@eeacms/volto-openlayers-map@npm:0.3.1"
+"@eeacms/volto-openlayers-map@npm:0.3.2":
+  version: 0.3.2
+  resolution: "@eeacms/volto-openlayers-map@npm:0.3.2"
   dependencies:
     ol: 6.6.x
-  checksum: 756db8c31a01eb6257647bec441a30f4af6e66046032011012763d57409fc67e21ff0f84d806ca89f7b4e298ad70f478e9b437433d8af961bd744e081b788802
+  checksum: 801eff2466aee3451f0c47abb1eb4ea5b2df2978f9e2e532851d32bb8ea2e5b945742e9fe59e402af1284301ebcfe861bbf83b5a57b61a3ebea3a7fd5556aca9
   languageName: node
   linkType: hard
 
@@ -8628,7 +8628,7 @@ __metadata:
     "@eeacms/volto-globalsearch": ^1.0.15
     "@eeacms/volto-listing-block": 7.1.0
     "@eeacms/volto-nextcloud-video-block": 0.4.8
-    "@eeacms/volto-openlayers-map": 0.3.1
+    "@eeacms/volto-openlayers-map": 0.3.2
     "@eeacms/volto-searchlib": ^0.7.3
     "@eeacms/volto-widget-dataprovenance": 0.4.3
     "@eeacms/volto-widget-geolocation": 5.2.0
