@@ -264,7 +264,10 @@ def fix_img_url(url):
     if len(bits) > 1:
         scale = list(reversed(bits[1].rsplit("/")))[0]
     if "resolveuid" in url and not url.startswith("/"):
-        url = "../" + url
+        bits = url.split("resolveuid", 1)
+        url = "../resolveuid%s" % bits[1]
+    if scale == "large":
+        scale = "huge"
     return (url, scale)
 
 
@@ -370,8 +373,10 @@ class HTML2Slate(object):
         # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
         # title="rawpixel on Unsplash"/>
 
+        # __import__("pdb").set_trace()
+        # print("fix image url", url)
         url, scale = fix_img_url(url)
-        return {
+        result = {
             "type": "img",
             "url": url,
             "title": node.attrs.get("title", ""),
@@ -379,6 +384,8 @@ class HTML2Slate(object):
             "children": [{"text": ""}],
             "scale": scale,
         }
+        # print("result", result)
+        return result
 
     def handle_tag_voltoblock(self, node):
         element = {
