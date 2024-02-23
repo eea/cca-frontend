@@ -53,7 +53,7 @@ async def toblocks(data: HtmlData) -> Dict:
     html: str = data.html
     data = text_to_blocks(html)
 
-    logger.info("Blocks: \n%s", json.dumps(data, indent=2))
+    # logger.info("Blocks: \n%s", json.dumps(data, indent=2))
     return {"data": data}
 
 
