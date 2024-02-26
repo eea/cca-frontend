@@ -103,7 +103,11 @@ class Slate2HTML(object):
 
         :param element:
         """
-        el = getattr(E, element["type"].upper())
+        _type = element["type"].upper()
+        if _type == "VOLTOBLOCK":
+            return []  # TODO: finish this. Right now it's only used in the plone4>plone6 migration
+            # __import__("pdb").set_trace()
+        el = getattr(E, _type)
 
         children = []
         for child in element["children"]:
