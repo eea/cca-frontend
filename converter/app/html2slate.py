@@ -365,7 +365,14 @@ class HTML2Slate(object):
     def handle_tag_img(self, node):
         url = node.attrs.get('src', '')
 
-        # todo: handle align, alt
+        str_node = repr(node)
+
+        align = ''
+        if "float: left" in str_node:
+            align = 'left'
+        elif "float: right" in str_node:
+            align = 'right'
+
         # TODO: just for testing, I'm missing the blobs
         # url = "/fallback.png/@@images/image/preview"
         # resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview
@@ -377,6 +384,7 @@ class HTML2Slate(object):
         url, scale = fix_img_url(url)
         return {
             "type": "img",
+            "align": align,
             "url": url,
             "title": node.attrs.get('title', ''),
             "alt": node.attrs.get('alt', ''),

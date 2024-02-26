@@ -148,6 +148,7 @@ def convert_button(soup):
         else:
             button.replace_with(block_tag(data, soup))
 
+
 def convert_read_more(soup):
     links = soup.find_all("a", attrs={"class": "accordion-toggle"})
 
@@ -190,7 +191,7 @@ def convert_accordion(soup):
 
             _panel_bodies = panel.find_all(
                 "div", attrs={"class": "panel-body"})
-            
+
             if panel_title == 'Read more':
                 return
 
@@ -271,6 +272,7 @@ def convert_volto_block(block, node):
     elif node_type == 'img':
         return {"@type": "image",
                 "url": node.get('url', '').split('/@@images', 1)[0],
+                "align": node.get('align', ''),
                 "title": node.get('title', ''),
                 "alt": node.get('alt', '')}
 
