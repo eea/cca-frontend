@@ -1,3 +1,5 @@
+from lxml.html import document_fromstring
+from .slate2html import slate_to_html
 import json
 import logging
 from collections import deque
@@ -55,9 +57,6 @@ def make_accordion_block(panels):
         "data": {"blocks": blocks, "blocks_layout": {"items": block_ids}},
     }
     return data
-
-
-_tag = None
 
 
 def block_tag(data, soup_or_tag):
@@ -229,14 +228,17 @@ def convert_slate_to_blocks(slate):
     return blocks
 
 
-def iterate_children(value):
+def iterate_children(value, front=False):
     """iterate_children.
 
     :param value:
     """
     queue = deque(value)
     while queue:
-        child = queue.pop()
+        if not front:
+            child = queue.pop()
+        else:
+            child = queue.popleft()
         yield child
         if isinstance(child, dict) and child.get("children"):
             queue.extend(child["children"] or [])
@@ -313,7 +315,7 @@ COL_MAPPING = {
 }
 
 
-def convert_volto_block(block, node):
+def convert_volto_block(block, node, plaintext):
     # if there's any image in the paragraph, it will be replaced only by the
     # image block. This needs to be treated carefully, if we have inline aligned
     # images
@@ -327,11 +329,12 @@ def convert_volto_block(block, node):
         if has_volto_blocks(node["children"]):
             return table_to_columns_block(node)
 
-        return {"@type": "slate", "value": [block], "plaintext": ""}
+        return {"@type": "slate", "value": [block], "plaintext": plaintext}
 
     elif node_type == "img":
-        # __import__("pdb").set_trace()
-        if block is node:  # convert to a volto block only on top level element
+        if (
+            block is node or plaintext == ""
+        ):  # convert to a volto block only on top level element or if the block has no text
             return {
                 "@type": "image",
                 "url": node.get("url", "").split("/@@images", 1)[0],
@@ -348,10 +351,22 @@ def convert_volto_block(block, node):
         }
 
 
+def extract_text(slate_node):
+    html = slate_to_html([slate_node])
+    try:
+        # throws error on VOLTOBLOCKS
+        e = document_fromstring(html)
+        text = e.text_content()
+        return text
+    except AttributeError:
+        return ""
+
+
 def convert_block(slate_node):
     # TODO: do the plaintext
 
-    volto_block = convert_volto_block(slate_node, slate_node)
+    plaintext = extract_text(slate_node)
+    volto_block = convert_volto_block(slate_node, slate_node, plaintext)
     if volto_block:
         return volto_block
 
@@ -360,9 +375,9 @@ def convert_block(slate_node):
         for child in children:
             # print('child', child)
 
-            volto_block = convert_volto_block(slate_node, child)
+            volto_block = convert_volto_block(slate_node, child, plaintext)
 
             if volto_block:
                 return volto_block
 
-    return {"@type": "slate", "value": [slate_node], "plaintext": ""}
+    return {"@type": "slate", "value": [slate_node], "plaintext": plaintext}
