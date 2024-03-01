@@ -15,6 +15,14 @@
     "develop": false,
     "path": "src"
   },
+  "volto-datablocks": {
+    "url": "git@github.com:eea/volto-datablocks.git",
+    "https": "https://github.com/eea/volto-datablocks.git",
+    "package": "@eeacms/volto-datablocks",
+    "branch": "develop",
+    "develop": false,
+    "path": "src"
+  },
   "volto-matomo": {
     "url": "git@github.com:eea/volto-matomo.git",
     "https": "https://github.com/eea/volto-matomo.git",
@@ -244,7 +252,7 @@
     "https": "https://github.com/eea/volto-eea-website-theme.git",
     "package": "@eeacms/volto-eea-website-theme",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-eea-website-policy": {
