@@ -36,7 +36,7 @@ services:
     volumes:
       - ./data:/data
       - ./backend/src:/plone/instance/src
-      # - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
+      - ./eea.docker.plone-climateadapt/buildout.cfg:/plone/instance/buildout.cfg
     # mem_limit: 4294967296
     # mem_reservation: 4294967296
     environment:
@@ -49,7 +49,7 @@ services:
       - memcached
 
   converter:
-    image: tiberiuichim/blocks-conversion-tool:0.5
+    image: tiberiuichim/blocks-conversion-tool:1.0
 
   apache:
     image: eeacms/apache:2.4-2.9
