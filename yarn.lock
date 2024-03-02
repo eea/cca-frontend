@@ -1953,6 +1953,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-datablocks@npm:6.3.4":
+  version: 6.3.4
+  resolution: "@eeacms/volto-datablocks@npm:6.3.4"
+  dependencies:
+    "@eeacms/countup": "*"
+    "@eeacms/volto-embed": "*"
+    "@eeacms/volto-group-block": "*"
+    "@eeacms/volto-matomo": "*"
+    d3: 7.1.1
+    date-fns: 2.28.0
+    humanize-plus: ^1.8.2
+    object-hash: 2.2.0
+    react-visibility-sensor: 5.1.1
+    sanitize-html: 2.7.3
+  checksum: 012ddf3289ed7fd19410a3098b32496f8879a934eeeaf5fd4716d6484509496fbe5a5226f41c0a01a36b2de8c0d91ad69516510c36b1e69e677210dd6a95e8f2
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-description-block@npm:1.2.4":
   version: 1.2.4
   resolution: "@eeacms/volto-description-block@npm:1.2.4"
@@ -8575,6 +8593,7 @@ __metadata:
     "@eeacms/volto-accordion-block": 10.4.6
     "@eeacms/volto-block-style": 6.1.0
     "@eeacms/volto-cca-policy": 0.1.88
+    "@eeacms/volto-datablocks": 6.3.4
     "@eeacms/volto-eea-design-system": 1.23.1
     "@eeacms/volto-eea-kitkat": 22.0.0
     "@eeacms/volto-eea-website-theme": 1.28.2
