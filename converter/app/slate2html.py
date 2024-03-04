@@ -44,7 +44,6 @@ class Slate2HTML(object):
                 handler = self.handle_block
 
         if handler is None:
-            # __import__("pdb").set_trace()
             print(element)
             raise ValueError("Unknown handler")
 
@@ -52,6 +51,14 @@ class Slate2HTML(object):
         if isinstance(res, list):
             return res
         return [res]
+
+    def handle_tag_div(self, element):
+        # __import__("pdb").set_trace()
+        # TODO: temporary, we need to see what to do for two-way with eTranslation
+        return self.handle_block(element)
+        # children = []
+        # for child in element["children"]:
+        #     children += self.serialize(child)
 
     def handle_tag_link(self, element):
         """handle_tag_link.
