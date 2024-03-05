@@ -13,6 +13,7 @@ python = "^3.10"
 starlite = "1.51.11"
 uvicorn = "0.18.2"
 beautifulsoup4 = "^4.11"
+lxml = "^5.1.0"
 
 [tool.poetry.dev-dependencies]
 
