@@ -94,8 +94,7 @@ def convert_tabs(soup):
                 div_content.find_all("div", {"id": tab_id}, limit=1)[0]
             )
 
-            tab_structure.append(
-                {"id": tab_id, "title": title, "content": tab_blocks})
+            tab_structure.append({"id": tab_id, "title": title, "content": tab_blocks})
 
         data = make_tab_block(tab_structure)
         ul.replace_with(block_tag(data, soup))  # no need to decompose
@@ -115,8 +114,7 @@ def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
 
     for button in buttons:
-        target = button.attrs["target"] if button.has_attr(
-            "target") else "_self"
+        target = button.attrs["target"] if button.has_attr("target") else "_self"
 
         data = {
             "@type": "callToActionBlock",
@@ -172,13 +170,11 @@ def convert_accordion(soup):
                 .attrs["id"]
                 .split("-heading")[0]
             )
-            panel_title = panel.find_all(
-                "h4", attrs={"class": "panel-title"})[0].text
+            panel_title = panel.find_all("h4", attrs={"class": "panel-title"})[0].text
 
-            _panel_bodies = panel.find_all(
-                "div", attrs={"class": "panel-body"})
+            _panel_bodies = panel.find_all("div", attrs={"class": "panel-body"})
 
-            if panel_title == 'Read more':
+            if panel_title == "Read more":
                 return
 
             blocks = []
@@ -342,7 +338,7 @@ def convert_volto_block(block, node, plaintext):
             return {
                 "@type": "image",
                 "url": node.get("url", "").split("/@@images", 1)[0],
-                "align": node.get('align', ''),
+                "align": node.get("align", ""),
                 "title": node.get("title", ""),
                 "alt": node.get("alt", ""),
             }
@@ -358,6 +354,8 @@ def convert_volto_block(block, node, plaintext):
 
 def extract_text(slate_node):
     html = slate_to_html([slate_node])
+    if not (html and html.strip()):
+        return ""
     try:
         # throws error on VOLTOBLOCKS
         e = document_fromstring(html)
@@ -365,6 +363,8 @@ def extract_text(slate_node):
         return text
     except AttributeError:
         return ""
+    # except:
+    #     __import__("pdb").set_trace()
 
 
 def convert_block(slate_node):
