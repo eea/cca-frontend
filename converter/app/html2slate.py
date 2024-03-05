@@ -90,6 +90,8 @@ def remove_space_follow_space(text, node):
     """Any space immediately following another space (even across two separate inline
     elements) is ignored (rule 4)
     """
+    # if text == " (2018)":
+    #     __import__("pdb").set_trace()
 
     text = MULTIPLE_SPACE.sub(" ", text)
 
@@ -112,6 +114,10 @@ def remove_space_follow_space(text, node):
             if prev_text and prev_text.endswith(" "):
                 return FIRST_SPACE.sub("", text)
         else:
+            # TODO: temporary, to be tested
+            if parent.parent and is_inline(parent.parent):
+                # __import__("pdb").set_trace()
+                return collapse_inline_space(parent.parent)
             return FIRST_SPACE.sub("", text)
 
     return text
@@ -192,7 +198,7 @@ def clean_padding_text(text, node):
     return text
 
 
-def collapse_inline_space(node, expanded=False):
+def collapse_inline_space(node):
     """Process inline text according to whitespace rules
 
     See
@@ -239,15 +245,15 @@ def is_element(node):
 def style_to_object(text):
     out = {}
 
-    for pair in [x.strip() for x in text.split(';') if x.strip()]:
-        k, v = pair.split(':', 1)
+    for pair in [x.strip() for x in text.split(";") if x.strip()]:
+        k, v = pair.split(":", 1)
         out[k.strip()] = v.strip()
 
     return out
 
 
 def fix_node_attributes(key):
-    restricted = ['type', 'value', 'children']
+    restricted = ["type", "value", "children"]
     if key in restricted:
         key = "_" + key
 
@@ -259,13 +265,16 @@ def fix_img_url(url):
     #     # TODO: fix this
     #     return ''
     # ../../../../
-    bits = url.split('/@@images', 1)
+    bits = url.split("/@@images", 1)
     url = bits[0]
     scale = None
     if len(bits) > 1:
-        scale = list(reversed(bits[1].rsplit('/')))[0]
-    if 'resolveuid' in url and not url.startswith('/'):
-        url = '../' + url
+        scale = list(reversed(bits[1].rsplit("/")))[0]
+    if "resolveuid" in url and not url.startswith("/"):
+        bits = url.split("resolveuid", 1)
+        url = "../resolveuid%s" % bits[1]
+    if scale == "large":
+        scale = "huge"
     return (url, scale)
 
 
@@ -277,17 +286,20 @@ class HTML2Slate(object):
     See https://github.com/plone/volto/blob/5f9066a70b9f3b60d462fc96a1aa7027ff9bbac0/packages/volto-slate/src/editor/deserialize.js
     """
 
-    def to_slate(self, text):
-        "Convert text to a slate value. A slate value is a list of elements"
-
-        fragments = fragments_fromstring(text)
+    def from_elements(self, elements):
         nodes = []
-        for f in fragments:
+        for f in elements:
             slate_nodes = self.deserialize(f)
             if slate_nodes:
                 nodes += slate_nodes
 
         return self.normalize(nodes)
+
+    def to_slate(self, text):
+        "Convert text to a slate value. A slate value is a list of elements"
+
+        fragments = fragments_fromstring(text)
+        return self.from_elements(fragments)
 
     def deserialize(self, node):
         """Deserialize a node into a list Slate Nodes"""
@@ -352,26 +364,20 @@ class HTML2Slate(object):
 
         if not children:
             # avoid crash in volto-slate when dealing with empty lists
-            return {
-                "type": "p",
-                "children": [{"text": ""}]
-            }
+            return {"type": "p", "children": [{"text": ""}]}
 
-        return {
-            "type": node_type,
-            "children": children
-        }
+        return {"type": node_type, "children": children}
 
     def handle_tag_img(self, node):
-        url = node.attrs.get('src', '')
+        url = node.attrs.get("src", "")
 
         str_node = repr(node)
 
-        align = ''
+        align = ""
         if "float: left" in str_node:
-            align = 'left'
+            align = "left"
         elif "float: right" in str_node:
-            align = 'right'
+            align = "right"
 
         # TODO: just for testing, I'm missing the blobs
         # url = "/fallback.png/@@images/image/preview"
@@ -381,26 +387,54 @@ class HTML2Slate(object):
         # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
         # title="rawpixel on Unsplash"/>
 
+        # __import__("pdb").set_trace()
+        # print("fix image url", url)
         url, scale = fix_img_url(url)
-        return {
+        result = {
             "type": "img",
             "align": align,
             "url": url,
-            "title": node.attrs.get('title', ''),
-            "alt": node.attrs.get('alt', ''),
+            "title": node.attrs.get("title", ""),
+            "alt": node.attrs.get("alt", ""),
             "children": [{"text": ""}],
-            "scale": scale
+            "scale": scale,
         }
+        # print("result", result)
+        return result
 
     def handle_tag_voltoblock(self, node):
         element = {
             "type": "voltoblock",
-            "data": json.loads(node.attrs['data-voltoblock'])
+            "data": json.loads(node.attrs["data-voltoblock"]),
         }
         return element
 
     def handle_tag_br(self, node):
         return {"text": "\n"}
+
+    def handle_tag_b(self, node):
+        # TO DO: implement <b> special cases
+        return self.handle_block(node)
+
+    def handle_tag_div(self, node):
+        if getattr(node, "name", "") == "[document]":
+            # treat divs directly in the input as paragraph nodes. Fixes
+            # en/observatory/policy-context/european-policy-framework/who/
+            return self.handle_tag_p(node)
+        else:
+            return self.handle_block(node)
+
+    def handle_tag_p(self, node):
+        # TO DO: implement <b> special cases
+        style = node.get("style", "")
+        styles = style_to_object(style)
+        if styles.get("text-align") == "center":
+            return {
+                "type": "p",
+                "children": self.deserialize_children(node),
+                "styleName": "text-center",
+            }
+        return self.handle_block(node)
 
     def handle_block(self, node):
         value = {"type": node.name,
@@ -409,22 +443,6 @@ class HTML2Slate(object):
             k = fix_node_attributes(k)
             value[k] = v
         return value
-
-    def handle_tag_b(self, node):
-        # TO DO: implement <b> special cases
-        return self.handle_block(node)
-
-    def handle_tag_p(self, node):
-        # TO DO: implement <b> special cases
-        style = node.get('style', '')
-        styles = style_to_object(style)
-        if styles.get('text-align') == 'center':
-            return {
-                "type": 'p',
-                "children": self.deserialize_children(node),
-                "styleName": "text-center"
-            }
-        return self.handle_block(node)
 
     def handle_slate_data_element(self, node):
         data = node["data-slate-data"]
@@ -463,7 +481,7 @@ class HTML2Slate(object):
         return value
 
 
-def text_to_slate(text):
+def text_to_slate(text: str):
     return HTML2Slate().to_slate(text)
 
 
