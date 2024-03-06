@@ -90,8 +90,6 @@ def remove_space_follow_space(text, node):
     """Any space immediately following another space (even across two separate inline
     elements) is ignored (rule 4)
     """
-    # if text == " (2018)":
-    #     __import__("pdb").set_trace()
 
     text = MULTIPLE_SPACE.sub(" ", text)
 
@@ -116,7 +114,6 @@ def remove_space_follow_space(text, node):
         else:
             # TODO: temporary, to be tested
             if parent.parent and is_inline(parent.parent):
-                # __import__("pdb").set_trace()
                 return collapse_inline_space(parent.parent)
             return FIRST_SPACE.sub("", text)
 
@@ -163,8 +160,7 @@ def remove_element_edges(text, node):
         text = FIRST_ALL_SPACE.sub("", text)
 
     if ANY_SPACE_AT_END.search(text):
-        has_inline_ancestor_sibling = get_inline_ancestor_sibling(
-            node) is not None
+        has_inline_ancestor_sibling = get_inline_ancestor_sibling(node) is not None
         if not has_inline_ancestor_sibling or (next_ and next_.name == "br"):
             text = ANY_SPACE_AT_END.sub("", text)
 
@@ -387,7 +383,6 @@ class HTML2Slate(object):
         # src="resolveuid/88a6567afaa148aabed5c5055e12c509/@@images/image/preview"
         # title="rawpixel on Unsplash"/>
 
-        # __import__("pdb").set_trace()
         # print("fix image url", url)
         url, scale = fix_img_url(url)
         result = {
@@ -422,7 +417,7 @@ class HTML2Slate(object):
             # en/observatory/policy-context/european-policy-framework/who/
             return self.handle_tag_p(node)
         else:
-            return self.handle_block(node)
+            return self.handle_fallback(node)
 
     def handle_tag_p(self, node):
         # TO DO: implement <b> special cases
@@ -437,8 +432,7 @@ class HTML2Slate(object):
         return self.handle_block(node)
 
     def handle_block(self, node):
-        value = {"type": node.name,
-                 "children": self.deserialize_children(node)}
+        value = {"type": node.name, "children": self.deserialize_children(node)}
         for k, v in node.attrs.items():
             k = fix_node_attributes(k)
             value[k] = v
