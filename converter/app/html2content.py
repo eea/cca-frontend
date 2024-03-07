@@ -110,6 +110,19 @@ converters = {
 }
 
 
+def visit_slate_nodes(slate_value, visitor):
+    for node in slate_value:
+        visitor(node)
+        if isinstance(node, dict) and node.get("children"):
+            visit_slate_nodes(node["children"], visitor)
+
+
+def debug_translation(node):
+    # just a debugging helper to understand which fields will be translated
+    if isinstance(node, dict) and node.get("text"):
+        node["text"] = f"will be translated----{node['text']}"
+
+
 def deserialize_block(fragment):
     """Convert a lxml fragment to a Volto block. This assumes that the HTML
     structure has been previously exported with block2html"""
@@ -125,8 +138,13 @@ def deserialize_block(fragment):
     # fallback to slate deserializer
     blocks = text_to_blocks(fragment)
     assert len(blocks) == 1
+    [uid, block] = blocks[0]
 
-    return blocks[0]
+    if block.get("@type") == "slate":
+        slate_value = block["value"]
+        visit_slate_nodes(slate_value, debug_translation)
+
+    return [uid, block]
 
 
 def deserialize_blocks(element):
@@ -134,10 +152,10 @@ def deserialize_blocks(element):
     items = []
 
     for f in get_elements(element):
-        blockuid = deserialize_block(f)
-        if len(blockuid) != 2:
+        pair = deserialize_block(f)
+        if len(pair) != 2:
             continue  # converter not created yet
-        uid, block = blockuid
+        uid, block = pair
         blocks[uid] = block
         items.append(uid)
 
