@@ -7,6 +7,7 @@ import json
 import re
 from collections import deque
 
+import lxml.html
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString, Tag
 
@@ -475,7 +476,19 @@ class HTML2Slate(object):
         return value
 
 
+def tostr(s):
+    if isinstance(s, str):
+        return s
+    else:
+        return s.decode("utf-8")
+
+
 def text_to_slate(text: str):
+    # __import__("pdb").set_trace()
+    # first we cleanup the broken html
+    e = lxml.html.document_fromstring(text)
+    children = e.find("body").getchildren()
+    text = "".join(tostr(lxml.html.tostring(child)) for child in children)
     return HTML2Slate().to_slate(text)
 
 
