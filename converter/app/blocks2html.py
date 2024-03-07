@@ -139,7 +139,7 @@ def convert_blocks_to_html(data):
     order = data.blocks_layout["items"]
     blocks = data.blocks
     fragments = []
-    __import__("pdb").set_trace()
+    # __import__("pdb").set_trace()
 
     for uid in order:
         block = blocks[uid]

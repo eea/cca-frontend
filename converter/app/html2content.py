@@ -83,10 +83,27 @@ def convert_quote_block(fragment):
     return [uid, data]
 
 
+# def generic_block_converter(translate_fields):
+#     return converter
+
+
+def generic_block_converter(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+    for ediv in fragment.children:
+        name = ediv.attrs["data-fieldname"]
+        data[name] = ediv.text
+
+    uid = str(uuid4())
+    return [uid, data]
+
+
 converters = {
     "columnsBlock": convert_columns_block,
     "quote": convert_quote_block,
     "slateTable": convert_slate_table_block,
+    "nextCloudVideo": generic_block_converter,
 }
 
 
