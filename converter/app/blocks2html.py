@@ -6,16 +6,11 @@ from .slate2html import elements_to_text, slate_to_elements
 TABLE_CELLS = {"header": E.TH, "data": E.TD}
 
 
-def nop_converter(block_data):
-    __import__("pdb").set_trace()
-    return None
-
-
-def convert_slate(block_data):
+def serialize_slate(block_data):
     return slate_to_elements(block_data["value"])
 
 
-def convert_slate_table(block_data):
+def serialize_slate_table(block_data):
     _type = block_data.pop("@type")
     data = block_data.pop("table")
     rows = data.pop("rows")
@@ -46,7 +41,7 @@ def iterate_blocks(data):
         yield (uid, blocks[uid])
 
 
-def convert_columns_block(block_data):
+def serialize_columns_block(block_data):
     _type = block_data.pop("@type")
     data = block_data.pop("data")
     attributes = {
@@ -91,7 +86,7 @@ def generic_block_converter(translate_fields):
     return converter
 
 
-def convert_quote(block_data):
+def serialize_quote(block_data):
     value = block_data.pop("value")
     _type = block_data.pop("@type")
     attributes = {
@@ -103,7 +98,7 @@ def convert_quote(block_data):
     return [div]
 
 
-def convert_image(block_data):
+def serialize_image(block_data):
     # print("img", block_data)
     attributes = {
         "src": block_data["url"],
@@ -112,16 +107,21 @@ def convert_image(block_data):
     return [E.IMG(**attributes)]
 
 
+def serialize_group_block(block_data):
+    return
+
+
 converters = {
-    "slate": convert_slate,
-    "slateTable": convert_slate_table,
+    "slate": serialize_slate,
+    "slateTable": serialize_slate_table,
     # TODO: implement specific fields for the title block
     "title": generic_block_converter([]),
-    "quote": convert_quote,
-    "image": convert_image,
-    "columnsBlock": convert_columns_block,
+    "quote": serialize_quote,
+    "image": serialize_image,
+    "columnsBlock": serialize_columns_block,
     "nextCloudVideo": generic_block_converter(["title"]),
     "layoutSettings": generic_block_converter([]),
+    "group": serialize_group_block,
 }
 
 
@@ -142,7 +142,6 @@ def convert_blocks_to_html(data):
     order = data.blocks_layout["items"]
     blocks = data.blocks
     fragments = []
-    # __import__("pdb").set_trace()
 
     for uid in order:
         block = blocks[uid]
