@@ -66,6 +66,30 @@ def convert_columns_block(block_data):
     return [div]
 
 
+def generic_block_converter(translate_fields):
+    def converter(block_data):
+        _type = block_data.pop("@type")
+
+        fv = {}
+        for name in translate_fields:
+            value = block_data.pop(name, None)
+            if value is not None:
+                fv[name] = value
+
+        attributes = {
+            "data-block-type": _type,
+            "data-volto-block": json.dumps(block_data),
+        }
+
+        children = [
+            E.DIV(fv[name], **{"data-fieldname": name}) for name in translate_fields
+        ]
+        div = E.DIV(*children, **attributes)
+        return [div]
+
+    return converter
+
+
 def convert_quote(block_data):
     value = block_data.pop("value")
     _type = block_data.pop("@type")
@@ -94,6 +118,7 @@ converters = {
     "quote": convert_quote,
     "image": convert_image,
     "columnsBlock": convert_columns_block,
+    "nextCloudVideo": generic_block_converter(["title"]),
 }
 
 
@@ -114,7 +139,7 @@ def convert_blocks_to_html(data):
     order = data.blocks_layout["items"]
     blocks = data.blocks
     fragments = []
-    # __import__("pdb").set_trace()
+    __import__("pdb").set_trace()
 
     for uid in order:
         block = blocks[uid]
