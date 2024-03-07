@@ -7,6 +7,7 @@ TABLE_CELLS = {"header": E.TH, "data": E.TD}
 
 
 def nop_converter(block_data):
+    __import__("pdb").set_trace()
     return None
 
 
@@ -114,11 +115,13 @@ def convert_image(block_data):
 converters = {
     "slate": convert_slate,
     "slateTable": convert_slate_table,
-    "title": nop_converter,
+    # TODO: implement specific fields for the title block
+    "title": generic_block_converter([]),
     "quote": convert_quote,
     "image": convert_image,
     "columnsBlock": convert_columns_block,
     "nextCloudVideo": generic_block_converter(["title"]),
+    "layoutSettings": generic_block_converter([]),
 }
 
 
@@ -129,8 +132,8 @@ def convert_block_to_elements(block_data):
         raise ValueError
 
     if _type not in converters:
-        print(f"{_type} has no block handler")
-        return ""
+        print(f"Block serializer needed: {_type}. Using default")
+        return generic_block_converter([])(block_data)
 
     return converters[_type](block_data)
 

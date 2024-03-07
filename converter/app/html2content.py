@@ -103,7 +103,10 @@ converters = {
     "columnsBlock": convert_columns_block,
     "quote": convert_quote_block,
     "slateTable": convert_slate_table_block,
+    # generics
     "nextCloudVideo": generic_block_converter,
+    "title": generic_block_converter,
+    "layoutSettings": generic_block_converter,
 }
 
 
@@ -113,8 +116,8 @@ def deserialize_block(fragment):
     _type = fragment.attrs.get("data-block-type")
     if _type:
         if _type not in converters:
-            print(f"Block deserializer needed: {_type}")
-            return []
+            print(f"Block deserializer needed: {_type}. Using default.")
+            return generic_block_converter(fragment)
         else:
             deserializer = converters[_type]
             return deserializer(fragment)
