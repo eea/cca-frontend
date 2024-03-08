@@ -202,6 +202,16 @@ def serialize_teaserGrid(block_data):
     return [div]
 
 
+TEASER_FIELDS = ["title", "head_title", "description"]
+
+
+def serialize_teaser(block_data):
+    serialized = generic_block_converter(TEASER_FIELDS)(block_data)
+    # TODO: handle the itemModel
+    # __import__("pdb").set_trace()
+    return serialized
+
+
 converters = {
     "slate": serialize_slate,
     "slateTable": serialize_slate_table,
@@ -220,7 +230,7 @@ converters = {
     "layoutSettings": generic_block_converter([]),
     "callToActionBlock": generic_block_converter(["text"]),
     "searchlib": generic_block_converter(["searchInputPlaceholder"]),
-    "teaser": generic_block_converter(["title", "head_title"]),
+    "teaser": serialize_teaser,
     # TODO: need to handle call to actions for teasers
     # teaserGrid
 }
