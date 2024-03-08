@@ -69,7 +69,12 @@ def merge_adjacent_text_nodes(children):
         if i in range_dict:
             d = range_dict[i] + 1
             slice = children[i:d]
-            result.append({"text": "".join([c["text"] for c in slice])})
+            node = {}
+            if slice:
+                node = slice[0]
+            node["text"] = "".join([c["text"] for c in slice])
+            result.append(node)
+
     return result
 
 
@@ -356,6 +361,14 @@ class HTML2Slate(object):
     def handle_tag_ol(self, node):
         return self.handle_tag_ul(node, node_type="ol")
 
+    def handle_tag_span(self, node):
+        rawdata = node.attrs.get("data-slate-node", None)
+        data = {}
+        if rawdata:
+            data = json.loads(rawdata)
+        data["text"] = node.text
+        return data
+
     def handle_tag_ul(self, node, node_type="ul"):
         children = self.deserialize_children(node)
 
@@ -433,6 +446,8 @@ class HTML2Slate(object):
         return self.handle_block(node)
 
     def handle_block(self, node):
+        # if node.name == "p":
+        #     __import__("pdb").set_trace()
         value = {"type": node.name, "children": self.deserialize_children(node)}
         for k, v in node.attrs.items():
             k = fix_node_attributes(k)

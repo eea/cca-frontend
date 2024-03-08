@@ -67,7 +67,6 @@ def deserialize_layout_block_with_titles(fragment):
 
     colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
 
-    # __import__("pdb").set_trace()
     for column in get_elements(fragment):
         metaelement = next(column.children)
         metaelement.extract()
