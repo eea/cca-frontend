@@ -146,6 +146,21 @@ def serialize_quote(block_data):
     return [div]
 
 
+def generic_slate_block(fieldname):
+    def convertor(block_data):
+        value = block_data.pop(fieldname)
+        _type = block_data.pop("@type")
+        attributes = {
+            "data-block-type": _type,
+            "data-volto-block": json.dumps(block_data),
+        }
+        children = slate_to_elements(value)
+        div = E.DIV(*children, **attributes)
+        return [div]
+
+    return convertor
+
+
 def serialize_image(block_data):
     # print("img", block_data)
     attributes = {
@@ -192,12 +207,14 @@ converters = {
     "slateTable": serialize_slate_table,
     # TODO: implement specific fields for the title block
     "title": generic_block_converter([]),
-    "quote": serialize_quote,
     "image": serialize_image,
     "columnsBlock": serialize_layout_block,
     "tabs_block": serialize_layout_block_with_titles,
     "group": serialize_group_block,
     "teaserGrid": serialize_teaserGrid,
+    # "quote": serialize_quote,
+    "quote": generic_slate_block("value"),
+    "item": generic_slate_block("description"),
     # generics
     "nextCloudVideo": generic_block_converter(["title"]),
     "layoutSettings": generic_block_converter([]),
