@@ -23,11 +23,10 @@ def nanoid(size=5):
     return "".join(random.choices(urlAlphabet, k=size))
 
 
-def deserialize_columns_block(fragment):
+def deserialize_layout_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
-
     data = json.loads(rawdata)
-    data["@type"] = "columnsBlock"
+    data["@type"] = fragment.attrs["data-block-type"]
 
     colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
 
@@ -37,7 +36,39 @@ def deserialize_columns_block(fragment):
         colblockdata["blocks"][coluid] = coldata
         colblockdata["blocks_layout"]["items"].append(coluid)
 
-    data["data"] = colblockdata
+    if "data" not in data:
+        data["data"] = {}
+    data["data"].update(colblockdata)
+    uid = str(uuid4())
+
+    return [uid, data]
+
+
+def deserialize_layout_block_with_titles(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+
+    colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
+
+    # __import__("pdb").set_trace()
+    for column in get_elements(fragment):
+        metaelement = next(column.children)
+        metaelement.extract()
+        metadata = json.loads(metaelement.attrs["data-volto-column"])
+        for ediv in metaelement.children:
+            name = ediv.attrs["data-fieldname"]
+            metadata[name] = f"TTT----{ediv.text}"
+
+        coldata = deserialize_blocks(column)
+        coldata.update(metadata)
+        coluid = str(uuid4())
+        colblockdata["blocks"][coluid] = coldata
+        colblockdata["blocks_layout"]["items"].append(coluid)
+
+    if "data" not in data:
+        data["data"] = {}
+    data["data"].update(colblockdata)
     uid = str(uuid4())
 
     return [uid, data]
@@ -45,15 +76,10 @@ def deserialize_columns_block(fragment):
 
 def deserialize_group_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
-
     data = json.loads(rawdata)
-    data["@type"] = "group"
-
-    blockdata = deserialize_blocks(fragment)
-
-    data["data"] = blockdata
+    data["@type"] = fragment.attrs["data-block-type"]
+    data["data"] = deserialize_blocks(fragment)
     uid = str(uuid4())
-
     return [uid, data]
 
 
@@ -104,16 +130,18 @@ def generic_block_converter(fragment):
     rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
     data["@type"] = fragment.attrs["data-block-type"]
+
     for ediv in fragment.children:
         name = ediv.attrs["data-fieldname"]
-        data[name] = ediv.text
+        data[name] = f"TTT----{ediv.text}"
 
     uid = str(uuid4())
     return [uid, data]
 
 
 converters = {
-    "columnsBlock": deserialize_columns_block,
+    "columnsBlock": deserialize_layout_block,
+    "tabs_block": deserialize_layout_block_with_titles,
     "quote": deserialize_quote_block,
     "slateTable": deserialize_slate_table_block,
     "group": deserialize_group_block,
@@ -121,6 +149,7 @@ converters = {
     "nextCloudVideo": generic_block_converter,
     "title": generic_block_converter,
     "layoutSettings": generic_block_converter,
+    "callToActionBlock": generic_block_converter,
 }
 
 
@@ -134,7 +163,7 @@ def visit_slate_nodes(slate_value, visitor):
 def debug_translation(node):
     # just a debugging helper to understand which fields will be translated
     if isinstance(node, dict) and node.get("text"):
-        node["text"] = f"will be translated----{node['text']}"
+        node["text"] = f"TTT----{node['text']}"
 
 
 def deserialize_block(fragment):
@@ -162,6 +191,8 @@ def deserialize_block(fragment):
 
 
 def deserialize_blocks(element):
+    """Converts a <div> with serialized (html) blocks inside to Volto blocks"""
+
     blocks = {}
     items = []
 

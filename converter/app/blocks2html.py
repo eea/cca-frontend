@@ -7,7 +7,10 @@ TABLE_CELLS = {"header": E.TH, "data": E.TD}
 
 
 def serialize_slate(block_data):
-    return slate_to_elements(block_data["value"])
+    if "value" in block_data:
+        return slate_to_elements(block_data["value"])
+    else:
+        return E.P()
 
 
 def serialize_slate_table(block_data):
@@ -41,9 +44,16 @@ def iterate_blocks(data):
         yield (uid, blocks[uid])
 
 
-def serialize_columns_block(block_data):
+def serialize_layout_block(block_data):
+    """Serializes a block that contains other blocks, such as column or tabs"""
+
     _type = block_data.pop("@type")
-    data = block_data.pop("data")
+    # if _type == "tabs_block":
+    #     __import__("pdb").set_trace()
+    data = {
+        "blocks": block_data["data"].pop("blocks"),
+        "blocks_layout": block_data["data"].pop("blocks_layout"),
+    }
     attributes = {
         "data-block-type": _type,
         "data-volto-block": json.dumps(block_data),
@@ -55,6 +65,43 @@ def serialize_columns_block(block_data):
         for _, block in iterate_blocks(coldata):
             colelements.extend(convert_block_to_elements(block))
         column = E.DIV(*colelements)
+        children.append(column)
+
+    div = E.DIV(*children, **attributes)
+
+    return [div]
+
+
+def serialize_layout_block_with_titles(block_data):
+    """Serializes a block that contains other blocks, such as column or tabs"""
+
+    _type = block_data.pop("@type")
+    data = {
+        "blocks": block_data["data"].pop("blocks"),
+        "blocks_layout": block_data["data"].pop("blocks_layout"),
+    }
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-block": json.dumps(block_data),
+    }
+
+    children = []
+    for _, coldata in iterate_blocks(data):
+        colelements = []
+        colblocksdata = {
+            "blocks": coldata.pop("blocks"),
+            "blocks_layout": coldata.pop("blocks_layout"),
+        }
+        translate_fields = ["title"]
+        metatags = [
+            E.DIV(coldata.pop(name, ""), **{"data-fieldname": name})
+            for name in translate_fields
+        ]
+        metacol = E.DIV(*metatags, **{"data-volto-column": json.dumps(coldata)})
+
+        for _, block in iterate_blocks(colblocksdata):
+            colelements.extend(convert_block_to_elements(block))
+        column = E.DIV(metacol, *colelements)
         children.append(column)
 
     div = E.DIV(*children, **attributes)
@@ -130,11 +177,13 @@ converters = {
     "title": generic_block_converter([]),
     "quote": serialize_quote,
     "image": serialize_image,
-    "columnsBlock": serialize_columns_block,
+    "columnsBlock": serialize_layout_block,
+    "tabs_block": serialize_layout_block_with_titles,
     "group": serialize_group_block,
     # generics
     "nextCloudVideo": generic_block_converter(["title"]),
     "layoutSettings": generic_block_converter([]),
+    "callToActionBlock": generic_block_converter(["text"]),
 }
 
 
