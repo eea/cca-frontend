@@ -150,6 +150,8 @@ converters = {
     "title": generic_block_converter,
     "layoutSettings": generic_block_converter,
     "callToActionBlock": generic_block_converter,
+    "searchlib": generic_block_converter,
+    "teaser": generic_block_converter,
 }
 
 
