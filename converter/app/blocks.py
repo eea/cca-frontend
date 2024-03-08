@@ -1,3 +1,4 @@
+from copy import deepcopy
 from lxml.html import document_fromstring
 from .slate2html import slate_to_html
 import json
@@ -368,7 +369,7 @@ def extract_text(slate_node):
 def convert_block(slate_node):
     # TODO: do the plaintext
 
-    plaintext = extract_text(slate_node)
+    plaintext = extract_text(deepcopy(slate_node))
     volto_block = convert_volto_block(slate_node, slate_node, plaintext)
     if volto_block:
         return volto_block
