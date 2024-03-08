@@ -132,30 +132,16 @@ def generic_slateblock_converter(fieldname):
         data["@type"] = _type
 
         elements = list(get_elements(fragment))
-        data[fieldname] = HTML2Slate().from_elements(elements)
+        slate_value = HTML2Slate().from_elements(elements)
+
+        visit_slate_nodes(slate_value, debug_translation)
+        data[fieldname] = slate_value
 
         uid = str(uuid4())
 
         return [uid, data]
 
     return converter
-
-
-# def deserialize_quote_block(fragment):
-#     rawdata = fragment.attrs["data-volto-block"]
-#
-#     data = json.loads(rawdata)
-#     data["@type"] = "quote"
-#     elements = list(get_elements(fragment))
-#     data["value"] = HTML2Slate().from_elements(elements)
-#
-#     uid = str(uuid4())
-#
-#     return [uid, data]
-
-
-# def generic_block_converter(translate_fields):
-#     return converter
 
 
 def generic_block_converter(fragment):
