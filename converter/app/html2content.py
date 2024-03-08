@@ -44,6 +44,22 @@ def deserialize_layout_block(fragment):
     return [uid, data]
 
 
+def deserialize_teaserGrid(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+    columns = []
+    for colel in fragment.children:
+        blockel = next(colel.children)
+        block = deserialize_block(blockel)[1]
+        columns.append(block)
+
+    data["columns"] = columns
+
+    uid = str(uuid4())
+    return [uid, data]
+
+
 def deserialize_layout_block_with_titles(fragment):
     rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
@@ -109,17 +125,34 @@ def deserialize_slate_table_block(fragment):
     return [str(uuid4()), block]
 
 
-def deserialize_quote_block(fragment):
-    rawdata = fragment.attrs["data-volto-block"]
+def generic_slateblock_converter(fieldname):
+    def converter(fragment):
+        rawdata = fragment.attrs["data-volto-block"]
+        _type = fragment.attrs["data-block-type"]
+        data = json.loads(rawdata)
+        data["@type"] = _type
 
-    data = json.loads(rawdata)
-    data["@type"] = "quote"
-    elements = list(get_elements(fragment))
-    data["value"] = HTML2Slate().from_elements(elements)
+        elements = list(get_elements(fragment))
+        data[fieldname] = HTML2Slate().from_elements(elements)
 
-    uid = str(uuid4())
+        uid = str(uuid4())
 
-    return [uid, data]
+        return [uid, data]
+
+    return converter
+
+
+# def deserialize_quote_block(fragment):
+#     rawdata = fragment.attrs["data-volto-block"]
+#
+#     data = json.loads(rawdata)
+#     data["@type"] = "quote"
+#     elements = list(get_elements(fragment))
+#     data["value"] = HTML2Slate().from_elements(elements)
+#
+#     uid = str(uuid4())
+#
+#     return [uid, data]
 
 
 # def generic_block_converter(translate_fields):
@@ -142,9 +175,12 @@ def generic_block_converter(fragment):
 converters = {
     "columnsBlock": deserialize_layout_block,
     "tabs_block": deserialize_layout_block_with_titles,
-    "quote": deserialize_quote_block,
+    # "quote": deserialize_quote_block,
+    "quote": generic_slateblock_converter("value"),
+    "item": generic_slateblock_converter("description"),
     "slateTable": deserialize_slate_table_block,
     "group": deserialize_group_block,
+    "teaserGrid": deserialize_teaserGrid,
     # generics
     "nextCloudVideo": generic_block_converter,
     "title": generic_block_converter,
