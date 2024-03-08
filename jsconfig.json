@@ -9,6 +9,24 @@
             ],
             "@eeacms/volto-globalsearch": [
                 "addons/volto-globalsearch/src"
+            ],
+            "@eeacms/volto-openlayers-map": [
+                "addons/volto-openlayers-map/src"
+            ],
+            "@eeacms/volto-hero-block": [
+                "addons/volto-hero-block/src"
+            ],
+            "@eeacms/volto-block-style": [
+                "addons/volto-block-style/src"
+            ],
+            "@eeacms/volto-datablocks": [
+                "addons/volto-datablocks/src"
+            ],
+            "@eeacms/volto-pdf-block": [
+                "addons/volto-pdf-block/src"
+            ],
+            "@eeacms/volto-eea-website-theme": [
+                "addons/volto-eea-website-theme/src"
             ]
         },
         "baseUrl": "src"
