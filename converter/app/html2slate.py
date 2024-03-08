@@ -484,7 +484,6 @@ def tostr(s):
 
 
 def text_to_slate(text: str):
-    # __import__("pdb").set_trace()
     # first we cleanup the broken html
     e = lxml.html.document_fromstring(text)
     children = e.find("body").getchildren()

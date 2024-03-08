@@ -53,7 +53,6 @@ class Slate2HTML(object):
         return [res]
 
     def handle_tag_div(self, element):
-        # __import__("pdb").set_trace()
         # TODO: temporary, we need to see what to do for two-way with eTranslation
         return self.handle_block(element)
         # children = []
@@ -113,7 +112,6 @@ class Slate2HTML(object):
         _type = element["type"].upper()
         if _type == "VOLTOBLOCK":
             return []  # TODO: finish this. Right now it's only used in the plone4>plone6 migration
-            # __import__("pdb").set_trace()
         el = getattr(E, _type)
 
         children = []
@@ -134,7 +132,6 @@ class Slate2HTML(object):
 
         :param value:
         """
-        # __import__("pdb").set_trace()
         children = []
         for child in value:
             children += self.serialize(child)
