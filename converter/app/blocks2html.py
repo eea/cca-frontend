@@ -125,7 +125,8 @@ def generic_block_converter(translate_fields):
         }
 
         children = [
-            E.DIV(fv[name], **{"data-fieldname": name}) for name in translate_fields
+            E.DIV(fv.get(name, ""), **{"data-fieldname": name})
+            for name in translate_fields
         ]
         div = E.DIV(*children, **attributes)
         return [div]
@@ -170,6 +171,22 @@ def serialize_group_block(block_data):
     return [div]
 
 
+def serialize_teaserGrid(block_data):
+    # __import__("pdb").set_trace()
+    _type = block_data.pop("@type")
+    columns = block_data.pop("columns")
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-block": json.dumps(block_data),
+    }
+    children = []
+    for teaser in columns:
+        elements = convert_block_to_elements(teaser)
+        children.append(E.DIV(*elements))
+    div = E.DIV(*children, **attributes)
+    return [div]
+
+
 converters = {
     "slate": serialize_slate,
     "slateTable": serialize_slate_table,
@@ -180,10 +197,15 @@ converters = {
     "columnsBlock": serialize_layout_block,
     "tabs_block": serialize_layout_block_with_titles,
     "group": serialize_group_block,
+    "teaserGrid": serialize_teaserGrid,
     # generics
     "nextCloudVideo": generic_block_converter(["title"]),
     "layoutSettings": generic_block_converter([]),
     "callToActionBlock": generic_block_converter(["text"]),
+    "searchlib": generic_block_converter(["searchInputPlaceholder"]),
+    "teaser": generic_block_converter(["title", "head_title"]),
+    # TODO: need to handle call to actions for teasers
+    # teaserGrid
 }
 
 
