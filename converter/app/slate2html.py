@@ -57,7 +57,8 @@ class Slate2HTML(object):
 
         if handler is None:
             print(element)
-            raise ValueError("Unknown handler")
+            handler = self.generic_type_handler
+            # raise ValueError("Unknown handler")
 
         res = handler(element)
         if isinstance(res, list):
@@ -106,15 +107,24 @@ class Slate2HTML(object):
 
         return el(*children, **attributes)
 
-    def handle_tag_callout(self, element):
-        el = E.P
-        attributes = {"class": "callout"}
+    def generic_type_handler(self, element):
+        el = E.DIV
 
         children = []
-        for child in element["children"]:
+        for child in element.pop("children"):
             children += self.serialize(child)
 
-        return el(*children, **attributes)
+        return el(*children, **{"data-slate-node": json.dumps(element)})
+
+    # def handle_tag_callout(self, element):
+    #     el = E.P
+    #     attributes = {"class": "callout"}
+    #
+    #     children = []
+    #     for child in element["children"]:
+    #         children += self.serialize(child)
+    #
+    #     return el(*children, **attributes)
 
     def handle_block(self, element):
         """handle_block.

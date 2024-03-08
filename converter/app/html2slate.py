@@ -446,8 +446,6 @@ class HTML2Slate(object):
         return self.handle_block(node)
 
     def handle_block(self, node):
-        # if node.name == "p":
-        #     __import__("pdb").set_trace()
         value = {"type": node.name, "children": self.deserialize_children(node)}
         for k, v in node.attrs.items():
             k = fix_node_attributes(k)
