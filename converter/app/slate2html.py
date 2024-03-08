@@ -1,4 +1,5 @@
 import json
+from copy import deepcopy
 
 from .config import ACCEPTED_TAGS
 from lxml.html import builder as E
@@ -20,6 +21,14 @@ def join(element, children):
     return res[:-1]  # remove the last break
 
 
+def inline_text_element(text, slate_node):
+    if len(slate_node) > 1:
+        el = E.SPAN
+        slate_node.pop("text", None)
+        return el(text, **{"data-slate-node": json.dumps(slate_node)})
+    return text
+
+
 class Slate2HTML(object):
     """Slate2HTML."""
 
@@ -30,9 +39,12 @@ class Slate2HTML(object):
         """
         if "text" in element:
             if "\n" not in element["text"]:
-                return [element["text"]]
+                return [inline_text_element(element["text"], deepcopy(element))]
 
-            return join(E.BR, element["text"].split("\n"))
+            return join(
+                E.BR,
+                [inline_text_element(t, element) for t in element["text"].split("\n")],
+            )
 
         tagname = element["type"]
 
