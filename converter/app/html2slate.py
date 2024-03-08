@@ -430,6 +430,11 @@ class HTML2Slate(object):
             # treat divs directly in the input as paragraph nodes. Fixes
             # en/observatory/policy-context/european-policy-framework/who/
             return self.handle_tag_p(node)
+        elif node.attrs.get("data-slate-node"):
+            rawdata = node.attrs["data-slate-node"]
+            slate_node = json.loads(rawdata)
+            slate_node["children"] = self.deserialize_children(node)
+            return slate_node
         else:
             return self.handle_fallback(node)
 
