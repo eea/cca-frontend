@@ -23,7 +23,7 @@ def nanoid(size=5):
     return "".join(random.choices(urlAlphabet, k=size))
 
 
-def convert_columns_block(fragment):
+def deserialize_columns_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
 
     data = json.loads(rawdata)
@@ -43,7 +43,21 @@ def convert_columns_block(fragment):
     return [uid, data]
 
 
-def convert_slate_table_block(fragment):
+def deserialize_group_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+
+    data = json.loads(rawdata)
+    data["@type"] = "group"
+
+    blockdata = deserialize_blocks(fragment)
+
+    data["data"] = blockdata
+    uid = str(uuid4())
+
+    return [uid, data]
+
+
+def deserialize_slate_table_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
 
@@ -61,7 +75,6 @@ def convert_slate_table_block(fragment):
             elif ecell.name == "td":
                 cell["type"] = "data"
             else:
-                # __import__("pdb").set_trace()
                 raise ValueError
 
             row["cells"].append(cell)
@@ -70,7 +83,7 @@ def convert_slate_table_block(fragment):
     return [str(uuid4()), block]
 
 
-def convert_quote_block(fragment):
+def deserialize_quote_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
 
     data = json.loads(rawdata)
@@ -100,9 +113,10 @@ def generic_block_converter(fragment):
 
 
 converters = {
-    "columnsBlock": convert_columns_block,
-    "quote": convert_quote_block,
-    "slateTable": convert_slate_table_block,
+    "columnsBlock": deserialize_columns_block,
+    "quote": deserialize_quote_block,
+    "slateTable": deserialize_slate_table_block,
+    "group": deserialize_group_block,
     # generics
     "nextCloudVideo": generic_block_converter,
     "title": generic_block_converter,

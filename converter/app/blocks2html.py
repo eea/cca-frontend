@@ -108,7 +108,19 @@ def serialize_image(block_data):
 
 
 def serialize_group_block(block_data):
-    return
+    _type = block_data.pop("@type")
+    data = block_data.pop("data")
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-block": json.dumps(block_data),
+    }
+
+    children = []
+    for _, block in iterate_blocks(data):
+        children.extend(convert_block_to_elements(block))
+
+    div = E.DIV(*children, **attributes)
+    return [div]
 
 
 converters = {
@@ -119,9 +131,10 @@ converters = {
     "quote": serialize_quote,
     "image": serialize_image,
     "columnsBlock": serialize_columns_block,
+    "group": serialize_group_block,
+    # generics
     "nextCloudVideo": generic_block_converter(["title"]),
     "layoutSettings": generic_block_converter([]),
-    "group": serialize_group_block,
 }
 
 

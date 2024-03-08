@@ -363,8 +363,6 @@ def extract_text(slate_node):
         return text
     except AttributeError:
         return ""
-    # except:
-    #     __import__("pdb").set_trace()
 
 
 def convert_block(slate_node):
