@@ -207,6 +207,10 @@ TEASER_FIELDS = ["title", "head_title", "description"]
 
 def serialize_teaser(block_data):
     serialized = generic_block_converter(TEASER_FIELDS)(block_data)
+
+    # item_model = block_data.pop('itemModel', None)
+    # if item_model:
+    #     serialized_model = generic_block_converter()
     # TODO: handle the itemModel
     # __import__("pdb").set_trace()
     return serialized
