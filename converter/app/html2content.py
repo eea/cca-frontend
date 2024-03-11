@@ -9,6 +9,10 @@ from .html2slate import HTML2Slate
 from .blocks import text_to_blocks
 from uuid import uuid4
 
+import os
+
+DEBUG = os.environ.get("DEBUG", False) and "TTT----" or ""
+
 
 def get_elements(node):
     for child in node.children:
@@ -73,7 +77,7 @@ def deserialize_layout_block_with_titles(fragment):
         metadata = json.loads(metaelement.attrs["data-volto-column"])
         for ediv in metaelement.children:
             name = ediv.attrs["data-fieldname"]
-            metadata[name] = f"TTT----{ediv.text}"
+            metadata[name] = f"{DEBUG}{ediv.text}"
 
         coldata = deserialize_blocks(column)
         coldata.update(metadata)
@@ -151,7 +155,7 @@ def generic_block_converter(fragment):
 
     for ediv in fragment.children:
         name = ediv.attrs["data-fieldname"]
-        data[name] = f"TTT----{ediv.text}"
+        data[name] = f"{DEBUG}{ediv.text}"
 
     uid = str(uuid4())
     return [uid, data]
@@ -186,7 +190,7 @@ def visit_slate_nodes(slate_value, visitor):
 def debug_translation(node):
     # just a debugging helper to understand which fields will be translated
     if isinstance(node, dict) and node.get("text"):
-        node["text"] = f"TTT----{node['text']}"
+        node["text"] = f"{DEBUG}{node['text']}"
 
 
 def deserialize_block(fragment):
