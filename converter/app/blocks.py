@@ -1,3 +1,4 @@
+from .utils import nanoid
 from copy import deepcopy
 from lxml.html import document_fromstring
 from .slate2html import slate_to_html
@@ -95,7 +96,8 @@ def convert_tabs(soup):
                 div_content.find_all("div", {"id": tab_id}, limit=1)[0]
             )
 
-            tab_structure.append({"id": tab_id, "title": title, "content": tab_blocks})
+            tab_structure.append(
+                {"id": tab_id, "title": title, "content": tab_blocks})
 
         data = make_tab_block(tab_structure)
         ul.replace_with(block_tag(data, soup))  # no need to decompose
@@ -115,7 +117,8 @@ def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
 
     for button in buttons:
-        target = button.attrs["target"] if button.has_attr("target") else "_self"
+        target = button.attrs["target"] if button.has_attr(
+            "target") else "_self"
 
         data = {
             "@type": "callToActionBlock",
@@ -171,9 +174,11 @@ def convert_accordion(soup):
                 .attrs["id"]
                 .split("-heading")[0]
             )
-            panel_title = panel.find_all("h4", attrs={"class": "panel-title"})[0].text
+            panel_title = panel.find_all(
+                "h4", attrs={"class": "panel-title"})[0].text
 
-            _panel_bodies = panel.find_all("div", attrs={"class": "panel-body"})
+            _panel_bodies = panel.find_all(
+                "div", attrs={"class": "panel-body"})
 
             if panel_title == "Read more":
                 return
@@ -316,6 +321,44 @@ COL_MAPPING = {
 }
 
 
+def table_to_table_block(node, plaintext):
+    block = {"@type": "slateTable",
+             "table": {"rows": []}, "plaintext": plaintext}
+    islisting = "listing" in node.get("class", [])
+    if islisting:
+        block["table"]["striped"] = True
+    tbody = None
+    thead = None
+
+    for child in node["children"]:
+        if child["type"] == "tbody":
+            tbody = child
+        elif child["type"] == "thead":
+            thead = child
+
+    for theadrow in (thead or {}).get("children", []):
+        row = {"cells": [], "key": nanoid()}
+        block["table"]["rows"].append(row)
+
+        for child in theadrow.get("children", []):
+            cell = {"key": nanoid()}
+            cell["value"] = child["children"]
+            cell["type"] = "header"
+            row["cells"].append(cell)
+
+    for tbodyrow in (tbody or {}).get("children", []):
+        row = {"cells": [], "key": nanoid()}
+        block["table"]["rows"].append(row)
+
+        for child in tbodyrow.get("children", []):
+            cell = {"key": nanoid()}
+            cell["value"] = child["children"]
+            cell["type"] = "data"
+            row["cells"].append(cell)
+
+    return block
+
+
 def convert_volto_block(block, node, plaintext):
     # if there's any image in the paragraph, it will be replaced only by the
     # image block. This needs to be treated carefully, if we have inline aligned
@@ -330,7 +373,7 @@ def convert_volto_block(block, node, plaintext):
         if has_volto_blocks(node["children"]):
             return table_to_columns_block(node)
 
-        return {"@type": "slate", "value": [block], "plaintext": plaintext}
+        return table_to_table_block(node, plaintext)
 
     elif node_type == "img":
         if (

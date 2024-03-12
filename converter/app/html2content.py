@@ -1,12 +1,12 @@
 """ Convert html produced by blocks2html
 """
 
-import random
 import json
 from bs4 import BeautifulSoup
 
 from .html2slate import HTML2Slate
 from .blocks import text_to_blocks
+from .utils import nanoid
 from uuid import uuid4
 
 import os
@@ -18,13 +18,6 @@ def get_elements(node):
     for child in node.children:
         if child.name:
             yield child
-
-
-urlAlphabet = "ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW"
-
-
-def nanoid(size=5):
-    return "".join(random.choices(urlAlphabet, k=size))
 
 
 def deserialize_layout_block(fragment):
