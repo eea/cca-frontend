@@ -224,7 +224,7 @@ def text_to_blocks(text_or_element):
 def convert_slate_to_blocks(slate):
     blocks = []
     for paragraph in slate:
-        maybe_block = convert_block(paragraph)
+        maybe_block = convert_block(paragraph, parent=slate)
 
         if not isinstance(maybe_block, list):
             blocks.append([make_uid(), maybe_block])
@@ -239,19 +239,22 @@ def iterate_children(value, front=False):
 
     :param value:
     """
-    queue = deque(value)
+    queue = deque([(child, None) for child in value])
+
     while queue:
         if not front:
-            child = queue.pop()
+            (child, parent) = queue.pop()
         else:
-            child = queue.popleft()
-        yield child
+            (child, parent) = queue.popleft()
+
+        yield (child, parent)
+
         if isinstance(child, dict) and child.get("children"):
-            queue.extend(child["children"] or [])
+            queue.extend([(ch, child) for ch in (child["children"])])
 
 
-def has_volto_blocks(node):
-    for child in iterate_children(node):
+def has_volto_blocks(children):
+    for child, _ in iterate_children(children):
         if isinstance(child, dict) and child.get("type") == "voltoblock":
             return True
 
@@ -359,7 +362,7 @@ def table_to_table_block(node, plaintext):
     return block
 
 
-def convert_volto_block(block, node, plaintext):
+def convert_volto_block(block, node, plaintext, parent=None):
     # if there's any image in the paragraph, it will be replaced only by the
     # image block. This needs to be treated carefully, if we have inline aligned
     # images
@@ -379,13 +382,21 @@ def convert_volto_block(block, node, plaintext):
         if (
             block is node or plaintext == ""
         ):  # convert to a volto block only on top level element or if the block has no text
-            return {
+            res = {
                 "@type": "image",
                 "url": node.get("url", "").split("/@@images", 1)[0],
                 "align": node.get("align", ""),
                 "title": node.get("title", ""),
                 "alt": node.get("alt", ""),
             }
+
+            if parent and parent.get("type") == "link":
+                href = parent.get("data", {}).get("url", "")
+                if href.startswith("resolveuid"):
+                    href = f"../{href}"
+                res["href"] = href
+
+            return res
 
     elif node_type == "video":
         return {
@@ -409,20 +420,23 @@ def extract_text(slate_node):
         return ""
 
 
-def convert_block(slate_node):
+def convert_block(slate_node, parent=None):
     # TODO: do the plaintext
 
     plaintext = extract_text(deepcopy(slate_node))
-    volto_block = convert_volto_block(slate_node, slate_node, plaintext)
+    volto_block = convert_volto_block(
+        slate_node, slate_node, plaintext, parent=parent)
     if volto_block:
         return volto_block
 
     if slate_node.get("children"):
         children = iterate_children(slate_node["children"])
-        for child in children:
+        for child, parent in children:
             # print('child', child)
 
-            volto_block = convert_volto_block(slate_node, child, plaintext)
+            volto_block = convert_volto_block(
+                slate_node, child, plaintext, parent=parent
+            )
 
             if volto_block:
                 return volto_block
