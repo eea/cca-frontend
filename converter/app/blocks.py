@@ -224,7 +224,7 @@ def text_to_blocks(text_or_element):
 def convert_slate_to_blocks(slate):
     blocks = []
     for paragraph in slate:
-        maybe_block = convert_block(paragraph, parent=slate)
+        maybe_block = convert_block(paragraph, parent=None)
 
         if not isinstance(maybe_block, list):
             blocks.append([make_uid(), maybe_block])
@@ -390,6 +390,8 @@ def convert_volto_block(block, node, plaintext, parent=None):
                 "alt": node.get("alt", ""),
             }
 
+            if isinstance(parent, list):
+                __import__("pdb").set_trace()
             if parent and parent.get("type") == "link":
                 href = parent.get("data", {}).get("url", "")
                 if href.startswith("resolveuid"):
