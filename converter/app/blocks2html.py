@@ -1,3 +1,4 @@
+from copy import deepcopy
 import json
 from lxml.html import builder as E
 from .slate2html import elements_to_text, slate_to_elements
@@ -44,12 +45,20 @@ def iterate_blocks(data):
         yield (uid, blocks[uid])
 
 
+def get_blockscontainer_data(data):
+    data = deepcopy(data)
+    if "blocks" in data:
+        del data["blocks"]
+    if "blocks_layout" in data:
+        del data["blocks_layout"]
+
+    return data
+
+
 def serialize_layout_block(block_data):
     """Serializes a block that contains other blocks, such as column or tabs"""
 
     _type = block_data.pop("@type")
-    # if _type == "tabs_block":
-    #     __import__("pdb").set_trace()
     data = {
         "blocks": block_data["data"].pop("blocks"),
         "blocks_layout": block_data["data"].pop("blocks_layout"),
@@ -61,10 +70,14 @@ def serialize_layout_block(block_data):
 
     children = []
     for _, coldata in iterate_blocks(data):
+        # if "settings" in coldata:
+        #     __import__("pdb").set_trace()
         colelements = []
         for _, block in iterate_blocks(coldata):
             colelements.extend(convert_block_to_elements(block))
-        column = E.DIV(*colelements)
+        colsettings = get_blockscontainer_data(coldata)
+        colattributes = {"data-volto-column-data": json.dumps(colsettings)}
+        column = E.DIV(*colelements, **colattributes)
         children.append(column)
 
     div = E.DIV(*children, **attributes)
@@ -97,7 +110,8 @@ def serialize_layout_block_with_titles(block_data):
             E.DIV(coldata.pop(name, ""), **{"data-fieldname": name})
             for name in translate_fields
         ]
-        metacol = E.DIV(*metatags, **{"data-volto-column": json.dumps(coldata)})
+        metacol = E.DIV(
+            *metatags, **{"data-volto-column": json.dumps(coldata)})
 
         for _, block in iterate_blocks(colblocksdata):
             colelements.extend(convert_block_to_elements(block))

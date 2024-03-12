@@ -28,7 +28,10 @@ def deserialize_layout_block(fragment):
     colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
 
     for column in get_elements(fragment):
+        rawcolsettings = column.attrs.get("data-volto-column-data", "{}")
+        colsettings = json.loads(rawcolsettings)
         coldata = deserialize_blocks(column)
+        coldata.update(colsettings)
         coluid = str(uuid4())
         colblockdata["blocks"][coluid] = coldata
         colblockdata["blocks_layout"]["items"].append(coluid)
