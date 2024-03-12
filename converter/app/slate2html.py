@@ -43,7 +43,8 @@ class Slate2HTML(object):
 
             return join(
                 E.BR,
-                [inline_text_element(t, element) for t in element["text"].split("\n")],
+                [inline_text_element(t, element)
+                 for t in element["text"].split("\n")],
             )
 
         tagname = element["type"]
@@ -71,6 +72,21 @@ class Slate2HTML(object):
         # children = []
         # for child in element["children"]:
         #     children += self.serialize(child)
+        #
+
+    def handle_tag_p(self, element):
+        attributes = {}
+        _type = element["type"].upper()
+        style = element.get("styleName")
+        if style == "text-center":
+            attributes = {"style": "text-align: center;"}
+
+        el = getattr(E, _type)
+        children = []
+        for child in element["children"]:
+            children += self.serialize(child)
+
+        return el(*children, **attributes)
 
     def handle_tag_link(self, element):
         """handle_tag_link.
