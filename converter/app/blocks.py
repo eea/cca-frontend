@@ -394,6 +394,12 @@ def convert_volto_block(block, node, plaintext, parent=None):
                 href = parent.get("data", {}).get("url", "")
                 if href.startswith("resolveuid"):
                     href = f"../{href}"
+                if "resolveuid" in href:
+                    href = [
+                        {
+                            "@id": href,
+                        }
+                    ]
                 res["href"] = href
 
             return res
