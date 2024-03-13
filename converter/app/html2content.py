@@ -1,13 +1,17 @@
 """ Convert html produced by blocks2html
 """
 
-import random
 import json
 from bs4 import BeautifulSoup
 
 from .html2slate import HTML2Slate
 from .blocks import text_to_blocks
+from .utils import nanoid
 from uuid import uuid4
+
+import os
+
+DEBUG = os.environ.get("DEBUG", False) and "TTT----" or ""
 
 
 def get_elements(node):
@@ -16,34 +20,104 @@ def get_elements(node):
             yield child
 
 
-urlAlphabet = "ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW"
-
-
-def nanoid(size=5):
-    return "".join(random.choices(urlAlphabet, k=size))
-
-
-def convert_columns_block(fragment):
+def deserialize_layout_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
-
     data = json.loads(rawdata)
-    data["@type"] = "columnsBlock"
+    data["@type"] = fragment.attrs["data-block-type"]
 
     colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
 
     for column in get_elements(fragment):
+        rawcolsettings = column.attrs.get("data-volto-column-data", "{}")
+        colsettings = json.loads(rawcolsettings)
         coldata = deserialize_blocks(column)
+        coldata.update(colsettings)
         coluid = str(uuid4())
         colblockdata["blocks"][coluid] = coldata
         colblockdata["blocks_layout"]["items"].append(coluid)
 
-    data["data"] = colblockdata
+    if "data" not in data:
+        data["data"] = {}
+    data["data"].update(colblockdata)
     uid = str(uuid4())
 
     return [uid, data]
 
 
-def convert_slate_table_block(fragment):
+def deserialize_teaserGrid(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+    columns = []
+    for colel in fragment.children:
+        blockel = next(colel.children)
+        block = deserialize_block(blockel)[1]
+        columns.append(block)
+
+    data["columns"] = columns
+
+    uid = str(uuid4())
+    return [uid, data]
+
+
+def deserialize_title_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+
+    for ediv in fragment.children:
+        name = ediv.attrs["data-fieldname"]
+        if name != "info":
+            data[name] = f"{DEBUG}{ediv.text}"
+        else:
+            data["info"] = [
+                {"@id": el.attrs["id"], "description": f"{DEBUG}{el.text}"}
+                for el in ediv.children
+            ]
+
+    uid = str(uuid4())
+    return [uid, data]
+
+
+def deserialize_layout_block_with_titles(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+
+    colblockdata = {"blocks_layout": {"items": []}, "blocks": {}}
+
+    for column in get_elements(fragment):
+        metaelement = next(column.children)
+        metaelement.extract()
+        metadata = json.loads(metaelement.attrs["data-volto-column"])
+        for ediv in metaelement.children:
+            name = ediv.attrs["data-fieldname"]
+            metadata[name] = f"{DEBUG}{ediv.text}"
+
+        coldata = deserialize_blocks(column)
+        coldata.update(metadata)
+        coluid = str(uuid4())
+        colblockdata["blocks"][coluid] = coldata
+        colblockdata["blocks_layout"]["items"].append(coluid)
+
+    if "data" not in data:
+        data["data"] = {}
+    data["data"].update(colblockdata)
+    uid = str(uuid4())
+
+    return [uid, data]
+
+
+def deserialize_group_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+    data["data"] = deserialize_blocks(fragment)
+    uid = str(uuid4())
+    return [uid, data]
+
+
+def deserialize_slate_table_block(fragment):
     rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
 
@@ -61,7 +135,6 @@ def convert_slate_table_block(fragment):
             elif ecell.name == "td":
                 cell["type"] = "data"
             else:
-                # __import__("pdb").set_trace()
                 raise ValueError
 
             row["cells"].append(cell)
@@ -70,24 +143,69 @@ def convert_slate_table_block(fragment):
     return [str(uuid4()), block]
 
 
-def convert_quote_block(fragment):
-    rawdata = fragment.attrs["data-volto-block"]
+def generic_slateblock_converter(fieldname):
+    def converter(fragment):
+        rawdata = fragment.attrs["data-volto-block"]
+        _type = fragment.attrs["data-block-type"]
+        data = json.loads(rawdata)
+        data["@type"] = _type
 
+        elements = list(get_elements(fragment))
+        slate_value = HTML2Slate().from_elements(elements)
+
+        visit_slate_nodes(slate_value, debug_translation)
+        data[fieldname] = slate_value
+
+        uid = str(uuid4())
+
+        return [uid, data]
+
+    return converter
+
+
+def generic_block_converter(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
-    data["@type"] = "quote"
-    elements = list(get_elements(fragment))
-    data["value"] = HTML2Slate().from_elements(elements)
+    data["@type"] = fragment.attrs["data-block-type"]
+
+    for ediv in fragment.children:
+        name = ediv.attrs["data-fieldname"]
+        data[name] = f"{DEBUG}{ediv.text}"
 
     uid = str(uuid4())
-
     return [uid, data]
 
 
 converters = {
-    "columnsBlock": convert_columns_block,
-    "quote": convert_quote_block,
-    "slateTable": convert_slate_table_block,
+    "columnsBlock": deserialize_layout_block,
+    "tabs_block": deserialize_layout_block_with_titles,
+    # "quote": deserialize_quote_block,
+    "quote": generic_slateblock_converter("value"),
+    "item": generic_slateblock_converter("description"),
+    "slateTable": deserialize_slate_table_block,
+    "group": deserialize_group_block,
+    "teaserGrid": deserialize_teaserGrid,
+    # generics
+    "nextCloudVideo": generic_block_converter,
+    "title": deserialize_title_block,
+    "layoutSettings": generic_block_converter,
+    "callToActionBlock": generic_block_converter,
+    "searchlib": generic_block_converter,
+    "teaser": generic_block_converter,
 }
+
+
+def visit_slate_nodes(slate_value, visitor):
+    for node in slate_value:
+        visitor(node)
+        if isinstance(node, dict) and node.get("children"):
+            visit_slate_nodes(node["children"], visitor)
+
+
+def debug_translation(node):
+    # just a debugging helper to understand which fields will be translated
+    if isinstance(node, dict) and node.get("text"):
+        node["text"] = f"{DEBUG}{node['text']}"
 
 
 def deserialize_block(fragment):
@@ -96,8 +214,8 @@ def deserialize_block(fragment):
     _type = fragment.attrs.get("data-block-type")
     if _type:
         if _type not in converters:
-            print(f"Block deserializer needed: {_type}")
-            return []
+            print(f"Block deserializer needed: {_type}. Using default.")
+            return generic_block_converter(fragment)
         else:
             deserializer = converters[_type]
             return deserializer(fragment)
@@ -105,19 +223,26 @@ def deserialize_block(fragment):
     # fallback to slate deserializer
     blocks = text_to_blocks(fragment)
     assert len(blocks) == 1
+    [uid, block] = blocks[0]
 
-    return blocks[0]
+    if block.get("@type") == "slate":
+        slate_value = block["value"]
+        visit_slate_nodes(slate_value, debug_translation)
+
+    return [uid, block]
 
 
 def deserialize_blocks(element):
+    """Converts a <div> with serialized (html) blocks inside to Volto blocks"""
+
     blocks = {}
     items = []
 
     for f in get_elements(element):
-        blockuid = deserialize_block(f)
-        if len(blockuid) != 2:
+        pair = deserialize_block(f)
+        if len(pair) != 2:
             continue  # converter not created yet
-        uid, block = blockuid
+        uid, block = pair
         blocks[uid] = block
         items.append(uid)
 
