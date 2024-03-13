@@ -1,4 +1,5 @@
 import json
+from copy import deepcopy
 
 from .config import ACCEPTED_TAGS
 from lxml.html import builder as E
@@ -20,6 +21,14 @@ def join(element, children):
     return res[:-1]  # remove the last break
 
 
+def inline_text_element(text, slate_node):
+    if len(slate_node) > 1:
+        el = E.SPAN
+        slate_node.pop("text", None)
+        return el(text, **{"data-slate-node": json.dumps(slate_node)})
+    return text
+
+
 class Slate2HTML(object):
     """Slate2HTML."""
 
@@ -30,9 +39,13 @@ class Slate2HTML(object):
         """
         if "text" in element:
             if "\n" not in element["text"]:
-                return [element["text"]]
+                return [inline_text_element(element["text"], deepcopy(element))]
 
-            return join(E.BR, element["text"].split("\n"))
+            return join(
+                E.BR,
+                [inline_text_element(t, element)
+                 for t in element["text"].split("\n")],
+            )
 
         tagname = element["type"]
 
@@ -45,7 +58,8 @@ class Slate2HTML(object):
 
         if handler is None:
             print(element)
-            raise ValueError("Unknown handler")
+            handler = self.generic_type_handler
+            # raise ValueError("Unknown handler")
 
         res = handler(element)
         if isinstance(res, list):
@@ -53,12 +67,26 @@ class Slate2HTML(object):
         return [res]
 
     def handle_tag_div(self, element):
-        # __import__("pdb").set_trace()
         # TODO: temporary, we need to see what to do for two-way with eTranslation
         return self.handle_block(element)
         # children = []
         # for child in element["children"]:
         #     children += self.serialize(child)
+        #
+
+    def handle_tag_p(self, element):
+        attributes = {}
+        _type = element["type"].upper()
+        style = element.get("styleName")
+        if style == "text-center":
+            attributes = {"style": "text-align: center;"}
+
+        el = getattr(E, _type)
+        children = []
+        for child in element["children"]:
+            children += self.serialize(child)
+
+        return el(*children, **attributes)
 
     def handle_tag_link(self, element):
         """handle_tag_link.
@@ -95,15 +123,24 @@ class Slate2HTML(object):
 
         return el(*children, **attributes)
 
-    def handle_tag_callout(self, element):
-        el = E.P
-        attributes = {"class": "callout"}
+    def generic_type_handler(self, element):
+        el = E.DIV
 
         children = []
-        for child in element["children"]:
+        for child in element.pop("children"):
             children += self.serialize(child)
 
-        return el(*children, **attributes)
+        return el(*children, **{"data-slate-node": json.dumps(element)})
+
+    # def handle_tag_callout(self, element):
+    #     el = E.P
+    #     attributes = {"class": "callout"}
+    #
+    #     children = []
+    #     for child in element["children"]:
+    #         children += self.serialize(child)
+    #
+    #     return el(*children, **attributes)
 
     def handle_block(self, element):
         """handle_block.
@@ -113,7 +150,6 @@ class Slate2HTML(object):
         _type = element["type"].upper()
         if _type == "VOLTOBLOCK":
             return []  # TODO: finish this. Right now it's only used in the plone4>plone6 migration
-            # __import__("pdb").set_trace()
         el = getattr(E, _type)
 
         children = []
@@ -134,7 +170,6 @@ class Slate2HTML(object):
 
         :param value:
         """
-        # __import__("pdb").set_trace()
         children = []
         for child in value:
             children += self.serialize(child)

@@ -1,3 +1,5 @@
+from .utils import nanoid
+from copy import deepcopy
 from lxml.html import document_fromstring
 from .slate2html import slate_to_html
 import json
@@ -94,7 +96,8 @@ def convert_tabs(soup):
                 div_content.find_all("div", {"id": tab_id}, limit=1)[0]
             )
 
-            tab_structure.append({"id": tab_id, "title": title, "content": tab_blocks})
+            tab_structure.append(
+                {"id": tab_id, "title": title, "content": tab_blocks})
 
         data = make_tab_block(tab_structure)
         ul.replace_with(block_tag(data, soup))  # no need to decompose
@@ -114,7 +117,8 @@ def convert_button(soup):
     buttons = soup.find_all("a", attrs={"class": "bluebutton"})
 
     for button in buttons:
-        target = button.attrs["target"] if button.has_attr("target") else "_self"
+        target = button.attrs["target"] if button.has_attr(
+            "target") else "_self"
 
         data = {
             "@type": "callToActionBlock",
@@ -170,9 +174,11 @@ def convert_accordion(soup):
                 .attrs["id"]
                 .split("-heading")[0]
             )
-            panel_title = panel.find_all("h4", attrs={"class": "panel-title"})[0].text
+            panel_title = panel.find_all(
+                "h4", attrs={"class": "panel-title"})[0].text
 
-            _panel_bodies = panel.find_all("div", attrs={"class": "panel-body"})
+            _panel_bodies = panel.find_all(
+                "div", attrs={"class": "panel-body"})
 
             if panel_title == "Read more":
                 return
@@ -218,7 +224,7 @@ def text_to_blocks(text_or_element):
 def convert_slate_to_blocks(slate):
     blocks = []
     for paragraph in slate:
-        maybe_block = convert_block(paragraph)
+        maybe_block = convert_block(paragraph, parent=None)
 
         if not isinstance(maybe_block, list):
             blocks.append([make_uid(), maybe_block])
@@ -233,19 +239,22 @@ def iterate_children(value, front=False):
 
     :param value:
     """
-    queue = deque(value)
+    queue = deque([(child, None) for child in value])
+
     while queue:
         if not front:
-            child = queue.pop()
+            (child, parent) = queue.pop()
         else:
-            child = queue.popleft()
-        yield child
+            (child, parent) = queue.popleft()
+
+        yield (child, parent)
+
         if isinstance(child, dict) and child.get("children"):
-            queue.extend(child["children"] or [])
+            queue.extend([(ch, child) for ch in (child["children"])])
 
 
-def has_volto_blocks(node):
-    for child in iterate_children(node):
+def has_volto_blocks(children):
+    for child, _ in iterate_children(children):
         if isinstance(child, dict) and child.get("type") == "voltoblock":
             return True
 
@@ -315,7 +324,45 @@ COL_MAPPING = {
 }
 
 
-def convert_volto_block(block, node, plaintext):
+def table_to_table_block(node, plaintext):
+    block = {"@type": "slateTable",
+             "table": {"rows": []}, "plaintext": plaintext}
+    islisting = "listing" in node.get("class", [])
+    if islisting:
+        block["table"]["striped"] = True
+    tbody = None
+    thead = None
+
+    for child in node["children"]:
+        if child["type"] == "tbody":
+            tbody = child
+        elif child["type"] == "thead":
+            thead = child
+
+    for theadrow in (thead or {}).get("children", []):
+        row = {"cells": [], "key": nanoid()}
+        block["table"]["rows"].append(row)
+
+        for child in theadrow.get("children", []):
+            cell = {"key": nanoid()}
+            cell["value"] = child["children"]
+            cell["type"] = "header"
+            row["cells"].append(cell)
+
+    for tbodyrow in (tbody or {}).get("children", []):
+        row = {"cells": [], "key": nanoid()}
+        block["table"]["rows"].append(row)
+
+        for child in tbodyrow.get("children", []):
+            cell = {"key": nanoid()}
+            cell["value"] = child["children"]
+            cell["type"] = "data"
+            row["cells"].append(cell)
+
+    return block
+
+
+def convert_volto_block(block, node, plaintext, parent=None):
     # if there's any image in the paragraph, it will be replaced only by the
     # image block. This needs to be treated carefully, if we have inline aligned
     # images
@@ -329,19 +376,35 @@ def convert_volto_block(block, node, plaintext):
         if has_volto_blocks(node["children"]):
             return table_to_columns_block(node)
 
-        return {"@type": "slate", "value": [block], "plaintext": plaintext}
+        return table_to_table_block(node, plaintext)
 
     elif node_type == "img":
         if (
             block is node or plaintext == ""
         ):  # convert to a volto block only on top level element or if the block has no text
-            return {
+            res = {
                 "@type": "image",
                 "url": node.get("url", "").split("/@@images", 1)[0],
                 "align": node.get("align", ""),
                 "title": node.get("title", ""),
                 "alt": node.get("alt", ""),
             }
+
+            if isinstance(parent, list):
+                __import__("pdb").set_trace()
+            if parent and parent.get("type") == "link":
+                href = parent.get("data", {}).get("url", "")
+                if href.startswith("resolveuid"):
+                    href = f"../{href}"
+                if "resolveuid" in href:
+                    href = [
+                        {
+                            "@id": href,
+                        }
+                    ]
+                res["href"] = href
+
+            return res
 
     elif node_type == "video":
         return {
@@ -363,24 +426,25 @@ def extract_text(slate_node):
         return text
     except AttributeError:
         return ""
-    # except:
-    #     __import__("pdb").set_trace()
 
 
-def convert_block(slate_node):
+def convert_block(slate_node, parent=None):
     # TODO: do the plaintext
 
-    plaintext = extract_text(slate_node)
-    volto_block = convert_volto_block(slate_node, slate_node, plaintext)
+    plaintext = extract_text(deepcopy(slate_node))
+    volto_block = convert_volto_block(
+        slate_node, slate_node, plaintext, parent=parent)
     if volto_block:
         return volto_block
 
     if slate_node.get("children"):
         children = iterate_children(slate_node["children"])
-        for child in children:
+        for child, parent in children:
             # print('child', child)
 
-            volto_block = convert_volto_block(slate_node, child, plaintext)
+            volto_block = convert_volto_block(
+                slate_node, child, plaintext, parent=parent
+            )
 
             if volto_block:
                 return volto_block

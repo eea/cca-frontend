@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "1.102.0",
+  "version": "1.103.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -160,7 +160,7 @@
     "node": "^12 || ^14 || ^16"
   },
   "resolutions": {
-    "@eeacms/volto-eea-design-system": "1.23.2",
+    "@eeacms/volto-eea-design-system": "1.23.3",
     "@eeacms/volto-workflow-progress": "4.1.1",
     "@eeacms/volto-widget-theme-picker": "1.1.5",
     "@eeacms/volto-listing-block": "7.1.0",
@@ -171,11 +171,11 @@
   "dependencies": {
     "@eeacms/volto-accordion-block": "10.4.6",
     "@eeacms/volto-block-style": "6.1.0",
-    "@eeacms/volto-cca-policy": "0.1.92",
-    "@eeacms/volto-datablocks": "6.3.4",
-    "@eeacms/volto-eea-design-system": "1.23.2",
-    "@eeacms/volto-eea-kitkat": "22.0.0",
-    "@eeacms/volto-eea-website-theme": "1.28.3",
+    "@eeacms/volto-cca-policy": "0.1.94",
+    "@eeacms/volto-datablocks": "6.4.0",
+    "@eeacms/volto-eea-design-system": "1.23.3",
+    "@eeacms/volto-eea-kitkat": "22.1.0",
+    "@eeacms/volto-eea-website-theme": "1.30.0",
     "@eeacms/volto-embed": "9.1.1",
     "@eeacms/volto-globalsearch": "^1.0.15",
     "@eeacms/volto-listing-block": "7.1.0",
@@ -183,7 +183,7 @@
     "@eeacms/volto-openlayers-map": "0.3.2",
     "@eeacms/volto-searchlib": "^0.7.3",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
-    "@eeacms/volto-widget-geolocation": "5.2.0",
+    "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-workflow-progress": "4.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",

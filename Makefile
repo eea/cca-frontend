@@ -39,6 +39,11 @@ endif
 
 ##############################################################################
 
+.PHONY: help
+help:		## Show this help.
+	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
+	head -n 10 Makefile
+
 # Top-level targets
 .PHONY: all
 all: develop install
@@ -86,8 +91,3 @@ status: ## Check src/addons for changes
 .PHONY: pull
 pull: ## Run git pull on all src/addons
 	./scripts/pull.sh
-
-.PHONY: help
-help:		## Show this help.
-	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
-	head -n 10 Makefile

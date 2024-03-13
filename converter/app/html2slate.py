@@ -7,6 +7,7 @@ import json
 import re
 from collections import deque
 
+import lxml.html
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString, Tag
 
@@ -68,7 +69,12 @@ def merge_adjacent_text_nodes(children):
         if i in range_dict:
             d = range_dict[i] + 1
             slice = children[i:d]
-            result.append({"text": "".join([c["text"] for c in slice])})
+            node = {}
+            if slice:
+                node = slice[0]
+            node["text"] = "".join([c["text"] for c in slice])
+            result.append(node)
+
     return result
 
 
@@ -160,7 +166,8 @@ def remove_element_edges(text, node):
         text = FIRST_ALL_SPACE.sub("", text)
 
     if ANY_SPACE_AT_END.search(text):
-        has_inline_ancestor_sibling = get_inline_ancestor_sibling(node) is not None
+        has_inline_ancestor_sibling = get_inline_ancestor_sibling(
+            node) is not None
         if not has_inline_ancestor_sibling or (next_ and next_.name == "br"):
             text = ANY_SPACE_AT_END.sub("", text)
 
@@ -355,6 +362,14 @@ class HTML2Slate(object):
     def handle_tag_ol(self, node):
         return self.handle_tag_ul(node, node_type="ol")
 
+    def handle_tag_span(self, node):
+        rawdata = node.attrs.get("data-slate-node", None)
+        data = {}
+        if rawdata:
+            data = json.loads(rawdata)
+        data["text"] = node.text
+        return data
+
     def handle_tag_ul(self, node, node_type="ul"):
         children = self.deserialize_children(node)
 
@@ -416,6 +431,11 @@ class HTML2Slate(object):
             # treat divs directly in the input as paragraph nodes. Fixes
             # en/observatory/policy-context/european-policy-framework/who/
             return self.handle_tag_p(node)
+        elif node.attrs.get("data-slate-node"):
+            rawdata = node.attrs["data-slate-node"]
+            slate_node = json.loads(rawdata)
+            slate_node["children"] = self.deserialize_children(node)
+            return slate_node
         else:
             return self.handle_fallback(node)
 
@@ -432,7 +452,8 @@ class HTML2Slate(object):
         return self.handle_block(node)
 
     def handle_block(self, node):
-        value = {"type": node.name, "children": self.deserialize_children(node)}
+        value = {"type": node.name,
+                 "children": self.deserialize_children(node)}
         for k, v in node.attrs.items():
             k = fix_node_attributes(k)
             value[k] = v
@@ -475,7 +496,18 @@ class HTML2Slate(object):
         return value
 
 
+def tostr(s):
+    if isinstance(s, str):
+        return s
+    else:
+        return s.decode("utf-8")
+
+
 def text_to_slate(text: str):
+    # first we cleanup the broken html
+    e = lxml.html.document_fromstring(text)
+    children = e.find("body").getchildren()
+    text = "".join(tostr(lxml.html.tostring(child)) for child in children)
     return HTML2Slate().to_slate(text)
 
 
