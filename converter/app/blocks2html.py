@@ -1,3 +1,8 @@
+""" Convert Volto blocks to a special HTML structure that's suitable for eTranslation.
+The main goal is to provide all block translatable text as "tag text" so that it can be processed by eTranslation.
+It should also be possible to convert this HTML back to Volto blocks, using the html2content.py module
+"""
+
 from copy import deepcopy
 import json
 from lxml.html import builder as E
@@ -230,11 +235,39 @@ def serialize_teaser(block_data):
     return serialized
 
 
+def serialize_title_block(block_data):
+    _type = block_data.pop("@type")
+    translate_fields = ["subtitle"]
+
+    fv = {}
+    for name in translate_fields:
+        value = block_data.pop(name, None)
+        if value is not None:
+            fv[name] = value
+
+    info = block_data.pop("info", [])
+    infoel = E.DIV(
+        *[E.DIV(bit.get("description", ""), id=bit["@id"]) for bit in info],
+        **{"data-fieldname": "info"},
+    )
+
+    attributes = {
+        "data-block-type": _type,
+        "data-volto-block": json.dumps(block_data),
+    }
+
+    children = [infoel] + [
+        E.DIV(fv.get(name, ""), **{"data-fieldname": name}) for name in translate_fields
+    ]
+    div = E.DIV(*children, **attributes)
+    return [div]
+
+
 converters = {
     "slate": serialize_slate,
     "slateTable": serialize_slate_table,
     # TODO: implement specific fields for the title block
-    "title": generic_block_converter([]),
+    "title": serialize_title_block,
     "image": serialize_image,
     "columnsBlock": serialize_layout_block,
     "tabs_block": serialize_layout_block_with_titles,
