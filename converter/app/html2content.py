@@ -60,6 +60,25 @@ def deserialize_teaserGrid(fragment):
     return [uid, data]
 
 
+def deserialize_title_block(fragment):
+    rawdata = fragment.attrs["data-volto-block"]
+    data = json.loads(rawdata)
+    data["@type"] = fragment.attrs["data-block-type"]
+
+    for ediv in fragment.children:
+        name = ediv.attrs["data-fieldname"]
+        if name != "info":
+            data[name] = f"{DEBUG}{ediv.text}"
+        else:
+            data["info"] = [
+                {"@id": el.attrs["id"], "description": f"{DEBUG}{el.text}"}
+                for el in ediv.children
+            ]
+
+    uid = str(uuid4())
+    return [uid, data]
+
+
 def deserialize_layout_block_with_titles(fragment):
     rawdata = fragment.attrs["data-volto-block"]
     data = json.loads(rawdata)
@@ -168,7 +187,7 @@ converters = {
     "teaserGrid": deserialize_teaserGrid,
     # generics
     "nextCloudVideo": generic_block_converter,
-    "title": generic_block_converter,
+    "title": deserialize_title_block,
     "layoutSettings": generic_block_converter,
     "callToActionBlock": generic_block_converter,
     "searchlib": generic_block_converter,
