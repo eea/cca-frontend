@@ -4,10 +4,10 @@ services:
     entrypoint: sh -c "tail -f /dev/null"
 
   converter:
-    build: ./converter
+    build: ./volto-blocks-converter
     volumes:
-      - ./converter/app:/app/app
-      - ./converter/requirements.txt:/app/requirements.txt
+      - ./volto-blocks-converter/app:/app/app
+      - ./volto-blocks-converter/requirements.txt:/app/requirements.txt
     ports:
       - "8000:8000"
     entrypoint: sh -c "tail -f /dev/null"
