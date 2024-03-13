@@ -4,3 +4,4 @@
 [submodule "volto-blocks-converter"]
 	url = git@github.com:eea/volto-blocks-converter.git
 	branch = main
+	path = volto-blocks-converter
