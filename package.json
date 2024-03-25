@@ -171,7 +171,7 @@
   "dependencies": {
     "@eeacms/volto-accordion-block": "10.4.6",
     "@eeacms/volto-block-style": "6.1.0",
-    "@eeacms/volto-cca-policy": "0.1.100",
+    "@eeacms/volto-cca-policy": "0.1.101",
     "@eeacms/volto-datablocks": "6.4.1",
     "@eeacms/volto-eea-design-system": "1.23.3",
     "@eeacms/volto-eea-kitkat": "23.0.1",
