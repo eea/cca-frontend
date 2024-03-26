@@ -181,7 +181,7 @@
     "@eeacms/volto-listing-block": "7.1.0",
     "@eeacms/volto-nextcloud-video-block": "0.4.8",
     "@eeacms/volto-openlayers-map": "0.3.2",
-    "@eeacms/volto-searchlib": "^0.7.3",
+    "@eeacms/volto-searchlib": "0.9.2",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
     "@eeacms/volto-widget-geolocation": "5.3.0",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
