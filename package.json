@@ -187,7 +187,7 @@
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-workflow-progress": "4.1.1",
     "@kitconcept/volto-blocks-grid": "7.0.2",
-    "@plone/volto": "16.31.1",
+    "@plone/volto": "16.31.4",
     "volto-subsites": "4.0.0"
   },
   "devDependencies": {
