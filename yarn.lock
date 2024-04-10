@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.1"
+"@eeacms/volto-cca-policy@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.2"
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-block-style": "*"
@@ -1911,6 +1911,7 @@ __metadata:
     "@eeacms/volto-openlayers-map": "*"
     "@eeacms/volto-searchlib": "*"
     "@eeacms/volto-slate-label": "*"
+    "@eeacms/volto-tabs-block": "*"
     "@eeacms/volto-widget-dataprovenance": "*"
     "@eeacms/volto-widget-geolocation": "*"
     "@eeacms/volto-widget-temporal-coverage": "*"
@@ -1918,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 8f45c6463f9e5fb67e5f19b99333a4cbdfdc55a30e48ed785e865eb70d4374c0230e04cb73087d0f14ff8360cdb033dae1e03b71e4bfd80a010a0a06a53dd704
+  checksum: 0d491473af0a1a62fe6085cb823ed30504373fdbedeb5f54071fc00eba92d5e4664e9aad1462f3ee38e7d52624546301c0b14f5ef4ef9c8f9cc05f2351a34c44
   languageName: node
   linkType: hard
 
@@ -2365,7 +2366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-tabs-block@npm:7.5.1":
+"@eeacms/volto-tabs-block@npm:*, @eeacms/volto-tabs-block@npm:7.5.1":
   version: 7.5.1
   resolution: "@eeacms/volto-tabs-block@npm:7.5.1"
   dependencies:
@@ -8685,7 +8686,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 10.4.6
     "@eeacms/volto-block-style": 6.1.0
-    "@eeacms/volto-cca-policy": 0.2.1
+    "@eeacms/volto-cca-policy": 0.2.2
     "@eeacms/volto-datablocks": 6.4.1
     "@eeacms/volto-eea-design-system": 1.23.5
     "@eeacms/volto-eea-kitkat": 24.0.0
