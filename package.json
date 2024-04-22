@@ -182,7 +182,7 @@
     "@eeacms/volto-nextcloud-video-block": "1.0.0",
     "@eeacms/volto-openlayers-map": "0.3.2",
     "@eeacms/volto-searchlib": "1.0.0",
-    "@eeacms/volto-widget-dataprovenance": "0.4.3",
+    "@eeacms/volto-widget-dataprovenance": "1.0.0",
     "@eeacms/volto-widget-geolocation": "5.3.1",
     "@eeacms/volto-widget-temporal-coverage": "5.2.0",
     "@eeacms/volto-workflow-progress": "4.1.1",

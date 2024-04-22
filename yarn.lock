@@ -2434,6 +2434,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-widget-dataprovenance@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@eeacms/volto-widget-dataprovenance@npm:1.0.0"
+  checksum: 4f42a98d4a1c7d2e2103aebe10fb7bf53b99074b9abd93344d710ce39297676c8a980aa7078b3c173b38709463bc1e78ed22bb3b52f3c9d93ed3e5138a52a0f9
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-widget-geolocation@npm:*":
   version: 5.2.0
   resolution: "@eeacms/volto-widget-geolocation@npm:5.2.0"
@@ -8715,7 +8722,7 @@ __metadata:
     "@eeacms/volto-nextcloud-video-block": 1.0.0
     "@eeacms/volto-openlayers-map": 0.3.2
     "@eeacms/volto-searchlib": 1.0.0
-    "@eeacms/volto-widget-dataprovenance": 0.4.3
+    "@eeacms/volto-widget-dataprovenance": 1.0.0
     "@eeacms/volto-widget-geolocation": 5.3.1
     "@eeacms/volto-widget-temporal-coverage": 5.2.0
     "@eeacms/volto-workflow-progress": 4.1.1
