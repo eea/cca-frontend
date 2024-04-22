@@ -179,7 +179,7 @@
     "@eeacms/volto-embed": "9.1.1",
     "@eeacms/volto-globalsearch": "^1.0.15",
     "@eeacms/volto-listing-block": "7.1.0",
-    "@eeacms/volto-nextcloud-video-block": "0.4.8",
+    "@eeacms/volto-nextcloud-video-block": "1.0.0",
     "@eeacms/volto-openlayers-map": "0.3.2",
     "@eeacms/volto-searchlib": "0.9.3",
     "@eeacms/volto-widget-dataprovenance": "0.4.3",
