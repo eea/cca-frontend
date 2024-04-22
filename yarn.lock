@@ -1887,14 +1887,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-block-style@npm:6.1.0":
-  version: 6.1.0
-  resolution: "@eeacms/volto-block-style@npm:6.1.0"
+"@eeacms/volto-block-style@npm:7.0.0":
+  version: 7.0.0
+  resolution: "@eeacms/volto-block-style@npm:7.0.0"
   dependencies:
     "@eeacms/volto-resize-helper": "*"
     "@eeacms/volto-widget-theme-picker": "*"
     react-color: ~2.18.1
-  checksum: 1a0abf8193d0cc873b03c9bedd4e4a64fb37e926a9985868f1a5f7c6139d509598b93170cefdff28da8fb1f8b24e7b8abca6a5bdaa26fef6b303d1ea467dc444
+  checksum: 0115cc35452554d00abe653669935c568bf4d55bf70aed7b9d6bd1a78cae8ee1130af9f56e8ee39b215cea4405e15fd4f2a6a0384275020e38122f13bba19997
   languageName: node
   linkType: hard
 
@@ -8694,7 +8694,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-accordion-block": 11.0.0
-    "@eeacms/volto-block-style": 6.1.0
+    "@eeacms/volto-block-style": 7.0.0
     "@eeacms/volto-cca-policy": 0.2.7
     "@eeacms/volto-datablocks": 6.4.1
     "@eeacms/volto-eea-design-system": 1.23.6
