@@ -169,7 +169,7 @@
     "d3-array": "^2.12.1"
   },
   "dependencies": {
-    "@eeacms/volto-accordion-block": "10.4.6",
+    "@eeacms/volto-accordion-block": "11.0.0",
     "@eeacms/volto-block-style": "6.1.0",
     "@eeacms/volto-cca-policy": "0.2.7",
     "@eeacms/volto-datablocks": "6.4.1",
