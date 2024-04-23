@@ -24,9 +24,6 @@
             ],
             "@eeacms/volto-pdf-block": [
                 "addons/volto-pdf-block/src"
-            ],
-            "@eeacms/volto-eea-website-theme": [
-                "addons/volto-eea-website-theme/src"
             ]
         },
         "baseUrl": "src"
