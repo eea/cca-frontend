@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "1.121.0",
+  "version": "1.122.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -169,7 +169,7 @@
     "d3-array": "^2.12.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.2.10",
+    "@eeacms/volto-cca-policy": "0.2.11",
     "@eeacms/volto-datablocks": "^6.4.1",
     "@eeacms/volto-eea-design-system": "1.23.6",
     "@eeacms/volto-eea-kitkat": "^24.0.1",
