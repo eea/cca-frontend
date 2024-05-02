@@ -169,7 +169,7 @@
     "d3-array": "^2.12.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.2.14",
+    "@eeacms/volto-cca-policy": "0.2.15",
     "@eeacms/volto-datablocks": "^6.4.1",
     "@eeacms/volto-eea-design-system": "1.23.6",
     "@eeacms/volto-eea-kitkat": "^24.0.1",
