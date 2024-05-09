@@ -157,7 +157,7 @@
     "not dead"
   ],
   "engines": {
-    "node": "^12 || ^14 || ^16"
+    "node": "^14 || ^16 || ^18"
   },
   "resolutions": {
     "@eeacms/volto-eea-kitkat": "^24.0.1",
