@@ -4,26 +4,8 @@
             "@eeacms/volto-cca-policy": [
                 "addons/volto-cca-policy/src"
             ],
-            "@eeacms/volto-searchlib": [
-                "addons/volto-searchlib/src"
-            ],
-            "@eeacms/volto-globalsearch": [
-                "addons/volto-globalsearch/src"
-            ],
             "@eeacms/volto-openlayers-map": [
                 "addons/volto-openlayers-map/src"
-            ],
-            "@eeacms/volto-hero-block": [
-                "addons/volto-hero-block/src"
-            ],
-            "@eeacms/volto-block-style": [
-                "addons/volto-block-style/src"
-            ],
-            "@eeacms/volto-datablocks": [
-                "addons/volto-datablocks/src"
-            ],
-            "@eeacms/volto-pdf-block": [
-                "addons/volto-pdf-block/src"
             ]
         },
         "baseUrl": "src"
