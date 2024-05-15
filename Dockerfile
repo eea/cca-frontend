@@ -13,13 +13,14 @@ RUN runDeps="openssl ca-certificates patch gosu git make tmux locales-all" \
  && cp jsconfig.json.prod jsconfig.json \
  && mkdir -p /app/src/addons \
  && rm -rf /app/src/addons/* \
- && find /app/ -not -user node -exec chown node {} \+ \
- && corepack enable
+ && find /app/ -not -user node -exec chown node {} \+
+# \
+# && corepack enable
 
 USER node
-RUN yarn \
- && yarn build \
- && rm -rf /home/node/.cache \
+RUN yarn
+RUN yarn build
+RUN rm -rf /home/node/.cache \
  && rm -rf /home/node/.yarn \
  && rm -rf /home/node/.npm \
  && rm -rf /app/.yarn/cache
