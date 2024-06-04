@@ -1898,15 +1898,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.40":
-  version: 0.2.40
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.40"
+"@eeacms/volto-cca-policy@npm:0.2.41":
+  version: 0.2.41
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.41"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-eea-website-theme": ^1.33.2
-    "@eeacms/volto-embed": 9.1.1
+    "@eeacms/volto-embed": 10.0.1
     "@eeacms/volto-globalsearch": ^1.1.0
     "@eeacms/volto-openlayers-map": "*"
     "@eeacms/volto-searchlib": ^0.9.3
@@ -1917,7 +1917,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 0c6ddc0482ac43fc6992e660b8ebd5c1a7e12e32679368303de9a74d12b94a8084ef5b43dffb9b42e243bf395e51957fb83488e2cfaa0a749a5b350ae8642625
+  checksum: 3e42bca096b894b55ad5b95296081ab2bdcd6e2bc5e3a057cce5cd127dd650c3c3e45214d29abdd8cc3035de8eb746a1dea76d5a8137d95f9604ca0137b4ed0d
   languageName: node
   linkType: hard
 
@@ -2079,7 +2079,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-embed@npm:9.1.1, @eeacms/volto-embed@npm:^9.1.1":
+"@eeacms/volto-embed@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@eeacms/volto-embed@npm:10.0.1"
+  dependencies:
+    "@eeacms/volto-corsproxy": "*"
+    "@eeacms/volto-datablocks": "*"
+  checksum: 63094601f1649103b694084f2ac34ab90ac73ac1f0265dbf35d8380ce48230c69de8b1ac1994b978ed6842fdcb72b1dcbd2e9d1d6071377a34af6046349fc94a
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-embed@npm:^9.1.1":
   version: 9.1.1
   resolution: "@eeacms/volto-embed@npm:9.1.1"
   dependencies:
@@ -8671,7 +8681,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.40
+    "@eeacms/volto-cca-policy": 0.2.41
     "@eeacms/volto-datablocks": ^6.4.1
     "@eeacms/volto-eea-design-system": 1.31.0
     "@eeacms/volto-eea-kitkat": ^24.0.1
