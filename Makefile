@@ -91,3 +91,13 @@ status: ## Check src/addons for changes
 .PHONY: pull
 pull: ## Run git pull on all src/addons
 	./scripts/pull.sh
+
+.PHONY: test
+test:
+	@if [ -z "$(ADDON)" ]; then \
+		echo "Error: No addon name provided. Usage: make test ADDON=<library_name>"; \
+		exit 1; \
+	else \
+		echo "Running tests for addon: $(ADDON)"; \
+		RAZZLE_JEST_CONFIG=src/addons/$(ADDON)/jest-addon.config.js yarn test src/addons/$(ADDON); \
+	fi
