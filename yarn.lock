@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.57":
-  version: 0.2.57
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.57"
+"@eeacms/volto-cca-policy@npm:0.2.59":
+  version: 0.2.59
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.59"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": "*"
@@ -1914,11 +1914,12 @@ __metadata:
     "@eeacms/volto-slate-label": ^0.6.0
     "@eeacms/volto-tabs-block": ^7.5.1
     "@elastic/search-ui": 1.21.2
+    "@tanstack/react-table": 8.19.3
     d3-array: ^2.12.1
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 7cd3ca45966bce9571c1502b94627bf71754bd033d78aa3f1a31a6f2a98422854e6a7e8e736afb762f663d11a15892ecc53fa918257486def705bacad98fc930
+  checksum: b1b1c86c36dd5e4aff019707b8913706812b424c92b9e30227fc2490eaef777e5e0c17587610748303b2eb4250586a62954ee40306e8ebc7ce4b9c361807e08a
   languageName: node
   linkType: hard
 
@@ -5404,6 +5405,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/react-table@npm:8.19.3":
+  version: 8.19.3
+  resolution: "@tanstack/react-table@npm:8.19.3"
+  dependencies:
+    "@tanstack/table-core": 8.19.3
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: e5f6d7f37d7f3cc5aa47abcc674294389f6392f92fddd90912d59c25bd332d7af7c33222b5854d03d4a832782b70408b9936ba9802de1cea3e8d5add32b7f902
+  languageName: node
+  linkType: hard
+
+"@tanstack/table-core@npm:8.19.3":
+  version: 8.19.3
+  resolution: "@tanstack/table-core@npm:8.19.3"
+  checksum: 1887d45d8bf6d1cb773752407834901401697cd5d0ab8e9191c8b2f353cbe80519e86798f4eaab1d86305297cf387ba7807f4c0e013368d874430fb9bab9192a
+  languageName: node
+  linkType: hard
+
 "@testing-library/cypress@npm:8.0.7":
   version: 8.0.7
   resolution: "@testing-library/cypress@npm:8.0.7"
@@ -8726,7 +8746,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.57
+    "@eeacms/volto-cca-policy": 0.2.59
     "@eeacms/volto-datablocks": ^6.4.1
     "@eeacms/volto-eea-design-system": 1.31.2
     "@eeacms/volto-eea-kitkat": ^24.0.1
