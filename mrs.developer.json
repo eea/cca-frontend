@@ -4,7 +4,7 @@
     "https": "https://github.com/eea/volto-cca-policy.git",
     "package": "@eeacms/volto-cca-policy",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   },
   "volto-embed": {
@@ -388,7 +388,7 @@
     "https": "https://github.com/eea/volto-openlayers-map.git",
     "package": "@eeacms/volto-openlayers-map",
     "branch": "develop",
-    "develop": true,
+    "develop": false,
     "path": "src"
   }
 }
