@@ -56,6 +56,14 @@ develop: ## Runs missdev in the local project (mrs.developer.json should be pres
 install:	## Frontend: Install project and add-ons
 	yarn install
 
+.PHONY: build
+build:                  ## Build frontend
+	NODE_OPTIONS="--max-old-space-size=16384" yarn build
+
+.PHONY: bundlewatch
+bundlewatch:
+	yarn bundlewatch --config .bundlewatch.config.json
+
 .PHONY: start
 start:		## Frontend: Start
 	yarn start
