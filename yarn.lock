@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.63":
-  version: 0.2.63
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.63"
+"@eeacms/volto-cca-policy@npm:0.2.64":
+  version: 0.2.64
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.64"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.2
@@ -1910,7 +1910,7 @@ __metadata:
     "@eeacms/volto-globalsearch": ^1.1.0
     "@eeacms/volto-hero-block": ^7.1.0
     "@eeacms/volto-openlayers-map": "*"
-    "@eeacms/volto-searchlib": 2.0.2
+    "@eeacms/volto-searchlib": 2.0.3
     "@eeacms/volto-slate-label": ^0.6.0
     "@eeacms/volto-tabs-block": ^7.5.1
     "@elastic/search-ui": 1.21.2
@@ -1919,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 87cf66b8a089c78a57226c659743aa86032b0ec0b6e1bdfa5713a81447bc75fb3a442cb935d80c6336a5d0de7833a564226ca9e80b83741eb2873b5f431e187d
+  checksum: 12e0987c92c54631817accea02500508adfddbd09f9ef94fe723a56d1f45e0a59f992e59951d22d71061fb7886247a3ba8f02505d6c6ad0026cc1958b08940c2
   languageName: node
   linkType: hard
 
@@ -1997,9 +1997,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.32.1":
-  version: 1.32.1
-  resolution: "@eeacms/volto-eea-design-system@npm:1.32.1"
+"@eeacms/volto-eea-design-system@npm:1.32.4":
+  version: 1.32.4
+  resolution: "@eeacms/volto-eea-design-system@npm:1.32.4"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -2008,7 +2008,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 3.6.0
     slick-carousel: ^1.8.1
-  checksum: 3adf460eb3783bdd8b22d179b076d0f6e0b138528d6c54c75794c2d3845625fc81f7aa072ca4ee001a0c7747c81640acbdd5dff58098c02693b0fa13a5f6bd68
+  checksum: 877bfc0da646bb32ffff50255cc251e2af1bfe00f8ba5ff5b24fbb12bd75ad5794a322e6d9e4eca135dd58375d828f739b4fadd4ae73485c226985434aa50dc1
   languageName: node
   linkType: hard
 
@@ -2278,9 +2278,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-searchlib@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@eeacms/volto-searchlib@npm:2.0.2"
+"@eeacms/volto-searchlib@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@eeacms/volto-searchlib@npm:2.0.3"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@elastic/react-search-ui": 1.20.2
@@ -2318,7 +2318,7 @@ __metadata:
     superagent: 3.8.2
     svg-loader: 0.0.2
     use-deep-compare-effect: 1.8.1
-  checksum: 34c4c171a49e178506ce9d207669ee2779fcba05c49900c682f5ae22cf1ca9e358409df17ecf727df2d1cc9e16a14a165df86100a0f3c08a953c593256ec90cf
+  checksum: 346bd5973a7a4bff7f53b59131d4a4ffd9dcd3750e455c0fc01a4112eb0702b8b86bb48147bc7ee73fdfe653018272553ca04faab154e4c8af84176cbbecf32a
   languageName: node
   linkType: hard
 
@@ -7560,6 +7560,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "axios@npm:0.24.0"
+  dependencies:
+    follow-redirects: ^1.14.4
+  checksum: 468cf496c08a6aadfb7e699bebdac02851e3043d4e7d282350804ea8900e30d368daa6e3cd4ab83b8ddb5a3b1e17a5a21ada13fc9cebd27b74828f47a4236316
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:^2.0.2":
   version: 2.2.0
   resolution: "axobject-query@npm:2.2.0"
@@ -8418,6 +8427,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bundlewatch@npm:0.3.3":
+  version: 0.3.3
+  resolution: "bundlewatch@npm:0.3.3"
+  dependencies:
+    axios: ^0.24.0
+    bytes: ^3.1.1
+    chalk: ^4.0.0
+    ci-env: ^1.17.0
+    commander: ^5.0.0
+    glob: ^7.1.2
+    gzip-size: ^6.0.0
+    jsonpack: ^1.1.5
+    lodash.merge: ^4.6.1
+    read-pkg-up: ^7.0.1
+  bin:
+    bundlewatch: lib/bin/index.js
+  checksum: ed47e5081664b667c512ef9c4f4d3b60228580939727b3ab39ff2f19c89b3fece7cdd0d0a175ed3ab0ade73a185b60ed9f9bc61a0b36c44f10835b2069f22c6a
+  languageName: node
+  linkType: hard
+
 "bytes@npm:3.0.0":
   version: 3.0.0
   resolution: "bytes@npm:3.0.0"
@@ -8425,7 +8454,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bytes@npm:3.1.2, bytes@npm:^3.0.0":
+"bytes@npm:3.1.2, bytes@npm:^3.0.0, bytes@npm:^3.1.1":
   version: 3.1.2
   resolution: "bytes@npm:3.1.2"
   checksum: e4bcd3948d289c5127591fbedf10c0b639ccbf00243504e4e127374a15c3bc8eed0d28d4aaab08ff6f1cf2abc0cce6ba3085ed32f4f90e82a5683ce0014e1b6e
@@ -8747,8 +8776,8 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.63
-    "@eeacms/volto-eea-design-system": 1.32.1
+    "@eeacms/volto-cca-policy": 0.2.64
+    "@eeacms/volto-eea-design-system": 1.32.4
     "@eeacms/volto-eea-kitkat": ^24.0.1
     "@eeacms/volto-eea-website-theme": ^1.33.2
     "@eeacms/volto-embed": ^9.1.1
@@ -8765,6 +8794,7 @@ __metadata:
     "@storybook/addon-essentials": ^6.3.0
     "@storybook/addon-links": ^6.3.0
     "@storybook/react": ^6.3.0
+    bundlewatch: 0.3.3
     cypress-fail-fast: ^5.0.1
     eslint-plugin-prettier: 3.1.3
     jest-junit: 8.0.0
@@ -8950,7 +8980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-env@npm:^1.14.0":
+"ci-env@npm:^1.14.0, ci-env@npm:^1.17.0":
   version: 1.17.0
   resolution: "ci-env@npm:1.17.0"
   checksum: e6a06d9a6c5abce1ab8fa0f1b0f80e7eb7615d59a937ed0a20a3589441cf49cff1fc64f4fa4b289e3b789dd4a1d9a8255f36a93ed3fc15b6e2be9b795d21fb46
@@ -13414,6 +13444,16 @@ __metadata:
     debug:
       optional: true
   checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.14.4":
+  version: 1.15.6
+  resolution: "follow-redirects@npm:1.15.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: a62c378dfc8c00f60b9c80cab158ba54e99ba0239a5dd7c81245e5a5b39d10f0c35e249c3379eae719ff0285fff88c365dd446fab19dee771f1d76252df1bbf5
   languageName: node
   linkType: hard
 

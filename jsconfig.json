@@ -1,13 +1,6 @@
 {
     "compilerOptions": {
-        "paths": {
-            "@eeacms/volto-cca-policy": [
-                "addons/volto-cca-policy/src"
-            ],
-            "@eeacms/volto-openlayers-map": [
-                "addons/volto-openlayers-map/src"
-            ]
-        },
+        "paths": {},
         "baseUrl": "src"
     }
 }
