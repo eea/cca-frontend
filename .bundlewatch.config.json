@@ -1,32 +1,36 @@
 {
-   "files": [
-      {
-        "path": "build/public/static/js/*.js",
-        "maxSize": "50kB"
-      },
-      {
-        "path": "build/public/static/js/d3*.js",
-        "maxSize": "103kB"
-      },
-      {
-        "path": "build/public/static/js/draft-js*.js",
-        "maxSize": "125kB"
-      },
-      {
-        "path": "build/public/static/js/prettier-standalone*.js",
-        "maxSize": "140kB"
-      },
-      {
-        "path": "build/public/static/js/react-sortable*.js",
-        "maxSize": "70kB"
-      },
-      {
-        "path": "build/public/static/js/sanitize-html*.js",
-        "maxSize": "85kB"
-      },
-      {
-        "path": "build/public/static/js/client*.js",
-        "maxSize": "1.85MB"
-      }
-    ]
+  "files": [
+    {
+      "path": "build/public/static/js/*.js",
+      "maxSize": "50kB"
+    },
+    {
+      "path": "build/public/static/js/d3*.js",
+      "maxSize": "103kB"
+    },
+    {
+      "path": "build/public/static/js/draft-js*.js",
+      "maxSize": "125kB"
+    },
+    {
+      "path": "build/public/static/js/prettier-standalone*.js",
+      "maxSize": "140kB"
+    },
+    {
+      "path": "build/public/static/js/react-sortable*.js",
+      "maxSize": "70kB"
+    },
+    {
+      "path": "build/public/static/js/sanitize-html*.js",
+      "maxSize": "85kB"
+    },
+    {
+      "path": "build/public/static/js/client*.js",
+      "maxSize": "1.85MB"
+    },
+    {
+      "path": "build/public/static/js/rehype-prism-plus*.js",
+      "maxSize": "250kB"
+    }
+  ]
 }

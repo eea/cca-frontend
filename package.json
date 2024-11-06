@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 4)",
   "license": "MIT",
-  "version": "2.49.0",
+  "version": "2.50.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -60,6 +60,7 @@
     "@eeacms/volto-widget-dataprovenance",
     "@eeacms/volto-accordion-block",
     "@eeacms/volto-cca-policy",
+    "@eeacms/volto-chatbot",
     "volto-subsites"
   ],
   "jest": {
@@ -168,17 +169,20 @@
     "@eeacms/volto-datablocks": "^7.2.5",
     "@kitconcept/volto-blocks-grid": "7.0.2",
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x",
+    "@eeacms/volto-eea-website-theme": "<=1.35.0",
+    "@eeacms/volto-chatbot": "0.1.7",
     "d3-array": "^2.12.1",
     "htmlparser2": "^7.2.0",
     "@elastic/search-ui": "1.21.2"
   },
   "dependencies": {
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x",
-    "@eeacms/volto-cca-policy": "0.2.73",
+    "@eeacms/volto-cca-policy": "0.2.76",
+    "@eeacms/volto-chatbot": "0.1.7",
     "@eeacms/volto-datablocks": "^7.2.5",
     "@eeacms/volto-eea-design-system": "1.34.1",
     "@eeacms/volto-eea-kitkat": "^24.0.1",
-    "@eeacms/volto-eea-website-theme": "^1.33.2",
+    "@eeacms/volto-eea-website-theme": "<=1.35.0",
     "@eeacms/volto-embed": "^9.1.1",
     "@eeacms/volto-globalsearch": "^1.1.0",
     "@eeacms/volto-listing-block": "^7.1.0",
