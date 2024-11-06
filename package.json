@@ -168,6 +168,7 @@
     "@eeacms/volto-datablocks": "^7.2.5",
     "@kitconcept/volto-blocks-grid": "7.0.2",
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x",
+    "@eeacms/volto-eea-website-theme": "github:eea/volto-eea-website-theme#e21bee61e55e6c6b46d0119059f7a6063b0edad8",
     "d3-array": "^2.12.1",
     "htmlparser2": "^7.2.0",
     "@elastic/search-ui": "1.21.2"
