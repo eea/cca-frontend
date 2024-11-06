@@ -1898,14 +1898,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.74":
-  version: 0.2.74
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.74"
+"@eeacms/volto-cca-policy@npm:0.2.76":
+  version: 0.2.76
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.76"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": "*"
-    "@eeacms/volto-eea-website-theme": "github:eea/volto-eea-website-theme#1.x.x"
+    "@eeacms/volto-eea-website-theme": 1.35.0
     "@eeacms/volto-embed": ^9.1.1
     "@eeacms/volto-globalsearch": ^1.1.0
     "@eeacms/volto-hero-block": ^7.1.0
@@ -1919,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: b7fadb25e8eca5a8f5b3f9f80c621e3ed2f3a910723d6541c024912e96d6d39a961781e008e50f66e247aeb59ecf78b04c62e0cd14d0901a34a0b18ee5bdea90
+  checksum: e3eb4fa6c4af595958c87007aab28808a341ff374454a9d18862d008cd3263dc628a22fa23f425be151557979281bb74e6afe41f8b53ffffc51d1762ec62c9f4
   languageName: node
   linkType: hard
 
@@ -8814,7 +8814,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.74
+    "@eeacms/volto-cca-policy": 0.2.76
     "@eeacms/volto-chatbot": 0.1.7
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": 1.34.1
