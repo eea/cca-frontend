@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.81":
-  version: 0.2.81
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.81"
+"@eeacms/volto-cca-policy@npm:^0.2.82":
+  version: 0.2.82
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.82"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
@@ -1919,13 +1919,13 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: d41bc709a7990a02f70b07cc85736194a83499c24159c3f36d3cfed33c2dc3edc9995152fddf160e16553659547459453a6212ba4bf08321ea40b480358a4eca
+  checksum: 34726df433ec5bc35ff6a8132f32f21ab04e0fb0749bf4fe3f874a2c2fea130846c000d8ca9333133aab12cccb2cbb4e37e1142103fa9ab5560025a1a8e1992c
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:0.1.7":
-  version: 0.1.7
-  resolution: "@eeacms/volto-chatbot@npm:0.1.7"
+"@eeacms/volto-chatbot@npm:0.1.9":
+  version: 0.1.9
+  resolution: "@eeacms/volto-chatbot@npm:0.1.9"
   dependencies:
     "@microsoft/fetch-event-source": 2.0.1
     fast-json-patch: 3.1.1
@@ -1938,7 +1938,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 57e3dd5a2ede171b2ccf2b0b3b149b18f93c5d55f80816b96245b2a5d3a20f0fecf021c10574e6b020d67a74fc735a033fb1f318f98f35fbe2d0450c99cc76e0
+  checksum: 9e7a31d96096c40a4ab0c0cf158a828e5233022ebb02f5192c9ac3764aa9ed24e00624ba52cf01ccd92e91782652d42aedc827261d3e3f048a0b0fafcded48f8
   languageName: node
   linkType: hard
 
@@ -1998,9 +1998,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.35.0":
-  version: 1.35.0
-  resolution: "@eeacms/volto-eea-design-system@npm:1.35.0"
+"@eeacms/volto-eea-design-system@npm:1.36.1":
+  version: 1.36.1
+  resolution: "@eeacms/volto-eea-design-system@npm:1.36.1"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -2009,7 +2009,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 3.6.0
     slick-carousel: ^1.8.1
-  checksum: 37ca058d7c9ba7ec1bdb230d60dcb7bb0934a28812e7b15a808985ac0d8e05fa1f42ccfefdee1ff49e38d8263dec797698c554ebce9e5343cd92424b1aaac8cf
+  checksum: 16da08e51185ceff176723d16e53c28702fa72d6f8cca250934d41ab75fea68909ff4e0c3ee85b1765f7d935caae60f9b1177977b316464ba253090c31a0c0e2
   languageName: node
   linkType: hard
 
@@ -8814,10 +8814,10 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.81
-    "@eeacms/volto-chatbot": 0.1.7
+    "@eeacms/volto-cca-policy": ^0.2.82
+    "@eeacms/volto-chatbot": 0.1.9
     "@eeacms/volto-datablocks": ^7.2.5
-    "@eeacms/volto-eea-design-system": 1.35.0
+    "@eeacms/volto-eea-design-system": 1.36.1
     "@eeacms/volto-eea-kitkat": ^24.0.1
     "@eeacms/volto-eea-website-theme": <=1.35.0
     "@eeacms/volto-embed": ^9.1.1
