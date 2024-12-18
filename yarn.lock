@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.85":
-  version: 0.2.85
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.85"
+"@eeacms/volto-cca-policy@npm:0.2.86":
+  version: 0.2.86
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.86"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
@@ -1910,7 +1910,7 @@ __metadata:
     "@eeacms/volto-globalsearch": ^1.1.0
     "@eeacms/volto-hero-block": ^7.1.0
     "@eeacms/volto-openlayers-map": "*"
-    "@eeacms/volto-searchlib": 2.0.5
+    "@eeacms/volto-searchlib": 2.0.6
     "@eeacms/volto-slate-label": ^0.6.0
     "@eeacms/volto-tabs-block": ^7.5.1
     "@elastic/search-ui": 1.21.2
@@ -1919,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: d8c73f8159abe7ff2c8b7eebffe4c93706bfb7302bd11228437b8a9cf93218e1a48207705b1a6ee692a066a717b42baeef81eef2af5eb03b4660e0cceca5a947
+  checksum: bbd27c16cff97b1ec48b882efe8aa578a577c262f4e48f6ea11de8c85969b027a6c62185bffe0e4895623df5910e56ec67dde84d9eb5cd8c4ec5462377034818
   languageName: node
   linkType: hard
 
@@ -2279,9 +2279,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-searchlib@npm:2.0.5":
-  version: 2.0.5
-  resolution: "@eeacms/volto-searchlib@npm:2.0.5"
+"@eeacms/volto-searchlib@npm:2.0.6":
+  version: 2.0.6
+  resolution: "@eeacms/volto-searchlib@npm:2.0.6"
   dependencies:
     "@eeacms/volto-eea-design-system": "*"
     "@elastic/react-search-ui": 1.20.2
@@ -2319,7 +2319,7 @@ __metadata:
     superagent: 3.8.2
     svg-loader: 0.0.2
     use-deep-compare-effect: 1.8.1
-  checksum: 24bc0b74813e91e7ecdbf8819d83f94c7676fe35a2a883f23623dcb2b9bfe754959d3f778e9bb8613ffefa4ccaa76550bc155c6c119feadd476ebaea8d2b222c
+  checksum: 517bf276a952cefaf1c9045c70e393d9c249ca3538b5fa7c4dff590a95e0790db18c04606e5f72998a32ecf581969b4f88ac1252467b5acecf6fd75246ec3579
   languageName: node
   linkType: hard
 
@@ -8814,7 +8814,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.85
+    "@eeacms/volto-cca-policy": 0.2.86
     "@eeacms/volto-chatbot": 0.1.10
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": 1.36.1
