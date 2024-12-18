@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.84":
-  version: 0.2.84
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.84"
+"@eeacms/volto-cca-policy@npm:0.2.85":
+  version: 0.2.85
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.85"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
@@ -1919,13 +1919,13 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: bc01f2f14318f073d6c483aee7bbc74ffc3d3be0c7a5b7c7d3c3ef04d25d0babefe401de1385cae4128f92e3fbe684a4c0c1125d6e9c41983f29eeaeea9b06b8
+  checksum: d8c73f8159abe7ff2c8b7eebffe4c93706bfb7302bd11228437b8a9cf93218e1a48207705b1a6ee692a066a717b42baeef81eef2af5eb03b4660e0cceca5a947
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:0.1.9":
-  version: 0.1.9
-  resolution: "@eeacms/volto-chatbot@npm:0.1.9"
+"@eeacms/volto-chatbot@npm:0.1.10":
+  version: 0.1.10
+  resolution: "@eeacms/volto-chatbot@npm:0.1.10"
   dependencies:
     "@microsoft/fetch-event-source": 2.0.1
     fast-json-patch: 3.1.1
@@ -1938,7 +1938,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 9e7a31d96096c40a4ab0c0cf158a828e5233022ebb02f5192c9ac3764aa9ed24e00624ba52cf01ccd92e91782652d42aedc827261d3e3f048a0b0fafcded48f8
+  checksum: fbe8cc22dfb8bb1f8ecd5b86e56e5821879f21fcf817c15183311c94ac716145c11544740819fed16c4d6f27ee239a440bd0ad19589102f7803f178f492665e8
   languageName: node
   linkType: hard
 
@@ -8814,8 +8814,8 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.84
-    "@eeacms/volto-chatbot": 0.1.9
+    "@eeacms/volto-cca-policy": 0.2.85
+    "@eeacms/volto-chatbot": 0.1.10
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": 1.36.1
     "@eeacms/volto-eea-kitkat": ^24.0.1
