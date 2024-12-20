@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.2.86":
-  version: 0.2.86
-  resolution: "@eeacms/volto-cca-policy@npm:0.2.86"
+"@eeacms/volto-cca-policy@npm:0.2.87":
+  version: 0.2.87
+  resolution: "@eeacms/volto-cca-policy@npm:0.2.87"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
@@ -1919,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: bbd27c16cff97b1ec48b882efe8aa578a577c262f4e48f6ea11de8c85969b027a6c62185bffe0e4895623df5910e56ec67dde84d9eb5cd8c4ec5462377034818
+  checksum: 9ac73278e06535b9c15d5ae2f3020ce447496463aa04bbe58a2da9ae3d86e8459d542b239e82872b6aa0ecd7b3cde5950b4bb317980891c0ef9ceefa4a7265fb
   languageName: node
   linkType: hard
 
@@ -1998,9 +1998,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.36.1":
-  version: 1.36.1
-  resolution: "@eeacms/volto-eea-design-system@npm:1.36.1"
+"@eeacms/volto-eea-design-system@npm:1.36.2":
+  version: 1.36.2
+  resolution: "@eeacms/volto-eea-design-system@npm:1.36.2"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -2009,7 +2009,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 3.6.0
     slick-carousel: ^1.8.1
-  checksum: 16da08e51185ceff176723d16e53c28702fa72d6f8cca250934d41ab75fea68909ff4e0c3ee85b1765f7d935caae60f9b1177977b316464ba253090c31a0c0e2
+  checksum: 754689c770ffcc6f6a8f85c3c8ee653dd7efe1d7a04d3347925006b346808fed177f59157a7c3e05563e7cbfaa316cacab50af44ec3dd2a3e8bb1a6df059761f
   languageName: node
   linkType: hard
 
@@ -8814,10 +8814,10 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
-    "@eeacms/volto-cca-policy": 0.2.86
+    "@eeacms/volto-cca-policy": 0.2.87
     "@eeacms/volto-chatbot": 0.1.10
     "@eeacms/volto-datablocks": ^7.2.5
-    "@eeacms/volto-eea-design-system": 1.36.1
+    "@eeacms/volto-eea-design-system": 1.36.2
     "@eeacms/volto-eea-kitkat": ^24.0.1
     "@eeacms/volto-eea-website-theme": <=1.35.0
     "@eeacms/volto-embed": ^9.1.1
