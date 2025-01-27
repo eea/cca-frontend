@@ -1923,9 +1923,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@eeacms/volto-chatbot@npm:0.1.10"
+"@eeacms/volto-chatbot@npm:0.1.11":
+  version: 0.1.11
+  resolution: "@eeacms/volto-chatbot@npm:0.1.11"
   dependencies:
     "@microsoft/fetch-event-source": 2.0.1
     fast-json-patch: 3.1.1
@@ -1938,7 +1938,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: fbe8cc22dfb8bb1f8ecd5b86e56e5821879f21fcf817c15183311c94ac716145c11544740819fed16c4d6f27ee239a440bd0ad19589102f7803f178f492665e8
+  checksum: af329bfb5e4cd5c62d52575d9b291c097acb69364dd4b20fff94ab125c72da52690c643085b6a6c4370ffcc45224e26f5702533fbbd7b7b90b08a59929ab727c
   languageName: node
   linkType: hard
 
@@ -8815,7 +8815,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-cca-policy": 0.2.96
-    "@eeacms/volto-chatbot": 0.1.10
+    "@eeacms/volto-chatbot": 0.1.11
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": 1.36.2
     "@eeacms/volto-eea-kitkat": ^24.0.1
