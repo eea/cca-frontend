@@ -177,7 +177,7 @@
   },
   "dependencies": {
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x",
-    "@eeacms/volto-cca-policy": "0.2.96",
+    "@eeacms/volto-cca-policy": "0.2.97",
     "@eeacms/volto-chatbot": "0.1.11",
     "@eeacms/volto-datablocks": "^7.2.5",
     "@eeacms/volto-eea-design-system": "1.36.2",
