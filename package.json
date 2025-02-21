@@ -186,7 +186,6 @@
     "@eeacms/volto-eea-kitkat": "^24.0.1",
     "@eeacms/volto-eea-website-theme": "<=1.35.0",
     "@eeacms/volto-embed": "^9.1.1",
-    "@eeacms/volto-globalsearch": "^1.1.0",
     "@eeacms/volto-listing-block": "^7.1.0",
     "@eeacms/volto-openlayers-map": "0.3.2",
     "@eeacms/volto-workflow-progress": "^4.1.1",
