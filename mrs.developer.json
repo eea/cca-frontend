@@ -3,7 +3,7 @@
     "url": "git@github.com:eea/volto-cca-policy.git",
     "https": "https://github.com/eea/volto-cca-policy.git",
     "package": "@eeacms/volto-cca-policy",
-    "branch": "plone6",
+    "branch": "develop",
     "develop": true,
     "path": "src"
   },
