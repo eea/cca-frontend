@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.16":
-  version: 0.3.16
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.16"
+"@eeacms/volto-cca-policy@npm:0.3.18":
+  version: 0.3.18
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.18"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
@@ -1919,13 +1919,13 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: da57b72da45414632a3fa2b59c9ae2627ded5b32fc0a2471b5528d56726627c68287ed3c0bfc2c9eae0f0dbbb8badadfd2fc09dbb1fb30a98e46451dafdeb1ca
+  checksum: f5bc999a9bbfcd0892d94cacb8d29632eb178b4ec14ce3347c7c73a2c0b355c4373bc0e3aaea5f8b361e0691977dc38630b76ac68524b58f93af69a7c0d84c92
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:0.1.12":
-  version: 0.1.12
-  resolution: "@eeacms/volto-chatbot@npm:0.1.12"
+"@eeacms/volto-chatbot@npm:0.1.13":
+  version: 0.1.13
+  resolution: "@eeacms/volto-chatbot@npm:0.1.13"
   dependencies:
     "@microsoft/fetch-event-source": 2.0.1
     fast-json-patch: 3.1.1
@@ -1938,7 +1938,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 16dcb2ec864624b134147c30fba188d6749f3fce4b3c4d9aa64b0b07a1a029e279d6bfcfd91a303c39a535da34d136af820c3917ba4b47875792376603510855
+  checksum: 3b7b946557c90d550dcfc91cb73bb033d5a9db901c5c730aa568df7fef010e25a199638c1267a4eaea0b119896bde268ebc87a7865c41128403bc08d89687ef7
   languageName: node
   linkType: hard
 
@@ -8727,8 +8727,8 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-call-to-action-block": <=5.1.3
-    "@eeacms/volto-cca-policy": 0.3.16
-    "@eeacms/volto-chatbot": 0.1.12
+    "@eeacms/volto-cca-policy": 0.3.18
+    "@eeacms/volto-chatbot": 0.1.13
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": 1.36.3
     "@eeacms/volto-eea-kitkat": ^24.0.1
