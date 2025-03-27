@@ -1,6 +1,6 @@
 {
   "name": "cca-frontend",
-  "description": "CCA frontend (Plone 4)",
+  "description": "CCA frontend (Plone 6)",
   "license": "MIT",
   "version": "2.87.0",
   "scripts": {
