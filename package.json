@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 6)",
   "license": "MIT",
-  "version": "2.105.0",
+  "version": "2.106.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -161,7 +161,7 @@
     "node": "^14 || ^16 || ^18"
   },
   "resolutions": {
-    "@eeacms/volto-cca-policy": "0.3.37",
+    "@eeacms/volto-cca-policy": "0.3.38",
     "@eeacms/volto-eea-kitkat": "^24.0.1",
     "@eeacms/volto-eea-design-system": "<=1.36.3",
     "@eeacms/volto-workflow-progress": "^4.1.1",
@@ -182,7 +182,7 @@
   "dependencies": {
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x",
     "@eeacms/volto-call-to-action-block": "<=5.1.3",
-    "@eeacms/volto-cca-policy": "0.3.37",
+    "@eeacms/volto-cca-policy": "0.3.38",
     "@eeacms/volto-chatbot": "0.1.16",
     "@eeacms/volto-datablocks": "^7.2.5",
     "@eeacms/volto-eea-design-system": "<=1.36.3",
