@@ -1898,16 +1898,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.40":
-  version: 0.3.40
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.40"
+"@eeacms/volto-cca-policy@npm:0.3.41":
+  version: 0.3.41
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.41"
   dependencies:
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": <=1.36.3
     "@eeacms/volto-eea-website-theme": ^1.35.0
     "@eeacms/volto-embed": ^9.1.1
-    "@eeacms/volto-globalsearch": 2.1.0
+    "@eeacms/volto-globalsearch": 2.1.1
     "@eeacms/volto-hero-block": ^7.1.0
     "@eeacms/volto-openlayers-map": "*"
     "@eeacms/volto-searchlib": 2.0.16
@@ -1919,7 +1919,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 69ccd12ac5485eb0c6009d5fb9e0ccda01f56c04df66f1c10acd57b739ce0ff602a57da8111680571d41e9da7b92213b6d0a7176d8146997207c6cbb58dd1fc9
+  checksum: 2c68ca897412445f38681342d4ab1974e4d3b0f2127177e6a9c5cdcc8f7069d6fd770d6bd992b5cd91e8dfbb847e14d201f107f81acbd51cdda95ca9b072a638
   languageName: node
   linkType: hard
 
@@ -2093,13 +2093,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-globalsearch@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@eeacms/volto-globalsearch@npm:2.1.0"
+"@eeacms/volto-globalsearch@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@eeacms/volto-globalsearch@npm:2.1.1"
   dependencies:
     "@eeacms/volto-listing-block": "*"
     "@eeacms/volto-searchlib": "*"
-  checksum: ed2371d4b43d9e0399154c40aeb53f765b7553eb7fbdfbef8a7c8ac3caae963f195facf8cc4256e12b30513407beeb9324e8a7291a30338f9e3bb1a8e71484ba
+  checksum: 106fce359ab548ba1081093c3d4044aa2a904e7adcfae719e2d68e123ff03b9d0214ab7e6cd06da58182447548fe36a6863793dfec195ca8c588fdeda48016be
   languageName: node
   linkType: hard
 
@@ -2361,12 +2361,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-taxonomy@npm:5.1.0":
-  version: 5.1.0
-  resolution: "@eeacms/volto-taxonomy@npm:5.1.0"
+"@eeacms/volto-taxonomy@npm:5.1.2":
+  version: 5.1.2
+  resolution: "@eeacms/volto-taxonomy@npm:5.1.2"
   dependencies:
     react-sortable-tree: 2.8.0
-  checksum: 226b8b7b536cf2c155c141ee68a92d5c01ce78f8da3129a3558fb768787a5370d020678f1f9d7821989acf55cb677659aaf290313d5f744c82633f65c4fc7a10
+  checksum: f3880fbd9acaf9ac5baf5f0a2ca01bd186beb76bc4611cd7c93749140fd37e4a46bf7c51cc30bbb302b55f12ab176735ad285054eee9256f1e3e79a5913d82e0
   languageName: node
   linkType: hard
 
@@ -8736,7 +8736,7 @@ __metadata:
     "@cypress/code-coverage": ^3.10.0
     "@eeacms/volto-block-style": "github:eea/volto-block-style#6.x.x"
     "@eeacms/volto-call-to-action-block": <=5.1.3
-    "@eeacms/volto-cca-policy": 0.3.40
+    "@eeacms/volto-cca-policy": 0.3.41
     "@eeacms/volto-chatbot": 0.1.18
     "@eeacms/volto-datablocks": ^7.2.5
     "@eeacms/volto-eea-design-system": <=1.36.3
