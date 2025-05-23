@@ -25,12 +25,16 @@
       "maxSize": "85kB"
     },
     {
-      "path": "build/public/static/js/client*.js",
-      "maxSize": "1.85MB"
+      "path": "build/public/static/js/ol*.js",
+      "maxSize": "1500kB"
     },
     {
       "path": "build/public/static/js/rehype-prism-plus*.js",
       "maxSize": "250kB"
+    },
+    {
+      "path": "build/public/static/js/client.*.chunk.js",
+      "maxSize": "1.5MB"
     }
   ]
 }
