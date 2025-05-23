@@ -2217,7 +2217,7 @@ __metadata:
   resolution: "@eeacms/volto-openlayers-map@https://github.com/eea/volto-openlayers-map.git#commit=fe98a11ef5f92335acaaff098ef7734c3f2ac2fa"
   dependencies:
     ol: 6.6.x
-  checksum: 851bbdbf1e698052ff5eca24e0e1cc7f54958db50dda8aa01b1f13623aa9124e0a26862cf6e1db96102bfe9ea9b73bd5b0219aae17cdfefcef449317bec8d1c1
+  checksum: 6ec9ece408f3f5b94ccd10c0a227d478d9f4d2a9224f55e9c2ae77cc277f02e98ac7b2a8d4ae83ff4d03389f62102af8ba94372352ea8b9fb11757c024863f26
   languageName: node
   linkType: hard
 
