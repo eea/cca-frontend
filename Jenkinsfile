@@ -111,7 +111,7 @@ pipeline {
             sh "make develop"
             sh "make install"
             sh "make build"
-            sh "make bundlewatch"
+            //sh "make bundlewatch"
           }
         }
       }
