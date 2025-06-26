@@ -177,10 +177,10 @@
     "@elastic/search-ui": "1.21.2"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#1e0cad8e1ed3ae827ee868dce8ad50b292a937ba",
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#e7f1e54f60f0b4cf23e89d8f2bd6ee4b1ea49379",
     "@eeacms/volto-chatbot": "0.1.20",
-    "@eeacms/volto-datablocks": "7.3.0",
-    "@eeacms/volto-eea-design-system": "1.37.0",
+    "@eeacms/volto-datablocks": "7.3.1",
+    "@eeacms/volto-eea-design-system": "1.37.1",
     "@eeacms/volto-eea-kitkat": "27.1.1",
     "@eeacms/volto-eea-website-theme": "3.7.0",
     "@eeacms/volto-embed": "10.1.3",
