@@ -177,7 +177,7 @@
     "@elastic/search-ui": "1.21.2"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#9a7a97138dd97d237ddf66b413073c8828880597",
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#1.0.0-alpha.0",
     "@eeacms/volto-chatbot": "0.1.20",
     "@eeacms/volto-datablocks": "7.3.1",
     "@eeacms/volto-eea-design-system": "1.37.1",
