@@ -161,7 +161,7 @@
     "node": "^14 || ^16 || ^18"
   },
   "resolutions": {
-    "@eeacms/volto-cca-policy": "0.3.63",
+    "@eeacms/volto-cca-policy": "0.365a1",
     "@eeacms/volto-eea-kitkat": "^24.0.1",
     "@eeacms/volto-eea-design-system": "<=1.36.3",
     "@eeacms/volto-workflow-progress": "^4.1.1",
