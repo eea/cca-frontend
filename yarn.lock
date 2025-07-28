@@ -3354,25 +3354,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-datablocks@npm:*":
-  version: 7.3.1
-  resolution: "@eeacms/volto-datablocks@npm:7.3.1"
-  dependencies:
-    "@eeacms/countup": "*"
-    "@eeacms/volto-embed": "*"
-    "@eeacms/volto-group-block": "*"
-    "@eeacms/volto-listing-block": "*"
-    "@eeacms/volto-matomo": "*"
-    d3: 7.1.1
-    date-fns: 2.28.0
-    humanize-plus: ^1.8.2
-    object-hash: 2.2.0
-    react-visibility-sensor: 5.1.1
-    sanitize-html: 2.12.1
-  checksum: b658158a202e7ba0f08c05341869b63ed2e3330c22d347d2e09a12ce500bb45aab32c1b35317c1f8902e1d9241ef836fa3bc86ede989f3f8197c31268627f0a4
-  languageName: node
-  linkType: hard
-
 "@eeacms/volto-datablocks@npm:7.3.3":
   version: 7.3.3
   resolution: "@eeacms/volto-datablocks@npm:7.3.3"
@@ -3519,13 +3500,6 @@ __metadata:
     "@eeacms/volto-listing-block": "*"
     "@eeacms/volto-searchlib": "*"
   checksum: bb9604a7c0290605619fbd9e3b0dbf2f1bf8deb1ba244f3cbefce91bbbf1daf00735650df49fc0fc72d9d343af6ce9da349b0bb5e654bbc9ae61af6b45e3ae31
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-group-block@npm:*":
-  version: 6.1.1
-  resolution: "@eeacms/volto-group-block@npm:6.1.1"
-  checksum: 5b163b8fce14bb5d7d7927d1970058c3090e472c79316510ac2452782b704d178770c1812430e5b7ea1a332d41fc631450b54c205056f45ba539d8f27e02cb43
   languageName: node
   linkType: hard
 
