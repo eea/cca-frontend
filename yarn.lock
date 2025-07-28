@@ -3302,25 +3302,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-chatbot@npm:0.1.20":
-  version: 0.1.20
-  resolution: "@eeacms/volto-chatbot@npm:0.1.20"
-  dependencies:
-    "@microsoft/fetch-event-source": 2.0.1
-    fast-json-patch: 3.1.1
-    highlight.js: 11.10.0
-    luxon: 3.5.0
-    marked: 13.0.3
-    node-fetch: 2.7.0
-    react-markdown: 6.0.3
-    react-textarea-autosize: ^8.5.3
-    rehype-prism-plus: 1.6.0
-    remark-gfm: 3.0.1
-    uuid: 10.0.0
-  checksum: 79e78f36346d9b91f0f7f19ebd078ebd464412184d0b1fe13e46d4076f862cd76aeef3db42077dc27ef045ac7b5a5f70183ba4d9039ba1a8d89099d65b78c643
+  checksum: 95e9f7868ecec8464b6fd7d7b588bcdbda62d8a610560188e7bd5be2aeb5285bac1638b549175987596ec30330241510c7ba9fcbe1d362fd13fa859384534ad2
   languageName: node
   linkType: hard
 
@@ -11989,13 +11971,14 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#1.0.0-alpha.1"
-    "@eeacms/volto-chatbot": 0.1.20
+    "@eeacms/volto-chatbot": 0.2.2
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.38.0
     "@eeacms/volto-eea-kitkat": 27.2.0
     "@eeacms/volto-eea-website-theme": 3.8.0
     "@eeacms/volto-embed": 10.1.3
     "@eeacms/volto-globalsearch": 2.1.2
+    "@eeacms/volto-matomo": 6.0.0
     "@eeacms/volto-workflow-progress": 5.0.0
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.0
