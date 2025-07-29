@@ -31,6 +31,22 @@
     {
       "path": "build/public/static/js/rehype-prism-plus*.js",
       "maxSize": "250kB"
+    },
+    {
+      "path": "build/public/static/js/PlotlyEditor*.js",
+      "maxSize": "1.4MB"
+    },
+    {
+      "path": "build/public/static/js/plotly-js-dist-plotly-min*.js",
+      "maxSize": "1.3MB"
+    },
+    {
+      "path": "build/public/static/js/react-plotly*.js",
+      "maxSize": "1.3MB"
+    },
+    {
+      "path": "build/public/static/js/client*.js",
+      "maxSize": "2.2MB"
     }
   ]
 }
