@@ -7,6 +7,10 @@
 #
 #     http://localhost:3000
 #
+# Test add-ons:
+#
+#    make test src/addons/volto-cca-policy
+#
 ##############################################################################
 # SETUP MAKE
 #
@@ -39,34 +43,41 @@ endif
 
 ##############################################################################
 
-.PHONY: help
-help:		## Show this help.
-	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
-	head -n 10 Makefile
-
 # Top-level targets
 .PHONY: all
-all: develop install
+all: develop install husky
 
 .PHONY: develop
 develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer@latest missdev --config=jsconfig.json --output=addons --fetch-https
+	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
 
 .PHONY: install
-install:	## Frontend: Install project and add-ons
-	yarn install
+install: ## Install project and add-ons
+	NODE_OPTIONS="--max-old-space-size=16384" yarn install
 
 .PHONY: build
-build:                  ## Build frontend
+build: ## Build frontend
 	NODE_OPTIONS="--max-old-space-size=16384" yarn build
 
 .PHONY: bundlewatch
 bundlewatch:
 	yarn bundlewatch --config .bundlewatch.config.json
 
+.PHONY: husky
+husky: ## Install husky git hooks in src/addons/*
+	./scripts/husky.sh
+
 .PHONY: start
-start:		## Frontend: Start
-	yarn start
+start: ## Start frontend
+	NODE_OPTIONS="--max-old-space-size=16384" yarn start
+
+.PHONY: relstorage
+relstorage: ## Start frontend w/ RelStorage Plone Backend
+	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://localhost:8080/www yarn start
+
+.PHONY: staging
+staging: ## Start frontend w/ Staging Plone Backend
+	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://10.110.30.173:59707/www yarn start
 
 .PHONY: omelette
 omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
@@ -78,7 +89,7 @@ patches:
 
 .PHONY: release
 release: ## Show release candidates
-	./scripts/release.py
+	./scripts/release.py -v
 
 .PHONY: update
 update: ## git pull all src/addons
@@ -101,11 +112,10 @@ pull: ## Run git pull on all src/addons
 	./scripts/pull.sh
 
 .PHONY: test
-test:
-	@if [ -z "$(ADDON)" ]; then \
-		echo "Error: No addon name provided. Usage: make test ADDON=<library_name>"; \
-		exit 1; \
-	else \
-		echo "Running tests for addon: $(ADDON)"; \
-		RAZZLE_JEST_CONFIG=src/addons/$(ADDON)/jest-addon.config.js yarn test src/addons/$(ADDON); \
-	fi
+test: ## Run Jest tests for Volto add-on
+	RAZZLE_JEST_CONFIG=$(filter-out $@,$(MAKECMDGOALS))/jest-addon.config.js yarn test $(filter-out $@,$(MAKECMDGOALS))
+
+.PHONY: help
+help: ## Show this help.
+	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
+	head -n 14 Makefile
