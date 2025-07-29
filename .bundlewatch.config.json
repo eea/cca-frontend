@@ -47,6 +47,10 @@
     {
       "path": "build/public/static/js/client*.js",
       "maxSize": "2.2MB"
+    },
+    {
+      "path": "build/public/static/js/jsoneditor-dist-jsoneditor*.js",
+      "maxSize": "300kB"
     }
   ]
 }
