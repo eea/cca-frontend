@@ -7,6 +7,14 @@
     "develop": false,
     "path": "src"
   },
+  "volto-chatbot": {
+    "url": "git@github.com:eea/volto-chatbot.git",
+    "https": "https://github.com/eea/volto-chatbot.git",
+    "package": "@eeacms/volto-chatbot",
+    "branch": "develop",
+    "develop": false,
+    "path": "src"
+  },
   "volto-embed": {
     "url": "git@github.com:eea/volto-embed.git",
     "https": "https://github.com/eea/volto-embed.git",
