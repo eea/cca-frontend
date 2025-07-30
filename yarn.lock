@@ -3396,9 +3396,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.38.0":
-  version: 1.38.0
-  resolution: "@eeacms/volto-eea-design-system@npm:1.38.0"
+"@eeacms/volto-eea-design-system@npm:1.38.2":
+  version: 1.38.2
+  resolution: "@eeacms/volto-eea-design-system@npm:1.38.2"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -3407,7 +3407,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 4.6.0
     slick-carousel: ^1.8.1
-  checksum: 5159d40c9e744bde1c789a2de32493a912d80088d8ecc2709b379737f19e8a5a79cd488918dc2adc81a55f8ab1433377a7b4b82f95bffc02a9138c41e9341747
+  checksum: 2c3b9fae1f351730a67e8ac45f654d97c8b1289784388ad9204ba4fdb116a7c848fab0b6123ac461d335066a10dd445fa069f2e875899e2197c325e088774576
   languageName: node
   linkType: hard
 
@@ -11947,7 +11947,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 0.3.76
     "@eeacms/volto-chatbot": 0.2.2
     "@eeacms/volto-datablocks": 7.3.3
-    "@eeacms/volto-eea-design-system": 1.38.0
+    "@eeacms/volto-eea-design-system": 1.38.2
     "@eeacms/volto-eea-kitkat": 27.2.0
     "@eeacms/volto-eea-website-theme": 3.8.0
     "@eeacms/volto-embed": 10.1.3
