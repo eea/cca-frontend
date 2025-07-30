@@ -3282,9 +3282,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.75":
-  version: 0.3.75
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.75"
+"@eeacms/volto-cca-policy@npm:0.3.76":
+  version: 0.3.76
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.76"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": "*"
@@ -3293,7 +3293,7 @@ __metadata:
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-openlayers-map": 1.0.1
     "@eeacms/volto-plotlycharts": 13.0.2
-    "@eeacms/volto-searchlib": 2.1.6
+    "@eeacms/volto-searchlib": 2.1.7
     "@eeacms/volto-slate-label": 1.0.1
     "@eeacms/volto-tabs-block": 9.0.3
     "@elastic/search-ui": 1.21.2
@@ -3302,7 +3302,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: dee8fb4ae592ad5b14836ef6c80660085186f69da1a0b0fb87be328e26d72f641a8eb941266595322ad59bd228eeb283ba4d9c9a258ab003df6e9308df432951
+  checksum: ab041a0b995cd08cc2e07c1e6ffa9ff83470cfc75eeca91e8f3d39882bf911fd928d19993fcfa4f3cc9d6d91b6e9eaa0814559d639b912c26d57f536ea20b974
   languageName: node
   linkType: hard
 
@@ -3691,9 +3691,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-searchlib@npm:2.1.6":
-  version: 2.1.6
-  resolution: "@eeacms/volto-searchlib@npm:2.1.6"
+"@eeacms/volto-searchlib@npm:2.1.7":
+  version: 2.1.7
+  resolution: "@eeacms/volto-searchlib@npm:2.1.7"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@elastic/react-search-ui": 1.20.2
@@ -3731,7 +3731,7 @@ __metadata:
     superagent: 3.8.2
     svg-loader: 0.0.2
     use-deep-compare-effect: 1.8.1
-  checksum: 56e787c4e72c1bed02756831bf3564dcd3d10ab03cdd91f03e222f21a9a5edebe753c64d116303e172fac156ce2187c7cd02c2f1c99f0e22e8746ecc3d790a7d
+  checksum: 1ef08293fe1439bd398764e3549d3da66c58d557e8acf8e202e8b6443a1c0ddb7c7adfb7949f269e813cb0b8216c332c9e41ed0a3061532ea7f2c6f5c0527e3f
   languageName: node
   linkType: hard
 
@@ -11944,7 +11944,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.75
+    "@eeacms/volto-cca-policy": 0.3.76
     "@eeacms/volto-chatbot": 0.2.2
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.38.0
