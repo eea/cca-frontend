@@ -3276,6 +3276,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-chatbot@npm:0.2.3":
+  version: 0.2.3
+  resolution: "@eeacms/volto-chatbot@npm:0.2.3"
+  dependencies:
+    "@eeacms/volto-matomo": 6.0.0
+    "@microsoft/fetch-event-source": 2.0.1
+    fast-json-patch: 3.1.1
+    highlight.js: 11.10.0
+    luxon: 3.5.0
+    marked: 13.0.3
+    node-fetch: 2.7.0
+    react-markdown: 6.0.3
+    react-textarea-autosize: ^8.5.3
+    rehype-prism-plus: 1.6.0
+    remark-gfm: 3.0.1
+    uuid: 10.0.0
+  checksum: 01d1b0dd5bfa72e4543bb44518285978159cee51426e16dc8664ba8f625bbf2fd8479115eae5a658eae122d22d67be6bf9762cf74db9f719b9558d7c13a00e4a
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-columns-block@npm:8.1.0":
   version: 8.1.0
   resolution: "@eeacms/volto-columns-block@npm:8.1.0"
@@ -11450,7 +11470,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-cca-policy": 0.3.78
-    "@eeacms/volto-chatbot": 0.2.2
+    "@eeacms/volto-chatbot": 0.2.3
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.38.3
     "@eeacms/volto-eea-kitkat": 28.0.0
