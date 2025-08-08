@@ -179,7 +179,7 @@
     "@eeacms/volto-group-block": "7.1.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.3.78",
+    "@eeacms/volto-cca-policy": "0.3.79",
     "@eeacms/volto-chatbot": "0.3.1",
     "@eeacms/volto-datablocks": "7.3.3",
     "@eeacms/volto-eea-design-system": "1.38.3",
