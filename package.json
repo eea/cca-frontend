@@ -166,7 +166,7 @@
     "node": "^18 || ^20"
   },
   "resolutions": {
-    "@eeacms/volto-eea-kitkat": "28.0.2",
+    "@eeacms/volto-object-widget": "8.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "d3-array": "^2.12.1",
