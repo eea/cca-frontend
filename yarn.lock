@@ -3234,9 +3234,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.79":
-  version: 0.3.79
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.79"
+"@eeacms/volto-cca-policy@npm:0.3.80":
+  version: 0.3.80
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.80"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": "*"
@@ -3253,7 +3253,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: b5232c8926de0ddc91134346f48af500094acdd697b9750cfa60523c89dd9bec600a8c7f5396c64238fbc64fdbca21c4958d49363eecf44abe752cc7fe46f255
+  checksum: b3e07b0f2ca9efb39cea97e029dc08928517cf1814ad693d21e2714f6efd4242a7fbf44ee16dfbe37d29135d888f7e437f19776cb6d27b7fad28a8c3bde1b35e
   languageName: node
   linkType: hard
 
@@ -11402,7 +11402,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.79
+    "@eeacms/volto-cca-policy": 0.3.80
     "@eeacms/volto-chatbot": 0.3.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.39.0
