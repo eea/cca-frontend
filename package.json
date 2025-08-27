@@ -177,7 +177,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "@elastic/search-ui": "1.21.2",
-    "@eeacms/volto-searchlib": "2.1.8",
+    "@eeacms/volto-searchlib": "2.1.10",
     "@eeacms/volto-datablocks": "7.3.3",
     "@eeacms/volto-group-block": "7.1.1"
   },
