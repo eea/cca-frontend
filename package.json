@@ -193,7 +193,7 @@
     "@eeacms/volto-matomo": "6.0.1",
     "@eeacms/volto-plotlycharts": "13.0.8",
     "@eeacms/volto-workflow-progress": "5.0.1",
-    "@plone/volto": "17.22.0",
+    "@plone/volto": "17.22.1",
     "volto-subsites": "4.0.0"
   },
   "devDependencies": {
