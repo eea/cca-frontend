@@ -191,7 +191,7 @@
     "@eeacms/volto-embed": "10.1.3",
     "@eeacms/volto-globalsearch": "2.1.2",
     "@eeacms/volto-matomo": "6.0.1",
-    "@eeacms/volto-plotlycharts": "13.0.10",
+    "@eeacms/volto-plotlycharts": "13.0.11",
     "@eeacms/volto-workflow-progress": "5.0.1",
     "@plone/volto": "17.22.1",
     "volto-subsites": "4.0.0"
