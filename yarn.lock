@@ -3180,9 +3180,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/react-chart-editor@npm:0.47.7":
-  version: 0.47.7
-  resolution: "@eeacms/react-chart-editor@npm:0.47.7"
+"@eeacms/react-chart-editor@npm:0.47.8":
+  version: 0.47.8
+  resolution: "@eeacms/react-chart-editor@npm:0.47.8"
   dependencies:
     "@eeacms/react-colorscales": 2.1.1
     "@plotly/draft-js-export-html": ^1.2.0
@@ -3211,7 +3211,7 @@ __metadata:
     plotly.js: ">=1.58.5 <3.0.0"
     react: ">=16"
     react-dom: ">=16"
-  checksum: 8238de3cc8aaff871f7bbdb3f7e83def9980f6b0140267fbeded433ad3ac8636428d5509996a3460cd38b851554655742f7401fafad13d267cbc1bdc5acd356b
+  checksum: c57a8f0975ab94fa0b385bb9c95fecae645b1990443456c34985cca8be3265a4d196b30691e45d5c96742e8b151280ae944b2fa511c67268b91e3b74dcdf9c82
   languageName: node
   linkType: hard
 
@@ -3687,11 +3687,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-plotlycharts@npm:13.0.12":
-  version: 13.0.12
-  resolution: "@eeacms/volto-plotlycharts@npm:13.0.12"
+"@eeacms/volto-plotlycharts@npm:13.1.0":
+  version: 13.1.0
+  resolution: "@eeacms/volto-plotlycharts@npm:13.1.0"
   dependencies:
-    "@eeacms/react-chart-editor": 0.47.7
+    "@eeacms/react-chart-editor": 0.47.8
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-embed": "*"
     "@eeacms/volto-matomo": "*"
@@ -3702,7 +3702,7 @@ __metadata:
     plotly.js: ^2.35.3
     react-plotly.js: 2.6.0
     remixicon: 4.6.0
-  checksum: cc3f7d63958fb5e0eecac4d7719138a5ff2185ab3ac286f04e151f72ef5ba1da3d267640ffb9a1d83cbea205771ddda8c08bc02899d7080905a9407a4f867122
+  checksum: 7d7e8b7422cfda08d222f36d2e836dc763e5c04e5cc8cf4e9c2ef9f551836aa42124165eebfc81464374366403f69e110d32fe370665b541fd2561fcf96c4a8b
   languageName: node
   linkType: hard
 
@@ -12005,7 +12005,7 @@ __metadata:
     "@eeacms/volto-embed": 10.1.3
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
-    "@eeacms/volto-plotlycharts": 13.0.12
+    "@eeacms/volto-plotlycharts": 13.1.0
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
