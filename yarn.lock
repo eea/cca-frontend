@@ -3331,13 +3331,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-block-toc@npm:8.1.1":
-  version: 8.1.1
-  resolution: "@eeacms/volto-block-toc@npm:8.1.1"
+"@eeacms/volto-block-toc@npm:8.2.0":
+  version: 8.2.0
+  resolution: "@eeacms/volto-block-toc@npm:8.2.0"
   dependencies:
     github-slugger: 1.4.0
     smoothscroll-polyfill: ^0.4.4
-  checksum: 9cee3a8c62cd1e6a5cd00fed83ed8d24635b65b55402f63134f4ab9c1d6d3d922d2dda6caf5298dd7c5f42159c296c50227f5a59e371b1f1ed8d46df91b085d7
+  checksum: 4923cf8aa3dfcb8a8e2980cb41ceb19fef89af4cdc14a54195528f6db339b3a16ef986fcc3420c4311438d11039800926c4d7b7daab98a2aaed702087914c449
   languageName: node
   linkType: hard
 
@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.83":
-  version: 0.3.83
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.83"
+"@eeacms/volto-cca-policy@npm:0.3.84":
+  version: 0.3.84
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.84"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": "*"
@@ -3369,13 +3369,13 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 3dba03476e8f631b50bb4858c347b6bcbc8c30f81d6e9dc94aaee9589cd4748732f1f6a3489d79ee8686d6d032ede02728e8380949d008f2876e727a565d9845
+  checksum: 637734c6563250f193dcbcb07f00e9198a3442facadb6eca4231ed7c656d83db948addcc2dbf0a61f9c251fdd8e3302bc19c79e57be19c8074507cf1bec6f2e8
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:0.5.0":
-  version: 0.5.0
-  resolution: "@eeacms/volto-chatbot@npm:0.5.0"
+"@eeacms/volto-chatbot@npm:0.5.2":
+  version: 0.5.2
+  resolution: "@eeacms/volto-chatbot@npm:0.5.2"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
@@ -3385,12 +3385,12 @@ __metadata:
     luxon: 3.5.0
     marked: 13.0.3
     node-fetch: 2.7.0
-    react-markdown: 6.0.3
+    react-markdown: 8.0.7
     react-textarea-autosize: ^8.5.3
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 4661ce369e1447f4047db7bde15ab3206d0a6c62669f6f33927e335a3bf9b84ef053574b8b0a99de5fffef37f1dede9a98e6f48f3768ffe26d1c7302d279a214
+  checksum: 2695ad7669bf54e1afd1eb48d3f4bb55c1a8a8da4665b73b82e1e880b1aa0234b2beacd9a908669c094df7f967649f312cd26fac69025cd72e3a2f8979d16cee
   languageName: node
   linkType: hard
 
@@ -3487,9 +3487,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:28.0.9":
-  version: 28.0.9
-  resolution: "@eeacms/volto-eea-kitkat@npm:28.0.9"
+"@eeacms/volto-eea-kitkat@npm:28.1.1":
+  version: 28.1.1
+  resolution: "@eeacms/volto-eea-kitkat@npm:28.1.1"
   dependencies:
     "@eeacms/countup": 2.0.7
     "@eeacms/volto-accordion-block": 11.0.4
@@ -3499,16 +3499,16 @@ __metadata:
     "@eeacms/volto-block-divider": 7.0.2
     "@eeacms/volto-block-image-cards": 3.0.0
     "@eeacms/volto-block-style": 8.0.0
-    "@eeacms/volto-block-toc": 8.1.1
+    "@eeacms/volto-block-toc": 8.2.0
     "@eeacms/volto-call-to-action-block": 5.1.3
-    "@eeacms/volto-chatbot": 0.5.0
+    "@eeacms/volto-chatbot": 0.5.2
     "@eeacms/volto-columns-block": 8.1.0
     "@eeacms/volto-controlpanel": 1.0.2
     "@eeacms/volto-corsproxy": 4.0.0
     "@eeacms/volto-description-block": 2.2.3
     "@eeacms/volto-group-block": 7.1.1
     "@eeacms/volto-hero-block": 8.0.0
-    "@eeacms/volto-listing-block": 9.0.3
+    "@eeacms/volto-listing-block": 9.1.0
     "@eeacms/volto-matomo": 6.0.1
     "@eeacms/volto-metadata-block": 8.0.5
     "@eeacms/volto-nextcloud-video-block": 2.0.0
@@ -3532,7 +3532,7 @@ __metadata:
     "@eeacms/volto-widget-theme-picker": 2.0.0
     "@eeacms/volto-widget-toggle": 4.0.0
     "@plone-collective/volto-sentry": 0.3.1
-  checksum: 58c2d9e04a2d7270e906217d75149420e62c973819b5a940ba035e85a47c4502b106f90242e65d1e43384731eaff41c56750cbdf32a12d4651a32aa89d1ffe4d
+  checksum: 8cd0939794c1f1089f02bfb8eadb31d9b2003afc8f039f197a2e59cdc52e0e2701439e6184e7da97693dfaa372672bff831b71ea4262db501ede44f27d3001ae
   languageName: node
   linkType: hard
 
@@ -3550,9 +3550,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:3.9.2":
-  version: 3.9.2
-  resolution: "@eeacms/volto-eea-website-theme@npm:3.9.2"
+"@eeacms/volto-eea-website-theme@npm:3.11.0":
+  version: 3.11.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:3.11.0"
   dependencies:
     "@eeacms/volto-anchors": "*"
     "@eeacms/volto-block-style": "*"
@@ -3560,7 +3560,7 @@ __metadata:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: e7edb991cf41b97f64d110eeeb9b9a37ddf700dde753185b5f2127112aee1004766beef5ddf5b33fd3db54b099b20a570091a1142bf250601f0392d004f19bc0
+  checksum: 2b9c43485189e9ede5848a11cfd4ae2e51c2946f65a2c767275843d8b52da73b08b140d516d04767010a8d4c9bc6a3b62b61b2800364213a9ceb61b04ac6ec9d
   languageName: node
   linkType: hard
 
@@ -3623,16 +3623,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:9.0.3":
-  version: 9.0.3
-  resolution: "@eeacms/volto-listing-block@npm:9.0.3"
+"@eeacms/volto-listing-block@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@eeacms/volto-listing-block@npm:9.1.0"
   dependencies:
     "@eeacms/volto-object-widget": "*"
     "@eeacms/volto-widget-theme-picker": "*"
     react-resize-detector: 7.1.2
     react-slick: ^0.30.1
     slick-carousel: 1.8.1
-  checksum: 924363f36c1ea4a16a0a7e4e072636ade8b83bd164b2ddcaa5a4f59ef4d61699a1831fc1398f8028b10595c0486a395d734019d494d28016be44684ba7568f90
+  checksum: 08fc31ac3684dea52b31e804111c72adb478c0176153ba002a75debad984cdb1fd25434cb08923ccd2f534dbc5f3e9931c4408c734570d8eb00bd54665b6e0aa
   languageName: node
   linkType: hard
 
@@ -3688,9 +3688,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-plotlycharts@npm:13.1.0":
-  version: 13.1.0
-  resolution: "@eeacms/volto-plotlycharts@npm:13.1.0"
+"@eeacms/volto-plotlycharts@npm:13.1.2":
+  version: 13.1.2
+  resolution: "@eeacms/volto-plotlycharts@npm:13.1.2"
   dependencies:
     "@eeacms/react-chart-editor": 0.47.8
     "@eeacms/volto-datablocks": "*"
@@ -3703,7 +3703,7 @@ __metadata:
     plotly.js: ^2.35.3
     react-plotly.js: 2.6.0
     remixicon: 4.6.0
-  checksum: 7d7e8b7422cfda08d222f36d2e836dc763e5c04e5cc8cf4e9c2ef9f551836aa42124165eebfc81464374366403f69e110d32fe370665b541fd2561fcf96c4a8b
+  checksum: 3033438619e8a85a8d616b068129446fbc80e53399926003b8efc298b397616a1d84bbee5aa1dc7a097d50453d38ac0d19feb732c7d2721ffea775ca46f82511
   languageName: node
   linkType: hard
 
@@ -8062,6 +8062,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:^15.0.0":
+  version: 15.7.15
+  resolution: "@types/prop-types@npm:15.7.15"
+  checksum: 31aa2f59b28f24da6fb4f1d70807dae2aedfce090ec63eaf9ea01727a9533ef6eaf017de5bff99fbccad7d1c9e644f52c6c2ba30869465dd22b1a7221c29f356
+  languageName: node
+  linkType: hard
+
 "@types/q@npm:^1.5.1":
   version: 1.5.5
   resolution: "@types/q@npm:1.5.5"
@@ -11997,16 +12004,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.83
-    "@eeacms/volto-chatbot": 0.5.0
+    "@eeacms/volto-cca-policy": 0.3.84
+    "@eeacms/volto-chatbot": 0.5.2
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.39.1
-    "@eeacms/volto-eea-kitkat": 28.0.9
-    "@eeacms/volto-eea-website-theme": 3.9.2
+    "@eeacms/volto-eea-kitkat": 28.1.1
+    "@eeacms/volto-eea-website-theme": 3.11.0
     "@eeacms/volto-embed": 10.1.3
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
-    "@eeacms/volto-plotlycharts": 13.1.0
+    "@eeacms/volto-plotlycharts": 13.1.2
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
@@ -19362,6 +19369,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hast-util-whitespace@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "hast-util-whitespace@npm:2.0.1"
+  checksum: 431be6b2f35472f951615540d7a53f69f39461e5e080c0190268bdeb2be9ab9b1dddfd1f467dd26c1de7e7952df67beb1307b6ee940baf78b24a71b5e0663868
+  languageName: node
+  linkType: hard
+
 "hastscript@npm:^6.0.0":
   version: 6.0.0
   resolution: "hastscript@npm:6.0.0"
@@ -23477,6 +23491,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast-util-definitions@npm:^5.0.0":
+  version: 5.1.2
+  resolution: "mdast-util-definitions@npm:5.1.2"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    "@types/unist": ^2.0.0
+    unist-util-visit: ^4.0.0
+  checksum: 2544daccab744ea1ede76045c2577ae4f1cc1b9eb1ea51ab273fe1dca8db5a8d6f50f87759c0ce6484975914b144b7f40316f805cb9c86223a78db8de0b77bae
+  languageName: node
+  linkType: hard
+
 "mdast-util-find-and-replace@npm:^2.0.0":
   version: 2.2.2
   resolution: "mdast-util-find-and-replace@npm:2.2.2"
@@ -23486,19 +23511,6 @@ __metadata:
     unist-util-is: ^5.0.0
     unist-util-visit-parents: ^5.0.0
   checksum: b4ce463c43fe6e1c38a53a89703f755c84ab5437f49bff9a0ac751279733332ca11c85ed0262aa6c17481f77b555d26ca6d64e70d6814f5b8d12d34a3e53a60b
-  languageName: node
-  linkType: hard
-
-"mdast-util-from-markdown@npm:^0.8.0":
-  version: 0.8.5
-  resolution: "mdast-util-from-markdown@npm:0.8.5"
-  dependencies:
-    "@types/mdast": ^3.0.0
-    mdast-util-to-string: ^2.0.0
-    micromark: ~2.11.0
-    parse-entities: ^2.0.0
-    unist-util-stringify-position: ^2.0.0
-  checksum: 5a9d0d753a42db763761e874c22365d0c7c9934a5a18b5ff76a0643610108a208a041ffdb2f3d3dd1863d3d915225a4020a0aade282af0facfd0df110601eee6
   languageName: node
   linkType: hard
 
@@ -23618,19 +23630,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-to-hast@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "mdast-util-to-hast@npm:10.2.0"
+"mdast-util-to-hast@npm:^12.1.0":
+  version: 12.3.0
+  resolution: "mdast-util-to-hast@npm:12.3.0"
   dependencies:
+    "@types/hast": ^2.0.0
     "@types/mdast": ^3.0.0
-    "@types/unist": ^2.0.0
-    mdast-util-definitions: ^4.0.0
-    mdurl: ^1.0.0
-    unist-builder: ^2.0.0
-    unist-util-generated: ^1.0.0
-    unist-util-position: ^3.0.0
-    unist-util-visit: ^2.0.0
-  checksum: 72df2dd9bfa2d07b4750a333444f82e0f3752dae75b6e300cf0a716407a185eb75095a54ecad90cbd6f6d133b20dea8844ff76c1ea78612550de170b43d4fa85
+    mdast-util-definitions: ^5.0.0
+    micromark-util-sanitize-uri: ^1.1.0
+    trim-lines: ^3.0.0
+    unist-util-generated: ^2.0.0
+    unist-util-position: ^4.0.0
+    unist-util-visit: ^4.0.0
+  checksum: ea40c9f07dd0b731754434e81c913590c611b1fd753fa02550a1492aadfc30fb3adecaf62345ebb03cea2ddd250c15ab6e578fffde69c19955c9b87b10f2a9bb
   languageName: node
   linkType: hard
 
@@ -23654,13 +23666,6 @@ __metadata:
   version: 1.1.0
   resolution: "mdast-util-to-string@npm:1.1.0"
   checksum: eec1eb283f3341376c8398b67ce512a11ab3e3191e3dbd5644d32a26784eac8d5f6d0b0fb81193af00d75a2c545cde765c8b03e966bd890076efb5d357fb4fe2
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-string@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "mdast-util-to-string@npm:2.0.0"
-  checksum: 0b2113ada10e002fbccb014170506dabe2f2ddacaacbe4bc1045c33f986652c5a162732a2c057c5335cdb58419e2ad23e368e5be226855d4d4e280b81c4e9ec2
   languageName: node
   linkType: hard
 
@@ -24135,7 +24140,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromark-util-sanitize-uri@npm:^1.0.0":
+"micromark-util-sanitize-uri@npm:^1.0.0, micromark-util-sanitize-uri@npm:^1.1.0":
   version: 1.2.0
   resolution: "micromark-util-sanitize-uri@npm:1.2.0"
   dependencies:
@@ -24194,16 +24199,6 @@ __metadata:
     micromark-util-types: ^1.0.1
     uvu: ^0.5.0
   checksum: 56c15851ad3eb8301aede65603473443e50c92a54849cac1dadd57e4ec33ab03a0a77f3df03de47133e6e8f695dae83b759b514586193269e98c0bf319ecd5e4
-  languageName: node
-  linkType: hard
-
-"micromark@npm:~2.11.0":
-  version: 2.11.4
-  resolution: "micromark@npm:2.11.4"
-  dependencies:
-    debug: ^4.0.0
-    parse-entities: ^2.0.0
-  checksum: f8a5477d394908a5d770227aea71657a76423d420227c67ea0699e659a5f62eb39d504c1f7d69ec525a6af5aaeb6a7bffcdba95614968c03d41d3851edecb0d6
   languageName: node
   linkType: hard
 
@@ -28586,7 +28581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:17.0.2, react-is@npm:^16.8.6 || ^17.0.0, react-is@npm:^17.0.0, react-is@npm:^17.0.1, react-is@npm:^17.0.2":
+"react-is@npm:17.0.2, react-is@npm:^16.8.6 || ^17.0.0, react-is@npm:^17.0.1, react-is@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
@@ -28634,27 +28629,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-markdown@npm:6.0.3":
-  version: 6.0.3
-  resolution: "react-markdown@npm:6.0.3"
+"react-markdown@npm:8.0.7":
+  version: 8.0.7
+  resolution: "react-markdown@npm:8.0.7"
   dependencies:
     "@types/hast": ^2.0.0
-    "@types/unist": ^2.0.3
-    comma-separated-tokens: ^1.0.0
-    prop-types: ^15.7.2
-    property-information: ^5.3.0
-    react-is: ^17.0.0
-    remark-parse: ^9.0.0
-    remark-rehype: ^8.0.0
-    space-separated-tokens: ^1.1.0
-    style-to-object: ^0.3.0
-    unified: ^9.0.0
-    unist-util-visit: ^2.0.0
-    vfile: ^4.0.0
+    "@types/prop-types": ^15.0.0
+    "@types/unist": ^2.0.0
+    comma-separated-tokens: ^2.0.0
+    hast-util-whitespace: ^2.0.0
+    prop-types: ^15.0.0
+    property-information: ^6.0.0
+    react-is: ^18.0.0
+    remark-parse: ^10.0.0
+    remark-rehype: ^10.0.0
+    space-separated-tokens: ^2.0.0
+    style-to-object: ^0.4.0
+    unified: ^10.0.0
+    unist-util-visit: ^4.0.0
+    vfile: ^5.0.0
   peerDependencies:
     "@types/react": ">=16"
     react: ">=16"
-  checksum: 5176e6a314a397b4747570213ae6c092f76c5c3dc67c748731243a0d4108e002134a9061cea87df1bea00db46cc7d238e092bae1609de74983c844e8386c0554
+  checksum: 0f3e570975134a3382c3fe5189e04e742ae154941463bdfaab2293319da1f1585cb9b75b6f07d99f514c4d728d69cc1af3c96ab37df90003b3bcc210dd0001ba
   languageName: node
   linkType: hard
 
@@ -30046,21 +30043,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-parse@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "remark-parse@npm:9.0.0"
+"remark-parse@npm:^10.0.0":
+  version: 10.0.2
+  resolution: "remark-parse@npm:10.0.2"
   dependencies:
-    mdast-util-from-markdown: ^0.8.0
-  checksum: 50104880549639b7dd7ae6f1e23c214915fe9c054f02f3328abdaee3f6de6d7282bf4357c3c5b106958fe75e644a3c248c2197755df34f9955e8e028fc74868f
+    "@types/mdast": ^3.0.0
+    mdast-util-from-markdown: ^1.0.0
+    unified: ^10.0.0
+  checksum: 5041b4b44725f377e69986e02f8f072ae2222db5e7d3b6c80829756b842e811343ffc2069cae1f958a96bfa36104ab91a57d7d7e2f0cef521e210ab8c614d5c7
   languageName: node
   linkType: hard
 
-"remark-rehype@npm:^8.0.0":
-  version: 8.1.0
-  resolution: "remark-rehype@npm:8.1.0"
+"remark-rehype@npm:^10.0.0":
+  version: 10.1.0
+  resolution: "remark-rehype@npm:10.1.0"
   dependencies:
-    mdast-util-to-hast: ^10.2.0
-  checksum: e1152464cfa83c14b570b1cb85eb9b3667795b5bed2f6b16d1c6e96c369816b07945a3c04eb0e1fd57a19cc1837969527d0056d5b6d179f1290688db2a7e2c5f
+    "@types/hast": ^2.0.0
+    "@types/mdast": ^3.0.0
+    mdast-util-to-hast: ^12.1.0
+    unified: ^10.0.0
+  checksum: b9ac8acff3383b204dfdc2599d0bdf86e6ca7e837033209584af2e6aaa6a9013e519a379afa3201299798cab7298c8f4b388de118c312c67234c133318aec084
   languageName: node
   linkType: hard
 
@@ -31739,7 +31741,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"space-separated-tokens@npm:^1.0.0, space-separated-tokens@npm:^1.1.0":
+"space-separated-tokens@npm:^1.0.0":
   version: 1.1.5
   resolution: "space-separated-tokens@npm:1.1.5"
   checksum: 8ef68f1cfa8ccad316b7f8d0df0919d0f1f6d32101e8faeee34ea3a923ce8509c1ad562f57388585ee4951e92d27afa211ed0a077d3d5995b5ba9180331be708
@@ -32535,6 +32537,15 @@ __metadata:
   dependencies:
     inline-style-parser: 0.1.1
   checksum: 4d7084015207f2a606dfc10c29cb5ba569f2fe8005551df7396110dd694d6ff650f2debafa95bd5d147dfb4ca50f57868e2a7f91bf5d11ef734fe7ccbd7abf59
+  languageName: node
+  linkType: hard
+
+"style-to-object@npm:^0.4.0":
+  version: 0.4.4
+  resolution: "style-to-object@npm:0.4.4"
+  dependencies:
+    inline-style-parser: 0.1.1
+  checksum: 41656c06f93ac0a7ac260ebc2f9d09a8bd74b8ec1836f358cc58e169235835a3a356977891d2ebbd76f0e08a53616929069199f9cce543214d3dc98346e19c9a
   languageName: node
   linkType: hard
 
@@ -33573,6 +33584,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"trim-lines@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "trim-lines@npm:3.0.1"
+  checksum: e241da104682a0e0d807222cc1496b92e716af4db7a002f4aeff33ae6a0024fef93165d49eab11aa07c71e1347c42d46563f91dfaa4d3fb945aa535cdead53ed
+  languageName: node
+  linkType: hard
+
 "trim-newlines@npm:^1.0.0":
   version: 1.0.0
   resolution: "trim-newlines@npm:1.0.0"
@@ -34090,20 +34108,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unified@npm:^9.0.0":
-  version: 9.2.2
-  resolution: "unified@npm:9.2.2"
-  dependencies:
-    bail: ^1.0.0
-    extend: ^3.0.0
-    is-buffer: ^2.0.0
-    is-plain-obj: ^2.0.0
-    trough: ^1.0.0
-    vfile: ^4.0.0
-  checksum: 7c24461be7de4145939739ce50d18227c5fbdf9b3bc5a29dabb1ce26dd3e8bd4a1c385865f6f825f3b49230953ee8b591f23beab3bb3643e3e9dc37aa8a089d5
-  languageName: node
-  linkType: hard
-
 "union-class-names@npm:^1.0.0":
   version: 1.0.0
   resolution: "union-class-names@npm:1.0.0"
@@ -34198,6 +34202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-generated@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "unist-util-generated@npm:2.0.1"
+  checksum: 6221ad0571dcc9c8964d6b054f39ef6571ed59cc0ce3e88ae97ea1c70afe76b46412a5ffaa91f96814644ac8477e23fb1b477d71f8d70e625728c5258f5c0d99
+  languageName: node
+  linkType: hard
+
 "unist-util-is@npm:^4.0.0":
   version: 4.1.0
   resolution: "unist-util-is@npm:4.1.0"
@@ -34218,6 +34229,15 @@ __metadata:
   version: 3.1.0
   resolution: "unist-util-position@npm:3.1.0"
   checksum: 10b3952e32a1ffabbecad41c3946237f7059f5bb6436796da05531a285f50b97e4f37cfc2f7164676d041063f40fe1ad92fbb8ca38d3ae8747328ebe738d738f
+  languageName: node
+  linkType: hard
+
+"unist-util-position@npm:^4.0.0":
+  version: 4.0.4
+  resolution: "unist-util-position@npm:4.0.4"
+  dependencies:
+    "@types/unist": ^2.0.0
+  checksum: e7487b6cec9365299695e3379ded270a1717074fa11fd2407c9b934fb08db6fe1d9077ddeaf877ecf1813665f8ccded5171693d3d9a7a01a125ec5cdd5e88691
   languageName: node
   linkType: hard
 
