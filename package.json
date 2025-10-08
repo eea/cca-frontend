@@ -172,6 +172,7 @@
     "react-dom": "17.0.2",
     "d3-array": "^2.12.1",
     "htmlparser2": "^7.2.0",
+    "unist-util-visit": "2.0.3",
     "react-colorscales": "github:eea/react-colorscales#1.0.2",
     "react-error-overlay": "6.0.9",
     "eslint-plugin-jsx-a11y": "6.7.1",
