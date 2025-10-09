@@ -216,6 +216,7 @@
     "postcss": "8.4.13",
     "prettier": "3.0.3",
     "razzle": "4.2.18",
+    "remark-preset-wooorm": "^7.0.0",
     "stylelint": "15.10.3",
     "stylelint-config-idiomatic-order": "9.0.0",
     "stylelint-prettier": "4.0.2",
