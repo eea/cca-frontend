@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 6)",
   "license": "MIT",
-  "version": "3.11.0",
+  "version": "3.12.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
