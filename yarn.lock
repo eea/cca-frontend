@@ -3709,9 +3709,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-plotlycharts@npm:13.3.3":
-  version: 13.3.3
-  resolution: "@eeacms/volto-plotlycharts@npm:13.3.3"
+"@eeacms/volto-plotlycharts@npm:13.3.4":
+  version: 13.3.4
+  resolution: "@eeacms/volto-plotlycharts@npm:13.3.4"
   dependencies:
     "@eeacms/react-chart-editor": 0.47.8
     "@eeacms/volto-datablocks": "*"
@@ -3724,7 +3724,7 @@ __metadata:
     plotly.js: ^2.35.3
     react-plotly.js: 2.6.0
     remixicon: 4.6.0
-  checksum: 906018d5cd7feb20e7571d577e391f8d556f1bac4bd3e1196731a69fe2c5f568c2e733df888055f7824cfbd5709bec9b2e1d340268e1f135584fceb81ac1cfb9
+  checksum: e34b76c4e331ad0f34cc4f7cd027edb3b0ae2354ed8e80e6d6e8aca0cfc4c8e4a256192d347d7752c3dadecdbaee67c7d677c6dffa92b44b57e463b733d9ddec
   languageName: node
   linkType: hard
 
@@ -12069,7 +12069,7 @@ __metadata:
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
-    "@eeacms/volto-plotlycharts": 13.3.3
+    "@eeacms/volto-plotlycharts": 13.3.4
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
