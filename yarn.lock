@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.88":
-  version: 0.3.88
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.88"
+"@eeacms/volto-cca-policy@npm:0.3.89":
+  version: 0.3.89
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.89"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": "*"
@@ -3369,7 +3369,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: b856d3f40cf1f452e9af180ba94e753e4e4a77444f05d06fed626e4b40029789d132bdd00263ce4455fd8ea8d7d6418a031df40d572772f2e72f34af9cc55565
+  checksum: 99197d3c43266ecb1f9fabba482ee6b5b3c2c6db5c3f91d01598d5aa28e09c95011dc774d8c9c2859a04153b2a45612a35dd17095d415c761e275bbfa1a8dc41
   languageName: node
   linkType: hard
 
@@ -3709,9 +3709,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-plotlycharts@npm:13.3.3":
-  version: 13.3.3
-  resolution: "@eeacms/volto-plotlycharts@npm:13.3.3"
+"@eeacms/volto-plotlycharts@npm:13.3.4":
+  version: 13.3.4
+  resolution: "@eeacms/volto-plotlycharts@npm:13.3.4"
   dependencies:
     "@eeacms/react-chart-editor": 0.47.8
     "@eeacms/volto-datablocks": "*"
@@ -3724,7 +3724,7 @@ __metadata:
     plotly.js: ^2.35.3
     react-plotly.js: 2.6.0
     remixicon: 4.6.0
-  checksum: 906018d5cd7feb20e7571d577e391f8d556f1bac4bd3e1196731a69fe2c5f568c2e733df888055f7824cfbd5709bec9b2e1d340268e1f135584fceb81ac1cfb9
+  checksum: e34b76c4e331ad0f34cc4f7cd027edb3b0ae2354ed8e80e6d6e8aca0cfc4c8e4a256192d347d7752c3dadecdbaee67c7d677c6dffa92b44b57e463b733d9ddec
   languageName: node
   linkType: hard
 
@@ -12060,7 +12060,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.88
+    "@eeacms/volto-cca-policy": 0.3.89
     "@eeacms/volto-chatbot": 0.6.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.0
@@ -12069,7 +12069,7 @@ __metadata:
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
-    "@eeacms/volto-plotlycharts": 13.3.3
+    "@eeacms/volto-plotlycharts": 13.3.4
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
