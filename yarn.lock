@@ -3394,6 +3394,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-chatbot@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@eeacms/volto-chatbot@npm:1.0.1"
+  dependencies:
+    "@eeacms/volto-matomo": "*"
+    "@microsoft/fetch-event-source": 2.0.1
+    "@plone-collective/volto-sentry": 0.3.1
+    fast-json-patch: 3.1.1
+    highlight.js: 11.10.0
+    luxon: 3.5.0
+    marked: 13.0.3
+    node-fetch: 2.7.0
+    react-markdown: 8.0.7
+    react-textarea-autosize: ^8.5.3
+    rehype-prism-plus: 1.6.0
+    remark-gfm: 3.0.1
+    uuid: 10.0.0
+  checksum: cde4eefca46d3abdc9d028414f29047e3d714d5f18a28686fa8791b4cd35850ca343f24d654f77693b23fd83aeaa4af1681c0b97b41e455818c8ffa4a27154a5
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-columns-block@npm:8.1.0":
   version: 8.1.0
   resolution: "@eeacms/volto-columns-block@npm:8.1.0"
@@ -3669,6 +3690,15 @@ __metadata:
   dependencies:
     "@eeacms/volto-object-widget": "*"
   checksum: d426634bbbe075be2e07df58e56a0bdd7918b91fce4a68c908990d9df98b55d8e461f6cccf7f97fef8908b5607785ef50e3064c68661de7f1a5e93260edb6442
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-nextcloud-video-block@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@eeacms/volto-nextcloud-video-block@npm:2.0.1"
+  dependencies:
+    "@eeacms/volto-object-widget": "*"
+  checksum: 59018c4b5afd8f98959f49e8f12af2fae8cce9b2497c40b9b09556a7e0a9a7bb7fd4c71174550a52644c649950a34483c6d319a31bf51e88eb8a198b091625ff
   languageName: node
   linkType: hard
 
@@ -12040,7 +12070,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-cca-policy": 0.3.90
-    "@eeacms/volto-chatbot": 1.0.0
+    "@eeacms/volto-chatbot": 1.0.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.0
     "@eeacms/volto-eea-kitkat": 29.0.0
@@ -12048,6 +12078,7 @@ __metadata:
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
+    "@eeacms/volto-nextcloud-video-block": 2.0.1
     "@eeacms/volto-plotlycharts": 13.3.7
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
