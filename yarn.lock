@@ -3263,12 +3263,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-block-data-table@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@eeacms/volto-block-data-table@npm:1.2.0"
+"@eeacms/volto-block-data-table@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@eeacms/volto-block-data-table@npm:1.3.0"
   dependencies:
     "@eeacms/volto-datablocks": "*"
-  checksum: 269d1e849cb7db7fd22ea247f2769f6e871d48cada72738cbf350af17182d15c62b43c92a82c78228b1521a6fd57c9c9d3f795fcff0354e434fb36cf75fc65c5
+  checksum: 4ddd5e302036036661ed54e75006f1b82c9b45164d69edfc56b6df6a3a3dafb62cde59eb8aa33379e49e5e65323353536ccabf622c70e967c46cfb28de6547f0
   languageName: node
   linkType: hard
 
@@ -3487,15 +3487,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-kitkat@npm:29.0.1":
-  version: 29.0.1
-  resolution: "@eeacms/volto-eea-kitkat@npm:29.0.1"
+"@eeacms/volto-eea-kitkat@npm:30.0.0":
+  version: 30.0.0
+  resolution: "@eeacms/volto-eea-kitkat@npm:30.0.0"
   dependencies:
     "@eeacms/countup": 2.0.7
     "@eeacms/volto-accordion-block": 11.0.4
     "@eeacms/volto-anchors": 1.0.1
     "@eeacms/volto-banner": 4.0.2
-    "@eeacms/volto-block-data-table": 1.2.0
+    "@eeacms/volto-block-data-table": 1.3.0
     "@eeacms/volto-block-divider": 7.0.2
     "@eeacms/volto-block-image-cards": 3.0.0
     "@eeacms/volto-block-style": 8.0.0
@@ -3506,7 +3506,7 @@ __metadata:
     "@eeacms/volto-controlpanel": 1.0.2
     "@eeacms/volto-corsproxy": 4.0.0
     "@eeacms/volto-description-block": 2.2.3
-    "@eeacms/volto-group-block": 7.1.1
+    "@eeacms/volto-group-block": 8.0.0
     "@eeacms/volto-hero-block": 8.0.0
     "@eeacms/volto-listing-block": 9.1.0
     "@eeacms/volto-matomo": 6.0.1
@@ -3532,7 +3532,7 @@ __metadata:
     "@eeacms/volto-widget-theme-picker": 2.0.0
     "@eeacms/volto-widget-toggle": 4.0.0
     "@plone-collective/volto-sentry": 0.4.0
-  checksum: 9d20225d40f668de4820b274097616a1e4387b55f64406628f86f655f5e42089c4d57cf3c15f4fcf43351339953ca46cd5322d786bc9441211396c36e1f7be48
+  checksum: e5cd7de9f9afc63a18ef9e28612b0770318dcea55c5133c80db36b9b8c47c8a8d7233aa6c054f057a02aa75dd567677409cdd864e104388c01674d9320d9e594
   languageName: node
   linkType: hard
 
@@ -12043,7 +12043,7 @@ __metadata:
     "@eeacms/volto-chatbot": 1.0.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.0
-    "@eeacms/volto-eea-kitkat": 29.0.1
+    "@eeacms/volto-eea-kitkat": 30.0.0
     "@eeacms/volto-eea-website-theme": 3.15.0
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
