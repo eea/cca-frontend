@@ -179,7 +179,8 @@
     "@elastic/search-ui": "1.21.2",
     "@eeacms/volto-searchlib": "2.1.10",
     "@eeacms/volto-datablocks": "7.3.3",
-    "@eeacms/volto-group-block": "8.1.0"
+    "@eeacms/volto-group-block": "8.1.0",
+    "@eeacms/volto-chatbot": "0.6.1"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.3.92",
