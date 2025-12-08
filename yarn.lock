@@ -3373,13 +3373,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@eeacms/volto-chatbot@npm:1.0.1"
+"@eeacms/volto-chatbot@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@eeacms/volto-chatbot@npm:0.6.1"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
-    "@plone-collective/volto-sentry": 0.3.1
+    "@plone-collective/volto-sentry": "*"
     fast-json-patch: 3.1.1
     highlight.js: 11.10.0
     luxon: 3.5.0
@@ -3390,28 +3390,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: cde4eefca46d3abdc9d028414f29047e3d714d5f18a28686fa8791b4cd35850ca343f24d654f77693b23fd83aeaa4af1681c0b97b41e455818c8ffa4a27154a5
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-chatbot@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@eeacms/volto-chatbot@npm:1.0.2"
-  dependencies:
-    "@eeacms/volto-matomo": "*"
-    "@microsoft/fetch-event-source": 2.0.1
-    "@plone-collective/volto-sentry": 0.3.1
-    fast-json-patch: 3.1.1
-    highlight.js: 11.10.0
-    luxon: 3.5.0
-    marked: 13.0.3
-    node-fetch: 2.7.0
-    react-markdown: 8.0.7
-    react-textarea-autosize: ^8.5.3
-    rehype-prism-plus: 1.6.0
-    remark-gfm: 3.0.1
-    uuid: 10.0.0
-  checksum: 9c687702ef6d082c576684636f64e7a6ca5b9a38c1d5222e6cc9a80b7c494586462108c898acd1fe95277b48c1ae0a0aa2ebd05042d532cf3fd6e423f2ba5872
+  checksum: 78b9e0a41d02b731367bbf9f1673572419bef6432f8e2db2bb6c95a04d1f4dc70d896e85c75dbb0fccfa4bd6891c94bb03d7a933ac83efe5410f3538a7e0d168
   languageName: node
   linkType: hard
 
@@ -5188,19 +5167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone-collective/volto-sentry@npm:0.3.1":
-  version: 0.3.1
-  resolution: "@plone-collective/volto-sentry@npm:0.3.1"
-  dependencies:
-    "@sentry/browser": 7.15.0
-    "@sentry/integrations": 7.15.0
-    "@sentry/node": 7.15.0
-    "@sentry/webpack-plugin": 1.19.1
-  checksum: cf3a1928608a8444cf09203037063d098da329e62bd2550ca36787f27a96ae8b03b1357943767f4e566f9e51d232ef59a533d8dc438bb6ffa7ce0bcb13b19aa1
-  languageName: node
-  linkType: hard
-
-"@plone-collective/volto-sentry@npm:0.4.0":
+"@plone-collective/volto-sentry@npm:*, @plone-collective/volto-sentry@npm:0.4.0":
   version: 0.4.0
   resolution: "@plone-collective/volto-sentry@npm:0.4.0"
   dependencies:
@@ -12061,7 +12028,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-cca-policy": 0.3.92
-    "@eeacms/volto-chatbot": 1.0.2
+    "@eeacms/volto-chatbot": 0.6.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.1
     "@eeacms/volto-eea-kitkat": 30.1.0
