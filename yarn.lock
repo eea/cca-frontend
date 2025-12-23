@@ -3457,6 +3457,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-eea-design-system@github:eea/volto-eea-design-system#develop":
+  version: 1.40.2
+  resolution: "@eeacms/volto-eea-design-system@https://github.com/eea/volto-eea-design-system.git#commit=84a80671e1be30cfaaf2bb43fe05dfefba9e942d"
+  dependencies:
+    "@eeacms/countup": "*"
+    "@eeacms/volto-corsproxy": "*"
+    "@fontsource/roboto": 4.5.8
+    react-lazy-load-image-component: 1.5.6
+    react-slick: ^0.30.1
+    remixicon: 4.6.0
+    slick-carousel: ^1.8.1
+  checksum: 85662298c1f9e6933593d6e403809b791fb1f0181575d348b0bbcd36cc9f243f91dfe5e74532b0dc55cd56e36f16f08f5c566689ecd73c8da390c668539cd58c
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-eea-design-system@npm:*":
   version: 1.37.2
   resolution: "@eeacms/volto-eea-design-system@npm:1.37.2"
@@ -3550,17 +3565,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:3.16.0":
-  version: 3.16.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:3.16.0"
+"@eeacms/volto-eea-website-theme@npm:3.17.0":
+  version: 3.17.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:3.17.0"
   dependencies:
     "@eeacms/volto-anchors": "*"
     "@eeacms/volto-block-style": "*"
     "@eeacms/volto-block-toc": "*"
-    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-eea-design-system": "github:eea/volto-eea-design-system#develop"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: 90df32ed955252af99849d3c1faced776f73313ee541305eb20abfad11ff19dcc71659eb37757b199534b25503bcd45bee2be9cdd34f2cb88224553e7ddcd9ab
+  checksum: a2ff9a1e1552d07ddeae5fff332705eb15821e4d76015af9265673e7513dd3d46dba22fee499dd6714c5178ab4cd4ee10e87ad879fe24994105a0caa1f2ebe7a
   languageName: node
   linkType: hard
 
@@ -12032,7 +12047,7 @@ __metadata:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.2
     "@eeacms/volto-eea-kitkat": 30.1.0
-    "@eeacms/volto-eea-website-theme": 3.16.0
+    "@eeacms/volto-eea-website-theme": 3.17.0
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
