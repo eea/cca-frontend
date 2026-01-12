@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.96":
-  version: 0.3.96
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.96"
+"@eeacms/volto-cca-policy@npm:0.3.97":
+  version: 0.3.97
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.97"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": "*"
@@ -3369,7 +3369,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: fd7f3354f1c71ab2bb8fedf0bdd5a36fffc09981108aec76844ce8fd3d3871c6e2b8cc722e64c506ad29e69655191d8ab83b95ba1c6a3c59e20bc2dc2d4863ee
+  checksum: 7e97ad0975dc58d979c55562008842f43518be3901c07e60b43494360759bed58301c3ef91bb23163f75813728ea58331895d9519a786ff4c5f10c2cca1971c4
   languageName: node
   linkType: hard
 
@@ -3454,6 +3454,21 @@ __metadata:
   version: 1.1.0
   resolution: "@eeacms/volto-design-tokens@npm:1.1.0"
   checksum: c69ddaaeac7106fc4e32ab4b09481047d99336ec8d65e468923ec40967bc5c8da417c54a8fd77cbcccd35d9d19ec10fcf9470a0287a1d96f09b8d1553ac83131
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-eea-design-system@github:eea/volto-eea-design-system#develop":
+  version: 1.40.2
+  resolution: "@eeacms/volto-eea-design-system@https://github.com/eea/volto-eea-design-system.git#commit=84a80671e1be30cfaaf2bb43fe05dfefba9e942d"
+  dependencies:
+    "@eeacms/countup": "*"
+    "@eeacms/volto-corsproxy": "*"
+    "@fontsource/roboto": 4.5.8
+    react-lazy-load-image-component: 1.5.6
+    react-slick: ^0.30.1
+    remixicon: 4.6.0
+    slick-carousel: ^1.8.1
+  checksum: 85662298c1f9e6933593d6e403809b791fb1f0181575d348b0bbcd36cc9f243f91dfe5e74532b0dc55cd56e36f16f08f5c566689ecd73c8da390c668539cd58c
   languageName: node
   linkType: hard
 
@@ -3550,17 +3565,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:3.16.0":
-  version: 3.16.0
-  resolution: "@eeacms/volto-eea-website-theme@npm:3.16.0"
+"@eeacms/volto-eea-website-theme@npm:3.18.0":
+  version: 3.18.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:3.18.0"
   dependencies:
     "@eeacms/volto-anchors": "*"
     "@eeacms/volto-block-style": "*"
     "@eeacms/volto-block-toc": "*"
-    "@eeacms/volto-eea-design-system": "*"
+    "@eeacms/volto-eea-design-system": "github:eea/volto-eea-design-system#develop"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: 90df32ed955252af99849d3c1faced776f73313ee541305eb20abfad11ff19dcc71659eb37757b199534b25503bcd45bee2be9cdd34f2cb88224553e7ddcd9ab
+  checksum: 1f81dcc9c15518a141b3bb0b6ed7f4579ad276ed27e30d22b5bd07c20f2b6067bc0b4c07254aeffe1a1ca6fc971d2dd27e213a013c7e6b0e2a4f8e3dbda47deb
   languageName: node
   linkType: hard
 
@@ -12027,12 +12042,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.96
+    "@eeacms/volto-cca-policy": 0.3.97
     "@eeacms/volto-chatbot": ^0.6.1
     "@eeacms/volto-datablocks": 7.3.3
     "@eeacms/volto-eea-design-system": 1.40.2
     "@eeacms/volto-eea-kitkat": 30.1.0
-    "@eeacms/volto-eea-website-theme": 3.16.0
+    "@eeacms/volto-eea-website-theme": 3.18.0
     "@eeacms/volto-embed": 10.1.4
     "@eeacms/volto-globalsearch": 2.1.2
     "@eeacms/volto-matomo": 6.0.1
