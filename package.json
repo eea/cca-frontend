@@ -191,7 +191,7 @@
     "@eeacms/volto-eea-kitkat": "30.1.0",
     "@eeacms/volto-eea-website-theme": "3.18.1",
     "@eeacms/volto-embed": "10.1.4",
-    "@eeacms/volto-globalsearch": "2.1.2",
+    "@eeacms/volto-globalsearch": "3.0.0",
     "@eeacms/volto-matomo": "6.0.1",
     "@eeacms/volto-nextcloud-video-block": "2.0.1",
     "@eeacms/volto-plotlycharts": "13.3.7",
