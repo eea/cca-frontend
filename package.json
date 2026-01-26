@@ -179,7 +179,7 @@
     "@elastic/search-ui": "1.21.2",
     "@eeacms/volto-searchlib": "^2.1.10",
     "@eeacms/volto-datablocks": "7.3.4",
-    "@eeacms/volto-group-block": "8.1.0",
+    "@eeacms/volto-group-block": "8.1.1",
     "@eeacms/volto-eea-design-system": "1.40.2",
     "@eeacms/volto-chatbot": "^0.6.1"
   },
