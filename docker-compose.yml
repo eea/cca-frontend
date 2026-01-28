@@ -43,7 +43,8 @@ services:
       SITE: "cca"
       TZ: Europe/Copenhagen
       SERVER_NAME: climate-adapt.eea.europa.eu
-***REMOVED***      CORS_ALLOW_ORIGIN: "http://localhost:3000"
+      ***REMOVED***
+      CORS_ALLOW_ORIGIN: "http://localhost:3000"
     depends_on:
       - memcached
 
