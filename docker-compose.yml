@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   frontend:
@@ -6,12 +6,12 @@ services:
     # image: eeacms/eea-website-frontend:develop
     # image: cca-test
     ports:
-    - "${FRONTEND:-3000}:3000"
+      - '${FRONTEND:-3000}:3000'
     environment:
-      RAZZLE_INTERNAL_API_PATH: "http://backend:8080/Plone"
-      RAZZLE_DEV_PROXY_API_PATH: "http://backend:8080/Plone"
+      RAZZLE_INTERNAL_API_PATH: 'http://backend:8080/Plone'
+      RAZZLE_DEV_PROXY_API_PATH: 'http://backend:8080/Plone'
     volumes:
-    - ./src/addons:/app/src/addons
+      - ./src/addons:/app/src/addons
     depends_on:
       - backend
 
@@ -22,8 +22,8 @@ services:
       TZ: Europe/Copenhagen
     # mem_reservation: 52428800
     command:
-    - -m
-    - '2048'
+      - -m
+      - '2048'
     # labels:
     #   io.rancher.scheduler.affinity:host_label_ne: reserved=yes
 
@@ -32,7 +32,7 @@ services:
     # image: eeacms/eea.docker.plone-climateadapt:v9.105
     image: eeacms/eea.docker.plone-climateadapt:latest
     ports:
-    - "${BACKEND:-8080}:8080"
+      - '${BACKEND:-8080}:8080'
     volumes:
       - ./data:/data
       - ./backend/src:/plone/instance/src
@@ -40,11 +40,10 @@ services:
     # mem_limit: 4294967296
     # mem_reservation: 4294967296
     environment:
-      SITE: "cca"
+      SITE: 'cca'
       TZ: Europe/Copenhagen
       SERVER_NAME: climate-adapt.eea.europa.eu
-      ***REMOVED***
-      CORS_ALLOW_ORIGIN: "http://localhost:3000"
+      CORS_ALLOW_ORIGIN: 'http://localhost:3000'
     depends_on:
       - memcached
 
@@ -147,4 +146,4 @@ services:
     stdin_open: true
     tty: true
     ports:
-    - "80:80"
+      - '80:80'
