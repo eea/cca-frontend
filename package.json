@@ -185,7 +185,7 @@
     "@eeacms/volto-chatbot": "^0.6.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.3.101",
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#296263-country-profile-2026",
     "@eeacms/volto-chatbot": "^0.6.1",
     "@eeacms/volto-datablocks": "7.3.4",
     "@eeacms/volto-eea-design-system": "1.40.2",
