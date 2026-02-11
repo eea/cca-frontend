@@ -182,7 +182,7 @@
     "@eeacms/volto-datablocks": "7.3.4",
     "@eeacms/volto-call-to-action-block": "5.2.0",
     "@eeacms/volto-group-block": "9.0.0",
-    "@eeacms/volto-eea-design-system": "1.40.2",
+    "@eeacms/volto-eea-design-system": "1.40.3",
     "@eeacms/volto-chatbot": "^0.6.1"
   },
   "dependencies": {
@@ -190,7 +190,7 @@
     "@eeacms/volto-cca-policy": "0.3.101",
     "@eeacms/volto-chatbot": "^0.6.1",
     "@eeacms/volto-datablocks": "7.3.4",
-    "@eeacms/volto-eea-design-system": "1.40.2",
+    "@eeacms/volto-eea-design-system": "1.40.3",
     "@eeacms/volto-eea-kitkat": "30.1.1",
     "@eeacms/volto-eea-website-theme": "3.18.1",
     "@eeacms/volto-embed": "10.1.4",
