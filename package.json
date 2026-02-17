@@ -63,7 +63,7 @@
     "@eeacms/volto-accordion-block",
     "@eeacms/volto-cca-policy",
     "@eeacms/volto-plotlycharts",
-    "@eeacms/volto-chatbot",
+    "@eeacms/volto-eea-chatbot",
     "volto-subsites"
   ],
   "jest": {
@@ -190,6 +190,7 @@
     "@eeacms/volto-cca-policy": "0.3.101",
     "@eeacms/volto-chatbot": "^0.6.1",
     "@eeacms/volto-datablocks": "7.3.4",
+    "@eeacms/volto-eea-chatbot": "^1.0.11",
     "@eeacms/volto-eea-design-system": "1.40.3",
     "@eeacms/volto-eea-kitkat": "31.0.2",
     "@eeacms/volto-eea-website-theme": "3.18.1",
