@@ -4,7 +4,7 @@
     "https": "https://github.com/eea/volto-cca-policy.git",
     "package": "@eeacms/volto-cca-policy",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-chatbot": {
@@ -12,7 +12,7 @@
     "https": "https://github.com/eea/volto-chatbot.git",
     "package": "@eeacms/volto-chatbot",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-embed": {
@@ -244,7 +244,7 @@
     "https": "https://github.com/eea/volto-eea-design-system.git",
     "package": "@eeacms/volto-eea-design-system",
     "branch": "develop",
-    "develop": false,
+    "develop": true,
     "path": "src"
   },
   "volto-eea-website-theme": {
@@ -397,6 +397,14 @@
     "package": "@eeacms/volto-openlayers-map",
     "branch": "develop",
     "develop": false,
+    "path": "src"
+  },
+  "volto-eea-chatbot": {
+    "url": "git@github.com:eea/volto-eea-chatbot.git",
+    "https": "https://github.com/eea/volto-eea-chatbot.git",
+    "package": "@eeacms/volto-eea-chatbot",
+    "branch": "develop",
+    "develop": true,
     "path": "src"
   }
 }
