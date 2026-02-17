@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 6)",
   "license": "MIT",
-  "version": "3.30.0",
+  "version": "3.31.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -183,7 +183,7 @@
     "@eeacms/volto-call-to-action-block": "5.2.0",
     "@eeacms/volto-group-block": "9.0.0",
     "@eeacms/volto-eea-design-system": "1.40.3",
-    "@eeacms/volto-chatbot": "^0.6.1"
+    "@eeacms/volto-chatbot": "^0.6.4"
   },
   "dependencies": {
     "@eeacms/volto-call-to-action-block": "5.2.0",
