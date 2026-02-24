@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.101":
-  version: 0.3.101
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.101"
+"@eeacms/volto-cca-policy@npm:0.3.102":
+  version: 0.3.102
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.102"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.4
     "@eeacms/volto-eea-design-system": "*"
@@ -3364,12 +3364,13 @@ __metadata:
     "@eeacms/volto-slate-label": 1.0.1
     "@eeacms/volto-tabs-block": 9.0.3
     "@elastic/search-ui": 1.21.2
+    "@plone-collective/volto-authomatic": 2.0.1
     "@tanstack/react-table": 8.19.3
     d3-array: ^2.12.1
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 8abc16b0ee0e3ce5968e9a827d0d1226c24cd9cd41fa1990c984f57ca07ae1a128d998ac81be1678e10906eb8813f15733069b739d7e62e6d764364b90c3fb02
+  checksum: 4bc72972438c3935c5aa9ed0eeb54dfb0a2eb2792722a432652928fd8180831e84e843f7e84c1d875363e30f79f9d9eb821fb69d3a63911722ef2c1cda7ce709
   languageName: node
   linkType: hard
 
@@ -5169,6 +5170,15 @@ __metadata:
   version: 0.1.2
   resolution: "@pkgr/core@npm:0.1.2"
   checksum: 5160ec9f2e3232da681824a42583ef80e637ae6143339bd1db176848efd244dd71d177ccb7fd729261d8dcaf88486ce701d39500d873ed5caf16e8c281e9e28a
+  languageName: node
+  linkType: hard
+
+"@plone-collective/volto-authomatic@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@plone-collective/volto-authomatic@npm:2.0.1"
+  peerDependencies:
+    "@plone/volto": ">=13.8.0"
+  checksum: 3ef620d30dd7c5716a327acdd8875df3b7902d2812c9d6dd1faf4dd36fd8462b32d04b20011070edfc781d5139f7eb0745702cf147e4703c0d8bb4315e8abfaa
   languageName: node
   linkType: hard
 
@@ -12033,7 +12043,7 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-call-to-action-block": 5.2.0
-    "@eeacms/volto-cca-policy": 0.3.101
+    "@eeacms/volto-cca-policy": 0.3.102
     "@eeacms/volto-chatbot": ^0.6.4
     "@eeacms/volto-datablocks": 7.3.4
     "@eeacms/volto-eea-chatbot": ^1.0.11
