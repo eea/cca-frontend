@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.102":
-  version: 0.3.102
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.102"
+"@eeacms/volto-cca-policy@npm:0.3.103":
+  version: 0.3.103
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.103"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.4
     "@eeacms/volto-eea-design-system": "*"
@@ -3370,7 +3370,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 4bc72972438c3935c5aa9ed0eeb54dfb0a2eb2792722a432652928fd8180831e84e843f7e84c1d875363e30f79f9d9eb821fb69d3a63911722ef2c1cda7ce709
+  checksum: a720a6155b3e1fb122b4e856bde13f5ee00e3130056a80339f0dc2b0c570cf3d2ab72c0a31692e5e278f9f13c3865c94be8b9df6a1be161c16d7a122a1431fed
   languageName: node
   linkType: hard
 
@@ -3570,6 +3570,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-embed-static-content@npm:0.5.1":
+  version: 0.5.1
+  resolution: "@eeacms/volto-embed-static-content@npm:0.5.1"
+  dependencies:
+    "@eeacms/volto-embed": "*"
+  checksum: 092a531a1da12c1ab435c9f5be11b5510741d54e68957a59fd14ff717a0eeb3469dc3bb1b8c925a7088f968b76f8c7ca0213d4918bb604beba14f7d1aaa03a86
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-embed@npm:*":
   version: 10.0.0
   resolution: "@eeacms/volto-embed@npm:10.0.0"
@@ -3600,7 +3609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-group-block@npm:9.0.0":
+"@eeacms/volto-group-block@npm:*, @eeacms/volto-group-block@npm:9.0.0":
   version: 9.0.0
   resolution: "@eeacms/volto-group-block@npm:9.0.0"
   checksum: 9c1b2cb1ec2781e7074335d78628bb396760c376e86f0bc4523802b70c8e0374b425115583e72c75c268bc4cc3558fb70554b6aa1498398a12774facfa69f1dc
@@ -3678,7 +3687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-object-widget@npm:8.0.0":
+"@eeacms/volto-object-widget@npm:*, @eeacms/volto-object-widget@npm:8.0.0":
   version: 8.0.0
   resolution: "@eeacms/volto-object-widget@npm:8.0.0"
   checksum: 9a8bd7ef8bf4ea78c2fb549b200ed86b7d08bf3991bbfcc9c3439c5b3bedd335733b8e07ba0e62f1da4d9db452d65e0c0e72e3f7b0e36a06a7374d0dea2f2f6a
@@ -12042,8 +12051,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-call-to-action-block": 5.2.0
-    "@eeacms/volto-cca-policy": 0.3.102
+    "@eeacms/volto-cca-policy": 0.3.103
     "@eeacms/volto-chatbot": ^0.6.4
     "@eeacms/volto-datablocks": 7.3.4
     "@eeacms/volto-eea-chatbot": ^1.0.11
@@ -12051,9 +12059,8 @@ __metadata:
     "@eeacms/volto-eea-kitkat": 32.0.2
     "@eeacms/volto-eea-website-theme": 3.19.1
     "@eeacms/volto-embed": 10.1.4
+    "@eeacms/volto-embed-static-content": 0.5.1
     "@eeacms/volto-globalsearch": ^2.1.2
-    "@eeacms/volto-matomo": 6.0.1
-    "@eeacms/volto-nextcloud-video-block": 2.0.1
     "@eeacms/volto-plotlycharts": 13.3.7
     "@eeacms/volto-workflow-progress": 5.0.1
     "@plone/scripts": ^3.3.2
