@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.104":
-  version: 0.3.104
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.104"
+"@eeacms/volto-cca-policy@npm:0.3.105":
+  version: 0.3.105
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.105"
   dependencies:
     "@eeacms/volto-datablocks": 7.3.5
     "@eeacms/volto-eea-design-system": "*"
@@ -3370,7 +3370,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: eea3fe99f3cb76683c51f17cd4b007f7fe7c540a178873063b1e985d355d2ca7b93a7cbd7973bf66afe3b477fe94200358dfe1d626084376dea24547a67ed46a
+  checksum: 9a355ee2da385cfc2e8861f4ec7dbb7fa595120114490ac941c05f8cb0fd41f3a7975d6571ce0c63688b175d5a33abac39269c4a8d21fadce34b60a37b91a72c
   languageName: node
   linkType: hard
 
@@ -3458,13 +3458,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-chatbot@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@eeacms/volto-eea-chatbot@npm:1.0.11"
+"@eeacms/volto-eea-chatbot@npm:^1.0.13":
+  version: 1.0.13
+  resolution: "@eeacms/volto-eea-chatbot@npm:1.0.13"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
     "@plone-collective/volto-sentry": "*"
+    compromise: 14.14.5
     fast-json-patch: 3.1.1
     highlight.js: 11.10.0
     luxon: 3.5.0
@@ -3475,7 +3476,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: a5dbd1281ba6ff120e288921b6c497d89a4670976133a2face9a7711053b0c6ae233d9d1c89f208cb5b120e8e70351e30272eb7d05d2d671dd17dfb55a5f9eee
+  checksum: f61873fa94d11e7f8d78ab16a745b6598df79a3fd796e2f106732fc2d27e049c1d7b75a25865bed2860d58dd2c7629a6a6cf1328d20e3ae4d5c7cede18649f1b
   languageName: node
   linkType: hard
 
@@ -12051,10 +12052,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.104
+    "@eeacms/volto-cca-policy": 0.3.105
     "@eeacms/volto-chatbot": ^0.6.4
     "@eeacms/volto-datablocks": 7.3.5
-    "@eeacms/volto-eea-chatbot": ^1.0.11
+    "@eeacms/volto-eea-chatbot": ^1.0.13
     "@eeacms/volto-eea-design-system": 1.40.3
     "@eeacms/volto-eea-kitkat": 32.0.2
     "@eeacms/volto-eea-website-theme": 3.19.1
@@ -12968,6 +12969,17 @@ __metadata:
     safe-buffer: 5.1.2
     vary: ~1.1.2
   checksum: 35c0f2eb1f28418978615dc1bc02075b34b1568f7f56c62d60f4214d4b7cc00d0f6d282b5f8a954f59872396bd770b6b15ffd8aa94c67d4bce9b8887b906999b
+  languageName: node
+  linkType: hard
+
+"compromise@npm:14.14.5":
+  version: 14.14.5
+  resolution: "compromise@npm:14.14.5"
+  dependencies:
+    efrt: 2.7.0
+    grad-school: 0.0.5
+    suffix-thumb: 5.0.2
+  checksum: ec091600c93b7b107030d546ab4dabde719dbd9a19870f64ea96f33a68bee81a5f2eb2b3afad8c827f461cb2b84f8acf94d54695f841e945f0f1db6421be8111
   languageName: node
   linkType: hard
 
@@ -15675,6 +15687,13 @@ __metadata:
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
   checksum: 1b4cac778d64ce3b582a7e26b218afe07e207a0f9bfe13cc7395a6d307849cfe361e65033c3251e00c27dd060cab43014c2d6b2647676135e18b77d2d05b3f4f
+  languageName: node
+  linkType: hard
+
+"efrt@npm:2.7.0":
+  version: 2.7.0
+  resolution: "efrt@npm:2.7.0"
+  checksum: 649da95aa60adc411563e04d8f953e67a67ebafca6f3479d5768cab2d011068de4379ad978ba8a87d574d7ea2494a82ecbe3a8f9f8f9bca3ddcc3d5cb4ea11ae
   languageName: node
   linkType: hard
 
@@ -18987,6 +19006,13 @@ __metadata:
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: ac85f94da92d8eb6b7f5a8b20ce65e43d66761c55ce85ac96df6865308390da45a8d3f0296dd3a663de65d30ba497bd46c696cc1e248c72b13d6d567138a4fc7
+  languageName: node
+  linkType: hard
+
+"grad-school@npm:0.0.5":
+  version: 0.0.5
+  resolution: "grad-school@npm:0.0.5"
+  checksum: 1330b02b71ef37f9a507261c1219056d19caa46f99e65fe30fe9b5c98235b5dec23d74928ed166516054b30c4cf470903de482311d2d25d985e904989b53c69a
   languageName: node
   linkType: hard
 
@@ -33887,6 +33913,13 @@ __metadata:
   version: 4.2.0
   resolution: "stylis@npm:4.2.0"
   checksum: 0eb6cc1b866dc17a6037d0a82ac7fa877eba6a757443e79e7c4f35bacedbf6421fadcab4363b39667b43355cbaaa570a3cde850f776498e5450f32ed2f9b7584
+  languageName: node
+  linkType: hard
+
+"suffix-thumb@npm:5.0.2":
+  version: 5.0.2
+  resolution: "suffix-thumb@npm:5.0.2"
+  checksum: 4c4f37168b9455c460451c9531fd2708dcd20aadbb3bc505901a0bb616fa9239a582661cd002625de3cf499ce747fbac45d074e75f0f1bccd7b88fb9c6f4fac9
   languageName: node
   linkType: hard
 
