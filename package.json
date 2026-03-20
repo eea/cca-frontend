@@ -64,6 +64,7 @@
     "@eeacms/volto-cca-policy",
     "@eeacms/volto-plotlycharts",
     "@eeacms/volto-eea-chatbot",
+    "@eeacms/volto-updatenotifier",
     "volto-subsites"
   ],
   "jest": {
@@ -189,6 +190,7 @@
     "@eeacms/volto-call-to-action-block": "5.2.0",
     "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#staging",
     "@eeacms/volto-chatbot": "^0.6.4",
+    "@eeacms/volto-updatenotifier": "0.1.2",
     "@eeacms/volto-datablocks": "7.3.4",
     "@eeacms/volto-eea-chatbot": "^1.0.11",
     "@eeacms/volto-eea-design-system": "1.40.3",
