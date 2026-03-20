@@ -184,7 +184,7 @@
     "@eeacms/volto-chatbot": "^0.6.4"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.3.105",
+    "@eeacms/volto-cca-policy": "0.3.106",
     "@eeacms/volto-chatbot": "^0.6.4",
     "@eeacms/volto-datablocks": "7.3.5",
     "@eeacms/volto-eea-chatbot": "^1.0.13",
