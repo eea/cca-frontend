@@ -192,7 +192,7 @@
     "@eeacms/volto-eea-kitkat": "32.0.2",
     "@eeacms/volto-eea-website-theme": "3.19.1",
     "@eeacms/volto-embed": "11.0.0",
-    "@eeacms/volto-embed-static-content": "0.5.1",
+    "@eeacms/volto-embed-static-content": "1.0.0",
     "@eeacms/volto-globalsearch": "^2.1.2",
     "@eeacms/volto-plotlycharts": "13.3.7",
     "@eeacms/volto-workflow-progress": "5.0.1",
