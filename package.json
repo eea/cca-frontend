@@ -179,14 +179,14 @@
     "@elastic/search-ui": "1.21.2",
     "@eeacms/volto-searchlib": "^2.1.10",
     "@eeacms/volto-globalsearch": "^2.1.2",
-    "@eeacms/volto-datablocks": "7.3.5",
+    "@eeacms/volto-datablocks": "8.0.0",
     "@eeacms/volto-eea-design-system": "1.50.0",
     "@eeacms/volto-chatbot": "^0.6.4"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.3.106",
     "@eeacms/volto-chatbot": "^0.6.4",
-    "@eeacms/volto-datablocks": "7.3.5",
+    "@eeacms/volto-datablocks": "8.0.0",
     "@eeacms/volto-eea-chatbot": "^1.0.13",
     "@eeacms/volto-eea-design-system": "1.50.0",
     "@eeacms/volto-eea-kitkat": "32.0.2",
