@@ -3374,27 +3374,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-chatbot@npm:^0.6.4":
-  version: 0.6.4
-  resolution: "@eeacms/volto-chatbot@npm:0.6.4"
-  dependencies:
-    "@eeacms/volto-matomo": "*"
-    "@microsoft/fetch-event-source": 2.0.1
-    "@plone-collective/volto-sentry": "*"
-    fast-json-patch: 3.1.1
-    highlight.js: 11.10.0
-    luxon: 3.5.0
-    marked: 13.0.3
-    node-fetch: 2.7.0
-    react-markdown: 8.0.7
-    react-textarea-autosize: ^8.5.3
-    rehype-prism-plus: 1.6.0
-    remark-gfm: 3.0.1
-    uuid: 10.0.0
-  checksum: 802735fc8faac58cfdf07df5844b0b4694b6777bf9ef6b927d9c01cdf7f532350a88094d1c95535fccee720a4aae9f5a10ca1460bc2c19572e5e41c0e04e6cfb
-  languageName: node
-  linkType: hard
-
 "@eeacms/volto-columns-block@npm:8.1.1":
   version: 8.1.1
   resolution: "@eeacms/volto-columns-block@npm:8.1.1"
@@ -3457,9 +3436,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-chatbot@npm:^1.0.13":
-  version: 1.0.13
-  resolution: "@eeacms/volto-eea-chatbot@npm:1.0.13"
+"@eeacms/volto-eea-chatbot@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@eeacms/volto-eea-chatbot@npm:2.0.0"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
@@ -3475,7 +3454,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: f61873fa94d11e7f8d78ab16a745b6598df79a3fd796e2f106732fc2d27e049c1d7b75a25865bed2860d58dd2c7629a6a6cf1328d20e3ae4d5c7cede18649f1b
+  checksum: 1caa593890835db0edfe3d8469acc4b47930844a8245afd74c7430093919236c4e129e7a2d8e016034fc7e606f2e75cc9879051714de7e8453600c929ccbd0e5
   languageName: node
   linkType: hard
 
@@ -12052,9 +12031,8 @@ __metadata:
   resolution: "cca-frontend@workspace:."
   dependencies:
     "@eeacms/volto-cca-policy": 0.3.106
-    "@eeacms/volto-chatbot": ^0.6.4
     "@eeacms/volto-datablocks": 8.0.0
-    "@eeacms/volto-eea-chatbot": ^1.0.13
+    "@eeacms/volto-eea-chatbot": ^2.0.0
     "@eeacms/volto-eea-design-system": 1.50.0
     "@eeacms/volto-eea-kitkat": 32.0.2
     "@eeacms/volto-eea-website-theme": 3.19.1
