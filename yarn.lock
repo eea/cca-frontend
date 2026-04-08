@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.109":
-  version: 0.3.109
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.109"
+"@eeacms/volto-cca-policy@npm:0.3.110":
+  version: 0.3.110
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.110"
   dependencies:
     "@eeacms/volto-datablocks": 8.0.0
     "@eeacms/volto-eea-design-system": "*"
@@ -3371,7 +3371,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 6fc00fa9e85dc272c47a8d6ad5e9c9f6f55374aa61e49ff966a181948f0dc21fae3d783bf585671a366c50f7a6ae7c12faafed846e7288fd7c352cf9514fc67b
+  checksum: 26c573d50a77a03bb393c3c06262c4e4caa3f12a76f0114da035bbac7fa104657e67996b521e10de9f44c1cce43fc020fead2edd040b5d68f65e32cb955b4d53
   languageName: node
   linkType: hard
 
@@ -3405,9 +3405,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-datablocks@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@eeacms/volto-datablocks@npm:8.0.0"
+"@eeacms/volto-datablocks@npm:8.0.1":
+  version: 8.0.1
+  resolution: "@eeacms/volto-datablocks@npm:8.0.1"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-embed": "*"
@@ -3419,7 +3419,7 @@ __metadata:
     object-hash: 2.2.0
     react-visibility-sensor: 5.1.1
     sanitize-html: 2.12.1
-  checksum: bda4ebe7cab3f10da7fa150fa7f79b58b862b67e34a9f7ca943c80e613e0618d4b73b27484b2a5094805bbc290e4bb10684095f74cdd638f0b7e66cab3607ee1
+  checksum: 8787d06f0a90d927639ef8065ff00fbd0c3bc4c6ad8e8492defd0751ad7c52b5cd44c9f92c0912c59302adc79d237ad3dcabaf250653ed9142d7be961d604553
   languageName: node
   linkType: hard
 
@@ -3459,9 +3459,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.50.0":
-  version: 1.50.0
-  resolution: "@eeacms/volto-eea-design-system@npm:1.50.0"
+"@eeacms/volto-eea-design-system@npm:1.50.1":
+  version: 1.50.1
+  resolution: "@eeacms/volto-eea-design-system@npm:1.50.1"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -3470,7 +3470,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 4.6.0
     slick-carousel: ^1.8.1
-  checksum: 30fc92111e9ace993ddcec236b7c84128831e1afa099f06d5e157bc87518737901782acad4b75b818edb12acfbc430c27f0399fa5662984d7e7a24bb5aaf6696
+  checksum: 979ba67bd6e63953417aa44d8b3dd2e5740e7111d12f9cedd6655d054341019b5eebc9c8d917199d9380f3c20cd2094cbc5c11c1950d99eb8a1e170345268c0b
   languageName: node
   linkType: hard
 
@@ -3536,9 +3536,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:3.19.1":
-  version: 3.19.1
-  resolution: "@eeacms/volto-eea-website-theme@npm:3.19.1"
+"@eeacms/volto-eea-website-theme@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@eeacms/volto-eea-website-theme@npm:4.0.1"
   dependencies:
     "@eeacms/volto-anchors": "*"
     "@eeacms/volto-block-style": "*"
@@ -3546,7 +3546,7 @@ __metadata:
     "@eeacms/volto-eea-design-system": "github:eea/volto-eea-design-system#develop"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: e21be4e844e94a7260c4dc30962248abb50069e66e23a475a8a75375478434db7a46ed2326ee5a24146398c939503f00bc459052ab6445d3701caa273c60be26
+  checksum: f523355188e6f1f274cfc5e4d9095a7dd22c7184baae5c95322de7d652e787b14c537c8fdaadd1f1fe6a47561d6d10cd83c497073a517afa60ef119800a99e9a
   languageName: node
   linkType: hard
 
@@ -12025,12 +12025,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.109
-    "@eeacms/volto-datablocks": 8.0.0
+    "@eeacms/volto-cca-policy": 0.3.110
+    "@eeacms/volto-datablocks": 8.0.1
     "@eeacms/volto-eea-chatbot": ^2.0.0
-    "@eeacms/volto-eea-design-system": 1.50.0
+    "@eeacms/volto-eea-design-system": 1.50.1
     "@eeacms/volto-eea-kitkat": 32.0.2
-    "@eeacms/volto-eea-website-theme": 3.19.1
+    "@eeacms/volto-eea-website-theme": 4.0.1
     "@eeacms/volto-embed": 11.0.0
     "@eeacms/volto-embed-static-content": 1.0.0
     "@eeacms/volto-globalsearch": ^2.1.2
