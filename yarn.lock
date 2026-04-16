@@ -3550,12 +3550,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-embed-static-content@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@eeacms/volto-embed-static-content@npm:1.0.1"
+"@eeacms/volto-embed-static-content@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@eeacms/volto-embed-static-content@npm:1.0.2"
   dependencies:
     "@eeacms/volto-embed": "*"
-  checksum: 231581795a88fcf83c8ad5fca28a5f184658c3c0481f1d9cba664e74375cb973a49bf840714c95393462de98b7abc386122b4fde444c3bbc430ce57c2e1c1f76
+  checksum: 534be707ebdda38b130c745ebf62eadbb606034575abc78306d9f28d0c262aa6386ddb9f548aa3bad0d4dcec9a8a24709dc2467784dad4f46e66d1cbe7373c65
   languageName: node
   linkType: hard
 
@@ -12059,7 +12059,7 @@ __metadata:
     "@eeacms/volto-eea-kitkat": 33.0.0
     "@eeacms/volto-eea-website-theme": 4.0.4
     "@eeacms/volto-embed": 11.0.1
-    "@eeacms/volto-embed-static-content": 1.0.1
+    "@eeacms/volto-embed-static-content": 1.0.2
     "@eeacms/volto-globalsearch": ^2.1.2
     "@eeacms/volto-plotlycharts": 14.0.1
     "@eeacms/volto-workflow-progress": 6.0.1
