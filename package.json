@@ -180,7 +180,7 @@
     "@eeacms/volto-searchlib": "^2.1.10",
     "@eeacms/volto-globalsearch": "^2.1.2",
     "@eeacms/volto-datablocks": "8.0.2",
-    "@eeacms/volto-eea-design-system": "1.60.0",
+    "@eeacms/volto-eea-design-system": "1.60.1",
     "@eeacms/volto-listing-block": "8.1.5",
     "@eeacms/volto-chatbot": "^0.6.4"
   },
@@ -188,7 +188,7 @@
     "@eeacms/volto-cca-policy": "0.3.114",
     "@eeacms/volto-datablocks": "8.0.2",
     "@eeacms/volto-eea-chatbot": "^2.0.0",
-    "@eeacms/volto-eea-design-system": "1.60.0",
+    "@eeacms/volto-eea-design-system": "1.60.1",
     "@eeacms/volto-eea-kitkat": "33.0.1",
     "@eeacms/volto-eea-website-theme": "4.1.0",
     "@eeacms/volto-embed": "11.0.1",
