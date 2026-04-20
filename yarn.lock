@@ -3459,7 +3459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.60.1":
+"@eeacms/volto-eea-design-system@npm:*, @eeacms/volto-eea-design-system@npm:1.60.1":
   version: 1.60.1
   resolution: "@eeacms/volto-eea-design-system@npm:1.60.1"
   dependencies:
@@ -3613,15 +3613,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:8.1.5":
-  version: 8.1.5
-  resolution: "@eeacms/volto-listing-block@npm:8.1.5"
+"@eeacms/volto-listing-block@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@eeacms/volto-listing-block@npm:10.0.1"
   dependencies:
+    "@eeacms/volto-object-widget": "*"
     "@eeacms/volto-widget-theme-picker": "*"
     react-resize-detector: 7.1.2
     react-slick: ^0.30.1
     slick-carousel: 1.8.1
-  checksum: 390a0a67cab4868f8ad7fc9455d5e213e713bda5338a06c161f13512819b642dfa74f698c8cbcb41c15552c9ad3ec1883473cd6b15ea09286ebb9aadbbce97fb
+  checksum: 9ef6be462b2bf5f9d330bd56046cba2b9e1163716ca7526881821bd23344d9e74d7002bfb9ae1d351606c69a833dd524db740ea3e43206c02e586b87ba81d681
   languageName: node
   linkType: hard
 
@@ -3686,9 +3687,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-plotlycharts@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@eeacms/volto-plotlycharts@npm:14.0.1"
+"@eeacms/volto-plotlycharts@npm:14.0.2":
+  version: 14.0.2
+  resolution: "@eeacms/volto-plotlycharts@npm:14.0.2"
   dependencies:
     "@eeacms/react-chart-editor": 0.47.8
     "@eeacms/volto-datablocks": "*"
@@ -3701,7 +3702,7 @@ __metadata:
     plotly.js: ^2.35.3
     react-plotly.js: 2.6.0
     remixicon: 4.6.0
-  checksum: 1b25ca2f80ad0fb5ba207e9c6b3062123858c7d14e7efad23b7f890d2a52d38fa08c28f83b19cd3d90075ea20ec38fcbff702b570932794b6c1737ba37f1b91c
+  checksum: 01b08110c11de9069174bb8a2884e01a3b8d8898a6ff9cc131e60b488a8b9b7b2c7d5b7d5fb8fbbc20aa9fe51d74ddec35319220a1b12d398a54f446870d5788
   languageName: node
   linkType: hard
 
@@ -12052,8 +12053,8 @@ __metadata:
     "@eeacms/volto-embed": 11.0.1
     "@eeacms/volto-embed-static-content": 1.0.2
     "@eeacms/volto-globalsearch": ^2.1.2
-    "@eeacms/volto-listing-block": 8.1.5
-    "@eeacms/volto-plotlycharts": 14.0.1
+    "@eeacms/volto-listing-block": 10.0.1
+    "@eeacms/volto-plotlycharts": 14.0.2
     "@eeacms/volto-workflow-progress": 6.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
