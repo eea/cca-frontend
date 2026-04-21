@@ -3536,9 +3536,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-website-theme@npm:4.1.1":
-  version: 4.1.1
-  resolution: "@eeacms/volto-eea-website-theme@npm:4.1.1"
+"@eeacms/volto-eea-website-theme@npm:4.2.0":
+  version: 4.2.0
+  resolution: "@eeacms/volto-eea-website-theme@npm:4.2.0"
   dependencies:
     "@eeacms/volto-anchors": "*"
     "@eeacms/volto-block-style": "*"
@@ -3546,7 +3546,7 @@ __metadata:
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-group-block": "*"
     volto-subsites: "*"
-  checksum: b34cbe061b023d9f6fb7655fe427e29627405c376702e20ee75d1c73cb3f97ccf7cefa5873bf4355c459624904333085da6249da1bfc030f56238c7bc203c262
+  checksum: a108bbc8eba496829dd6d70abd04feb6924437ea17f2070f67478df8b0bcc353638eff179b053c438eccd9f9758982f3bdca9faeb2363e15553baf8197a3d28d
   languageName: node
   linkType: hard
 
@@ -5181,6 +5181,17 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=13.8.0"
   checksum: 3ef620d30dd7c5716a327acdd8875df3b7902d2812c9d6dd1faf4dd36fd8462b32d04b20011070edfc781d5139f7eb0745702cf147e4703c0d8bb4315e8abfaa
+  languageName: node
+  linkType: hard
+
+"@plone-collective/volto-rss-provider@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@plone-collective/volto-rss-provider@npm:1.0.1"
+  dependencies:
+    rss: 1.2.2
+  peerDependencies:
+    "@plone/volto": ^17.0.0
+  checksum: 62c7811f2646497ca94d4c57243da37daf0f4de591dc9d343d4866ad63fe294cf332131d9cbfaa6e5035a4bc3551eec4e7f7557b1a99a059ee12508e25826595
   languageName: node
   linkType: hard
 
@@ -12049,13 +12060,14 @@ __metadata:
     "@eeacms/volto-eea-chatbot": ^2.0.0
     "@eeacms/volto-eea-design-system": 1.60.1
     "@eeacms/volto-eea-kitkat": 33.0.1
-    "@eeacms/volto-eea-website-theme": 4.1.1
+    "@eeacms/volto-eea-website-theme": 4.2.0
     "@eeacms/volto-embed": 11.0.1
     "@eeacms/volto-embed-static-content": 1.0.2
     "@eeacms/volto-globalsearch": ^2.1.2
     "@eeacms/volto-listing-block": 10.0.1
     "@eeacms/volto-plotlycharts": 14.0.2
     "@eeacms/volto-workflow-progress": 6.0.1
+    "@plone-collective/volto-rss-provider": 1.0.1
     "@plone/scripts": ^3.3.2
     "@plone/volto": 17.22.1
     "@storybook/addon-actions": ^6.3.0
@@ -24409,6 +24421,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mime-db@npm:~1.25.0":
+  version: 1.25.0
+  resolution: "mime-db@npm:1.25.0"
+  checksum: bf1c56d50cb5752c5495ddf2a1dd938015c58b3bc0c8d19c4cacb198322267d6fc1b944e70efec0d5215584cf1c57d58e2d4f609094ebe3e88bdf34028ca102d
+  languageName: node
+  linkType: hard
+
+"mime-types@npm:2.1.13":
+  version: 2.1.13
+  resolution: "mime-types@npm:2.1.13"
+  dependencies:
+    mime-db: ~1.25.0
+  checksum: 661db5db5900dcf8bc345d2aea9cc2bd38d53374c000e0d8d7b592230ff37ea173b9514f15bfd89efe46476f57f1785866d13060c71d12ca98c5b5a8f662ae04
+  languageName: node
+  linkType: hard
+
 "mime-types@npm:^2.1.12, mime-types@npm:^2.1.27, mime-types@npm:^2.1.30, mime-types@npm:^2.1.31, mime-types@npm:~2.1.17, mime-types@npm:~2.1.19, mime-types@npm:~2.1.24, mime-types@npm:~2.1.34":
   version: 2.1.35
   resolution: "mime-types@npm:2.1.35"
@@ -31749,6 +31777,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rss@npm:1.2.2":
+  version: 1.2.2
+  resolution: "rss@npm:1.2.2"
+  dependencies:
+    mime-types: 2.1.13
+    xml: 1.0.1
+  checksum: 9f823a6c1c807b4d9a800f74063d03eb188751c2e7fab36a50d5bdc33577a03562d5a610d8c809729f5a3721805a5495119c105237a87a6bb5a8a146df8b887a
+  languageName: node
+  linkType: hard
+
 "rsvp@npm:^4.8.4":
   version: 4.8.5
   resolution: "rsvp@npm:4.8.5"
@@ -37183,7 +37221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml@npm:^1.0.1":
+"xml@npm:1.0.1, xml@npm:^1.0.1":
   version: 1.0.1
   resolution: "xml@npm:1.0.1"
   checksum: 11b5545ef3f8fec3fa29ce251f50ad7b6c97c103ed4d851306ec23366f5fa4699dd6a942262df52313a0cd1840ab26256da253c023bad3309d8ce46fe6020ca0
