@@ -65,7 +65,8 @@
     "@eeacms/volto-cca-policy",
     "@eeacms/volto-plotlycharts",
     "@eeacms/volto-eea-chatbot",
-    "volto-subsites"
+    "volto-subsites",
+    "@plone-collective/volto-rss-provider"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -180,7 +181,8 @@
     "@eeacms/volto-searchlib": "^2.1.10",
     "@eeacms/volto-globalsearch": "^2.1.2",
     "@eeacms/volto-datablocks": "8.0.2",
-    "@eeacms/volto-listing-block": "10.0.1"
+    "@eeacms/volto-listing-block": "10.0.1",
+    "@plone-collective/volto-rss-provider": "1.0.1"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.3.114",
@@ -195,6 +197,7 @@
     "@eeacms/volto-listing-block": "10.0.1",
     "@eeacms/volto-plotlycharts": "14.0.2",
     "@eeacms/volto-workflow-progress": "6.0.1",
+    "@plone-collective/volto-rss-provider": "1.0.1",
     "@plone/volto": "17.22.1",
     "volto-subsites": "4.0.0"
   },
