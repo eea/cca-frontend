@@ -3550,12 +3550,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-embed-static-content@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@eeacms/volto-embed-static-content@npm:1.0.2"
+"@eeacms/volto-embed-static-content@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@eeacms/volto-embed-static-content@npm:1.0.3"
   dependencies:
     "@eeacms/volto-embed": "*"
-  checksum: 534be707ebdda38b130c745ebf62eadbb606034575abc78306d9f28d0c262aa6386ddb9f548aa3bad0d4dcec9a8a24709dc2467784dad4f46e66d1cbe7373c65
+  checksum: a1222b0548b5d30c5e9a17ff3fc4b3f4fc3d86894bb279fa64ba1352f7c526b34c86a56ca6d7feb0fd77f270b2a89571de00cf5a5f3984a6c98bd8c6a5159bd8
   languageName: node
   linkType: hard
 
@@ -12062,7 +12062,7 @@ __metadata:
     "@eeacms/volto-eea-kitkat": 33.0.1
     "@eeacms/volto-eea-website-theme": 4.2.0
     "@eeacms/volto-embed": 11.0.1
-    "@eeacms/volto-embed-static-content": 1.0.2
+    "@eeacms/volto-embed-static-content": 1.0.3
     "@eeacms/volto-globalsearch": ^2.1.2
     "@eeacms/volto-listing-block": 10.0.1
     "@eeacms/volto-plotlycharts": 14.0.3
