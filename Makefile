@@ -14,7 +14,7 @@
 ##############################################################################
 # SETUP MAKE
 #
-## Defensive settings for make: https://tech.davis-hansson.com/p/make/
+## Defensive settings for make:  https://tech.davis-hansson.com/p/make/
 SHELL:=bash
 .ONESHELL:
 # for Makefile debugging purposes add -x to the .SHELLFLAGS
