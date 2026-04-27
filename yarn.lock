@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.115":
-  version: 0.3.115
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.115"
+"@eeacms/volto-cca-policy@npm:0.3.116":
+  version: 0.3.116
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.116"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -3371,7 +3371,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: f15a5c099b3322ef70406f32cb38568bdad1ad0f7b93514d618eb4a09c6bc4ae4aef7ff226a232749e4fe010cce627d525a8fb3939662e9e89bfca48eedb45b6
+  checksum: 7aa94a7c7972e6582f91d11c853151b7bdb1f60c3f30f135e78458c3b96968c35a0db70a233111340807a230ea44b54234cdabaf06b2115a590850ce112a73e1
   languageName: node
   linkType: hard
 
@@ -3405,7 +3405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-datablocks@npm:8.0.2":
+"@eeacms/volto-datablocks@npm:*, @eeacms/volto-datablocks@npm:8.0.2":
   version: 8.0.2
   resolution: "@eeacms/volto-datablocks@npm:8.0.2"
   dependencies:
@@ -3594,13 +3594,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-globalsearch@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "@eeacms/volto-globalsearch@npm:2.1.2"
+"@eeacms/volto-globalsearch@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@eeacms/volto-globalsearch@npm:4.0.1"
   dependencies:
     "@eeacms/volto-listing-block": "*"
     "@eeacms/volto-searchlib": "*"
-  checksum: bb9604a7c0290605619fbd9e3b0dbf2f1bf8deb1ba244f3cbefce91bbbf1daf00735650df49fc0fc72d9d343af6ce9da349b0bb5e654bbc9ae61af6b45e3ae31
+  checksum: a45d7ccb259380ae6e255adff494df2a35806a9b5b1db24b2907ddf18eaf12cd79b3dd0d819796d7af3483b4923a5bb86736bbdf2f47d54c245c6cdfdb0cce1b
   languageName: node
   linkType: hard
 
@@ -3628,7 +3628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:10.0.1":
+"@eeacms/volto-listing-block@npm:*, @eeacms/volto-listing-block@npm:10.0.1":
   version: 10.0.1
   resolution: "@eeacms/volto-listing-block@npm:10.0.1"
   dependencies:
@@ -12070,7 +12070,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.115
+    "@eeacms/volto-cca-policy": 0.3.116
     "@eeacms/volto-datablocks": 8.0.2
     "@eeacms/volto-eea-chatbot": ^2.0.0
     "@eeacms/volto-eea-design-system": 1.60.2
@@ -12078,7 +12078,7 @@ __metadata:
     "@eeacms/volto-eea-website-theme": 4.3.0
     "@eeacms/volto-embed": 11.0.1
     "@eeacms/volto-embed-static-content": 1.0.4
-    "@eeacms/volto-globalsearch": ^2.1.2
+    "@eeacms/volto-globalsearch": 4.0.1
     "@eeacms/volto-listing-block": 10.0.1
     "@eeacms/volto-plotlycharts": 14.0.3
     "@eeacms/volto-workflow-progress": 6.0.1
