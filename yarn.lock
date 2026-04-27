@@ -3350,17 +3350,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.114":
-  version: 0.3.114
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.114"
+"@eeacms/volto-cca-policy@npm:0.3.115":
+  version: 0.3.115
+  resolution: "@eeacms/volto-cca-policy@npm:0.3.115"
   dependencies:
-    "@eeacms/volto-datablocks": 8.0.0
+    "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-eea-website-theme": "*"
     "@eeacms/volto-embed": "*"
     "@eeacms/volto-globalsearch": 4.0.1
     "@eeacms/volto-group-block": ^9.0.0
-    "@eeacms/volto-openlayers-map": 1.0.1
+    "@eeacms/volto-openlayers-map": 2.0.0
     "@eeacms/volto-searchlib": ^2.1.10
     "@eeacms/volto-slate-label": 2.0.1
     "@eeacms/volto-tabs-block": ^9.0.3
@@ -3371,7 +3371,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 2f59d043828bea6b468effa81562c8871df405ad2eb9a4786f2cf16cab8466ab4715c0c25dce6fba3a732390be4479efbda8daca3b694e00fb1fabe6de3ab262
+  checksum: f15a5c099b3322ef70406f32cb38568bdad1ad0f7b93514d618eb4a09c6bc4ae4aef7ff226a232749e4fe010cce627d525a8fb3939662e9e89bfca48eedb45b6
   languageName: node
   linkType: hard
 
@@ -3693,12 +3693,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-openlayers-map@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@eeacms/volto-openlayers-map@npm:1.0.1"
+"@eeacms/volto-openlayers-map@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@eeacms/volto-openlayers-map@npm:2.0.0"
   dependencies:
     ol: 6.6.x
-  checksum: efbd9bd2fcd481d7e4b8b157015e2e71d7bcbefd4b537550aeb03c356b0ad923b7659bad1886f32331f50689694968783d8919ba5630896bae8f79d2caafc3a6
+  checksum: 74379666d34ab8c79397b0da7be0dff31244c09e9d49b9480c2b1b84846af474e6c7b84415a5c3750c5df9f8afeb141b6c72198b423d008ba6fea42b263ef4e7
   languageName: node
   linkType: hard
 
@@ -12070,7 +12070,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.114
+    "@eeacms/volto-cca-policy": 0.3.115
     "@eeacms/volto-datablocks": 8.0.2
     "@eeacms/volto-eea-chatbot": ^2.0.0
     "@eeacms/volto-eea-design-system": 1.60.2
