@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 6)",
   "license": "MIT",
-  "version": "3.52.0",
+  "version": "3.53.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -178,10 +178,12 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "@elastic/search-ui": "1.21.2",
-    "@eeacms/volto-searchlib": "^2.1.10"
+    "@eeacms/volto-searchlib": "^2.1.10",
+    "@eeacms/volto-columns-block": "^8.1.1"
   },
   "dependencies": {
     "@eeacms/volto-cca-policy": "0.3.118",
+    "@eeacms/volto-columns-block": "^8.1.1",
     "@eeacms/volto-datablocks": "8.0.2",
     "@eeacms/volto-eea-chatbot": "^2.0.0",
     "@eeacms/volto-eea-design-system": "1.60.2",
