@@ -177,7 +177,7 @@
     "@eeacms/volto-columns-block": "^8.1.1"
   },
   "dependencies": {
-    "@eeacms/volto-cca-policy": "0.3.119",
+    "@eeacms/volto-cca-policy": "0.3.120",
     "@eeacms/volto-columns-block": "^8.1.1",
     "@eeacms/volto-datablocks": "8.0.2",
     "@eeacms/volto-eea-chatbot": "^2.0.0",
