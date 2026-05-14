@@ -28,12 +28,6 @@
       ],
       "@eeacms/volto-cca-policy": [
         "addons/volto-cca-policy/src"
-      ],
-      "@eeacms/volto-searchlib": [
-        "addons/volto-searchlib/src"
-      ],
-      "@eeacms/volto-globalsearch": [
-        "addons/volto-globalsearch/src"
       ]
     },
     "baseUrl": "src"
