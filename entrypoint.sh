@@ -3,9 +3,9 @@ set -Ex
 
 function apply_rebuild {
   mkdir -p /app/src/addons
-  gosu node pnpm develop
-  gosu node pnpm install
-  gosu node pnpm build
+  gosu node yarn develop
+  gosu node yarn
+  gosu node yarn build
 }
 
 # Should we re-build
