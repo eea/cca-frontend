@@ -10033,7 +10033,7 @@ __metadata:
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.2
     "@eeacms/volto-eea-chatbot": ^2.0.0
-    "@eeacms/volto-eea-design-system": 1.60.2
+    "@eeacms/volto-eea-design-system": 1.60.3
     "@eeacms/volto-eea-kitkat": 33.0.3
     "@eeacms/volto-eea-website-theme": 4.3.0
     "@eeacms/volto-embed": 11.0.1
