@@ -79,14 +79,17 @@
     ],
     "moduleNameMapper": {
       "@plone/volto/cypress/(.*)$": "<rootDir>/node_modules/@plone/volto/cypress/$1",
-      "@plone/volto/addon-registry": "<rootDir>/node_modules/@plone/volto/addon-registry",
+      "@plone/volto/addon-registry": "<rootDir>/node_modules/@plone/registry/addon-registry",
+      "@plone/registry/addon-registry": "<rootDir>/node_modules/@plone/registry/addon-registry",
       "@plone/volto/webpack-plugins/webpack-less-plugin": "<rootDir>/node_modules/@plone/volto/webpack-plugins/webpack-less-plugin",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
-      "@plone/volto-slate/(.*)$": "<rootDir>/node_modules/@plone/volto/packages/volto-slate/src/$1",
+      "@plone/volto-slate/(.*)$": "<rootDir>/node_modules/@plone/volto-slate/src/$1",
       "load-volto-addons": "<rootDir>/node_modules/@plone/volto/jest-addons-loader.js",
       "@package/(.*)$": "<rootDir>/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1"
+      "~/(.*)$": "<rootDir>/src/$1",
+      "@root/(.*)$": "<rootDir>/src/$1",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     },
     "coverageThreshold": {
       "global": {
@@ -98,7 +101,7 @@
     },
     "setupFiles": [
       "@plone/volto/test-setup-globals.js",
-      "@plone/volto/test-setup-config.js"
+      "@plone/volto/test-setup-config.jsx"
     ],
     "globals": {
       "__DEV__": true
@@ -164,15 +167,22 @@
     "node": "^20 || ^22"
   },
   "resolutions": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "d3-array": "^2.12.1",
-    "htmlparser2": "^7.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-colorscales": "github:eea/react-colorscales#1.0.2",
-    "react-error-overlay": "6.0.9",
+    "d3-array": "^2.12.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react-hooks": "4.6.0",
+    "react-dev-utils": "^12",
+    "react-error-overlay": "6.0.9",
+    "react-is": "^18.2.0",
+    "react-refresh": "0.14.0",
+    "request/form-data": "2.5.4",
+    "sane/execa": "2.0.0",
+    "shell-quote": "1.7.3",
+    "webpack-bundle-analyzer": "4.10.1",
     "@elastic/search-ui": "1.21.2",
+    "@elastic/react-search-ui": "1.21.2",
     "@eeacms/volto-searchlib": "^2.1.10",
     "@eeacms/volto-columns-block": "^8.1.1"
   },
