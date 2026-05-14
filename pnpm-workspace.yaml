@@ -1,0 +1,14 @@
+packages:
+  - "src/addons/*"
+allowBuilds:
+  '@eeacms/volto-globalsearch': true
+  '@parcel/watcher': true
+  '@sentry/cli': true
+  core-js: true
+  cypress: true
+  es5-ext: true
+  esbuild: true
+  full-icu: true
+  iltorb: true
+  unrs-resolver: true
+  why: true

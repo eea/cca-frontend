@@ -1,4 +1,5 @@
-FROM node:18-bullseye-slim
+FROM node:22-bookworm-slim
+# FROM node:18-bullseye-slim
 
 COPY . /app/
 WORKDIR /app/
@@ -14,6 +15,8 @@ RUN runDeps="openssl ca-certificates patch gosu git make tmux locales-all" \
   && mkdir -p /app/src/addons \
   && rm -rf /app/src/addons/* \
   && find /app/ -not -user node -exec chown node {} \+ 
+  && corepack enable && corepack prepare pnpm@latest --activate
+  && pnpm install && pnpm build
 # \
 # && corepack enable
 

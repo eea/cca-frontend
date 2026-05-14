@@ -134,8 +134,8 @@ pipeline {
             env.NODEJS_HOME = "${tool 'NodeJS'}"
             env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             env.CI=false
-            sh "yarn config set -H enableImmutableInstalls false"
-            sh "yarn"
+            sh "pnpm config set -H enableImmutableInstalls false"
+            sh "pnpm"
             sh "make develop"
             sh "make install"
             sh "make build"

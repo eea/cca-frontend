@@ -49,15 +49,16 @@ all: develop install husky
 
 .PHONY: develop
 develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+# npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+	pnpm -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
 
 .PHONY: install
 install: ## Install project and add-ons
-	NODE_OPTIONS="--max-old-space-size=16384" yarn install
+	NODE_OPTIONS="--max-old-space-size=16384" pnpm install
 
 .PHONY: build
 build: ## Build frontend
-	NODE_OPTIONS="--max-old-space-size=16384" yarn build
+	NODE_OPTIONS="--max-old-space-size=16384" pnpm build
 
 .PHONY: bundlewatch
 bundlewatch:
@@ -69,15 +70,15 @@ husky: ## Install husky git hooks in src/addons/*
 
 .PHONY: start
 start: ## Start frontend
-	NODE_OPTIONS="--max-old-space-size=16384" yarn start
+	NODE_OPTIONS="--max-old-space-size=16384" pnpm start
 
 .PHONY: relstorage
 relstorage: ## Start frontend w/ RelStorage Plone Backend
-	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://localhost:8080/www yarn start
+	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://localhost:8080/www pnpm start
 
 .PHONY: staging
 staging: ## Start frontend w/ Staging Plone Backend
-	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://10.110.30.173:59707/www yarn start
+	NODE_OPTIONS="--max-old-space-size=16384" RAZZLE_DEV_PROXY_API_PATH=http://10.110.30.173:59707/www pnpm start
 
 .PHONY: omelette
 omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
