@@ -198,7 +198,7 @@
     "@plone-collective/volto-authomatic": "2.0.1",
     "@plone-collective/volto-rss-provider": "1.0.1",
     "@plone/scripts": "^3.6.0",
-    "@plone/volto": "18.0.0",
+    "@plone/volto": "18.34.0",
     "@redux-devtools/extension": "^3.3.0",
     "classnames": "2.5.1",
     "connected-react-router": "6.8.0",
