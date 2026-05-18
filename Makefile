@@ -114,7 +114,7 @@ pull: ## Run git pull on all src/addons
 
 .PHONY: test
 test: ## Run Jest tests for Volto add-on
-	RAZZLE_JEST_CONFIG=$(filter-out $@,$(MAKECMDGOALS))/jest-addon.config.js yarn test $(filter-out $@,$(MAKECMDGOALS))
+	TZ=UTC RAZZLE_JEST_CONFIG=$(filter-out $@,$(MAKECMDGOALS))/jest-addon.config.js yarn test $(filter-out $@,$(MAKECMDGOALS))
 
 .PHONY: help
 help: ## Show this help.
