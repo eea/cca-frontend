@@ -2130,9 +2130,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.125":
+"@eeacms/volto-cca-policy@github:eea/volto-cca-policy#volto-18":
   version: 0.3.125
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.125"
+  resolution: "@eeacms/volto-cca-policy@https://github.com/eea/volto-cca-policy.git#commit=5fe54fb44960bacc9ff0fe1d91bbbeec2bc58e83"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -2152,7 +2152,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 0d7f6e3b4d73ced137e3c54a0f6676fdb83c96dfb3289a1f02e8378fa4278e75227fa68b69d87bd0b8b18b92d6f0be9e50490fc2771cb47f1d501d980b9c34e9
+  checksum: 67f68bce12440c0392e8ba637ab90af6f53fc1f76d567075b8a0af86d43f76969bc88d7e5e36ef1de691366b3d2fdd044da1fee654c58bb128d1ca24323aaf09
   languageName: node
   linkType: hard
 
@@ -2211,9 +2211,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-chatbot@npm:^2.0.0":
-  version: 2.0.2
-  resolution: "@eeacms/volto-eea-chatbot@npm:2.0.2"
+"@eeacms/volto-eea-chatbot@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@eeacms/volto-eea-chatbot@npm:2.0.3"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
@@ -2229,7 +2229,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 6a5cfe630565df515d64adb68fb206fc00e434f524633d3ac0c89c866615abefffa2338d06dbd9a6ad53fd4c049c2f6e2a45d3018f98704318e53879b4677957
+  checksum: 821e2a660b842fb853a945939cc50a767ec0866e5240aa61276a1f6f1c8ac329501159319d9217a7b753155d9eaace5ead55a2caffdba07d8c644f28537b80f0
   languageName: node
   linkType: hard
 
@@ -10001,10 +10001,10 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": 0.3.125
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#volto-18"
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.2
-    "@eeacms/volto-eea-chatbot": ^2.0.0
+    "@eeacms/volto-eea-chatbot": 2.0.3
     "@eeacms/volto-eea-design-system": 1.60.3
     "@eeacms/volto-eea-kitkat": 33.0.4
     "@eeacms/volto-eea-website-theme": 4.3.2
