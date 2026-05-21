@@ -3350,9 +3350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:0.3.125":
+"@eeacms/volto-cca-policy@github:eea/volto-cca-policy#staging":
   version: 0.3.125
-  resolution: "@eeacms/volto-cca-policy@npm:0.3.125"
+  resolution: "@eeacms/volto-cca-policy@https://github.com/eea/volto-cca-policy.git#commit=1d9a0c4ec38785517a6b08375abd2642e2de6ddd"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
@@ -3372,7 +3372,7 @@ __metadata:
     jotai: ^1.6.0
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
-  checksum: 0d7f6e3b4d73ced137e3c54a0f6676fdb83c96dfb3289a1f02e8378fa4278e75227fa68b69d87bd0b8b18b92d6f0be9e50490fc2771cb47f1d501d980b9c34e9
+  checksum: 3dfa5383718d4f45d9684b66eb456a9534c2aa32dd6337b58338d9579bb076a5de9bd4ac7e6dc4881a2699e4f42cb5c2043618ecb411721f1f363f06e8ac899d
   languageName: node
   linkType: hard
 
@@ -3898,6 +3898,13 @@ __metadata:
   version: 3.0.1
   resolution: "@eeacms/volto-toolbar-actions@npm:3.0.1"
   checksum: ad305d677299c5e9b6f1aa89c7d33db4fe9ad466cbab8a46275a4985bea2affdba3cb0efd5a088abf95d271b9099e386775e5dbd27e4b4a4c33686484da95565
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-updatenotifier@npm:0.1.3":
+  version: 0.1.3
+  resolution: "@eeacms/volto-updatenotifier@npm:0.1.3"
+  checksum: c6571cf67bd6a3a234ae9c18df3872025a85e9587c3de465e73b4570cad952054ff4d1ebc7495be32b4310ebdeb18c90717db79189bf21e3dee6f9ca44295c87
   languageName: node
   linkType: hard
 
@@ -12071,7 +12078,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cca-frontend@workspace:."
   dependencies:
-    "@eeacms/volto-cca-policy": 0.3.125
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#staging"
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.2
     "@eeacms/volto-eea-chatbot": 2.0.3
@@ -12083,6 +12090,7 @@ __metadata:
     "@eeacms/volto-globalsearch": 4.0.1
     "@eeacms/volto-listing-block": 10.0.1
     "@eeacms/volto-plotlycharts": 14.0.3
+    "@eeacms/volto-updatenotifier": 0.1.3
     "@eeacms/volto-workflow-progress": 6.0.1
     "@plone-collective/volto-rss-provider": 1.0.1
     "@plone/scripts": ^3.3.2
