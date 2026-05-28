@@ -2130,7 +2130,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@github:eea/volto-cca-policy#1.0.0-alpha.3":
+"@eeacms/volto-cca-policy@github:eea/volto-cca-policy#staging":
   version: 1.0.0
   resolution: "@eeacms/volto-cca-policy@https://github.com/eea/volto-cca-policy.git#commit=6673b5a6c80dae4d5c86a440fc9a2b49eced5a26"
   dependencies:
@@ -10061,7 +10061,7 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#1.0.0-alpha.3"
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#staging"
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.2
     "@eeacms/volto-eea-chatbot": 2.0.3
