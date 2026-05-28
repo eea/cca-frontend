@@ -191,7 +191,7 @@
     "@dnd-kit/core": "6.0.8",
     "@dnd-kit/sortable": "7.0.2",
     "@dnd-kit/utilities": "3.2.2",
-    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#1.0.0-alpha.3",
+    "@eeacms/volto-cca-policy": "github:eea/volto-cca-policy#volto-18",
     "@eeacms/volto-columns-block": "^8.1.1",
     "@eeacms/volto-datablocks": "8.0.2",
     "@eeacms/volto-eea-chatbot": "2.0.3",
