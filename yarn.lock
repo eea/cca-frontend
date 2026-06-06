@@ -3642,6 +3642,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-listing-block@npm:10.0.2":
+  version: 10.0.2
+  resolution: "@eeacms/volto-listing-block@npm:10.0.2"
+  dependencies:
+    "@eeacms/volto-object-widget": "*"
+    "@eeacms/volto-widget-theme-picker": "*"
+    react-resize-detector: 7.1.2
+    react-slick: ^0.30.1
+    slick-carousel: 1.8.1
+  checksum: 6efa1cfe3cdb40271a7a7d239f0d6c918d693099a7f1b070568e06b7349c0c57a7e8876d82b8dc1cc63b05c1d229d69a81d5f58c3c5de6e829fda332cbb47b25
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-matomo@npm:*":
   version: 4.1.0
   resolution: "@eeacms/volto-matomo@npm:4.1.0"
@@ -12244,7 +12257,7 @@ __metadata:
     "@eeacms/volto-embed": 11.0.4
     "@eeacms/volto-embed-static-content": 1.0.4
     "@eeacms/volto-globalsearch": 4.0.1
-    "@eeacms/volto-listing-block": 10.0.1
+    "@eeacms/volto-listing-block": 10.0.2
     "@eeacms/volto-plotlycharts": 14.0.4
     "@eeacms/volto-workflow-progress": 6.0.1
     "@plone-collective/volto-rss-provider": 1.0.1
