@@ -1,4 +1,4 @@
-FROM node:18-bullseye-slim
+FROM node:22-slim
 
 COPY . /app/
 WORKDIR /app/
@@ -13,9 +13,9 @@ RUN runDeps="openssl ca-certificates patch gosu git make tmux locales-all" \
   && cp jsconfig.json.prod jsconfig.json \
   && mkdir -p /app/src/addons \
   && rm -rf /app/src/addons/* \
-  && find /app/ -not -user node -exec chown node {} \+ 
-# \
-# && corepack enable
+  && find /app/ -not -user node -exec chown node {} \+
+  # \
+  # && corepack enable
 
 USER node
 
@@ -28,6 +28,7 @@ RUN yarn \
   && rm -rf /home/node/.yarn \
   && rm -rf /home/node/.npm \
   && rm -rf /app/.yarn/cache
+
 USER root
 
 EXPOSE 3000 3001
