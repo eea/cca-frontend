@@ -49,7 +49,8 @@ all: develop install husky
 
 .PHONY: develop
 develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+# npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+	yarn -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
 
 .PHONY: install
 install: ## Install project and add-ons
