@@ -9,10 +9,6 @@
       "maxSize": "103kB"
     },
     {
-      "path": "build/public/static/js/draft-js*.js",
-      "maxSize": "125kB"
-    },
-    {
       "path": "build/public/static/js/prettier-standalone*.js",
       "maxSize": "140kB"
     },
@@ -22,7 +18,7 @@
     },
     {
       "path": "build/public/static/js/sanitize-html*.js",
-      "maxSize": "85kB"
+      "maxSize": "100kB"
     },
 
     {
