@@ -2229,9 +2229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-chatbot@npm:2.0.4":
-  version: 2.0.4
-  resolution: "@eeacms/volto-eea-chatbot@npm:2.0.4"
+"@eeacms/volto-eea-chatbot@npm:2.0.5":
+  version: 2.0.5
+  resolution: "@eeacms/volto-eea-chatbot@npm:2.0.5"
   dependencies:
     "@eeacms/volto-matomo": "*"
     "@microsoft/fetch-event-source": 2.0.1
@@ -2247,7 +2247,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: cb20e4e0c981c51af3fa610f3a88444da7830d18f2fb148fbafc2e3489af425305e2c6317bcc80b30e25f601390b476641237978405d2383f0c2f815e01655f2
+  checksum: a75826d0570a60988614c4cf936d5a384558b106d220738ed3aaf616dd463d6487145e2b7027b6c88608b188eeb2b8c43ed9309a30c73ee4c6ca8048769af3e1
   languageName: node
   linkType: hard
 
@@ -2575,6 +2575,15 @@ __metadata:
   version: 6.0.2
   resolution: "@eeacms/volto-sentry-rancher-config@npm:6.0.2"
   checksum: 896b665c82b4cd0c06a065748985de2920edf03bde3f2eaa0cb0f71751398c6bd3bd5f25d3bf0669ba8ef739840ee9b9a87eaee8c71e5da841e640e32d05064d
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-slate-dataentity@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@eeacms/volto-slate-dataentity@npm:5.0.0"
+  dependencies:
+    "@eeacms/volto-datablocks": "*"
+  checksum: 71924c97fb816b4904ab653d4ccc94c0945c6f94edaa34ebfb7c47373017b25ff216453f01ad07f34e396e60abdb86c8cf02fc2a2ea5f6fbdc725925ec052575
   languageName: node
   linkType: hard
 
@@ -10100,7 +10109,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 1.0.0
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.3
-    "@eeacms/volto-eea-chatbot": 2.0.4
+    "@eeacms/volto-eea-chatbot": 2.0.5
     "@eeacms/volto-eea-design-system": 1.60.8
     "@eeacms/volto-eea-kitkat": 33.0.7
     "@eeacms/volto-eea-website-theme": 4.3.8
@@ -10109,6 +10118,7 @@ __metadata:
     "@eeacms/volto-globalsearch": 4.0.1
     "@eeacms/volto-listing-block": 10.0.2
     "@eeacms/volto-plotlycharts": 14.0.6
+    "@eeacms/volto-slate-dataentity": 5.0.0
     "@eeacms/volto-workflow-progress": 6.0.1
     "@fiverr/afterbuild-webpack-plugin": ^1.0.0
     "@jest/globals": ^29.7.0
