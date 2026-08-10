@@ -2130,15 +2130,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@eeacms/volto-cca-policy@npm:1.0.5"
+"@eeacms/volto-cca-policy@npm:1.0.6":
+  version: 1.0.6
+  resolution: "@eeacms/volto-cca-policy@npm:1.0.6"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-eea-website-theme": "*"
     "@eeacms/volto-embed": "*"
-    "@eeacms/volto-globalsearch": 4.0.1
+    "@eeacms/volto-globalsearch": 4.1.0
     "@eeacms/volto-group-block": ^9.0.0
     "@eeacms/volto-openlayers-map": 2.0.1
     "@eeacms/volto-searchlib": ^2.1.10
@@ -2153,7 +2153,7 @@ __metadata:
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
     uuid: ^8.3.2
-  checksum: d527e86b2ed651685555f6e90e8d28da3b4ea0622ac60003936c0d3665b54062b9aa56722a99cb6d7f03b0af14bd952e3b62dc0305e4671beae58b8ab4f3215f
+  checksum: 77badf724bc566a407e2434484696241647a8616eb87f752f453c97bafdf96e47cdbd3592ef7344a85fa5cb99cb6ae497d00bc95b82b450cae204cadfeb54a41
   languageName: node
   linkType: hard
 
@@ -2385,16 +2385,6 @@ __metadata:
     "@eeacms/volto-corsproxy": "*"
     "@eeacms/volto-datablocks": "*"
   checksum: e5614d61428bcf0deb2b6df2f4e3a38840b032059d5ecded4558928f4c37c50289f8e424d7bbccd6c750ef6ba1107c3f32afafee923a459d226078c2abb25b92
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-globalsearch@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@eeacms/volto-globalsearch@npm:4.0.1"
-  dependencies:
-    "@eeacms/volto-listing-block": "*"
-    "@eeacms/volto-searchlib": "*"
-  checksum: a45d7ccb259380ae6e255adff494df2a35806a9b5b1db24b2907ddf18eaf12cd79b3dd0d819796d7af3483b4923a5bb86736bbdf2f47d54c245c6cdfdb0cce1b
   languageName: node
   linkType: hard
 
@@ -10119,7 +10109,7 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": 1.0.5
+    "@eeacms/volto-cca-policy": 1.0.6
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 8.0.3
     "@eeacms/volto-eea-chatbot": 3.0.1
