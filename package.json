@@ -193,7 +193,7 @@
     "@dnd-kit/utilities": "3.2.2",
     "@eeacms/volto-cca-policy": "1.0.10",
     "@eeacms/volto-columns-block": "^8.1.1",
-    "@eeacms/volto-datablocks": "9.0.0",
+    "@eeacms/volto-datablocks": "9.0.1",
     "@eeacms/volto-eea-chatbot": "3.0.1",
     "@eeacms/volto-eea-design-system": "1.60.8",
     "@eeacms/volto-eea-kitkat": "33.1.2",
