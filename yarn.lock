@@ -2230,9 +2230,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-chatbot@npm:3.0.1":
-  version: 3.0.1
-  resolution: "@eeacms/volto-eea-chatbot@npm:3.0.1"
+"@eeacms/volto-eea-chatbot@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@eeacms/volto-eea-chatbot@npm:4.1.0"
   dependencies:
     "@eeacms/volto-design-tokens": "*"
     "@eeacms/volto-matomo": "*"
@@ -2249,7 +2249,7 @@ __metadata:
     rehype-prism-plus: 1.6.0
     remark-gfm: 3.0.1
     uuid: 10.0.0
-  checksum: 66f7a0dd4e6d42132c56e56d3e33dcf252915b6f59bda19251a2fed3149053602bf31b555b5a013e02b70ee7967c8e04930bac4c01eeadc19ec90222b9e39c5a
+  checksum: 9bb8011cbb9ec002ebd92179805be45f5a1385bb514198937887c13134e64d80cf004499b4ddeabbf29b7b14492b86f1041bf61dca8806a7bdd90d91e65d7a11
   languageName: node
   linkType: hard
 
@@ -10124,7 +10124,7 @@ __metadata:
     "@eeacms/volto-cca-policy": 1.0.13
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 9.0.1
-    "@eeacms/volto-eea-chatbot": 3.0.1
+    "@eeacms/volto-eea-chatbot": 4.1.0
     "@eeacms/volto-eea-design-system": 1.60.8
     "@eeacms/volto-eea-kitkat": 33.2.0
     "@eeacms/volto-eea-website-theme": 4.5.0
