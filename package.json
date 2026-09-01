@@ -2,7 +2,7 @@
   "name": "cca-frontend",
   "description": "CCA frontend (Plone 6)",
   "license": "MIT",
-  "version": "4.14.0",
+  "version": "4.15.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -191,7 +191,7 @@
     "@dnd-kit/core": "6.0.8",
     "@dnd-kit/sortable": "7.0.2",
     "@dnd-kit/utilities": "3.2.2",
-    "@eeacms/volto-cca-policy": "1.0.13",
+    "@eeacms/volto-cca-policy": "1.0.14",
     "@eeacms/volto-columns-block": "^8.1.1",
     "@eeacms/volto-datablocks": "9.0.1",
     "@eeacms/volto-eea-chatbot": "3.0.1",
