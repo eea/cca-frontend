@@ -2130,11 +2130,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@eeacms/volto-cca-policy@npm:1.0.14"
+"@eeacms/volto-cca-policy@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@eeacms/volto-cca-policy@npm:1.0.15"
   dependencies:
     "@eeacms/volto-datablocks": "*"
+    "@eeacms/volto-eea-chatbot": ^4.1.0
     "@eeacms/volto-eea-design-system": "*"
     "@eeacms/volto-eea-website-theme": "*"
     "@eeacms/volto-embed": "*"
@@ -2153,7 +2154,7 @@ __metadata:
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
     uuid: ^8.3.2
-  checksum: 42e8dfe1df4887c7d0bd9651e6c1514632c424b27c0a22e07b965070d90b47ec3746d82cb6f125ae769c12cd4d686d77bb0086e19c15f9b2a99a1c665749513c
+  checksum: 2a7030ea2381c6b49bb5f579d60a517834d21ebcfe3eaf8b7f14550816f43ff20c7ad75c3e0ec58f8940dbcee32f0138bef6a8ddab3d3f4cc666f4b3837fe240
   languageName: node
   linkType: hard
 
@@ -2250,6 +2251,29 @@ __metadata:
     remark-gfm: 3.0.1
     uuid: 10.0.0
   checksum: 66f7a0dd4e6d42132c56e56d3e33dcf252915b6f59bda19251a2fed3149053602bf31b555b5a013e02b70ee7967c8e04930bac4c01eeadc19ec90222b9e39c5a
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-eea-chatbot@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@eeacms/volto-eea-chatbot@npm:4.1.0"
+  dependencies:
+    "@eeacms/volto-design-tokens": "*"
+    "@eeacms/volto-matomo": "*"
+    "@microsoft/fetch-event-source": 2.0.1
+    "@plone-collective/volto-sentry": "*"
+    compromise: 14.14.5
+    fast-json-patch: 3.1.1
+    highlight.js: 11.10.0
+    luxon: 3.5.0
+    marked: 13.0.3
+    node-fetch: 2.7.0
+    react-markdown: 8.0.7
+    react-textarea-autosize: ^8.5.3
+    rehype-prism-plus: 1.6.0
+    remark-gfm: 3.0.1
+    uuid: 10.0.0
+  checksum: 9bb8011cbb9ec002ebd92179805be45f5a1385bb514198937887c13134e64d80cf004499b4ddeabbf29b7b14492b86f1041bf61dca8806a7bdd90d91e65d7a11
   languageName: node
   linkType: hard
 
@@ -10121,7 +10145,7 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": 1.0.14
+    "@eeacms/volto-cca-policy": 1.0.15
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 9.0.1
     "@eeacms/volto-eea-chatbot": 3.0.1
