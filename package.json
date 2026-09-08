@@ -195,7 +195,7 @@
     "@eeacms/volto-columns-block": "^8.1.1",
     "@eeacms/volto-datablocks": "9.0.1",
     "@eeacms/volto-eea-chatbot": "^4.1.0",
-    "@eeacms/volto-eea-design-system": "1.61.0",
+    "@eeacms/volto-eea-design-system": "1.61.1",
     "@eeacms/volto-eea-kitkat": "33.2.0",
     "@eeacms/volto-eea-website-theme": "4.5.0",
     "@eeacms/volto-embed": "11.0.6",
