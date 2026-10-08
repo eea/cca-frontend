@@ -2130,9 +2130,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:1.0.36":
-  version: 1.0.36
-  resolution: "@eeacms/volto-cca-policy@npm:1.0.36"
+"@eeacms/volto-cca-policy@npm:1.0.37":
+  version: 1.0.37
+  resolution: "@eeacms/volto-cca-policy@npm:1.0.37"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-chatbot": ^4.1.0
@@ -2154,7 +2154,7 @@ __metadata:
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
     uuid: ^8.3.2
-  checksum: 637586d87e55aa5a95601b85866787a0bf6cb09c58321f5b511b1592e660d40482851e6af8331e257bbdbcc5f8d988055e2080c0744b8a941c075c61efa1165f
+  checksum: d075704257941956c4deb99fee79b7ceca322749ce0f56b70e8b0a8d9dd2c0b56500b767c409bd6453a3a396ba1180d8351eca0cb7e7e2d0f7815d7909f66210
   languageName: node
   linkType: hard
 
@@ -10158,7 +10158,7 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": 1.0.36
+    "@eeacms/volto-cca-policy": 1.0.37
     "@eeacms/volto-columns-block": ^8.1.1
     "@eeacms/volto-datablocks": 9.0.2
     "@eeacms/volto-eea-chatbot": ^4.1.3
