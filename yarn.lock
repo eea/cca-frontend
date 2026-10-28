@@ -2140,9 +2140,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-cca-policy@npm:1.0.48":
-  version: 1.0.48
-  resolution: "@eeacms/volto-cca-policy@npm:1.0.48"
+"@eeacms/volto-cca-policy@npm:1.0.49":
+  version: 1.0.49
+  resolution: "@eeacms/volto-cca-policy@npm:1.0.49"
   dependencies:
     "@eeacms/volto-datablocks": "*"
     "@eeacms/volto-eea-chatbot": ^4.1.0
@@ -2164,7 +2164,7 @@ __metadata:
     query-string: 7.1.0
     react-visibility-sensor: 5.1.1
     uuid: ^8.3.2
-  checksum: 06b8f80f61261e2735ceb2d182448423d340ea26a268066ff4bb6754be964f3f39b2d0d48f16153f91ad56d249c85a5548858401c476c8a651789c670cbcc515
+  checksum: 590701b6de0085ab433303ca47bf9c8f54b00dec24dddda3206818719097c762e7943ed93955b2e20998d53b240b21446120af9ce4a9f54552fad010d3399557
   languageName: node
   linkType: hard
 
@@ -2209,9 +2209,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-datablocks@npm:9.0.4":
-  version: 9.0.4
-  resolution: "@eeacms/volto-datablocks@npm:9.0.4"
+"@eeacms/volto-datablocks@npm:9.0.5":
+  version: 9.0.5
+  resolution: "@eeacms/volto-datablocks@npm:9.0.5"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-embed": "*"
@@ -2223,7 +2223,7 @@ __metadata:
     object-hash: 2.2.0
     react-visibility-sensor: 5.1.1
     sanitize-html: 2.18.0
-  checksum: 9462dd8446c79b56692cd5b448f03bf7d04471e145d9afa9c5d86592fe9020d7b20b5bf4a180dd18a28f6ed06241914d14e72f78e231a111379e2a9a624d72d7
+  checksum: 7ef3920c7b112a53c498d3d220a4f45e94442e40c98505c5d1233438da440df656cd38e384fdea93b205c3584b1af34a0a3a52f00cc6fb4e3735a9a6c82334f7
   languageName: node
   linkType: hard
 
@@ -2302,9 +2302,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-eea-design-system@npm:1.61.5":
-  version: 1.61.5
-  resolution: "@eeacms/volto-eea-design-system@npm:1.61.5"
+"@eeacms/volto-eea-design-system@npm:1.61.6":
+  version: 1.61.6
+  resolution: "@eeacms/volto-eea-design-system@npm:1.61.6"
   dependencies:
     "@eeacms/countup": "*"
     "@eeacms/volto-corsproxy": "*"
@@ -2313,7 +2313,7 @@ __metadata:
     react-slick: ^0.30.1
     remixicon: 4.6.0
     slick-carousel: ^1.8.1
-  checksum: 158d053737e9ed085bfaf17554791fb83fb1366d210cc5725a9dc7e58d1874ecb6f6e259c1798b46a373978f42a8020d9f59e0aa6a345949aec4fd082e3b5b78
+  checksum: b2a800f60654e9b8b576e48ab8b4ff4619d87054ae0e427c605f4dd9a0f6695081d2188828cb953e3f2677668d7ba33409ad1fd5cdb4ed2f169c9437f9cbd93b
   languageName: node
   linkType: hard
 
@@ -10155,11 +10155,11 @@ __metadata:
     "@dnd-kit/core": 6.0.8
     "@dnd-kit/sortable": 7.0.2
     "@dnd-kit/utilities": 3.2.2
-    "@eeacms/volto-cca-policy": 1.0.48
+    "@eeacms/volto-cca-policy": 1.0.49
     "@eeacms/volto-columns-block": ^8.1.1
-    "@eeacms/volto-datablocks": 9.0.4
+    "@eeacms/volto-datablocks": 9.0.5
     "@eeacms/volto-eea-chatbot": ^4.1.3
-    "@eeacms/volto-eea-design-system": 1.61.5
+    "@eeacms/volto-eea-design-system": 1.61.6
     "@eeacms/volto-eea-kitkat": 33.2.2
     "@eeacms/volto-eea-website-theme": 4.5.3
     "@eeacms/volto-embed": 11.0.6
