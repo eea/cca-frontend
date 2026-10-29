@@ -1,4 +1,4 @@
-# EEA CCA Website frontend (Plone 6)
+# EEA Climate-Adapt website frontend (Plone 6)
 
 [![Release](https://img.shields.io/github/v/release/eea/cca-frontend?sort=semver)](https://github.com/eea/cca-frontend/releases)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto/eea-website-frontend/master&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto/job/cca-frontend/job/master/display/redirect)
