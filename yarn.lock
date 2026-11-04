@@ -2491,16 +2491,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-listing-block@npm:11.0.3":
-  version: 11.0.3
-  resolution: "@eeacms/volto-listing-block@npm:11.0.3"
+"@eeacms/volto-listing-block@npm:11.0.4":
+  version: 11.0.4
+  resolution: "@eeacms/volto-listing-block@npm:11.0.4"
   dependencies:
     "@eeacms/volto-object-widget": "*"
     "@eeacms/volto-widget-theme-picker": "*"
     react-resize-detector: 7.1.2
     react-slick: ^0.30.1
     slick-carousel: 1.8.1
-  checksum: 73dd4ed4ae5fa91f9d0e0bcee0a31fbdcf5aa59b4d1862ed798d0f6614ab18c856b39acfd8b03de0b430b3cae5f08b1357ceda70c1b819dcfc294146b3027e70
+  checksum: bfa7fad1b0a79a25e2805a43dcdf9a758075f52651d0743534ff6fa883e434a3c933a9f854bb8da0c610fdd682f92b53331db097b27d70df533b64768b920e37
   languageName: node
   linkType: hard
 
@@ -10178,7 +10178,7 @@ __metadata:
     "@eeacms/volto-embed": 11.0.6
     "@eeacms/volto-embed-static-content": 1.0.4
     "@eeacms/volto-globalsearch": 4.1.1
-    "@eeacms/volto-listing-block": 11.0.3
+    "@eeacms/volto-listing-block": 11.0.4
     "@eeacms/volto-plotlycharts": 14.0.7
     "@eeacms/volto-slate-dataentity": 5.0.1
     "@eeacms/volto-workflow-progress": 6.0.1
