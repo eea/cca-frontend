@@ -185,7 +185,8 @@
     "@elastic/search-ui": "1.21.2",
     "@elastic/react-search-ui": "1.21.2",
     "@eeacms/volto-searchlib": "^2.1.10",
-    "@eeacms/volto-columns-block": "^8.1.1"
+    "@eeacms/volto-columns-block": "^8.1.1",
+    "@eeacms/volto-listing-block": "^10.1.0"
   },
   "dependencies": {
     "@dnd-kit/core": "6.0.8",
@@ -201,7 +202,7 @@
     "@eeacms/volto-embed": "11.0.6",
     "@eeacms/volto-embed-static-content": "1.0.4",
     "@eeacms/volto-globalsearch": "4.1.1",
-    "@eeacms/volto-listing-block": "11.0.5",
+    "@eeacms/volto-listing-block": "^10.1.0",
     "@eeacms/volto-plotlycharts": "14.0.7",
     "@eeacms/volto-slate-dataentity": "5.0.1",
     "@eeacms/volto-workflow-progress": "6.0.1",
