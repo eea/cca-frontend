@@ -2766,10 +2766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-workflow-progress@npm:6.0.1":
-  version: 6.0.1
-  resolution: "@eeacms/volto-workflow-progress@npm:6.0.1"
-  checksum: b3a4a52b74f3f92bbb72d0325dc9f58db3ca02fc0878f5d1a839759053a79334810b14595d48c8d67d66e54ac039c0cadeafa7838aca19c3394e5f33225438d3
+"@eeacms/volto-workflow-progress@npm:7.0.0":
+  version: 7.0.0
+  resolution: "@eeacms/volto-workflow-progress@npm:7.0.0"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 5fc689609392bee5bfa6569bc6e5db46599e6eea5aed575368469b0ceeb3a46de6d478c7183b4a7327eca74aed6055462e7356d54382c5b9e997808b84643f1d
   languageName: node
   linkType: hard
 
@@ -10161,7 +10164,7 @@ __metadata:
     "@eeacms/volto-listing-block": ^10.1.0
     "@eeacms/volto-plotlycharts": 14.0.7
     "@eeacms/volto-slate-dataentity": 5.0.1
-    "@eeacms/volto-workflow-progress": 6.0.1
+    "@eeacms/volto-workflow-progress": 7.0.0
     "@fiverr/afterbuild-webpack-plugin": ^1.0.0
     "@jest/globals": ^29.7.0
     "@loadable/babel-plugin": 5.13.2
